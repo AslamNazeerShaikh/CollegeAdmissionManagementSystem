@@ -44,5 +44,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    implementation 'com.airbnb.android:lottie:3.6.0'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
 
 }
