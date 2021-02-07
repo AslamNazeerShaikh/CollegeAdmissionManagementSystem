@@ -32,29 +32,28 @@
 
     <Button
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/sf_pro_display_bold"
         android:layout_marginTop="18dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="Accept"
         android:layout_gravity="center"
         android:gravity="center"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/acceptButton"
         />
 
     <Button
+        android:backgroundTint="@color/colorOrange"
         android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/sf_pro_display_bold"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="12dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="Cancel"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:id="@+id/cancelButton"
         />
 

@@ -47,5 +47,10 @@ dependencies {
     implementation 'com.airbnb.android:lottie:3.6.0'
     implementation 'com.orhanobut:dialogplus:1.11@aar'
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+
+
+
 
 }

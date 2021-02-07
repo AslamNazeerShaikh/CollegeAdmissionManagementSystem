@@ -95,6 +95,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/mainScreenMainView">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegBscCS"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_gravity="center"
@@ -109,6 +110,7 @@
                         app:cardBackgroundColor="@color/colorFadeWhite">
 
                         <LinearLayout
+                            android:background="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -148,6 +150,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegBscSE"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_gravity="center"
@@ -162,6 +165,7 @@
                         app:cardBackgroundColor="@color/colorFadeWhite">
 
                         <LinearLayout
+                            android:background="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -216,6 +220,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/mainScreenMainView">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegBscNT"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_gravity="center"
@@ -230,6 +235,7 @@
                         app:cardBackgroundColor="@color/colorFadeWhite">
 
                         <LinearLayout
+                            android:background="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -269,6 +275,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegMscCS"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_gravity="center"
@@ -283,6 +290,7 @@
                         app:cardBackgroundColor="@color/colorFadeWhite">
 
                         <LinearLayout
+                            android:background="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -316,7 +324,7 @@
                                 android:fontFamily="@font/sf_pro_display_regular"
                                 android:gravity="center"
                                 android:padding="5dp"
-                                android:text="Eligibility : Any Computer UG\nDuration : 2 Years"
+                                android:text="Any Computer UG\nDuration : 2 Years"
                                 android:textAlignment="center" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -337,6 +345,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/mainScreenMainView">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegMscSE"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_gravity="center"
@@ -351,6 +360,7 @@
                         app:cardBackgroundColor="@color/colorFadeWhite">
 
                         <LinearLayout
+                            android:background="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -390,6 +400,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegMscSA"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_gravity="center"
@@ -404,6 +415,7 @@
                         app:cardBackgroundColor="@color/colorFadeWhite">
 
                         <LinearLayout
+                            android:background="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -437,7 +449,383 @@
                                 android:fontFamily="@font/sf_pro_display_regular"
                                 android:gravity="center"
                                 android:padding="5dp"
-                                android:text="Any Computer UG\nDuration : 2 Years"
+                                android:text="Eligibility : Any UG\nDuration : 2 Years"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/mainScreenBackImgBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainScreenMainView">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegMscCM"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorFadeWhite">
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="78dp"
+                                android:layout_height="78dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/certificate_flat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:text="M.Sc. \nComputer Management"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorBlack" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Eligibility : Any UG\nDuration : 2 Years"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegBCA"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorFadeWhite">
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="78dp"
+                                android:layout_height="78dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/certificate_flat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:text="( BCA ) Bachelor of\nComputer Application"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorBlack" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Eligibility : Any 12th\nDuration : 3 Years"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/mainScreenBackImgBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainScreenMainView">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegBscBT"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorFadeWhite">
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="78dp"
+                                android:layout_height="78dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/certificate_flat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:text="B.Sc.\nBiotechnology"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorBlack" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Eligibility : 12th Science\nDuration : 3 Years"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegMscBT"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorFadeWhite">
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="78dp"
+                                android:layout_height="78dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/certificate_flat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:text="M.Sc.\nBiotechnology"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorBlack" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Eligibility : Any UG\nDuration : 2 Years"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/mainScreenBackImgBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainScreenMainView">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegBBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorFadeWhite">
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="78dp"
+                                android:layout_height="78dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/certificate_flat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:text="( BBA ) Bachelor of\nBusiness Administration
+"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorBlack" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Eligibility : Any 12th\nDuration : 3 Years"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/courseRegMBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorFadeWhite">
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="78dp"
+                                android:layout_height="78dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/certificate_flat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:text="( MBA ) Master of\nBusiness Administration"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorBlack" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Eligibility : Any UG\nDuration : 2 Years"
                                 android:textAlignment="center" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -448,7 +836,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/mainScreenBackImgBtn"
+        android:id="@+id/courseScreenBackImgBtn"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"

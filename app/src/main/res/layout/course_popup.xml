@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:background="@drawable/course_flat"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="120dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:foregroundGravity="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/coursePopupTextViewTitle"
+        android:textSize="24dp"
+        android:text="Demo Testing Text 123"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:text="Testing SubTitle 123\nTesting SubTitle 123\nTesting SubTitle 123\n\nTesting SubTitle 123\nTesting SubTitle 123"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:id="@+id/coursePopupTextViewSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:foregroundGravity="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
+        android:background="@color/colorPrimary" />
+
+    <Button
+        android:layout_marginTop="14dp"
+        android:id="@+id/coursePopupPDFBtn1"
+        android:textAllCaps="true"
+        android:text="PDF FY SYLLABUS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:backgroundTint="@color/colorOrange"
+        android:layout_gravity="center"
+        android:layout_width="220dp"
+        android:layout_height="48dp" />
+
+    <Button
+        android:id="@+id/coursePopupPDFBtn2"
+        android:textAllCaps="true"
+        android:text="PDF SY SYLLABUS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:backgroundTint="@color/colorOrange"
+        android:layout_gravity="center"
+        android:layout_width="220dp"
+        android:layout_height="48dp" />
+
+    <Button
+        android:id="@+id/coursePopupPDFBtn3"
+        android:textAllCaps="true"
+        android:text="PDF TY SYLLABUS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:backgroundTint="@color/colorOrange"
+        android:layout_gravity="center"
+        android:layout_width="220dp"
+        android:layout_height="48dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:foregroundGravity="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="120dp"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/coursePopupCancelBtn"
+            android:textAllCaps="true"
+            android:text="CANCEL"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:backgroundTint="@color/colorRed"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <Button
+            android:id="@+id/coursePopupRegBtn"
+            android:textAllCaps="true"
+            android:text="REGISTER"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

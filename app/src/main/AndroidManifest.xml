@@ -28,11 +28,13 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
-
         <activity
             android:name=".Courses"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
+        <activity android:name=".PDFviewer"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CollegeAdmissionManagementSystem"/>
 
     </application>
 
