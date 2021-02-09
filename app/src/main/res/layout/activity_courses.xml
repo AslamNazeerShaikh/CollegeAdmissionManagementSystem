@@ -752,8 +752,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/sf_pro_display_bold"
-                                android:text="( BBA ) Bachelor of\nBusiness Administration
-"
+                                android:text="( BBA ) Bachelor of\nBusiness Administration"
                                 android:textAlignment="center"
                                 android:textColor="@color/colorBlack" />
 

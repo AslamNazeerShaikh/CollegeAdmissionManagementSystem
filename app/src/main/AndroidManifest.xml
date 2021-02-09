@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeAdmissionManagementSystem"
         tools:ignore="AllowBackup">
-
+        <activity android:name=".Registration"></activity>
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait"
@@ -23,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
@@ -32,10 +31,10 @@
             android:name=".Courses"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
-        <activity android:name=".PDFviewer"
+        <activity
+            android:name=".PDFviewer"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.CollegeAdmissionManagementSystem"/>
-
+            android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
     </application>
 
 </manifest>

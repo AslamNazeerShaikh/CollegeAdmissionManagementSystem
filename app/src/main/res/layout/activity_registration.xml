@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+    <TextView
+        android:id="@+id/RegWinTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="Registration Form"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:id="@+id/RegWinView1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTitle" />
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/black"
+        android:text="Enter Student's Full Name"
+        android:textSize="14dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/RegWinTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinView1" />
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout1"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTextView1">
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="First Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Middle Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Last Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/black"
+        android:text="Enter Student's Percentage"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/RegWinTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinLinearLayout1" />
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout2"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTextView2">
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="10th"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="12th"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="UG/PG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/black"
+        android:text="Enter Student's Passing Year"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/RegWinTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinLinearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout3"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTextView3">
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="10th"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="12th"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="UG/PG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/black"
+        android:text="Enter Student's Birth Date"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/RegWinTextView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinLinearLayout3" />
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout4"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTextView4">
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/black"
+        android:text="Enter Student's Other Details"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/RegWinTextView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinLinearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout5"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTextView5">
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Blood Group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Nationality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/black"
+        android:text="Enter Student's Contact Details"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/RegWinTextView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinLinearLayout5" />
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout6"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTextView6">
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Primary Mobile No."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Secondary Mobile No."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/black"
+        android:text="Enter Course Name"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/RegWinTextView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinLinearLayout6" />
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout7"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinTextView7">
+
+        <EditText
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textAlignment="center"
+            android:hint="Primary Mobile No."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RegWinLinearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegWinLinearLayout7">
+
+        <Button
+            android:id="@+id/coursePopupCancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorRed"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="CANCEL"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/coursePopupRegBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="REGISTER"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

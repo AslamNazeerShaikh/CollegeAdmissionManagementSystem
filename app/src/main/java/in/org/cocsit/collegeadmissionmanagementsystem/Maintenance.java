@@ -25,7 +25,7 @@ public class Maintenance {
         c. open pdf view with appropriate pdf (done)
         d. close the pdf view when press back (done)
 
-   6. make registration screen for user
+   6. make registration screen for user (done)
 
      */
 

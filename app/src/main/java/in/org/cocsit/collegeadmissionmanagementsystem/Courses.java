@@ -88,27 +88,46 @@ public class Courses extends AppCompatActivity implements View.OnClickListener {
                                  ,"cbcs_bsc_nt_fy.pdf","cbcs_bsc_nt_sy.pdf","cbcs_bsc_nt_ty.pdf");
                 break;
             case R.id.courseRegMscCS:
+                showCoursePopup(v,"M.Sc. Computer Science","Eligibility : Any Computer UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                        ,"cbcs_msc_cs_fy.pdf","cbcs_msc_cs_sy.pdf","0");
                 break;
             case R.id.courseRegMscSE:
+                showCoursePopup(v,"M.Sc. Software Engineering","Eligibility : Any Computer UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                        ,"cbcs_msc_se_fy.pdf","cbcs_msc_se_sy.pdf","0");
                 break;
             case R.id.courseRegMscSA:
+                showCoursePopup(v,"M.Sc. System Admin. & N/W","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                        ,"cbcs_msc_sa_fy.pdf","cbcs_msc_sa_sy.pdf","0");
                 break;
             case R.id.courseRegMscCM:
+                showCoursePopup(v,"M.Sc. Computer Management","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                        ,"cbcs_msc_cm_fy.pdf","cbcs_msc_cm_sy.pdf","0");
                 break;
             case R.id.courseRegBCA:
+                showCoursePopup(v,"BCA - Bachelor of\nComputer Application","Eligibility : Any 12th\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                        ,"cbcs_bca_fy.pdf","cbcs_bca_sy.pdf","cbcs_bca_ty.pdf");
                 break;
             case R.id.courseRegBscBT:
+                showCoursePopup(v,"B.Sc. Biotechnology","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                        ,"cbcs_bsc_bt_fy.pdf","cbcs_bsc_bt_sy.pdf","cbcs_bsc_bt_ty.pdf");
                 break;
             case R.id.courseRegMscBT:
+                showCoursePopup(v,"M.Sc. Biotechnology","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                        ,"cbcs_msc_bt_fy.pdf","cbcs_msc_bt_sy.pdf","0");
                 break;
             case R.id.courseRegBBA:
+                showCoursePopup(v,"BBA - Bachelor of\nBusiness Administration","Eligibility : Any 12th\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                        ,"cbcs_bba_fy.pdf","cbcs_bba_sy.pdf","cbcs_bba_ty.pdf");
                 break;
             case R.id.courseRegMBA:
+                showCoursePopup(v,"MBA - Master of\nBusiness Administration","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 17,900.0 Rs."
+                        ,"0","0","0");
                 break;
         }
 
 
     }
+
 
     public void showCoursePopup(View view, String myCourseName, String myCourseDetails, String myFyPDF, String mySyPDF, String myTyPDF) {
 
@@ -151,6 +170,26 @@ public class Courses extends AppCompatActivity implements View.OnClickListener {
             i.putExtra("myPDFname",myTyPDF);
             this.startActivity(i);
         });
+
+        if(myTyPDF.contentEquals("0")) {
+            openPDFButton3.setVisibility(View.INVISIBLE);
+            openPDFButton3.setClickable(false);
+            openPDFButton3.setEnabled(false);
+        }
+
+        if(mySyPDF.contentEquals("0")) {
+            openPDFButton2.setVisibility(View.INVISIBLE);
+            openPDFButton2.setClickable(false);
+            openPDFButton2.setEnabled(false);
+        }
+
+        if(myFyPDF.contentEquals("0")) {
+            openPDFButton1.setVisibility(View.INVISIBLE);
+            openPDFButton1.setClickable(false);
+            openPDFButton1.setEnabled(false);
+        }
+
+        registrationButton.setOnClickListener(v -> { Intent i = new Intent(this,Registration.class); startActivity(i); } );
 
         cancelButton.setOnClickListener(v -> dialog.dismiss());
 
