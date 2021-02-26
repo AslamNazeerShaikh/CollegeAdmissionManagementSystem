@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.orhanobut.dialogplus.DialogPlus;
@@ -140,6 +141,8 @@ public class Courses extends AppCompatActivity implements View.OnClickListener {
 
         View holderView = dialog.getHolderView();
 
+        LottieAnimationView animationView = holderView.findViewById(R.id.RegWinCautionAnim);
+
         Button openPDFButton1 = holderView.findViewById(R.id.coursePopupPDFBtn1);
         Button openPDFButton2 = holderView.findViewById(R.id.coursePopupPDFBtn2);
         Button openPDFButton3 = holderView.findViewById(R.id.coursePopupPDFBtn3);
@@ -187,6 +190,7 @@ public class Courses extends AppCompatActivity implements View.OnClickListener {
             openPDFButton1.setVisibility(View.INVISIBLE);
             openPDFButton1.setClickable(false);
             openPDFButton1.setEnabled(false);
+            animationView.playAnimation();
         }
 
         registrationButton.setOnClickListener(v -> { Intent i = new Intent(this,Registration.class); startActivity(i); } );
@@ -197,7 +201,7 @@ public class Courses extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-        // Enables regular immersive mode or fullscreen mode
+    // Enables regular immersive mode or fullscreen mode
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
