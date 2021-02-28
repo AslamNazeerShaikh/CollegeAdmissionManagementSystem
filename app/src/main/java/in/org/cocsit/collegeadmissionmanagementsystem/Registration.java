@@ -43,7 +43,7 @@ public class Registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        instantiateWebSocket();
+        instantiateWebSocket("192.168.2.5:9999");
 
         //add hardware acceleration enable
         getWindow().setFlags(
@@ -209,11 +209,14 @@ public class Registration extends AppCompatActivity {
                 mCurAdd.getText().toString()  ;
 
         webSocket.send(mySendString);
+
     }
 
-    public class WebSocketAddmission extends WebSocketListener {
-        public WebSocketAddmission() {
-            super();
+    public class SocketListener extends WebSocketListener {
+
+        public Registration activity;
+        public SocketListener(Registration activity) {
+            this.activity = activity;
         }
 
         @Override
@@ -247,14 +250,13 @@ public class Registration extends AppCompatActivity {
         }
     }
 
-    private void instantiateWebSocket()
-    {
+    private void instantiateWebSocket(String ipaddress) {
+
         OkHttpClient client = new OkHttpClient();
+
         //replace x.x.x.x with your machine's IP Address
-        Request request = new Request.Builder().url("ws://192.168.2.9:9999").build();
-        WebSocketAddmission webSocketAddmission = new WebSocketAddmission();
-        webSocket = client.newWebSocket(request, webSocketAddmission);
-
+        Request request = new Request.Builder().url("ws://"+ipaddress).build();
+        SocketListener socketListener = new SocketListener(this);
+        webSocket = client.newWebSocket(request, socketListener);
     }
-
 }
