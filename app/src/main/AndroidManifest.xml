@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="in.org.cocsit.collegeadmissionmanagementsystem">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -15,8 +14,9 @@
 
         <activity
             android:name=".SplashScreen"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.CollegeAdmissionManagementSystem">
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.CollegeAdmissionManagementSystem"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,19 +25,19 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
         <activity
             android:name=".Courses"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
         <activity
             android:name=".PDFviewer"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
         <activity
             android:name=".Registration"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
 
     </application>
