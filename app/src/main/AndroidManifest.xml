@@ -14,7 +14,7 @@
 
         <activity
             android:name=".SplashScreen"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem"
             android:exported="true">
             <intent-filter>
@@ -25,19 +25,19 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
         <activity
             android:name=".Courses"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
         <activity
             android:name=".PDFviewer"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
         <activity
             android:name=".Registration"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.CollegeAdmissionManagementSystem" />
 
     </application>
