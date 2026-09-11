@@ -1053,3 +1053,414 @@ strategy:
 ---
 
 *Appendix A generated from live website scrape on 2026-09-11. Verify links periodically as website updates.*
+
+---
+
+## 🏗️ Appendix B: Clean Architecture + DDD Patterns from InventoryManagement Reference Project
+
+The **InventoryManagement** project (`/Users/aslamshaikh/Projects/DownloadManager/InventoryManagement`) is a production-grade **Clean Architecture + Domain-Driven Design** reference implementation built with **.NET 10**, **EF Core (SQLite)**, **Next.js/React (Client)**, and **Serilog**. The following patterns, conventions, and anti-patterns should be adapted for our **PlatformUno Migration App**.
+
+---
+
+### 📐 Architecture & Layering
+
+| Layer | Project | Responsibility | Uno Adaptation |
+|-------|---------|----------------|----------------|
+| **Domain** | `InventoryManagement.Domain` | Pure business logic, entities, value objects, domain events, interfaces, exceptions, DTOs | `CollegeAdmission.Core` — net10.0 class library, zero dependencies |
+| **Application** | `InventoryManagement.Application` | Use cases, orchestration, mapping, service interfaces | `CollegeAdmission.Core` — merged (CQRS not needed for MVP) |
+| **Infrastructure** | `InventoryManagement.Infrastructure` | EF Core, repositories, security, idempotency, migrations | `CollegeAdmission.Core.Infrastructure` — platform-specific SQLite providers |
+| **API** | `InventoryManagement.API` | Controllers, middleware, pipeline, OpenAPI | **Not needed** — Uno is client-only; backend is separate decision (Phase 5) |
+| **Client** | `client/` (Next.js) | React UI, typed API client, token management | `CollegeAdmission.UI` — Uno Platform (XAML + C#) |
+
+**Key Principle**: Domain layer has **zero external dependencies**. Application depends only on Domain. Infrastructure depends on Domain + Application. This enables full unit testing of business logic without DB or HTTP.
+
+---
+
+### 🎯 Core Patterns to Adopt
+
+#### 1. **Result<T> Pattern** (Domain/Common/Result.cs:1-144)
+```csharp
+// Instead of throwing for expected business outcomes
+public Result<InventoryDto> CreateInventory(CreateInventoryDto dto, int userId)
+{
+    if (barcodeExists) return Result<InventoryDto>.Conflict("Barcode already exists");
+    return Result<InventoryDto>.Success(newInventory.ToDto());
+}
+```
+- **Adopt**: Use `Result<T>` in all services/ViewModels for explicit success/failure
+- **Uno**: Map to UI via `CommunityToolkit.Mvvm` — `AsyncRelayCommand` handles `Result<T>`
+- **Benefit**: No try/catch for business logic; API/UI maps `ErrorType` → HTTP status / toast / dialog
+
+#### 2. **Domain Exceptions with HTTP Mapping** (Domain/Exceptions/DomainExceptions.cs:1-86)
+```csharp
+public class EntityNotFoundException : DomainException { ... }      // → 404
+public class DuplicateEntityException : DomainException { ... }     // → 409
+public class ConcurrencyConflictException : DomainException { ... } // → 409
+```
+- **Adopt**: Define domain-specific exceptions in Core; map in global handler
+- **Uno**: Use for backend API (Phase 5); client catches `ApiError` with status + message
+
+#### 3. **BaseEntity with Auditing + Optimistic Concurrency** (Domain/Common/BaseEntity.cs:1-39)
+```csharp
+public abstract class BaseEntity
+{
+    public int Id { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime? UpdatedAt { get; set; }
+    public string? CreatedBy { get; set; }
+    public string? UpdatedBy { get; set; }
+    public bool IsDeleted { get; set; } = false;        // Soft delete
+    public DateTime? DeletedAt { get; set; }
+    public string? DeletedBy { get; set; }
+    public Guid ConcurrencyToken { get; set; } = Guid.NewGuid(); // Optimistic locking
+}
+```
+- **Adopt**: All SQLite entities inherit this — enables audit trail, soft delete, concurrency safety
+- **Uno**: Implement in `Course`, `RegistrationDraft`, `UserPreferences` entities
+
+#### 4. **Generic Repository + Composable Queries** (Infrastructure/Repositories/GenericRepository.cs:1-165)
+```csharp
+public async Task<IReadOnlyList<T>> ListAsync(
+    Expression<Func<T, bool>>? predicate = null,
+    Func<IQueryable<T>, IQueryable<T>>? include = null,
+    Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+    int? take = null,
+    bool asNoTracking = true)
+```
+- **Adopt**: Single repository base; all filtering/ordering/paging executes **in SQL**
+- **Uno**: Wrap `Microsoft.Data.Sqlite` / `sqlite-net` with same interface for cross-platform
+
+#### 5. **Unit of Work with Execution Strategy** (Infrastructure/Repositories/UnitOfWork.cs:1-84)
+```csharp
+public async Task<TResult> ExecuteInTransactionAsync<TResult>(
+    Func<CancellationToken, Task<TResult>> operation)
+{
+    var strategy = _dbContext.Database.CreateExecutionStrategy();
+    return await strategy.ExecuteAsync(async () => {
+        await using var tx = await _dbContext.Database.BeginTransactionAsync();
+        var result = await operation(ct);
+        await tx.CommitAsync();
+        return result;
+    });
+}
+```
+- **Adopt**: All multi-entity writes go through `ExecuteInTransactionAsync`
+- **Handles**: SQLite retry on `SQLITE_BUSY`, deadlocks, transient failures
+
+#### 6. **Global Exception Handler + Structured Logging** (API/Infrastructure/ErrorHandling/GlobalExceptionHandler.cs:1-97)
+```csharp
+// Maps DomainException → HTTP status, logs with context
+_logger.LogWarning(ex, "Handled {ExceptionType} for {Method} {Path}: {Message}.");
+```
+- **Adopt**: Centralized error handling; **never leak stack traces** to client
+- **Uno**: Implement in backend API; client uses typed `ApiError` with status + message array
+
+#### 7. **Idempotency Middleware** (API/Infrastructure/IdempotencyMiddleware.cs:1-267)
+- **Purpose**: Safe retries for POST/PUT/PATCH/DELETE via `Idempotency-Key` header
+- **Store**: EF Core table with lock, request hash (SHA-256), replay logic
+- **Adopt**: **Critical for registration submit** — prevents duplicate submissions on retry
+- **Uno**: Client generates UUID per form submit; includes header on mutating calls
+
+#### 8. **ApiControllerBase — Result → HTTP Mapping** (API/Infrastructure/ApiControllerBase.cs:1-54)
+```csharp
+protected ActionResult<ApiResponse<T>> HandleResult<T>(Result<T> result)
+    => result.IsSuccess ? Ok(ApiResponse<T>.Success(result.Value!, result.Message))
+                        : ToErrorResult<T>(result);
+```
+- **Adopt**: Controllers never contain `if/else` for success/failure
+- **Uno**: Not directly applicable (no controllers), but ViewModel commands follow same pattern
+
+#### 9. **Uniform ApiResponse<T> Envelope** (Domain/DTOs/CommonDto.cs:1-43)
+```json
+{ "isSuccess": true, "message": "...", "data": { ... }, "errors": [] }
+```
+- **Adopt**: All API responses use this envelope — client always checks `isSuccess`
+- **Uno**: Backend returns this; client deserializes to `ApiResponse<T>`
+
+#### 10. **Layered DI via Extension Methods** (Application/Extensions/ServiceCollectionExtensions.cs + Infrastructure/Extensions/ServiceCollectionExtensions.cs)
+```csharp
+// In Program.cs — clean composition root
+builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddApplicationServices();
+builder.Services.AddApiServices(builder.Configuration, builder.Environment);
+```
+- **Adopt**: Each layer exposes `Add{Layer}Services()`; Platform heads call in order
+- **Uno**: `CollegeAdmission.Core` → `AddCoreServices()`; Platform heads add platform-specific impls
+
+#### 11. **Database Seeding with Strong Defaults** (Infrastructure/Extensions/ServiceCollectionExtensions.cs:67-139)
+```csharp
+// Generates cryptographically strong password if not configured
+// Logs it ONCE at Warning level — no well-known defaults ship
+```
+- **Adopt**: Seed admin user on first run; require `SeedData:AdminPassword` in config for reproducibility
+
+#### 12. **Typed Configuration with Validation** (Domain/Configuration/*.cs)
+```csharp
+public class JwtOptions { public string Issuer { get; set; } ... }
+// Bound in DI: services.Configure<JwtOptions>(config.GetSection("Jwt"));
+// Validated at startup
+```
+- **Adopt**: Strongly-typed options per feature; validate on startup
+
+---
+
+### 🔐 Security Patterns
+
+| Pattern | InventoryManagement | Uno Adaptation |
+|---------|---------------------|----------------|
+| **Password Hashing** | `IdentityPasswordHasher` (PBKDF2 via ASP.NET Core Identity) | Use `Microsoft.AspNetCore.Cryptography.KeyDerivation` or `BCrypt.Net` |
+| **JWT Tokens** | Access (short) + Refresh (long, stored as hash) + Rotation on use | Backend API only; Uno client stores tokens securely (Keychain/Keystore/DPAPI) |
+| **CORS** | Configuration-driven policy per environment | Backend concern |
+| **Rate Limiting** | `app.UseRateLimiter()` with policies | Backend concern |
+| **Certificate Pinning** | `HttpClientHandler.ServerCertificateCustomValidationCallback` | **Critical for Uno** — implement in `INetworkService` per platform |
+| **Cleartext Blocked** | `network_security_config.xml` with `cleartextTrafficPermitted="false"` | Android `NetworkSecurityConfig`; iOS `NSAppTransportSecurity`; Win `HttpClient` default |
+| **Biometric Auth** | Not implemented (planned) | **Adopt**: Windows Hello / Touch ID / Face ID / Android BiometricPrompt for sensitive ops |
+
+---
+
+### 📱 Client-Side Patterns (Next.js → Uno Platform)
+
+#### Typed API Client with Token Refresh (client/src/lib/api.ts:1-335)
+```typescript
+// Auto-refresh on 401, single-flight refresh, abort on timeout
+async function request<T>(method, path, options) {
+  const res = await fetch(...);
+  if (res.status === 401 && !_retry && refreshToken) {
+    const refreshed = await tryRefresh();
+    if (refreshed) return request(method, path, { ...options, _retry: true });
+  }
+}
+```
+- **Adopt in Uno**: `HttpClient` wrapper with `DelegatingHandler` for auth + refresh + timeout
+- **Idempotency**: Client generates `Guid.NewGuid().ToString("N")` per mutating request
+
+#### Reusable UI Component Library (client/src/components/ui/*.tsx)
+- **Button**, **Card**, **Modal**, **Table**, **Input**, **Select**, **Pagination**, **Skeleton**, **Toast**
+- **Adapt**: Build Uno `UserControl` library with Material theme — `Button`, `Card`, `ContentDialog`, `DataGrid`, `TextBox`, `ComboBox`, `ProgressRing`, `Snackbar`
+
+#### Theme System (client/tailwind.config.ts + CSS variables)
+- **Dark/Light** via CSS custom properties + `class="dark"` on `<html>`
+- **Adapt**: Uno `ThemeService` + `ResourceDictionary` merging (already in plan Phase 1)
+
+---
+
+### 🧪 Testing Strategy (from tests/ folder)
+
+| Layer | Framework | Pattern |
+|-------|-----------|---------|
+| **Domain** | xUnit | Pure unit tests — no mocks needed (pure logic) |
+| **Application** | xUnit + Moq | Mock `IUnitOfWork`, `IRepository` — test orchestration |
+| **Infrastructure** | xUnit + EF Core InMemory / SQLite | `SqliteInMemoryFixture` — real EF Core against in-memory DB |
+| **API** | xUnit + WebApplicationFactory | Integration tests with `HttpClient` against TestServer |
+| **Client** | Vitest + React Testing Library | Component tests, API mocking via MSW |
+
+**Adopt for Uno**:
+- `CollegeAdmission.Core.Tests` — xUnit + Moq (ViewModels, Services, Result logic)
+- `CollegeAdmission.UI.Tests` — Uno Headless / Avalonia.Headless (XAML rendering, bindings, navigation)
+- `CollegeAdmission.Integration.Tests` — Playwright (WASM) + Appium (Mobile/Desktop)
+
+---
+
+### ⚡ Performance & Design Patterns
+
+| Pattern | Description | Uno Application |
+|---------|-------------|-----------------|
+| **AsNoTracking Reads** | All queries default `AsNoTracking()` — no change tracking overhead | All `ListAsync`/`GetPagedAsync` in repositories |
+| **Server-Side Filtering** | Predicates translate to SQL — no in-memory `Where` | `SearchInventoriesAsync` builds single `Where` expression |
+| **PagedList Record Struct** | Lightweight `readonly record struct PagedList<T>(Items, TotalCount)` | Use for all paginated queries |
+| **Request Timeout** | 30s client-side `AbortController` | `HttpClient.Timeout` + `CancellationToken` per request |
+| **Response Caching** | Idempotency store caches responses ≤ 1MB for replay | Same for registration submit |
+| **Background Services** | `IdempotencyCleanupService` — hosted service purges expired keys | `BackgroundService` for offline queue sync, PDF preload |
+| **Structured Logging** | Serilog + `LogContext` + `Enrich.FromLogContext()` | Serilog in Uno (works on all platforms) |
+
+---
+
+### 🚫 Anti-Patterns to Avoid (Observed in Legacy Android App, Fixed in InventoryManagement)
+
+| Anti-Pattern | Legacy App | InventoryManagement Fix | Uno Rule |
+|--------------|------------|-------------------------|----------|
+| **Exceptions for Control Flow** | Try/catch everywhere | `Result<T>` + Domain exceptions only for truly unexpected | Never throw for validation/not found/conflict |
+| **Anemic Domain Model** | Entities = DTOs with no behavior | Rich entities with invariants (e.g., `AvailableQuantity <= Quantity`) | Encapsulate business rules in Domain |
+| **Hardcoded Connection Strings** | `ws://192.168.2.5:9999` | Config-driven, validated at startup | `IConfiguration` + `Options<T>` validation |
+| **No Idempotency** | Duplicate submissions on retry | Middleware + DB store with locks | **Mandatory** for registration submit |
+| **Leaking Stack Traces** | `ex.ToString()` to client | Global handler returns generic message for 5xx | Never expose internals |
+| **Blocking Calls** | `.Result`, `.Wait()` | `async`/`await` + `ConfigureAwait(false)` throughout | **Zero blocking** in ViewModels/services |
+| **God Classes** | `MainActivity` = 2000+ lines | Thin controllers, fat services, pure domain | Single Responsibility per class |
+| **Missing Permissions** | No `INTERNET` permission | `AndroidManifest.xml` + runtime requests | Declare all in platform manifests |
+| **No Concurrency Control** | Last write wins | `ConcurrencyToken` (Guid) + `DbUpdateConcurrencyException` → 409 | Implement on all mutable entities |
+| **Magic Strings/Numbers** | Scattered constants | `BusinessConstants`, `AuthConstants` classes | Centralize in `Constants` folder |
+
+---
+
+### 📦 Naming Conventions (from InventoryManagement)
+
+| Element | Convention | Example |
+|---------|------------|---------|
+| **Projects** | `{Solution}.{Layer}` | `CollegeAdmission.Core`, `CollegeAdmission.UI`, `CollegeAdmission.Platforms.Android` |
+| **Namespaces** | Match folder structure | `CollegeAdmission.Core.Services`, `CollegeAdmission.UI.Views` |
+| **Interfaces** | `I` prefix + Service/Repository name | `ICourseService`, `IInventoryRepository`, `IUnitOfWork` |
+| **Implementations** | Interface name without `I` | `CourseService`, `SqliteCourseRepository`, `UnitOfWork` |
+| **DTOs** | `{Entity}{Operation}Dto` | `CreateCourseDto`, `UpdateRegistrationDto`, `CourseDetailDto` |
+| **Enums** | PascalCase, singular | `InventoryStatus`, `AssignmentStatus`, `ThemeMode` |
+| **Exceptions** | `{Scenario}Exception` | `EntityNotFoundException`, `ConcurrencyConflictException` |
+| **Result Methods** | `Success`, `Failure`, `NotFound`, `Conflict`, `Validation`, `Unauthorized`, `Forbidden` | `Result<T>.Success(value)`, `Result.NotFound(msg)` |
+| **Async Methods** | `Async` suffix | `GetCourseAsync`, `CreateRegistrationAsync` |
+| **Cancellation** | `CancellationToken cancellationToken = default` | Last parameter, optional |
+| **Configuration Classes** | `{Feature}Options` | `JwtOptions`, `CorsOptions`, `IdempotencyOptions` |
+| **Constants Classes** | `{Domain}Constants` | `BusinessConstants`, `AuthConstants`, `PaginationConstants` |
+| **ViewModels** | `{View}ViewModel` | `CoursesViewModel`, `RegistrationViewModel` |
+| **Views/Pages** | `{View}Page` (XAML) + `{View}Page.xaml.cs` | `CoursesPage.xaml`, `RegistrationPage.xaml` |
+| **Platform Services** | `{Platform}{Feature}Service` | `AndroidSqliteProvider`, `IosThemeIntegration` |
+
+---
+
+### 📁 Suggested Folder Structure Updates (Reflecting InventoryManagement)
+
+```text
+CollegeAdmission.Core/                    # net10.0 — Domain + Application merged
+├── Common/
+│   ├── Result.cs                         # Result<T> + ResultErrorType
+│   ├── BaseEntity.cs                     # Auditing + ConcurrencyToken
+│   └── PagedList.cs                      # readonly record struct
+├── Configuration/
+│   ├── JwtOptions.cs
+│   ├── CorsOptions.cs
+│   └── IdempotencyOptions.cs
+├── Constants/
+│   ├── BusinessConstants.cs              # MaxPageSize, LowStockThreshold, etc.
+│   ├── AuthConstants.cs                  # Claims, Policies, Roles
+│   └── ValidationConstants.cs
+├── DTOs/
+│   ├── CourseDto.cs
+│   ├── RegistrationDto.cs
+│   ├── CommonDto.cs                      # ApiResponse<T>, PagedResult<T>
+│   └── SearchDtos.cs
+├── Entities/
+│   ├── Course.cs
+│   ├── RegistrationDraft.cs
+│   └── UserPreferences.cs
+├── Enums/
+│   ├── CourseDegree.cs
+│   ├── RegistrationStatus.cs
+│   └── ThemeMode.cs
+├── Exceptions/
+│   ├── DomainException.cs
+│   ├── EntityNotFoundException.cs
+│   ├── DuplicateEntityException.cs
+│   ├── ConcurrencyConflictException.cs
+│   └── ValidationDomainException.cs
+├── Interfaces/
+│   ├── ICourseService.cs
+│   ├── IRegistrationService.cs
+│   ├── IPdfService.cs
+│   ├── ISqliteService.cs
+│   ├── INetworkService.cs
+│   ├── IAiService.cs
+│   ├── IThemeService.cs
+│   └── INavigationService.cs
+├── Security/
+│   ├── IPasswordHasher.cs
+│   ├── ITokenService.cs
+│   ├── IJwtSigningKeyProvider.cs
+│   ├── ISecretClient.cs
+│   └── IDateTimeProvider.cs
+├── Services/                             # Application services (use cases)
+│   ├── CourseService.cs
+│   ├── RegistrationService.cs
+│   └── PdfService.cs
+├── Mapping/
+│   └── MappingExtensions.cs              # Entity ↔ DTO extension methods
+├── Infrastructure/
+│   ├── ServiceCollectionExtensions.cs    # AddCoreServices()
+│   └── ResultExtensions.cs               # Result → UI helpers
+└── PlatformAbstractions/
+    ├── ISqliteProvider.cs                # Platform-specific DB path/connection
+    ├── ISystemThemeListener.cs
+    ├── IFilePicker.cs
+    └── IPermissionsService.cs
+
+CollegeAdmission.Core.Infrastructure/     # net10.0 — EF Core / sqlite-net impls
+├── Data/
+│   ├── AppDbContext.cs
+│   ├── Configurations/
+│   └── Migrations/
+├── Repositories/
+│   ├── GenericRepository.cs
+│   ├── CourseRepository.cs
+│   ├── RegistrationRepository.cs
+│   └── UnitOfWork.cs
+├── Security/
+│   ├── IdentityPasswordHasher.cs
+│   ├── TokenService.cs
+│   └── JwtSigningKeyProvider.cs
+├── Idempotency/
+│   ├── EfIdempotencyStore.cs
+│   └── IdempotencyCleanupService.cs
+└── Extensions/
+    └── ServiceCollectionExtensions.cs    # AddInfrastructureServices()
+
+CollegeAdmission.UI/                      # Uno.Sdk single project
+├── Views/                                # Pages + Dialogs
+├── ViewModels/                           # MVVM with CommunityToolkit.Mvvm
+├── Converters/                           # IValueConverter implementations
+├── Behaviors/                            # Attached behaviors (AutoPlayLottie, Focus)
+├── Resources/
+│   ├── Themes/                           # MaterialLight/Dark, ThemeResources
+│   ├── Styles/                           # Common, Animation, Lottie
+│   └── Assets/                           # Lottie, Images, Fonts
+└── Services/                             # UI-specific (DialogService, ToastService)
+
+CollegeAdmission.Platforms.*/             # Per-platform heads
+├── Program.cs                            # Entry point + Host builder
+├── PlatformSpecific/
+│   ├── {Platform}SqliteProvider.cs
+│   ├── {Platform}ThemeIntegration.cs
+│   ├── {Platform}FilePicker.cs
+│   ├── {Platform}Permissions.cs
+│   └── {Platform}NetworkConfig.cs        # Cert pinning, TLS config
+```
+
+---
+
+### 🛠️ Tooling & DevEx (from InventoryManagement)
+
+| Tool | Purpose | Uno Adoption |
+|------|---------|--------------|
+| **Serilog** | Structured logging with enrichment | `Serilog.Sinks.Console`, `Serilog.Sinks.File` — works on all Uno platforms |
+| **Scalar.AspNetCore** | OpenAPI/Swagger UI replacement | Backend only |
+| **MSBuild.Sdk.SqlProj** | SQL projects for schema | Not needed (EF Core migrations) |
+| **GitHub Actions Matrix** | Win/macOS/Linux + Android/iOS | Already in plan Phase 0 |
+| **Dependabot + CodeQL** | Security scanning | Enable in repo setup |
+| **EditorConfig** | Consistent formatting | Add `.editorconfig` at solution root |
+| **Directory.Build.props** | Centralized package versions | `Directory.Packages.props` for NuGet versions |
+
+---
+
+### 📋 Phase Updates Based on InventoryManagement Patterns
+
+| Phase | Additional Tasks from Reference Project |
+|-------|------------------------------------------|
+| **Phase 0** | Add `Directory.Packages.props`, `.editorconfig`, `Serilog` bootstrap |
+| **Phase 1** | Implement `ThemeService` with `ISystemThemeListener` per platform (already planned) |
+| **Phase 2** | Implement `BaseEntity`, `Result<T>`, Domain exceptions, Generic Repository, Unit of Work |
+| **Phase 3** | Add idempotency-ready `INetworkService` with `DelegatingHandler` for auth/timeout |
+| **Phase 4** | Registration service uses `ExecuteInTransactionAsync`; soft-delete drafts; concurrency token |
+| **Phase 5** | Backend API implements GlobalExceptionHandler, IdempotencyMiddleware, ApiControllerBase |
+| **Phase 6** | NativeAOT trimming config for reflection (JSON, DI, EF Core) — `[DynamicallyAccessedMembers]` |
+| **Phase 7** | AI services follow same DI pattern: `AddAiServices()` with platform implementations |
+
+---
+
+### ✅ Quick-Start Checklist for Team
+
+- [ ] Read `InventoryManagement.Domain/Common/Result.cs` — understand `Result<T>` pattern
+- [ ] Read `InventoryManagement.Domain/Common/BaseEntity.cs` — audit + concurrency fields
+- [ ] Read `InventoryManagement.API/Infrastructure/ApiControllerBase.cs` — Result → HTTP mapping
+- [ ] Read `InventoryManagement.API/Infrastructure/IdempotencyMiddleware.cs` — safe retry pattern
+- [ ] Read `InventoryManagement.Infrastructure/Repositories/UnitOfWork.cs` — transaction strategy
+- [ ] Review `client/src/lib/api.ts` — typed client with token refresh + idempotency
+- [ ] Clone repo locally; run `dotnet test` in `server/` and `pnpm test` in `client/`
+
+---
+
+*Appendix B derived from InventoryManagement reference project (Clean Architecture + DDD, .NET 10, SQLite, Next.js). Update as patterns evolve.*
