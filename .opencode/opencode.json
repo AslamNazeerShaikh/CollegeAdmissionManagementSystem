@@ -1,0 +1,68 @@
+{
+  "$schema": "https://opencode.ai/schema.json",
+  "version": "1.0.0",
+  "project": {
+    "name": "CollegeAdmissionManagementSystem",
+    "description": "A college admission management system built with Gradle",
+    "type": "gradle"
+  },
+  "agents": {
+    "default": "college-admission-assistant",
+    "list": [
+      "college-admission-assistant",
+      "code-reviewer",
+      "test-writer",
+      "documentation-writer",
+      "gradle-expert"
+    ]
+  },
+  "skills": {
+    "enabled": [
+      "gradle-build",
+      "java-development",
+      "kotlin-development",
+      "database-migration",
+      "api-design",
+      "testing-strategy"
+    ]
+  },
+  "commands": {
+    "custom": [
+      "build",
+      "test",
+      "lint",
+      "format",
+      "run",
+      "clean"
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "read",
+      "write",
+      "edit",
+      "bash",
+      "glob",
+      "grep",
+      "task"
+    ],
+    "deny": [
+      "bash:rm -rf *",
+      "bash:sudo *",
+      "bash:chmod 777 *"
+    ]
+  },
+  "lsp": {
+    "enabled": true,
+    "servers": {
+      "gradle": {
+        "command": "gradle-language-server",
+        "args": []
+      },
+      "kotlin": {
+        "command": "kotlin-language-server",
+        "args": []
+      }
+    }
+  }
+}
