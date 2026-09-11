@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avalonia Migration Plan</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#F2F5F8;
+    --surface:#FFFFFF;
+    --surface-2:#E8EDF3;
+    --surface-3:#EEF2F6;
+    --ink:#131F2B;
+    --ink-soft:#4B5C6E;
+    --ink-faint:#7D8CA0;
+    --border:#D6DFE8;
+    --accent:#1D4E8F;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#E4EDFB;
+    --accent-soft-border:#C3D8F5;
+
+    --crit:#B3261E;   --crit-bg:#FBE9E7;   --crit-border:#F0C4BE;
+    --high:#B4530A;   --high-bg:#FCEEE1;   --high-border:#F0CFA8;
+    --med:#8A6D00;    --med-bg:#FBF3D6;    --med-border:#EBDA9E;
+    --low:#2D6A8F;    --low-bg:#E6F1F7;    --low-border:#BEDCEA;
+    --info:#55606C;   --info-bg:#ECEFF2;   --info-border:#D4DAE1;
+    --dead:#7A2E8A;   --dead-bg:#F3E7F7;   --dead-border:#DFC3EA;
+
+    --font-sans:'IBM Plex Sans', system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --shadow: 0 1px 2px rgba(19,31,43,0.06), 0 4px 16px rgba(19,31,43,0.05);
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0A121C;
+      --surface:#111B29;
+      --surface-2:#182536;
+      --surface-3:#15202E;
+      --ink:#E8EEF5;
+      --ink-soft:#A9B9CC;
+      --ink-faint:#6E8098;
+      --border:#26374C;
+      --accent:#6FA8F0;
+      --accent-ink:#0A121C;
+      --accent-soft:#16283F;
+      --accent-soft-border:#274568;
+
+      --crit:#FF7A6B;   --crit-bg:#33170F;   --crit-border:#5C2620;
+      --high:#FFAE5E;   --high-bg:#332210;   --high-border:#5C3B18;
+      --med:#F0CD5A;    --med-bg:#302909;    --med-border:#574A16;
+      --low:#7FC1E8;    --low-bg:#0F2733;    --low-border:#1C4459;
+      --info:#B6C2CF;   --info-bg:#1B2530;   --info-border:#334355;
+      --dead:#D79BE6;   --dead-bg:#2A1830;   --dead-border:#48294F;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font-sans); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:var(--font-sans); font-weight:700; text-wrap:balance; color:var(--ink); line-height:1.2;}
+  code, .mono{font-family:var(--font-mono);}
+  a{color:var(--accent);}
+  p{max-width:70ch;}
+  .full p{max-width:none;}
+  img{max-width:100%;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px;}
+  .masthead{padding:56px 0 32px; border-bottom:1px solid var(--border); margin-bottom:8px;}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); background:var(--accent-soft); border:1px solid var(--accent-soft-border); padding:5px 10px; border-radius:20px;}
+  .masthead h1{font-size:clamp(28px,4vw,44px); margin:18px 0 10px; letter-spacing:-0.01em;}
+  .masthead .sub{color:var(--ink-soft); font-size:17px; max-width:66ch; margin:0 0 22px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:10px 22px; font-size:13px; color:var(--ink-faint); font-family:var(--font-mono);}
+  .meta-row b{color:var(--ink-soft); font-weight:500;}
+
+  .stat-strip{display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin:28px 0 4px;}
+  .stat{background:var(--surface); padding:16px 14px;}
+  .stat .n{font-family:var(--font-mono); font-variant-numeric:tabular-nums; font-size:22px; font-weight:600; color:var(--accent); display:block;}
+  .stat .l{font-size:11.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.05em; margin-top:2px; display:block;}
+
+  .report-shell{display:grid; grid-template-columns:230px minmax(0,1fr); gap:52px; margin-top:40px; align-items:start;}
+  .toc-rail{position:sticky; top:28px;}
+  .toc-rail .toc-title{font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:10px; font-family:var(--font-mono);}
+  .toc-rail ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1px; border-left:2px solid var(--border);}
+  .toc-rail a{display:block; padding:6px 0 6px 14px; color:var(--ink-soft); text-decoration:none; font-size:13px; border-left:2px solid transparent; margin-left:-2px;}
+  .toc-rail a:hover{color:var(--ink);}
+  .toc-rail a.active{color:var(--accent); border-left-color:var(--accent); font-weight:600;}
+  .toc-num{font-family:var(--font-mono); color:var(--ink-faint); margin-right:6px; font-size:12px;}
+
+  main{min-width:0;}
+  .section{padding:44px 0; border-bottom:1px solid var(--border); scroll-margin-top:24px;}
+  .section:last-child{border-bottom:none;}
+  .section-head{display:flex; align-items:baseline; gap:16px; margin-bottom:6px;}
+  .section-head .num{font-family:var(--font-mono); font-size:15px; color:var(--ink-faint); font-weight:500;}
+  .section-head h2{font-size:26px; margin:0;}
+  .lede{color:var(--ink-soft); font-size:15.5px; margin:10px 0 26px;}
+
+  .callout{background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:8px; padding:16px 18px; margin:18px 0; font-size:14.5px; color:var(--ink-soft);}
+  .callout b{color:var(--ink);}
+  .callout.warn{border-left-color:var(--crit);}
+
+  .chip{display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono); font-size:10.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:3px 8px; border-radius:5px; border:1px solid; white-space:nowrap;}
+  .chip.crit{color:var(--crit); background:var(--crit-bg); border-color:var(--crit-border);}
+  .chip.high{color:var(--high); background:var(--high-bg); border-color:var(--high-border);}
+  .chip.med{color:var(--med); background:var(--med-bg); border-color:var(--med-border);}
+  .chip.low{color:var(--low); background:var(--low-bg); border-color:var(--low-border);}
+  .chip.info{color:var(--info); background:var(--info-bg); border-color:var(--info-border);}
+  .chip.dead{color:var(--dead); background:var(--dead-bg); border-color:var(--dead-border);}
+
+  .loc{font-family:var(--font-mono); font-size:12.5px; background:var(--surface-3); border:1px solid var(--border); padding:2px 7px; border-radius:5px; color:var(--ink-soft);}
+
+  .finding{background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin-bottom:14px; box-shadow:var(--shadow);}
+  .finding-head{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; flex-wrap:wrap;}
+  .finding-head h4{font-size:15.5px; margin:0;}
+  .finding p{margin:6px 0; font-size:14.5px; color:var(--ink-soft);}
+  .finding p b{color:var(--ink);}
+
+  pre.code{background:var(--surface-3); border:1px solid var(--border); border-radius:8px; padding:14px 16px; overflow-x:auto; font-family:var(--font-mono); font-size:12.5px; line-height:1.65; color:var(--ink-soft); margin:10px 0;}
+  pre.code .c{color:var(--ink-faint); font-style:italic;}
+
+  .table-wrap{overflow-x:auto; border:1px solid var(--border); border-radius:10px; margin:16px 0; background:var(--surface);}
+  table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:640px;}
+  thead th{text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); background:var(--surface-2); padding:10px 14px; border-bottom:1px solid var(--border); white-space:nowrap;}
+  td{padding:10px 14px; border-bottom:1px solid var(--border); vertical-align:top; color:var(--ink-soft);}
+  tbody tr:last-child td{border-bottom:none;}
+  td b, td.strong{color:var(--ink); font-weight:600;}
+  td .mono, table .mono{font-family:var(--font-mono); font-variant-numeric:tabular-nums; font-size:12.5px;}
+
+  .mermaid-wrap{background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; margin:18px 0; overflow-x:auto;}
+  .mermaid-wrap .mermaid{display:flex; justify-content:center;}
+  .fig-caption{font-size:13px; color:var(--ink-faint); margin-top:10px; text-align:center;}
+
+  .swatch-row{display:flex; gap:14px; flex-wrap:wrap; margin:16px 0;}
+  .swatch{display:flex; flex-direction:column; align-items:center; gap:6px;}
+  .swatch .sq{width:52px; height:52px; border-radius:10px; border:1px solid rgba(0,0,0,0.1); box-shadow:var(--shadow);}
+  .swatch span{font-family:var(--font-mono); font-size:11px; color:var(--ink-faint);}
+
+  .card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin:18px 0;}
+  .mini-card{background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 18px;}
+  .mini-card h4{font-size:14.5px; margin:0 0 6px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  .mini-card p{font-size:13.5px; color:var(--ink-soft); margin:0;}
+
+  .platform-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin:18px 0;}
+  .platform-card{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; box-shadow:var(--shadow);}
+  .platform-card .flag{font-size:26px; line-height:1;}
+  .platform-card h3{font-size:16px; margin:10px 0 2px;}
+  .platform-card .rid{font-family:var(--font-mono); font-size:12px; color:var(--accent); margin-bottom:12px; display:block;}
+  .platform-card dl{margin:0; font-size:13px;}
+  .platform-card dt{color:var(--ink-faint); text-transform:uppercase; font-size:10.5px; letter-spacing:.04em; margin-top:10px;}
+  .platform-card dd{margin:2px 0 0; color:var(--ink-soft);}
+
+  .phase{display:grid; grid-template-columns:44px 1fr auto; gap:16px; align-items:start; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 20px; margin-bottom:12px;}
+  .phase .pn{font-family:var(--font-mono); font-size:20px; font-weight:600; background:var(--accent-soft); border-radius:8px; height:36px; width:36px; display:flex; align-items:center; justify-content:center; color:var(--accent);}
+  .phase h4{margin:0 0 4px; font-size:15px;}
+  .phase p{margin:0; font-size:13.5px; color:var(--ink-soft);}
+  .phase .tags{display:flex; flex-direction:column; gap:6px; align-items:flex-end;}
+  .risk{font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:5px; white-space:nowrap;}
+  .risk.r-low{color:var(--low); background:var(--low-bg);}
+  .risk.r-med{color:var(--med); background:var(--med-bg);}
+  .risk.r-high{color:var(--high); background:var(--high-bg);}
+  .unchanged{font-size:11px; color:var(--ink-faint); white-space:nowrap;}
+
+  .decision{background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--dead); border-radius:8px; padding:16px 18px; margin-bottom:12px;}
+  .decision h4{margin:0 0 6px; font-size:14.5px;}
+  .decision p{margin:0 0 4px; font-size:13.5px; color:var(--ink-soft);}
+
+  .src-list{columns:2; column-gap:32px; font-size:13px; padding:0; margin:0; list-style:none;}
+  .src-list li{margin-bottom:8px; break-inside:avoid;}
+  .src-list a{text-decoration:none;}
+  .src-list a:hover{text-decoration:underline;}
+
+  .offline-note{background:var(--accent-soft); border:1px solid var(--accent-soft-border); color:var(--ink-soft); font-size:12.5px; padding:10px 16px; text-align:center;}
+
+  footer{padding:40px 0 0; color:var(--ink-faint); font-size:12.5px; text-align:center;}
+
+  @media (max-width:900px){
+    .report-shell{grid-template-columns:1fr; gap:20px;}
+    .toc-rail{position:static; border-bottom:1px solid var(--border); padding-bottom:14px;}
+    .toc-rail ul{flex-direction:row; overflow-x:auto; border-left:none; gap:6px; padding-bottom:4px;}
+    .toc-rail a{border-left:none; border-bottom:2px solid transparent; padding:4px 10px; background:var(--surface-2); border-radius:20px; white-space:nowrap;}
+    .toc-rail a.active{border-bottom-color:transparent; background:var(--accent-soft);}
+    .stat-strip{grid-template-columns:repeat(3,1fr);}
+    .phase{grid-template-columns:36px 1fr;}
+    .phase .tags{grid-column:1 / -1; flex-direction:row; justify-content:flex-start;}
+    .src-list{columns:1;}
+  }
+  @media (max-width:560px){
+    .stat-strip{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+
+<div class="offline-note">Standalone local copy &middot; diagrams and fonts load from a CDN the first time you open it, so an internet connection is needed once per session.</div>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <span class="eyebrow">Planning only &middot; greenfield rewrite, not a port</span>
+    <h1>College Admission Management System &mdash; Avalonia Migration Plan</h1>
+    <p class="sub">A feasibility plan for rebuilding this app from scratch on .NET 10 and Avalonia UI 12.1, as one shared codebase targeting Windows x64, macOS arm64, iOS arm64, and Android arm64 &mdash; reproducing the same look, feel, feature set, and logic documented in the companion <span class="loc">modernization-audit.html</span>.</p>
+    <div class="meta-row">
+      <span><b>Companion doc:</b> modernization-audit.html</span>
+      <span><b>Researched:</b> avaloniaui.net blogs, Avalonia docs, Microsoft Learn</span>
+      <span><b>Date:</b> 6 September 2026</span>
+      <span><b>Scope:</b> feasibility, toolchain, architecture, phased plan</span>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat"><span class="n">4</span><span class="l">Target platforms</span></div>
+      <div class="stat"><span class="n">1</span><span class="l">Shared codebase</span></div>
+      <div class="stat"><span class="n">.NET 10</span><span class="l">SDK 10.0.302, LTS to 2028</span></div>
+      <div class="stat"><span class="n">12.1.2</span><span class="l">Avalonia, verified on NuGet</span></div>
+      <div class="stat"><span class="n">2</span><span class="l">Store accounts required</span></div>
+      <div class="stat"><span class="n">0</span><span class="l">Existing C# code to reuse</span></div>
+    </div>
+  </div>
+
+  <div class="report-shell">
+    <nav class="toc-rail">
+      <div class="toc-title">Contents</div>
+      <ul id="toc">
+        <li><a href="#summary"><span class="toc-num">00</span>Executive summary</a></li>
+        <li><a href="#legend"><span class="toc-num">01</span>How to read this</a></li>
+        <li><a href="#paths"><span class="toc-num">02</span>Path A vs Path B</a></li>
+        <li><a href="#platforms"><span class="toc-num">03</span>Target platform matrix</a></li>
+        <li><a href="#system-map"><span class="toc-num">04</span>System map</a></li>
+        <li><a href="#parity"><span class="toc-num">05</span>Feature parity map</a></li>
+        <li><a href="#toolchain"><span class="toc-num">06</span>Toolchain &amp; packages</a></li>
+        <li><a href="#realities"><span class="toc-num">07</span>Platform realities</a></li>
+        <li><a href="#risks"><span class="toc-num">08</span>Migration risk register</a></li>
+        <li><a href="#architecture"><span class="toc-num">09</span>Target architecture</a></li>
+        <li><a href="#roadmap"><span class="toc-num">10</span>Phased roadmap</a></li>
+        <li><a href="#decisions"><span class="toc-num">11</span>Open decisions</a></li>
+        <li><a href="#sources"><span class="toc-num">12</span>Sources</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <section class="section" id="summary">
+        <div class="section-head"><span class="num">00</span><h2>Executive summary</h2></div>
+        <p class="lede">This is a different kind of project than the companion audit. That document modernized an existing Android app in place. This one plans a rewrite: the same six screens, the same navigation, the same Material look, rebuilt from zero in C# and XAML so one codebase can also run on Windows, macOS, and iOS &mdash; platforms the current Java app has never touched.</p>
+
+        <p>The timing is genuinely reasonable. Avalonia 12 (April 2026) explicitly targets <b>.NET 10</b> and <b>SkiaSharp 3.0</b>, and its release notes describe mobile being elevated to "first-class status," with Android startup time dropping from 1,960&nbsp;ms to 460&nbsp;ms under NativeAOT and idle CPU use falling 20x. Avalonia 12.1 (July 2026) followed with a native Wayland backend, mobile haptics/sound, and the framework's first Software Bill of Materials for supply-chain compliance. This is a framework investing seriously in the exact four platforms you named, on the exact .NET version you asked for.</p>
+
+        <div class="callout warn"><b>The honest framing:</b> nothing in this document is a migration of existing code &mdash; there is no C# in this repository today. Every screen, view model, and package choice below is a fresh build that has to reproduce what <span class="loc">modernization-audit.html</span> already catalogued: the same 12-course catalog, the same syllabus PDFs, the same registration form, the same Material colors pulled from <code>colors.xml</code>. Budget for a rewrite, not a port.</p></div>
+
+        <p>Two platform-specific realities shape the plan more than anything technical: iOS requires a Mac with Xcode to build and sign, full ahead-of-time compilation (Apple disallows JIT), and a $99/year Apple Developer account &mdash; and since macOS is also one of your four targets, that Mac and that account serve both platforms at once. Android, by contrast, lands almost exactly where the current app already sits: <span class="loc">net10.0-android</span> defaults to API 36 in .NET 10, which is precisely the API level Google Play now mandates &mdash; the same requirement the companion audit flagged for the existing app.</p>
+      </section>
+
+      <section class="section" id="legend">
+        <div class="section-head"><span class="num">01</span><h2>How to read this report</h2></div>
+        <p class="lede">Every consideration below carries a chip describing how much it should worry you, not a bug severity &mdash; there's no existing code to find bugs in yet.</p>
+        <div class="card-grid">
+          <div class="mini-card"><h4><span class="chip crit">Critical</span></h4><p>A hard constraint that shapes the whole plan &mdash; ignoring it isn't an option, only how you accommodate it.</p></div>
+          <div class="mini-card"><h4><span class="chip high">High</span></h4><p>A real cost or risk you should plan and budget for explicitly before committing.</p></div>
+          <div class="mini-card"><h4><span class="chip med">Medium</span></h4><p>Worth knowing about and watching, but manageable with normal engineering care.</p></div>
+          <div class="mini-card"><h4><span class="chip low">Low</span></h4><p>Minor, or fully mitigated by a straightforward choice covered in this document.</p></div>
+          <div class="mini-card"><h4><span class="chip dead">Immature</span></h4><p>Real and usable today, but younger and less battle-tested than the desktop-first parts of this ecosystem.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="paths">
+        <div class="section-head"><span class="num">02</span><h2>Path A vs Path B</h2></div>
+        <p class="lede">You now have two documented options. This one assumes you're pursuing Path B &mdash; here's the honest comparison that decision rests on.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Dimension</th><th>Path A &mdash; modernize in place</th><th>Path B &mdash; rewrite in .NET + Avalonia</th></tr></thead>
+            <tbody>
+              <tr><td class="strong">Platforms reached</td><td>Android only</td><td>Windows x64, macOS arm64, iOS arm64, Android arm64</td></tr>
+              <tr><td class="strong">Starting point</td><td>757 lines of working Java to refactor</td><td>Blank slate &mdash; zero existing C#</td></tr>
+              <tr><td class="strong">Tooling you already know</td><td>Android Studio, Gradle, Java/Kotlin</td><td>New: Avalonia, XAML, C#/.NET</td></tr>
+              <tr><td class="strong">Store accounts</td><td>Google Play ($25 one-time)</td><td>Google Play ($25 one-time) + Apple Developer ($99/year)</td></tr>
+              <tr><td class="strong">Extra hardware</td><td>None</td><td>A Mac, for the macOS and iOS builds</td></tr>
+              <tr><td class="strong">Relative effort</td><td>Smaller &mdash; 7 phases refactoring existing files</td><td>Larger &mdash; every screen is built new, same 7-phase shape</td></tr>
+              <tr><td class="strong">Where it lands you</td><td>One well-modernized Android app</td><td>One shared codebase, four native-feeling apps</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>If reaching Windows, Mac, and iPhone users is a real requirement, Path A can't get you there at all &mdash; Path B is the only option on the table. The rest of this document assumes that's the call, and plans it as carefully as the companion document planned Path A.</p>
+        <div class="callout">A third path now has its own document: <span class="loc">uno-platform-migration-plan.html</span> plans the same four platforms on <b>Uno Platform</b> instead of Avalonia. Its section 02 carries the full three-way comparison and a direct recommendation between the two.</div>
+      </section>
+
+      <section class="section" id="platforms">
+        <div class="section-head"><span class="num">03</span><h2>Target platform matrix</h2></div>
+        <p class="lede">What each of your four targets actually requires to build, sign, and ship &mdash; verified against current Apple and Google requirements, not assumed.</p>
+
+        <div class="platform-grid">
+          <div class="platform-card">
+            <div class="flag">🪟</div>
+            <h3>Windows</h3>
+            <span class="rid">win-x64</span>
+            <dl>
+              <dt>Build machine</dt><dd>Any Windows, macOS, or Linux dev box</dd>
+              <dt>Distribution</dt><dd>Plain <code>.exe</code>, MSIX package, or Microsoft Store</dd>
+              <dt>Signing</dt><dd>Optional; an unsigned <code>.exe</code> triggers a SmartScreen warning. A code-signing certificate (~$100&ndash;400/year) removes it.</dd>
+              <dt>Verdict</dt><dd><span class="chip low">Low friction</span></dd>
+            </dl>
+          </div>
+          <div class="platform-card">
+            <div class="flag">🍎</div>
+            <h3>macOS</h3>
+            <span class="rid">osx-arm64</span>
+            <dl>
+              <dt>Build machine</dt><dd>Must be a Mac</dd>
+              <dt>Distribution</dt><dd>Notarized <code>.app</code>/<code>.dmg</code>, or the Mac App Store</dd>
+              <dt>Signing</dt><dd>Distributing outside your own machine requires notarization, which requires a paid Apple Developer account &mdash; Gatekeeper blocks unnotarized apps since Catalina.</dd>
+              <dt>Verdict</dt><dd><span class="chip med">Medium &mdash; needs the account below</span></dd>
+            </dl>
+          </div>
+          <div class="platform-card">
+            <div class="flag">📱</div>
+            <h3>iOS</h3>
+            <span class="rid">ios-arm64</span>
+            <dl>
+              <dt>Build machine</dt><dd>Must be a Mac, with Xcode installed (Apple's rule, not Avalonia's)</dd>
+              <dt>Distribution</dt><dd>App Store or TestFlight; sideloading is limited and time-boxed without an enterprise account</dd>
+              <dt>Signing</dt><dd>Apple Developer Program, $99/year &mdash; the same account and the same Mac already needed for macOS above</dd>
+              <dt>Verdict</dt><dd><span class="chip high">High &mdash; the most involved target</span></dd>
+            </dl>
+          </div>
+          <div class="platform-card">
+            <div class="flag">🤖</div>
+            <h3>Android</h3>
+            <span class="rid">android-arm64 (arm64-v8a)</span>
+            <dl>
+              <dt>Build machine</dt><dd>Any dev box with the Android SDK and a JDK</dd>
+              <dt>Distribution</dt><dd>Google Play (AAB) or a direct APK</dd>
+              <dt>Signing</dt><dd>A keystore you generate yourself; Google Play registration is a $25 one-time fee</dd>
+              <dt>Verdict</dt><dd><span class="chip low">Low friction &mdash; closest to today's app</span></dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="callout"><b>Apple's SDK requirement moves every year.</b> As of this writing, App Store submissions must be built with Xcode 26 targeting the iOS 26 SDK. This isn't a one-time hurdle &mdash; it's a standing maintenance cost: the Mac, Xcode, and target SDK version all need to stay current for every future submission, for as long as this app ships on iOS.</div>
+      </section>
+
+      <section class="section" id="system-map">
+        <div class="section-head"><span class="num">04</span><h2>System map</h2></div>
+        <p class="lede">One shared project holding everything platform-agnostic, with a thin, mostly-boilerplate "head" project per platform &mdash; the structure Avalonia's own cross-platform template (<code>avalonia.xplat</code>) generates.</p>
+
+        <div class="mermaid-wrap">
+<pre class="mermaid">
+mindmap
+  root((Avalonia cross platform app))
+    Core project
+      Views
+      View models
+      Course model
+      Networking service
+      Material theme and colors
+    Windows head
+      win x64
+      MainWindow entry point
+    macOS head
+      osx arm64
+      Same executable as Windows head
+    iOS head
+      ios arm64
+      Xcode build required
+      Full ahead of time compilation
+    Android head
+      android arm64
+      Api thirty six default
+</pre>
+        </div>
+        <p class="fig-caption">Fig. 1 &mdash; everything reusable lives in one project; each platform head is mostly bootstrapping code.</p>
+
+        <p>The same visual identity documented in the companion audit carries over directly &mdash; Material.Avalonia (section 06) uses the same primary/secondary color concept as the Android Material Components this app already uses:</p>
+        <div class="swatch-row">
+          <div class="swatch"><div class="sq" style="background:#6200EE"></div><span>PrimaryColor<br>#6200EE</span></div>
+          <div class="swatch"><div class="sq" style="background:#03DAC5"></div><span>SecondaryColor<br>#03DAC5</span></div>
+          <div class="swatch"><div class="sq" style="background:#FF9800"></div><span>colorOrange<br>#FF9800</span></div>
+          <div class="swatch"><div class="sq" style="background:#F44336"></div><span>colorRed<br>#F44336</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="parity">
+        <div class="section-head"><span class="num">05</span><h2>Feature parity map</h2></div>
+        <p class="lede">Every screen and feature from the companion audit, mapped to how it gets rebuilt &mdash; and in several cases, the rebuild naturally fixes a smell the audit flagged, just by using Avalonia idioms instead of porting the old shape.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Today (Java/Android)</th><th>Rebuilt as (C#/Avalonia)</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">SplashScreen.java</td><td class="mono">Views/SplashView.axaml</td><td>YoYo fade-ins become native Avalonia <code>Animation</code>/<code>Transitions</code> &mdash; no animation package needed at all.</td></tr>
+              <tr><td class="mono">MainActivity.java</td><td class="mono">Views/MainView.axaml + MainViewModel.cs</td><td>Cards bind to commands instead of a manual <code>onClick</code> switch.</td></tr>
+              <tr><td class="mono">Courses.java (12-way switch)</td><td class="mono">Models/Course.cs + CoursesViewModel.cs</td><td>The audit's #1 code smell disappears by construction: courses become a list of <code>Course</code> records bound to an items control, not copy-pasted branches.</td></tr>
+              <tr><td class="mono">course_popup.xml + DialogPlus</td><td class="mono">Views/CoursePopup.axaml</td><td>Avalonia 12's built-in page/dialog navigation replaces the third-party dialog library outright.</td></tr>
+              <tr><td class="mono">PDFviewer.java + android-pdf-viewer</td><td class="mono">Views/PdfView.axaml + a PDFium-backed control</td><td>See section 06 &mdash; same "prefer the well-maintained low-level library over a small wrapper" judgment call as the Android plan.</td></tr>
+              <tr><td class="mono">Registration.java + raw WebSocket</td><td class="mono">Views/RegistrationView.axaml + INetworkService</td><td>The backend question is unchanged by the rewrite &mdash; see <a href="#decisions">Open decisions</a>. <code>ClientWebSocket</code> ships in the .NET base class library either way.</td></tr>
+              <tr><td class="mono">daimajia YoYo</td><td class="mono">Avalonia.Animation (built in)</td><td>Zero dependency, framework-native.</td></tr>
+              <tr><td class="mono">Lottie via com.airbnb.android</td><td class="mono">Avalonia.Labs.Lottie</td><td>Same JSON files play as-is; no re-export needed.</td></tr>
+              <tr><td class="mono">colors.xml (Material palette)</td><td class="mono">Material.Avalonia theme + the same hex values</td><td>Pixel-identical palette, different plumbing &mdash; exactly the constraint from the companion audit.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="toolchain">
+        <div class="section-head"><span class="num">06</span><h2>Toolchain &amp; package ledger</h2></div>
+        <p class="lede">Every package this rewrite would pull in, its current version, and why it's the recommended choice.</p>
+        <div class="callout">Versions below were checked directly against live NuGet listings filtered to <code>net10.0</code>, not recalled from release-blog text &mdash; see the three NuGet links added to section 12.</div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Component</th><th>Version</th><th>Status</th><th>Why</th></tr></thead>
+            <tbody>
+              <tr><td class="strong">.NET SDK</td><td class="mono">10.0.302</td><td><span class="chip info">LTS to Nov 2028</span></td><td>Current .NET LTS; what you asked to target</td></tr>
+              <tr><td class="strong">Avalonia</td><td class="mono">12.1.2</td><td><span class="chip info">Current, verified</span></td><td>Core, <code>Avalonia.Desktop</code>, and <code>Avalonia.Skia</code> all confirmed at 12.1.2 on NuGet; mobile elevated to first-class in v12</td></tr>
+              <tr><td class="strong">SkiaSharp</td><td class="mono">4.151.2</td><td><span class="chip info">Current, verified</span></td><td>Avalonia's rendering engine dependency. Avalonia 12 shipped built against the SkiaSharp 3.0 line; SkiaSharp has since moved forward independently &mdash; a normal transitive-dependency drift, not a mismatch to worry about</td></tr>
+              <tr><td class="strong">SkiaSharp.Skottie</td><td class="mono">4.151.2</td><td><span class="chip info">Current, verified</span></td><td>The actual Lottie-rendering engine underneath Avalonia.Labs.Lottie below</td></tr>
+              <tr><td class="strong">CommunityToolkit.Mvvm</td><td class="mono">latest stable</td><td><span class="chip low">Recommended</span></td><td>Official Microsoft MVVM toolkit, source-generator based &mdash; simpler than ReactiveUI for a 6-screen app</td></tr>
+              <tr><td class="strong">Material.Avalonia</td><td class="mono">3.15.1</td><td><span class="chip low">Mature</span></td><td>Community Material Design theme; cards, dialogs, FABs, and a full palette system matching the app's existing look</td></tr>
+              <tr><td class="strong">Avalonia.Labs.Lottie</td><td class="mono">12.0.2</td><td><span class="chip low">Incubating, AvaloniaUI-org</span></td><td>Corrected from an earlier pass &mdash; confirmed 12.0.2 (23 Apr 2026) directly on NuGet. Lives under the official AvaloniaUI GitHub org's "Labs" incubation space; plays the existing Lottie JSON files unchanged</td></tr>
+              <tr><td class="strong">PDF rendering</td><td class="mono">see below</td><td><span class="chip dead">Immature</span></td><td>No option here is as battle-tested as the rest of this table &mdash; treat as the one area needing a spike before committing</td></tr>
+              <tr><td class="strong">Networking</td><td class="mono">System.Net.WebSockets</td><td><span class="chip low">Base class library</span></td><td>Zero extra dependency for either the current WebSocket shape or a future REST client</td></tr>
+              <tr><td class="strong">Testing</td><td class="mono">xUnit + Avalonia.Headless</td><td><span class="chip low">Recommended</span></td><td>Avalonia ships a headless test mode built for exactly this; the companion audit flagged zero real tests today &mdash; this is a straightforward upgrade</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card-grid">
+          <div class="mini-card"><h4>PDF rendering &mdash; three real options</h4><p><b>AvaloniaPdfViewer</b> (PDFium + SkiaSharp) is the most direct fit but is a small, pre-release personal project (<code>0.0.2-pre</code> on NuGet) &mdash; the same maturity caution the companion audit raised about the current Android PDF library. <b>PdfForge.Avalonia</b> explicitly doesn't support Windows or macOS, ruling it out for this platform set. <b>Avalonia Pro</b> (the commercial control pack) ships a "Document viewer" control, which sidesteps this problem entirely if a paid license fits the budget. Recommended default: build a thin custom control over a well-maintained low-level PDFium wrapper, same judgment as recommending a native <code>PdfRenderer</code> wrapper on the Android side.</p></div>
+          <div class="mini-card"><h4>Android and iOS aren't separate NuGet packages</h4><p>A direct NuGet search for <code>Avalonia.Android</code> / <code>Avalonia.iOS</code> turns up nothing by design &mdash; mobile support arrives through the installed <b>.NET workload</b> (<code>dotnet workload install android ios</code>) plus the platform's own <code>TargetFramework</code> moniker (<code>net10.0-android</code>, <code>net10.0-ios</code>), the same mechanism .NET MAUI uses. The platform head project just references the ordinary <code>Avalonia</code> package; the workload supplies the rest.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="realities">
+        <div class="section-head"><span class="num">07</span><h2>Platform-specific realities</h2></div>
+        <p class="lede">What actually changes about how you work, once the target list includes Apple platforms.</p>
+
+        <div class="finding">
+          <div class="finding-head"><h4>iOS mandates full ahead-of-time compilation</h4><span class="chip crit">Critical</span></div>
+          <p>Apple disallows JIT compilation for third-party apps on iOS, which has always meant .NET's iOS target compiles fully ahead-of-time rather than JITing like a normal .NET app. This isn't an Avalonia limitation &mdash; it's an iOS platform rule that constrains any reflection-heavy code (some serializers, some DI containers) and needs to be kept in mind when choosing packages for the shared core project.</p>
+        </div>
+
+        <div class="finding">
+          <div class="finding-head"><h4>Mobile is Avalonia's youngest target</h4><span class="chip dead">Immature</span></div>
+          <p>Mobile uses the same rendering engine and tooling as desktop, but the third-party control ecosystem is shallower on phones than on desktop. Concretely, this shows up exactly where you'd expect: the PDF viewer situation above is the one place in this plan without a clearly mature, widely-used answer.</p>
+        </div>
+
+        <div class="finding">
+          <div class="finding-head"><h4>Wayland is real now, but opt-in</h4><span class="chip info">Info</span></div>
+          <p>Avalonia 12.1 graduated native Wayland support out of preview, but it's not yet the default Linux backend &mdash; it requires an explicit <code>UseWayland()</code> call. Not on your platform list today, but worth knowing Linux desktop support exists essentially for free if it's ever wanted later.</p>
+        </div>
+
+        <div class="finding">
+          <div class="finding-head"><h4>Apple's yearly SDK treadmill</h4><span class="chip high">High</span></div>
+          <p>App Store submissions currently require Xcode 26 and the iOS 26 SDK. Historically Apple raises this bar roughly once a year. Shipping on iOS means budgeting time, not just once at launch, for keeping the build Mac's Xcode and SDK current indefinitely.</p>
+        </div>
+
+        <div class="finding">
+          <div class="finding-head"><h4>Android lands almost exactly where you are today</h4><span class="chip low">Low</span></div>
+          <p><code>net10.0-android</code> defaults to targeting API 36 &mdash; the same Android 16 baseline the companion audit already identified as Google Play's current mandatory requirement for the existing Java app. No extra work here beyond what Path A already needed.</p>
+        </div>
+      </section>
+
+      <section class="section" id="risks">
+        <div class="section-head"><span class="num">08</span><h2>Migration risk register</h2></div>
+        <p class="lede">The risks specific to choosing this path over Path A, ranked by how much they should influence planning.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr></thead>
+            <tbody>
+              <tr><td class="strong">This is a full rewrite, not a port</td><td><span class="chip crit">Critical</span></td><td>Scope and estimate it as new development against the feature parity map in section 05, not as a refactor.</td></tr>
+              <tr><td class="strong">No team experience with C#/Avalonia yet</td><td><span class="chip high">High</span></td><td>The Starter Tutorial and ToDo List tutorial in Avalonia's own docs are the fastest on-ramp; budget ramp-up time explicitly in Phase 0.</td></tr>
+              <tr><td class="strong">PDF viewer ecosystem is thin</td><td><span class="chip med">Medium</span></td><td>Spike this first (Phase 3) before committing to a package, and keep the option of a paid Avalonia Pro control open.</td></tr>
+              <tr><td class="strong">Ongoing Apple account/hardware upkeep</td><td><span class="chip med">Medium</span></td><td>One person or process needs to own the Apple Developer account renewal and the Mac's Xcode version, indefinitely.</td></tr>
+              <tr><td class="strong">Registration still has no real backend</td><td><span class="chip high">High</span></td><td>Unchanged from the companion audit &mdash; carried forward as an open decision in section 11, not solved by the rewrite itself.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="architecture">
+        <div class="section-head"><span class="num">09</span><h2>Target architecture</h2></div>
+        <p class="lede">One core project, four thin heads &mdash; the shape Avalonia's own <code>avalonia.xplat</code> template generates.</p>
+
+        <div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart TB
+  subgraph Core["Shared core project"]
+    direction LR
+    V["Views"] --> VM["View models"]
+    VM --> M["Course model"]
+    VM --> S["Networking service"]
+  end
+  Core --> Win["Windows head - win x64"]
+  Core --> Mac["macOS head - osx arm64"]
+  Core --> IOS["iOS head - ios arm64"]
+  Core --> And["Android head - android arm64"]
+</pre>
+        </div>
+        <p class="fig-caption">Fig. 2 &mdash; the Android head's <code>MainActivity</code> and the iOS head's <code>AppDelegate</code> are the only pieces of platform-specific bootstrapping; everything a user sees or interacts with lives in Core.</p>
+
+        <div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart TD
+  Splash["Splash view"] --> Main["Main view"]
+  Main -->|Registration card| Courses["Courses view"]
+  Main -->|Walkthrough card| Splash
+  Main -->|Back command| ExitDialog{{"Exit dialog"}}
+  Courses -->|Select a course| Popup["Course detail dialog"]
+  Popup -->|Syllabus button| PDF["PDF viewer view"]
+  Popup -->|Register button| Reg["Registration view"]
+  PDF -->|Back command| Courses
+  Reg -->|Next command| Confirm{{"Confirm dialog"}}
+  Confirm -->|Register| Net["Networking service"]
+</pre>
+        </div>
+        <p class="fig-caption">Fig. 3 &mdash; identical navigation graph to the current app (compare with Fig. 2 in the companion audit), rebuilt as views and commands instead of Activities and switch statements.</p>
+      </section>
+
+      <section class="section" id="roadmap">
+        <div class="section-head"><span class="num">10</span><h2>Phased roadmap</h2></div>
+        <p class="lede">Ordered so every phase produces something runnable on all four platforms before the next phase starts.</p>
+
+        <div class="phase"><div class="pn">0</div><div><h4>Scaffold &amp; ramp up</h4><p>Generate the solution from <code>avalonia.xplat</code>; get a blank window building and running on all four targets, including a first Mac-built iOS run.</p></div><div class="tags"><span class="risk r-low">Low risk</span><span class="unchanged">Team learning curve</span></div></div>
+
+        <div class="phase"><div class="pn">1</div><div><h4>Static screens &amp; theme</h4><p>Splash and Main views, Material.Avalonia wired to the existing color values, native Avalonia animations replacing YoYo.</p></div><div class="tags"><span class="risk r-low">Low risk</span><span class="unchanged">Look &amp; feel: matched</span></div></div>
+
+        <div class="phase"><div class="pn">2</div><div><h4>Course catalog</h4><p><code>Course</code> model, <code>CoursesViewModel</code>, an items control replacing the 12-way switch outright.</p></div><div class="tags"><span class="risk r-low">Low risk</span><span class="unchanged">Feature set: matched</span></div></div>
+
+        <div class="phase"><div class="pn">3</div><div><h4>PDF viewer spike</h4><p>Prove out the PDF rendering choice from section 06 before building the real screen around it.</p></div><div class="tags"><span class="risk r-med">Medium risk</span><span class="unchanged">The one open technical spike</span></div></div>
+
+        <div class="phase"><div class="pn">4</div><div><h4>Registration UI</h4><p>All 19 fields, the confirm/cancel dialogs &mdash; UI only, networking stubbed.</p></div><div class="tags"><span class="risk r-low">Low risk</span><span class="unchanged">Feature set: matched</span></div></div>
+
+        <div class="phase"><div class="pn">5</div><div><h4>Backend decision &amp; wiring</h4><p>Resolve the same open question the companion audit raised, then implement it via <code>INetworkService</code>.</p></div><div class="tags"><span class="risk r-med">Medium risk</span><span class="unchanged">Gated on section 11</span></div></div>
+
+        <div class="phase"><div class="pn">6</div><div><h4>Packaging &amp; store submission</h4><p>Windows signing, macOS notarization, iOS App Store/TestFlight, Android Play Console &mdash; all four, per section 03.</p></div><div class="tags"><span class="risk r-high">Higher risk</span><span class="unchanged">Apple accounts/hardware needed</span></div></div>
+
+        <div class="phase"><div class="pn">7</div><div><h4>Optional: Linux, Windows on Arm, Browser</h4><p>Nearly free once Core is solid &mdash; Avalonia covers all three if ever wanted.</p></div><div class="tags"><span class="risk r-low">Your call</span><span class="unchanged">Not requested today</span></div></div>
+      </section>
+
+      <section class="section" id="decisions">
+        <div class="section-head"><span class="num">11</span><h2>Open decisions</h2></div>
+        <p class="lede">One is carried straight over from the companion audit; the rest are specific to building on this stack.</p>
+
+        <div class="decision"><h4>What should "Register" actually do? <span class="chip info">Carried over</span></h4><p>Unchanged by the rewrite &mdash; the hardcoded LAN WebSocket from the Java app still has no real destination. Same options as before: a real REST/TLS backend, a hosted BaaS, or a minimal handoff until a backend exists.</p></div>
+        <div class="decision"><h4>Who owns the Apple Developer account?</h4><p>A $99/year recurring cost and a Mac that needs its Xcode kept current &mdash; needs a named owner before Phase 6.</p></div>
+        <div class="decision"><h4>Buy the PDF control, or build it?</h4><p>Avalonia Pro's commercial document viewer removes section 06's one open spike, at a license cost. Worth pricing out against the engineering time to build and maintain a custom PDFium-based control.</p></div>
+        <div class="decision"><h4>CommunityToolkit.Mvvm, or ReactiveUI?</h4><p>This plan recommends CommunityToolkit.Mvvm for its simplicity, but ReactiveUI is Avalonia's more traditional default and may suit the team better if there's prior Rx experience.</p></div>
+        <div class="decision"><h4>Any value in the free extra platforms?</h4><p>Linux desktop and Windows on Arm come essentially for free once Core is built (section 10, Phase 7) &mdash; worth deciding now whether that's worth even a small amount of extra testing.</p></div>
+      </section>
+
+      <section class="section" id="sources">
+        <div class="section-head"><span class="num">12</span><h2>Sources</h2></div>
+        <p class="lede">Read in full for this document, plus targeted searches to confirm current package versions and platform requirements.</p>
+        <ul class="src-list">
+          <li><a href="https://avaloniaui.net/blog/release-12-1" target="_blank" rel="noopener">Avalonia 12.1 release blog</a></li>
+          <li><a href="https://avaloniaui.net/blog/avalonia-12" target="_blank" rel="noopener">Avalonia 12 release blog</a></li>
+          <li><a href="https://docs.avaloniaui.net/docs/welcome" target="_blank" rel="noopener">Avalonia docs &mdash; Welcome</a></li>
+          <li><a href="https://docs.avaloniaui.net/docs/samples-tutorials/" target="_blank" rel="noopener">Avalonia docs &mdash; Samples &amp; tutorials</a></li>
+          <li><a href="https://docs.avaloniaui.net/docs/app-development/cross-platform-solution-setup" target="_blank" rel="noopener">Avalonia docs &mdash; cross-platform solution setup</a></li>
+          <li><a href="https://avaloniaui.net/avalonia/mobile" target="_blank" rel="noopener">Avalonia UI for Mobile</a></li>
+          <li><a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/" target="_blank" rel="noopener">Announcing .NET 10 &mdash; .NET Blog</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/dotnet/maui/whats-new/dotnet-10?view=net-maui-10.0" target="_blank" rel="noopener">What's new in .NET MAUI for .NET 10</a></li>
+          <li><a href="https://dotnet.microsoft.com/en-us/platform/support/policy" target="_blank" rel="noopener">The official .NET support policy</a></li>
+          <li><a href="https://github.com/AvaloniaCommunity/Material.Avalonia" target="_blank" rel="noopener">Material.Avalonia</a></li>
+          <li><a href="https://github.com/wieslawsoltes/Avalonia.Skia.Lottie" target="_blank" rel="noopener">Avalonia.Skia.Lottie</a></li>
+          <li><a href="https://www.nuget.org/packages/Avalonia.Labs.Lottie" target="_blank" rel="noopener">Avalonia.Labs.Lottie on NuGet</a></li>
+          <li><a href="https://github.com/chrisg32/AvaloniaPdfViewer" target="_blank" rel="noopener">AvaloniaPdfViewer</a></li>
+          <li><a href="https://developer.apple.com/news/?id=ueeok6yw" target="_blank" rel="noopener">Apple &mdash; upcoming SDK minimum requirements</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/dotnet/core/install/macos-notarization-issues" target="_blank" rel="noopener">Working with macOS notarization &mdash; .NET</a></li>
+          <li><a href="https://www.nuget.org/packages?q=SkiaSharp&tfms=net10.0&includeComputedFrameworks=true&frameworkFilterMode=all&prerel=false&sortby=relevance" target="_blank" rel="noopener">NuGet &mdash; SkiaSharp packages targeting net10.0</a></li>
+          <li><a href="https://www.nuget.org/packages?q=avaloniaui&tfms=net10.0&includeComputedFrameworks=true&frameworkFilterMode=all&prerel=false&sortby=relevance" target="_blank" rel="noopener">NuGet &mdash; AvaloniaUI packages targeting net10.0</a></li>
+          <li><a href="https://www.nuget.org/packages/Avalonia.Labs.Lottie" target="_blank" rel="noopener">NuGet &mdash; Avalonia.Labs.Lottie</a></li>
+        </ul>
+      </section>
+
+      <footer>College Admission Management System &middot; Avalonia Migration Plan &middot; generated 6 September 2026</footer>
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.min.js" integrity="sha384-EOXBFmc3gx5mb+vn0vPvvGqACToJD24hhacX5Yx+8NUUQrHIle/Qi5Bg9o3zKwW2" crossorigin="anonymous"></script>
+<script>
+(function(){
+  try{
+    var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: isDark ? 'dark' : 'default',
+      securityLevel: 'loose'
+    });
+  }catch(e){}
+})();
+(function(){
+  try{
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc a'));
+    var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+    if(!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id = '#' + entry.target.id;
+        var link = links.find(function(a){ return a.getAttribute('href') === id; });
+        if(!link) return;
+        if(entry.isIntersecting){
+          links.forEach(function(a){ a.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-10% 0px -75% 0px' });
+    sections.forEach(function(s){ io.observe(s); });
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
