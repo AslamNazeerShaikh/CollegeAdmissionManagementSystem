@@ -61,19 +61,26 @@
   },
   "lsp": {
     "csharp": {
-      "command": ["csharp-ls"],
+      "command": [
+        "csharp-ls"
+      ],
       "args": []
     },
     "gradle": {
-      "command": ["gradle-language-server"],
+      "command": [
+        "gradle-language-server"
+      ],
       "args": []
     },
     "kotlin": {
-      "command": ["kotlin-language-server"],
+      "command": [
+        "kotlin-language-server"
+      ],
       "args": []
     }
   },
   "plugin": [
-    "@dietrichgebert/ponytail"
+    "@dietrichgebert/ponytail",
+    ".opencode/plugins/graphify.js"
   ]
 }
