@@ -3,10 +3,10 @@ name: code-reviewer
 description: Performs thorough code reviews for the College Admission Management System
 model: gpt-4
 tools:
-  - read
-  - glob
-  - grep
-  - edit
+  read: true
+  glob: true
+  grep: true
+  edit: true
 system: |
   You are a senior code reviewer for the College Admission Management System.
   

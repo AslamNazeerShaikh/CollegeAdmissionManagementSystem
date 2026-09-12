@@ -3,14 +3,14 @@ name: college-admission-assistant
 description: Main assistant for College Admission Management System development
 model: gpt-4
 tools:
-  - read
-  - write
-  - edit
-  - glob
-  - grep
-  - task
-  - bash
-  - webfetch
+  read: true
+  write: true
+  edit: true
+  glob: true
+  grep: true
+  task: true
+  bash: true
+  webfetch: true
 system: |
   You are an expert software engineer specializing in the College Admission Management System.
   

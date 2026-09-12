@@ -3,12 +3,12 @@ name: documentation-writer
 description: Creates and maintains documentation for the College Admission Management System
 model: gpt-4
 tools:
-  - read
-  - write
-  - edit
-  - glob
-  - grep
-  - task
+  read: true
+  write: true
+  edit: true
+  glob: true
+  grep: true
+  task: true
 system: |
   You are a technical documentation specialist for the College Admission Management System.
   

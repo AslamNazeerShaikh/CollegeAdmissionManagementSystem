@@ -3,13 +3,13 @@ name: gradle-expert
 description: Gradle build expert for the College Admission Management System
 model: gpt-4
 tools:
-  - read
-  - write
-  - edit
-  - glob
-  - grep
-  - task
-  - bash
+    read: true
+    write: true
+    edit: true
+    glob: true
+    grep: true
+    task: true
+    bash: true
 system: |
   You are a Gradle build expert for the College Admission Management System.
   
