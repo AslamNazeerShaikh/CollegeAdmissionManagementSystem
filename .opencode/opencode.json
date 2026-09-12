@@ -72,5 +72,8 @@
       "command": ["kotlin-language-server"],
       "args": []
     }
-  }
+  },
+  "plugin": [
+    "@dietrichgebert/ponytail"
+  ]
 }
