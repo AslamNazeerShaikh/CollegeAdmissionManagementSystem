@@ -1,0 +1,7 @@
+﻿<Solution>
+  <Project Path="CollegeAdmission.Android/CollegeAdmission.Android.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="CollegeAdmission.Desktop/CollegeAdmission.Desktop.csproj" />
+  <Project Path="CollegeAdmission/CollegeAdmission.csproj" />
+</Solution>

@@ -1,0 +1,84 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:CollegeAdmission.ViewModels"
+             xmlns:models="using:CollegeAdmission.Models"
+             x:Class="CollegeAdmission.Views.CoursesView"
+             x:DataType="vm:MainViewModel"
+             Background="White">
+  <Panel>
+    <ScrollViewer>
+      <StackPanel Margin="10,42,10,42" Spacing="0">
+        <Border Height="1" Background="#6200EE" Margin="120,0,120,10" />
+        <Border Height="1" Background="#6200EE" Margin="32,0,32,10" />
+        <TextBlock Text="Select one of the following UG or PG Course&#x0a;Scroll Down for more categories"
+                   FontSize="12" FontStyle="Italic" Foreground="Black"
+                   TextAlignment="Center" Margin="0,0,0,10" />
+        <ItemsControl ItemsSource="{Binding Courses}">
+          <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+              <UniformGrid Columns="2" />
+            </ItemsPanelTemplate>
+          </ItemsControl.ItemsPanel>
+          <ItemsControl.ItemTemplate>
+            <DataTemplate x:DataType="models:Course">
+              <Button Margin="5" Padding="0" Background="Transparent"
+                      Tag="{Binding}" Click="OnCourseClick"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Border Height="190" Background="#CCFFFFFF" CornerRadius="4"
+                        BorderBrush="#E4E4E4" BorderThickness="1" Padding="5">
+                  <StackPanel VerticalAlignment="Center" Spacing="4">
+                    <Image Source="avares://CollegeAdmission/Assets/certificate_flat.jpg" Width="78" Height="78" />
+                    <TextBlock Text="{Binding CardTitle}" FontWeight="Bold" Foreground="Black"
+                               TextAlignment="Center" TextWrapping="Wrap" />
+                    <Border Height="1" Background="#6200EE" Margin="10,0,10,0" />
+                    <TextBlock Text="{Binding CardSubtitle}" Foreground="Black"
+                               TextAlignment="Center" Padding="5" />
+                  </StackPanel>
+                </Border>
+              </Button>
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Button Click="OnBackClick" Background="Transparent" Padding="0"
+                HorizontalAlignment="Center" Margin="0,16,0,0">
+          <Image Source="avares://CollegeAdmission/Assets/back.png" Width="32" Height="32" />
+        </Button>
+      </StackPanel>
+    </ScrollViewer>
+
+    <Border x:Name="PopupOverlay" Background="#80000000" IsVisible="False">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
+              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+        <ScrollViewer MaxHeight="520">
+          <StackPanel Spacing="8">
+            <Image Source="avares://CollegeAdmission/Assets/course_flat.png"
+                   Width="120" Height="120" HorizontalAlignment="Center" />
+            <Border Height="1" Background="#6200EE" Margin="120,0,120,0" />
+            <Border Height="1" Background="#6200EE" Margin="120,0,120,0" />
+            <TextBlock x:Name="PopupTitle" FontSize="24" FontWeight="Bold"
+                       Foreground="Black" TextAlignment="Center" TextWrapping="Wrap" />
+            <TextBlock x:Name="PopupSubtitle" FontSize="14" Foreground="Black"
+                       TextAlignment="Center" TextWrapping="Wrap" />
+            <Button x:Name="FyButton" Content="PDF FY SYLLABUS" Width="220" Height="48"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Center" Click="OnPdfFy" />
+            <Button x:Name="SyButton" Content="PDF SY SYLLABUS" Width="220" Height="48"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Center" Click="OnPdfSy" />
+            <Button x:Name="TyButton" Content="PDF TY SYLLABUS" Width="220" Height="48"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Center" Click="OnPdfTy" />
+            <Grid ColumnDefinitions="*,*">
+              <Button Grid.Column="0" Content="CANCEL" Height="48" Margin="0,0,4,0"
+                      Background="#F44336" Foreground="White" FontWeight="Bold"
+                      HorizontalAlignment="Stretch" Click="OnPopupCancel" />
+              <Button Grid.Column="1" Content="REGISTER" Height="48" Margin="4,0,0,0"
+                      Background="#03DAC5" Foreground="White" FontWeight="Bold"
+                      HorizontalAlignment="Stretch" Click="OnPopupRegister" />
+            </Grid>
+          </StackPanel>
+        </ScrollViewer>
+      </Border>
+    </Border>
+  </Panel>
+</UserControl>
