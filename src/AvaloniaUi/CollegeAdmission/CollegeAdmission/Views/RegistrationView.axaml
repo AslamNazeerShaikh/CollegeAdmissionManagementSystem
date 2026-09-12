@@ -1,0 +1,129 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:CollegeAdmission.ViewModels"
+             x:Class="CollegeAdmission.Views.RegistrationView"
+             x:DataType="vm:RegistrationViewModel"
+             Background="White">
+  <Panel>
+    <Grid RowDefinitions="Auto,Auto,*" Margin="8,32,8,8">
+      <TextBlock Grid.Row="0" Text="Registration Form" FontSize="24" FontWeight="Bold"
+                 Foreground="Black" HorizontalAlignment="Center" />
+      <Border Grid.Row="1" Height="1" Background="#6200EE" Margin="100,14,100,8" />
+      <ScrollViewer Grid.Row="2">
+        <StackPanel Spacing="0">
+          <Grid ColumnDefinitions="*,*">
+            <Button Grid.Column="0" Content="CANCEL" Height="48" Margin="0,0,4,0"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Stretch" Click="OnCancelClick" />
+            <Button Grid.Column="1" Content="NEXT 👉" Height="48" Margin="4,0,0,0"
+                    Background="#03DAC5" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Stretch" Click="OnNextClick" />
+          </Grid>
+
+          <TextBlock Text="Full Name" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <Grid ColumnDefinitions="*,*,*" Margin="0,8,0,0">
+            <TextBox Grid.Column="0" PlaceholderText="First 👦" Text="{Binding FirstName}" Margin="0,0,4,0" />
+            <TextBox Grid.Column="1" PlaceholderText="Middle 🧔" Text="{Binding MiddleName}" Margin="4,0,4,0" />
+            <TextBox Grid.Column="2" PlaceholderText="Last 👨‍👩‍👧‍👦" Text="{Binding LastName}" Margin="4,0,0,0" />
+          </Grid>
+
+          <TextBlock Text="Percentage" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <Grid ColumnDefinitions="*,*,*" Margin="0,8,0,0">
+            <TextBox Grid.Column="0" PlaceholderText="10th 🖍" Text="{Binding Marks10}" Margin="0,0,4,0" />
+            <TextBox Grid.Column="1" PlaceholderText="12th 🖊" Text="{Binding Marks12}" Margin="4,0,4,0" />
+            <TextBox Grid.Column="2" PlaceholderText="UG 🖋" Text="{Binding MarksUG}" Margin="4,0,0,0" />
+          </Grid>
+
+          <TextBlock Text="Passing Year" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <Grid ColumnDefinitions="*,*,*" Margin="0,8,0,0">
+            <TextBox Grid.Column="0" PlaceholderText="10th 🖍" Text="{Binding PassYear10}" Margin="0,0,4,0" />
+            <TextBox Grid.Column="1" PlaceholderText="12th 🖊" Text="{Binding PassYear12}" Margin="4,0,4,0" />
+            <TextBox Grid.Column="2" PlaceholderText="UG 🖋" Text="{Binding PassYearUG}" Margin="4,0,0,0" />
+          </Grid>
+
+          <TextBlock Text="Birth Date" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <Grid ColumnDefinitions="*,*,*" Margin="0,8,0,0">
+            <TextBox Grid.Column="0" PlaceholderText="Date 📆" Text="{Binding BirthDay}" Margin="0,0,4,0" />
+            <TextBox Grid.Column="1" PlaceholderText="Month 🗓" Text="{Binding BirthMonth}" Margin="4,0,4,0" />
+            <TextBox Grid.Column="2" PlaceholderText="Year 📅" Text="{Binding BirthYear}" Margin="4,0,0,0" />
+          </Grid>
+
+          <TextBlock Text="Other Details" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <Grid ColumnDefinitions="*,*,*" Margin="0,8,0,0">
+            <TextBox Grid.Column="0" PlaceholderText="Blood Group 🩸" Text="{Binding BloodGroup}" Margin="0,0,4,0" />
+            <TextBox Grid.Column="1" PlaceholderText="Nationality 🌏" Text="{Binding Nationality}" Margin="4,0,4,0" />
+            <TextBox Grid.Column="2" PlaceholderText="Gender ♐" Text="{Binding Gender}" Margin="4,0,0,0" />
+          </Grid>
+
+          <TextBlock Text="Contact" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <Grid ColumnDefinitions="*,*" Margin="0,8,0,0">
+            <TextBox Grid.Column="0" PlaceholderText="Primary 📞" Text="{Binding PrimaryPhone}" Margin="0,0,4,0" />
+            <TextBox Grid.Column="1" PlaceholderText="Secondary 📱" Text="{Binding SecondaryPhone}" Margin="4,0,0,0" />
+          </Grid>
+
+          <TextBlock Text="Course" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <TextBox PlaceholderText="Enter Course Name Here 📚" Text="{Binding CourseName}" Margin="0,8,0,0" />
+
+          <TextBlock Text="Address" FontSize="14" FontWeight="Bold" Foreground="Black"
+                     HorizontalAlignment="Center" Margin="0,16,0,0" />
+          <TextBox PlaceholderText="Permanent 🗺" Text="{Binding PermanentAddress}"
+                   AcceptsReturn="True" TextWrapping="Wrap" MinHeight="64" Margin="0,8,0,0" />
+          <TextBox PlaceholderText="Current 🗺" Text="{Binding CurrentAddress}"
+                   AcceptsReturn="True" TextWrapping="Wrap" MinHeight="64" Margin="0,8,0,0" />
+
+          <Button Content="Save Draft" Margin="0,16,0,0" HorizontalAlignment="Center"
+                  Command="{Binding SaveDraftCommand}" />
+          <TextBlock Text="{Binding StatusMessage}" Foreground="Red"
+                     TextWrapping="Wrap" Margin="0,8,0,0" />
+        </StackPanel>
+      </ScrollViewer>
+    </Grid>
+
+    <Border x:Name="ConfirmOverlay" Background="#80000000" IsVisible="False">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
+              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+        <StackPanel Spacing="12">
+          <Image Source="avares://CollegeAdmission/Assets/old_logo.png" Width="64" Height="64"
+                 HorizontalAlignment="Center" />
+          <TextBlock Text="College of Computer Science&#x0a;&amp; Information Technology&#x0a;&#x0a;Online Admission Management System&#x0a;&#x0a;Warning: By going ahead you will get registered !&#x0a;Are sure you want to register ?"
+                     Foreground="Black" TextWrapping="Wrap" />
+          <Grid ColumnDefinitions="*,*">
+            <Button Grid.Column="0" Content="REGISTER" Height="50" Margin="0,0,4,0"
+                    Background="#6200EE" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Stretch" Click="OnConfirmRegister" />
+            <Button Grid.Column="1" Content="DISMISS" Height="50" Margin="4,0,0,0"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Stretch" Click="OnConfirmDismiss" />
+          </Grid>
+        </StackPanel>
+      </Border>
+    </Border>
+
+    <Border x:Name="CancelOverlay" Background="#80000000" IsVisible="False">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
+              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+        <StackPanel Spacing="12">
+          <Image Source="avares://CollegeAdmission/Assets/old_logo.png" Width="64" Height="64"
+                 HorizontalAlignment="Center" />
+          <TextBlock Text="College of Computer Science&#x0a;&amp; Information Technology&#x0a;&#x0a;Online Admission Management System&#x0a;&#x0a;Warning: You will lose all the data you entered !&#x0a;Are sure you want to go back ?"
+                     Foreground="Black" TextWrapping="Wrap" />
+          <Grid ColumnDefinitions="*,*">
+            <Button Grid.Column="0" Content="CONTINUE" Height="50" Margin="0,0,4,0"
+                    Background="#6200EE" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Stretch" Click="OnCancelContinue" />
+            <Button Grid.Column="1" Content="DISMISS" Height="50" Margin="4,0,0,0"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Stretch" Click="OnCancelDismiss" />
+          </Grid>
+        </StackPanel>
+      </Border>
+    </Border>
+  </Panel>
+</UserControl>

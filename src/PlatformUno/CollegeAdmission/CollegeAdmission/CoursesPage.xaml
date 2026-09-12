@@ -1,0 +1,49 @@
+<Page x:Class="CollegeAdmission.CoursesPage"
+      x:Name="Root"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:models="using:CollegeAdmission.Models"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <Grid RowSpacing="8" Padding="16">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Button Content="← Back" Click="OnBackClick" HorizontalAlignment="Left" />
+
+    <ListView Grid.Row="1" ItemsSource="{Binding Courses}"
+              SelectedItem="{Binding SelectedCourse, Mode=TwoWay}"
+              SelectionMode="Single">
+      <ListView.ItemTemplate>
+        <DataTemplate x:DataType="models:Course">
+          <StackPanel Padding="4">
+            <TextBlock Text="{x:Bind Name}" FontWeight="SemiBold" />
+            <TextBlock Text="{x:Bind Subtitle}" Opacity="0.7" FontSize="12" TextWrapping="Wrap" />
+          </StackPanel>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    <StackPanel Grid.Row="2" Spacing="8" DataContext="{Binding SelectedCourse}">
+      <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="16" TextWrapping="Wrap" />
+      <TextBlock Text="{Binding Subtitle}" Opacity="0.7" FontSize="12" TextWrapping="Wrap" />
+      <StackPanel Orientation="Horizontal" Spacing="8">
+        <Button Content="FY Syllabus"
+                Command="{Binding ElementName=Root, Path=DataContext.OpenSyllabusCommand}"
+                CommandParameter="{Binding FySyllabusUrl}"
+                IsEnabled="{Binding HasFy}" />
+        <Button Content="SY Syllabus"
+                Command="{Binding ElementName=Root, Path=DataContext.OpenSyllabusCommand}"
+                CommandParameter="{Binding SySyllabusUrl}"
+                IsEnabled="{Binding HasSy}" />
+        <Button Content="TY Syllabus"
+                Command="{Binding ElementName=Root, Path=DataContext.OpenSyllabusCommand}"
+                CommandParameter="{Binding TySyllabusUrl}"
+                IsEnabled="{Binding HasTy}" />
+        <Button Content="Register" Click="OnRegisterClick" />
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</Page>

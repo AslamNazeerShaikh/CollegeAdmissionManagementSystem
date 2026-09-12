@@ -1,0 +1,57 @@
+<Page x:Class="CollegeAdmission.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <Grid RowSpacing="8" Padding="16">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Button Content="← Back" Click="OnBackClick" HorizontalAlignment="Left" />
+
+    <ScrollViewer Grid.Row="1">
+      <StackPanel Spacing="8" MaxWidth="560">
+        <TextBlock Text="Name" FontWeight="SemiBold" />
+        <TextBox Header="First name" Text="{Binding FirstName, Mode=TwoWay}" />
+        <TextBox Header="Middle name" Text="{Binding MiddleName, Mode=TwoWay}" />
+        <TextBox Header="Last name" Text="{Binding LastName, Mode=TwoWay}" />
+
+        <TextBlock Text="Marks (%)" FontWeight="SemiBold" />
+        <TextBox Header="10th marks" Text="{Binding Marks10, Mode=TwoWay}" InputScope="Number" />
+        <TextBox Header="12th marks" Text="{Binding Marks12, Mode=TwoWay}" InputScope="Number" />
+        <TextBox Header="UG marks" Text="{Binding MarksUG, Mode=TwoWay}" InputScope="Number" />
+        <TextBox Header="10th passing year" Text="{Binding PassYear10, Mode=TwoWay}" InputScope="Number" />
+        <TextBox Header="12th passing year" Text="{Binding PassYear12, Mode=TwoWay}" InputScope="Number" />
+        <TextBox Header="UG passing year" Text="{Binding PassYearUG, Mode=TwoWay}" InputScope="Number" />
+
+        <TextBlock Text="Birth date" FontWeight="SemiBold" />
+        <StackPanel Orientation="Horizontal" Spacing="8">
+          <TextBox Header="Day" Text="{Binding BirthDay, Mode=TwoWay}" InputScope="Number" Width="100" />
+          <TextBox Header="Month" Text="{Binding BirthMonth, Mode=TwoWay}" InputScope="Number" Width="100" />
+          <TextBox Header="Year" Text="{Binding BirthYear, Mode=TwoWay}" InputScope="Number" Width="140" />
+        </StackPanel>
+
+        <TextBlock Text="Other details" FontWeight="SemiBold" />
+        <TextBox Header="Blood group" Text="{Binding BloodGroup, Mode=TwoWay}" />
+        <TextBox Header="Nationality" Text="{Binding Nationality, Mode=TwoWay}" />
+        <TextBox Header="Gender" Text="{Binding Gender, Mode=TwoWay}" />
+        <TextBox Header="Primary phone" Text="{Binding PrimaryPhone, Mode=TwoWay}" InputScope="TelephoneNumber" />
+        <TextBox Header="Secondary phone" Text="{Binding SecondaryPhone, Mode=TwoWay}" InputScope="TelephoneNumber" />
+        <TextBox Header="Course name" Text="{Binding CourseName, Mode=TwoWay}" />
+        <TextBox Header="Permanent address" Text="{Binding PermanentAddress, Mode=TwoWay}"
+                 AcceptsReturn="True" TextWrapping="Wrap" MinHeight="64" />
+        <TextBox Header="Current address" Text="{Binding CurrentAddress, Mode=TwoWay}"
+                 AcceptsReturn="True" TextWrapping="Wrap" MinHeight="64" />
+
+        <TextBlock Text="{Binding StatusMessage}" TextWrapping="Wrap" Foreground="Red" />
+      </StackPanel>
+    </ScrollViewer>
+
+    <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="8">
+      <Button Content="Save Draft" Command="{Binding SaveDraftCommand}" />
+      <Button Content="Register" Click="OnRegisterClick" />
+    </StackPanel>
+  </Grid>
+</Page>
