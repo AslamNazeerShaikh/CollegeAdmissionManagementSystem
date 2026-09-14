@@ -15,6 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CollegeAdmission\CollegeAdmission.csproj" />
+    <ProjectReference Include="..\CollegeAdmission.Core\CollegeAdmission.Core.csproj" />
   </ItemGroup>
 </Project>

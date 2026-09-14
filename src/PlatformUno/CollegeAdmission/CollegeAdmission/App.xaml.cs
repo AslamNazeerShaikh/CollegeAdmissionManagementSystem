@@ -1,4 +1,5 @@
 using System;
+using CollegeAdmission.Services;
 using Microsoft.Extensions.Logging;
 using Uno.Resizetizer;
 
@@ -6,6 +7,11 @@ namespace CollegeAdmission;
 
 public partial class App : Application
 {
+    public static INavigationService Navigation { get; } = new FrameNavigationService();
+
+    public static ILauncherService Launcher { get; } = new UnoLauncherService();
+
+    public static Frame? RootFrame { get; private set; }
     /// <summary>
     /// Initializes the singleton application object. This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -38,12 +44,14 @@ public partial class App : Application
             rootFrame.NavigationFailed += OnNavigationFailed;
         }
 
+        RootFrame = rootFrame;
+
         if (rootFrame.Content == null)
         {
             // When the navigation stack isn't restored navigate to the first page,
             // configuring the new page by passing required information as a navigation
             // parameter
-            rootFrame.Navigate(typeof(MainPage), args.Arguments);
+            rootFrame.Navigate(typeof(SplashPage), args.Arguments);
         }
 
         MainWindow.SetWindowIcon();

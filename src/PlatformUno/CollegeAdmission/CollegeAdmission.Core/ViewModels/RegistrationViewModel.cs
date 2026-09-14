@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace CollegeAdmission.ViewModels;
 

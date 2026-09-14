@@ -1,9 +1,22 @@
 # College Admission Management System — Master Modernization Plan
 
-**Version:** 1.0  
-**Date:** September 11, 2026  
-**Status:** Planning Phase  
+**Version:** 1.1  
+**Date:** September 14, 2026  
+**Status:** In Progress — Uno UI port + layering landed (see Implementation Log)  
 **Target Platforms:** Windows x64, macOS arm64, iOS arm64, Android arm64, Linux (Fedora) x64/arm64
+
+---
+
+## Implementation Log
+
+### 2026-09-14 — Uno layered UI port (Uno.Sdk 6.7.22, .NET 10)
+- **Layers:** new `CollegeAdmission.Core` (net10.0) holds `Models` (Course + card-text props), `ViewModels`, `Services` (`ILauncherService`, `INavigationService`). UI head keeps Pages + `FrameNavigationService`/`UnoLauncherService`. Tests now target Core (4/4 green, incl. new launcher seam test). Covers Phase 0 multi-project layout and the `INavigationService` abstraction from the tree map.
+- **Lottie (official path):** `Lottie` UnoFeature → `Uno.WinUI.Lottie` 6.7.103; `SkiaSharp.Views.Uno.WinUI` + `SkiaSharp.Skottie` 4.152.0 for Skia Desktop. `AnimatedVisualPlayer` + `LottieVisualSource` (`xmlns:lottie="using:CommunityToolkit.WinUI.Lottie"`). JSONs live once in `Assets/Lottie/` as `Content`, referenced via `ms-appx:///Assets/Lottie/*.json` — no Android-asset duplication needed in single-project (fallback if an Android device ever misses one: copy to `Platforms/Android/Assets/Lottie/` as `AndroidAsset`).
+- **Wired animations (mirrors legacy Java):** `get_in_touch.json` header on MainMenu (245dp, autoplay+loop), `tutorials_online.json` header on Courses (240dp, autoplay+loop), `caution_anim.json` in course dialog, played only when FY syllabus is missing (MBA case, same trigger as `Courses.java:193`). `programmerx.json` is unreferenced in the Java app too — deliberately not bundled.
+- **Pages:** `SplashPage` (logo 300 + titles + version, 3s → Main, matches Avalonia), `MainMenuPage` (2 cards + exit overlay with ❤ text), `CoursesPage` (`GridView` + `VariableSizedWrapGrid`, max 2 cols, fixed 170×190 cards — `ItemsWrapGrid` is not implemented in Uno, verified via build warning), course dialog (FY/SY/TY buttons collapse when missing instead of overlapping the caution animation), `RegistrationPage` (sectioned form + emoji placeholders + confirm/cancel overlays, REGISTER pre-fills course name via nav parameter). Legacy `MainPage` removed.
+- **Verified:** `net10.0-desktop` builds with 0 warnings/errors; assets land in output; Desktop Lottie path compiles. Android/Windows heads need a machine with the respective workloads (this Mac has none installed) — UI code is shared, so risk is packaging-only.
+- **Device A/B verdict (2026-09-14):** Debug Avalonia 12 build felt extremely smooth on-device; Uno Release + full native AOT (222 assemblies) still felt choppy (white flash on navigation, slow scrolling). Decision: **proceed with Avalonia 12** for this app. Uno port retained in `src/PlatformUno/` untouched; `CollegeAdmission.Core` layering pattern (service abstractions, launcher seam test) is reusable if the Avalonia app is layered the same way.
+- **Avalonia layered (2026-09-14):** same split applied under `src/AvaloniaUi/CollegeAdmission/` — new `CollegeAdmission.Core` (12-card `Course` catalog, `MainViewModel`/`RegistrationViewModel`, `ILauncherService`/`INavigationService`); head keeps Views + `AppShell`/`ViewNavigationService`/`AvaloniaLauncherService`. View code-behind untouched except `CoursesView` (syllabus via `OpenSyllabusCommand`, launcher resolved from active `TopLevel`). Layered Debug build deployed to device and running.
 
 ---
 

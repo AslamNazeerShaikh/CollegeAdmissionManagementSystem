@@ -3,47 +3,89 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:models="using:CollegeAdmission.Models"
-      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-  <Grid RowSpacing="8" Padding="16">
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="*" />
-      <RowDefinition Height="Auto" />
-    </Grid.RowDefinitions>
-
-    <Button Content="← Back" Click="OnBackClick" HorizontalAlignment="Left" />
-
-    <ListView Grid.Row="1" ItemsSource="{Binding Courses}"
-              SelectedItem="{Binding SelectedCourse, Mode=TwoWay}"
-              SelectionMode="Single">
-      <ListView.ItemTemplate>
-        <DataTemplate x:DataType="models:Course">
-          <StackPanel Padding="4">
-            <TextBlock Text="{x:Bind Name}" FontWeight="SemiBold" />
-            <TextBlock Text="{x:Bind Subtitle}" Opacity="0.7" FontSize="12" TextWrapping="Wrap" />
-          </StackPanel>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-
-    <StackPanel Grid.Row="2" Spacing="8" DataContext="{Binding SelectedCourse}">
-      <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="16" TextWrapping="Wrap" />
-      <TextBlock Text="{Binding Subtitle}" Opacity="0.7" FontSize="12" TextWrapping="Wrap" />
-      <StackPanel Orientation="Horizontal" Spacing="8">
-        <Button Content="FY Syllabus"
-                Command="{Binding ElementName=Root, Path=DataContext.OpenSyllabusCommand}"
-                CommandParameter="{Binding FySyllabusUrl}"
-                IsEnabled="{Binding HasFy}" />
-        <Button Content="SY Syllabus"
-                Command="{Binding ElementName=Root, Path=DataContext.OpenSyllabusCommand}"
-                CommandParameter="{Binding SySyllabusUrl}"
-                IsEnabled="{Binding HasSy}" />
-        <Button Content="TY Syllabus"
-                Command="{Binding ElementName=Root, Path=DataContext.OpenSyllabusCommand}"
-                CommandParameter="{Binding TySyllabusUrl}"
-                IsEnabled="{Binding HasTy}" />
-        <Button Content="Register" Click="OnRegisterClick" />
+      xmlns:lottie="using:CommunityToolkit.WinUI.Lottie"
+      Background="White">
+  <Grid>
+    <ScrollViewer>
+      <StackPanel Margin="10,42,10,42" Spacing="0">
+        <AnimatedVisualPlayer x:Name="HeaderAnim" AutoPlay="True"
+                              Height="240" HorizontalAlignment="Stretch" Stretch="Uniform">
+          <lottie:LottieVisualSource UriSource="ms-appx:///Assets/Lottie/tutorials_online.json" />
+        </AnimatedVisualPlayer>
+        <Border Height="1" Background="#6200EE" Margin="120,10,120,10" />
+        <TextBlock Text="Select one of the following UG or PG Course&#x0a;Scroll Down for more categories"
+                   FontSize="12" FontStyle="Italic" Foreground="Black"
+                   TextAlignment="Center" Margin="0,0,0,10" />
+        <Border Height="1" Background="#6200EE" Margin="32,0,32,10" />
+        <GridView ItemsSource="{Binding Courses}" SelectionMode="None"
+                  IsItemClickEnabled="True" ItemClick="OnCourseClick">
+          <GridView.ItemsPanel>
+            <ItemsPanelTemplate>
+              <VariableSizedWrapGrid MaximumRowsOrColumns="2" Orientation="Horizontal" />
+            </ItemsPanelTemplate>
+          </GridView.ItemsPanel>
+          <GridView.ItemTemplate>
+            <DataTemplate x:DataType="models:Course">
+              <Border Width="170" Height="190" Background="#CCFFFFFF" CornerRadius="4"
+                      BorderBrush="#E4E4E4" BorderThickness="1" Padding="5" Margin="5">
+                <StackPanel VerticalAlignment="Center" Spacing="4">
+                  <Image Source="ms-appx:///Assets/Images/certificate_flat.jpg" Width="78" Height="78"
+                         HorizontalAlignment="Center" />
+                  <TextBlock Text="{x:Bind CardTitle}" FontWeight="Bold" Foreground="Black"
+                             TextAlignment="Center" TextWrapping="Wrap" />
+                  <Border Height="1" Background="#6200EE" Margin="10,0,10,0" />
+                  <TextBlock Text="{x:Bind CardSubtitle}" Foreground="Black"
+                             TextAlignment="Center" Padding="5" />
+                </StackPanel>
+              </Border>
+            </DataTemplate>
+          </GridView.ItemTemplate>
+        </GridView>
+        <Button Click="OnBackClick" Background="Transparent" Padding="0"
+                HorizontalAlignment="Center" Margin="0,16,0,0">
+          <Image Source="ms-appx:///Assets/Images/back.png" Width="32" Height="32" />
+        </Button>
       </StackPanel>
-    </StackPanel>
+    </ScrollViewer>
+
+    <Border x:Name="PopupOverlay" Background="#80000000" Visibility="Collapsed">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
+              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+        <ScrollViewer MaxHeight="520">
+          <StackPanel Spacing="8">
+            <Image Source="ms-appx:///Assets/Images/course_flat.png"
+                   Width="120" Height="120" HorizontalAlignment="Center" />
+            <Border Height="1" Background="#6200EE" Margin="120,0,120,0" />
+            <TextBlock x:Name="PopupTitle" FontSize="24" FontWeight="Bold"
+                       Foreground="Black" TextAlignment="Center" TextWrapping="Wrap" />
+            <TextBlock x:Name="PopupSubtitle" FontSize="14" Foreground="Black"
+                       TextAlignment="Center" TextWrapping="Wrap" />
+            <Border Height="1" Background="#6200EE" Margin="120,0,120,0" />
+            <AnimatedVisualPlayer x:Name="CautionAnim" AutoPlay="False"
+                                  Width="150" Height="150" HorizontalAlignment="Center"
+                                  Visibility="Collapsed" Stretch="Uniform">
+              <lottie:LottieVisualSource UriSource="ms-appx:///Assets/Lottie/caution_anim.json" />
+            </AnimatedVisualPlayer>
+            <Button x:Name="FyButton" Content="PDF FY SYLLABUS" Width="220" Height="48"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Center" Click="OnPdfFy" />
+            <Button x:Name="SyButton" Content="PDF SY SYLLABUS" Width="220" Height="48"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Center" Click="OnPdfSy" />
+            <Button x:Name="TyButton" Content="PDF TY SYLLABUS" Width="220" Height="48"
+                    Background="#FF9800" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Center" Click="OnPdfTy" />
+            <Grid ColumnDefinitions="*,*">
+              <Button Grid.Column="0" Content="CANCEL" Height="48" Margin="0,0,4,0"
+                      Background="#F44336" Foreground="White" FontWeight="Bold"
+                      HorizontalAlignment="Stretch" Click="OnPopupCancel" />
+              <Button Grid.Column="1" Content="REGISTER" Height="48" Margin="4,0,0,0"
+                      Background="#03DAC5" Foreground="White" FontWeight="Bold"
+                      HorizontalAlignment="Stretch" Click="OnPopupRegister" />
+            </Grid>
+          </StackPanel>
+        </ScrollViewer>
+      </Border>
+    </Border>
   </Grid>
 </Page>

@@ -1,6 +1,5 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Platform.Storage;
 using CollegeAdmission.Models;
 
 namespace CollegeAdmission.Views;
@@ -25,16 +24,14 @@ public partial class CoursesView : UserControl
         PopupOverlay.IsVisible = true;
     }
 
-    private ILauncher Launcher => TopLevel.GetTopLevel(this)!.Launcher;
-
     private void OnPdfFy(object? sender, RoutedEventArgs e) =>
-        MainView.RootOf(this).OpenSyllabusAsync(selected?.FySyllabusUrl, Launcher).ConfigureAwait(false);
+        MainView.RootOf(this).OpenSyllabusCommand.Execute(selected?.FySyllabusUrl);
 
     private void OnPdfSy(object? sender, RoutedEventArgs e) =>
-        MainView.RootOf(this).OpenSyllabusAsync(selected?.SySyllabusUrl, Launcher).ConfigureAwait(false);
+        MainView.RootOf(this).OpenSyllabusCommand.Execute(selected?.SySyllabusUrl);
 
     private void OnPdfTy(object? sender, RoutedEventArgs e) =>
-        MainView.RootOf(this).OpenSyllabusAsync(selected?.TySyllabusUrl, Launcher).ConfigureAwait(false);
+        MainView.RootOf(this).OpenSyllabusCommand.Execute(selected?.TySyllabusUrl);
 
     private void OnPopupCancel(object? sender, RoutedEventArgs e) =>
         PopupOverlay.IsVisible = false;

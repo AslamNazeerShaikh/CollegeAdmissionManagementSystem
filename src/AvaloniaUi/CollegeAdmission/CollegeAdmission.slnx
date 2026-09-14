@@ -4,4 +4,5 @@
   </Project>
   <Project Path="CollegeAdmission.Desktop/CollegeAdmission.Desktop.csproj" />
   <Project Path="CollegeAdmission/CollegeAdmission.csproj" />
+  <Project Path="CollegeAdmission.Core/CollegeAdmission.Core.csproj" />
 </Solution>

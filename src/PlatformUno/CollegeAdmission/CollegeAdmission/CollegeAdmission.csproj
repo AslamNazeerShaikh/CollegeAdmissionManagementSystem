@@ -25,7 +25,14 @@
       Material;
       Mvvm;
       SkiaRenderer;
+      Lottie;
     </UnoFeatures>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.Uno.WinUI" />
+    <PackageReference Include="SkiaSharp.Skottie" />
+    <ProjectReference Include="..\CollegeAdmission.Core\CollegeAdmission.Core.csproj" />
+  </ItemGroup>
 
 </Project>
