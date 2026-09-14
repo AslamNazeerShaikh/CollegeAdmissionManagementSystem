@@ -59,26 +59,7 @@
       "chmod 777 *": "deny"
     }
   },
-  "lsp": {
-    "csharp": {
-      "command": [
-        "csharp-ls"
-      ],
-      "args": []
-    },
-    "gradle": {
-      "command": [
-        "gradle-language-server"
-      ],
-      "args": []
-    },
-    "kotlin": {
-      "command": [
-        "kotlin-language-server"
-      ],
-      "args": []
-    }
-  },
+  "lsp": true,
   "plugin": [
     "@dietrichgebert/ponytail",
     ".opencode/plugins/graphify.js"
