@@ -14,10 +14,13 @@ public partial class MainViewModel : ViewModelBase
     {
         this.launcher = launcher;
         this.navigation = navigation;
+        Crm = new CrmViewModel(launcher);
     }
 
     [ObservableProperty]
     private object? currentView;
+
+    public CrmViewModel Crm { get; }
 
     public RegistrationViewModel Registration { get; } = new();
 
@@ -31,6 +34,8 @@ public partial class MainViewModel : ViewModelBase
 
     public void ShowRegistration(string? courseName = null) =>
         navigation.NavigateToRegistration(courseName);
+
+    public void ShowCrm() => navigation.NavigateToCrm();
 
     [RelayCommand]
     private Task OpenSyllabusAsync(string? url)

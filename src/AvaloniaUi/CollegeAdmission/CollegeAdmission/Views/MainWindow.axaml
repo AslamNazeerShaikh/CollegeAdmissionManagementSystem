@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="using:CollegeAdmission.Views"
         mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="800"
-        x:Class="CollegeAdmission.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="CollegeAdmission"
-        Width="720" Height="1280"
-        MinWidth="270" MinHeight="480"
+         x:Class="CollegeAdmission.Views.MainWindow"
+         Icon="/Assets/avalonia-logo.ico"
+         Title="COCSIT Admissions CRM"
+         Width="1440" Height="900"
+         MinWidth="1024" MinHeight="640"
         WindowStartupLocation="CenterScreen">
         <views:MainView />
 </Window>

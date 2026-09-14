@@ -44,4 +44,6 @@ public sealed class ViewNavigationService : INavigationService
             Vm.Registration.CourseName = courseName;
         Vm.CurrentView = new RegistrationView();
     }
+
+    public void NavigateToCrm() => Vm.CurrentView = new CrmShellView { DataContext = Vm.Crm };
 }

@@ -12,4 +12,5 @@ public interface INavigationService
     void NavigateToMain();
     void NavigateToCourses();
     void NavigateToRegistration(string? courseName = null);
+    void NavigateToCrm();
 }

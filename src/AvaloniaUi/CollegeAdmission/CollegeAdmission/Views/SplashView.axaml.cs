@@ -17,9 +17,9 @@ public partial class SplashView : UserControl
         base.OnAttachedToVisualTree(e);
         try
         {
-            await Task.Delay(3000);
+            await Task.Delay(1200);
             if (!detached)
-                MainView.RootOf(this).ShowMain();
+                MainView.RootOf(this).ShowCrm();
         }
         catch (TaskCanceledException) { }
     }

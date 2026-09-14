@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- CRM paper-ink system (docs/avalonia-crm-vision.md §5). Semantic only; views never hard-code hex. -->
+  <SolidColorBrush x:Key="CrmPaperBg" Color="#F7F5F0" />
+  <SolidColorBrush x:Key="CrmSurface" Color="#FFFFFF" />
+  <SolidColorBrush x:Key="CrmRaised" Color="#FFFFFF" />
+  <SolidColorBrush x:Key="CrmInk" Color="#131720" />
+  <SolidColorBrush x:Key="CrmInk2" Color="#4B5563" />
+  <SolidColorBrush x:Key="CrmMuted" Color="#8A8FA3" />
+  <SolidColorBrush x:Key="CrmLine" Color="#E3E0D8" />
+  <SolidColorBrush x:Key="CrmLineSoft" Color="#EDEAE2" />
+  <SolidColorBrush x:Key="CrmAccent" Color="#4F46E5" />
+  <SolidColorBrush x:Key="CrmAccentSoft" Color="#EEEDFE" />
+  <SolidColorBrush x:Key="CrmAccentInk" Color="#FFFFFF" />
+  <SolidColorBrush x:Key="CrmOk" Color="#15803D" />
+  <SolidColorBrush x:Key="CrmOkBg" Color="#E4F4E8" />
+  <SolidColorBrush x:Key="CrmWarn" Color="#B45309" />
+  <SolidColorBrush x:Key="CrmWarnBg" Color="#FDF0DC" />
+  <SolidColorBrush x:Key="CrmBad" Color="#DC2626" />
+  <SolidColorBrush x:Key="CrmBadBg" Color="#FBE4E4" />
+  <SolidColorBrush x:Key="CrmInfoBg" Color="#E8EEF5" />
+</ResourceDictionary>
