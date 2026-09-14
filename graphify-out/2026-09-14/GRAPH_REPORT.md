@@ -1,12 +1,12 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-14)
 
 ## Corpus Check
-- 118 files · ~317,568 words
+- 121 files · ~317,853 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 862 nodes · 1080 edges · 59 communities (46 shown, 9 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 83 edges (avg confidence: 0.86)
+- 889 nodes · 1115 edges · 63 communities (50 shown, 9 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
@@ -16,7 +16,7 @@
 
 ## Community Hubs (Navigation)
 - Android Courses Activity
-- MainViewModel
+- .RootOf
 - B.Sc. Network Technology S.Y. Program
 - B.Sc. Software Engineering T.Y. Program
 - opencode.json
@@ -30,34 +30,35 @@
 - ApplicationController REST Endpoints
 - BSc Biotechnology Third Year
 - AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj
-- M.Sc. Computer Science S.Y. Program
+- MainViewModel
 - CollegeAdmission.Tests
 - BBA First Year (Sem I-II)
 - M.Sc. Computer Management S.Y. Program
 - Page
 - M.Sc. Software Engineering F.Y. Program
-- CatalogTests.cs
+- UnitTest1
 - Shared Assets
 - MSc Software Engineering Second Year (CBCS)
 - Application
 - App
-- CoursesViewModel
+- INavigationService
 - Graphify Knowledge Graph Pipeline
 - ExampleInstrumentedTest.java
 - B.Sc. Software Engineering F.Y. Program
 - M.Sc. Biotechnology F.Y. Program
 - M.Sc. Biotechnology S.Y. Program
 - MainActivity
-- CollegeAdmission.ViewModels
+- BSc Computer Science Third Year
 - Course Catalog UI
 - FakeLauncher
-- App.axaml.cs
-- CollegeAdmission
+- AvaloniaServices.cs
+- CollegeAdmission.ViewModels
 - .BuildAvaloniaApp
 - Course
 - Uno Platform Rewrite Master Plan
 - Admission Flat Illustration Set
 - gradlew
+- Course
 - College Branding Identity
 - Launcher Icon Foreground Layer
 - graphify.js
@@ -70,13 +71,16 @@
 - ColorPaletteOverride.xaml
 - Readme.md
 - REST API Design Principles
+- .OpenUrlAsync
+- CoursesViewModel
+- ILauncherService
 
 ## God Nodes (most connected - your core abstractions)
 1. `Page` - 32 edges
 2. `RegistrationViewModel` - 30 edges
 3. `RegistrationViewModel` - 28 edges
-4. `Page` - 16 edges
-5. `MainViewModel` - 15 edges
+4. `MainViewModel` - 18 edges
+5. `Page` - 16 edges
 6. `App` - 15 edges
 7. `M.Sc. Computer Science S.Y. Program` - 14 edges
 8. `M.Sc. Computer Management S.Y. Program` - 14 edges
@@ -119,19 +123,19 @@
 - **Persistence migration and testing flow** — _opencode_skills_database_migration_flyway_config, _opencode_skills_database_migration_migration_scripts, _opencode_skills_testing_strategy_testcontainers, _opencode_skills_csharp_development_sqlite_abstraction [INFERRED 0.85]
 - **Shared FY computing foundation across BCA, BSc CS and BSc NT** — app_src_main_assets_cbcs_bca_fy_bca_first_year, app_src_main_assets_cbcs_bsc_cs_fy_bsc_computer_science_first_year, app_src_main_assets_cbcs_bsc_nt_fy_bsc_network_technology_first_year, app_src_main_assets_cbcs_bca_fy_basics_of_computer_system, app_src_main_assets_cbcs_bca_fy_programming_in_c [INFERRED 0.85]
 
-## Communities (59 total, 9 thin omitted)
+## Communities (63 total, 9 thin omitted)
 
 ### Community 0 - "Android Courses Activity"
 Cohesion: 0.08
 Nodes (22): android.os.Bundle, android.view.View, android.widget.Button, android.widget.EditText, androidx.appcompat.app.AppCompatActivity, Courses, Override, Override (+14 more)
 
-### Community 1 - "MainViewModel"
+### Community 1 - ".RootOf"
 Cohesion: 0.06
-Nodes (23): Control, MainViewModel, Courses, Registration, ILauncher, IReadOnlyList, Task, CoursesView (+15 more)
+Nodes (22): Application, CollegeAdmission.Views, App, ViewNavigationService, Vm, CoursesView, RoutedEventArgs, MainMenuView (+14 more)
 
 ### Community 2 - "B.Sc. Network Technology S.Y. Program"
-Cohesion: 0.07
-Nodes (49): Basics of Computer System, BCA First Year (Sem I-II), Communication and Soft Skills, Database Management System, Fundamental of Digital Logic, Programming in C, Statistical Techniques in Computer Science, Web Technology (+41 more)
+Cohesion: 0.06
+Nodes (53): Basics of Computer System, BCA First Year (Sem I-II), Communication and Soft Skills, Database Management System, Fundamental of Digital Logic, Programming in C, Statistical Techniques in Computer Science, Web Technology (+45 more)
 
 ### Community 3 - "B.Sc. Software Engineering T.Y. Program"
 Cohesion: 0.05
@@ -178,12 +182,12 @@ Cohesion: 0.12
 Nodes (18): Biomolecules, BSc Biotechnology First Year, English and Science Communication Skills, Fundamentals of Chemistry, Introduction to Biotechnology, Microbiology, Principles of Genetics, BSc Biotechnology Second Year (+10 more)
 
 ### Community 14 - "AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj"
-Cohesion: 0.12
-Nodes (16): Avalonia, Avalonia.Android, Avalonia.Desktop, Avalonia.Fonts.Inter, Avalonia.Themes.Fluent, AvaloniaUI.DiagnosticsSupport, Xamarin.AndroidX.Core.SplashScreen, CollegeAdmission.Android (+8 more)
+Cohesion: 0.10
+Nodes (19): Avalonia, Avalonia.Android, Avalonia.Desktop, Avalonia.Fonts.Inter, Avalonia.Themes.Fluent, AvaloniaUI.DiagnosticsSupport, Xamarin.AndroidX.Core.SplashScreen, CollegeAdmission.Android (+11 more)
 
-### Community 15 - "M.Sc. Computer Science S.Y. Program"
-Cohesion: 0.12
-Nodes (16): Linux Administration, Advance Database Administration, Advanced Operating System, Artificial Intelligence, Cloud Computing, Data Mining and Data Warehousing, Digital Image Processing using MATLAB, Embedded System Design (+8 more)
+### Community 15 - "MainViewModel"
+Cohesion: 0.21
+Nodes (5): INavigationService, MainViewModel, Courses, Registration, IReadOnlyList
 
 ### Community 16 - "CollegeAdmission.Tests"
 Cohesion: 0.10
@@ -205,8 +209,8 @@ Nodes (13): Page, ExitMessage, ExitOverlay, Page, WelcomeAnim, MainMenuPage, Rou
 Cohesion: 0.17
 Nodes (12): Client Server Technology, Computer System Security, Data Structures using C Plus Plus, Linux Operating System and Administration, Network Programming, Network Security, PHP and MySQL, M.Sc. Software Engineering F.Y. Program (+4 more)
 
-### Community 21 - "CatalogTests.cs"
-Cohesion: 0.25
+### Community 21 - "UnitTest1"
+Cohesion: 0.29
 Nodes (4): CollegeAdmission.Tests, SetUp, UnitTest1, Test
 
 ### Community 22 - "Shared Assets"
@@ -223,11 +227,11 @@ Nodes (7): AvaloniaAndroidApplication, AvaloniaMainActivity, CollegeAdmission.An
 
 ### Community 25 - "App"
 Cohesion: 0.09
-Nodes (14): LaunchActivatedEventArgs, NavigationFailedEventArgs, Application, App, Launcher, MainWindow, Navigation, RootFrame (+6 more)
+Nodes (13): LaunchActivatedEventArgs, NavigationFailedEventArgs, Application, App, Launcher, MainWindow, Navigation, RootFrame (+5 more)
 
-### Community 26 - "CoursesViewModel"
-Cohesion: 0.17
-Nodes (9): ObservableObject, ViewModelBase, ILauncherService, Task, CoursesViewModel, Courses, IReadOnlyList, RelayCommand (+1 more)
+### Community 26 - "INavigationService"
+Cohesion: 0.20
+Nodes (3): ILauncherService, INavigationService, Task
 
 ### Community 27 - "Graphify Knowledge Graph Pipeline"
 Cohesion: 0.22
@@ -253,9 +257,9 @@ Nodes (9): Animal Biotechnology, Applied Biotechnology, Computational Biology an
 Cohesion: 0.22
 Nodes (6): ApplicationActivity, CollegeAdmission.Droid, NativeApplication, Application, MainActivity, Bundle
 
-### Community 33 - "CollegeAdmission.ViewModels"
-Cohesion: 0.27
-Nodes (3): CollegeAdmission.Views, CollegeAdmission.Models, CollegeAdmission.ViewModels
+### Community 33 - "BSc Computer Science Third Year"
+Cohesion: 0.23
+Nodes (12): BCA Third Year (Sem V-VI), Cloud Computing, Linux Administration, Linux and Shell Programming, Software Engineering, Software Testing, Windows Programming with C#.NET, Android Programming (+4 more)
 
 ### Community 34 - "Course Catalog UI"
 Cohesion: 0.28
@@ -265,21 +269,21 @@ Nodes (9): Android Studio Project Structure, App Source Classes, Syllabus PDF As
 Cohesion: 0.29
 Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
 
-### Community 36 - "App.axaml.cs"
-Cohesion: 0.25
-Nodes (4): Application, App, MainWindow, Window
+### Community 36 - "AvaloniaServices.cs"
+Cohesion: 0.20
+Nodes (8): Func, ILauncher, AppShell, Main, ShellView, AvaloniaLauncherService, Control, Task
 
-### Community 37 - "CollegeAdmission"
-Cohesion: 0.22
-Nodes (4): CollegeAdmission, CollegeAdmission.Services, UnoLauncherService, Task
+### Community 37 - "CollegeAdmission.ViewModels"
+Cohesion: 0.24
+Nodes (4): CollegeAdmission.Models, CollegeAdmission.ViewModels, CollegeAdmission, CollegeAdmission.Services
 
 ### Community 38 - ".BuildAvaloniaApp"
 Cohesion: 0.29
 Nodes (5): CollegeAdmission.Desktop, Program, App, AppBuilder, STAThread
 
 ### Community 39 - "Course"
-Cohesion: 0.11
-Nodes (18): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList, Course (+10 more)
+Cohesion: 0.17
+Nodes (11): Course, CardSubtitle, CardTitle, HasFy, HasSy, HasTy, PopupSubtitle, Subtitle (+3 more)
 
 ### Community 40 - "Uno Platform Rewrite Master Plan"
 Cohesion: 0.38
@@ -293,6 +297,10 @@ Nodes (6): Back Navigation Button, Applicant Form Illustration, Admission Flat I
 Cohesion: 0.70
 Nodes (4): gradlew script, die(), save(), warn()
 
+### Community 43 - "Course"
+Cohesion: 0.29
+Nodes (7): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList
+
 ### Community 44 - "College Branding Identity"
 Cohesion: 0.67
 Nodes (3): College Branding Identity, Graduates Launcher Icon, Royal Education Society Latur Institution Logo
@@ -305,13 +313,25 @@ Nodes (3): Launcher Icon Foreground Layer, Launcher Icon, Launcher Icon Round Va
 Cohesion: 0.67
 Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
 
+### Community 60 - ".OpenUrlAsync"
+Cohesion: 0.25
+Nodes (5): Task, RelayCommand, Task, RelayCommand, Task
+
+### Community 61 - "CoursesViewModel"
+Cohesion: 0.33
+Nodes (5): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList
+
+### Community 62 - "ILauncherService"
+Cohesion: 0.33
+Nodes (3): ILauncherService, UnoLauncherService, Task
+
 ## Ambiguous Edges - Review These
 - `Admission Flat Illustration Set` → `Back Navigation Button`  [AMBIGUOUS]
   app/src/main/res/drawable/back.png · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **384 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+379 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 444 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **389 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+384 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 463 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -319,15 +339,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Admission Flat Illustration Set` and `Back Navigation Button`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `MainViewModel`, `CoursesViewModel`, `Page`, `CollegeAdmission.ViewModels`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
-- **Why does `RegistrationPage` connect `Page` to `RegistrationViewModel`, `Page`, `CollegeAdmission`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `CoursesPage` connect `Page` to `CollegeAdmission.ViewModels`, `CoursesViewModel`, `Page`, `Course`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`, `RegistrationViewModel`, `Course`, `.OpenUrlAsync`, `CoursesViewModel`, `ILauncherService`?**
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `CollegeAdmission.ViewModels`, `Page`, `MainViewModel`, `CoursesViewModel`?**
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+- **Why does `RegistrationPage` connect `Page` to `RegistrationViewModel`, `Page`, `CollegeAdmission.ViewModels`?**
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _384 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _389 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Android Courses Activity` be split into smaller, more focused modules?**
   _Cohesion score 0.08220211161387632 - nodes in this community are weakly interconnected._
-- **Should `MainViewModel` be split into smaller, more focused modules?**
-  _Cohesion score 0.0602322206095791 - nodes in this community are weakly interconnected._
+- **Should `.RootOf` be split into smaller, more focused modules?**
+  _Cohesion score 0.05565638233514821 - nodes in this community are weakly interconnected._

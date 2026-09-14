@@ -1,16 +1,16 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-14)
 
 ## Corpus Check
-- 121 files · ~317,853 words
+- 124 files · ~324,718 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 889 nodes · 1115 edges · 63 communities (50 shown, 9 thin omitted)
+- 890 nodes · 1116 edges · 61 communities (48 shown, 9 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9adc3396`
+- Built from commit: `0647f96a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,7 +50,7 @@
 - MainActivity
 - BSc Computer Science Third Year
 - Course Catalog UI
-- FakeLauncher
+- CollegeAdmission
 - AvaloniaServices.cs
 - CollegeAdmission.ViewModels
 - .BuildAvaloniaApp
@@ -58,7 +58,6 @@
 - Uno Platform Rewrite Master Plan
 - Admission Flat Illustration Set
 - gradlew
-- Course
 - College Branding Identity
 - Launcher Icon Foreground Layer
 - graphify.js
@@ -72,8 +71,7 @@
 - Readme.md
 - REST API Design Principles
 - .OpenUrlAsync
-- CoursesViewModel
-- ILauncherService
+- FrameNavigationService
 
 ## God Nodes (most connected - your core abstractions)
 1. `Page` - 32 edges
@@ -82,9 +80,9 @@
 4. `MainViewModel` - 18 edges
 5. `Page` - 16 edges
 6. `App` - 15 edges
-7. `M.Sc. Computer Science S.Y. Program` - 14 edges
-8. `M.Sc. Computer Management S.Y. Program` - 14 edges
-9. `B.Sc. Network Technology S.Y. Program` - 14 edges
+7. `M.Sc. Computer Management S.Y. Program` - 14 edges
+8. `B.Sc. Network Technology S.Y. Program` - 14 edges
+9. `M.Sc. Computer Science S.Y. Program` - 14 edges
 10. `B.Sc. Software Engineering T.Y. Program` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -123,7 +121,7 @@
 - **Persistence migration and testing flow** — _opencode_skills_database_migration_flyway_config, _opencode_skills_database_migration_migration_scripts, _opencode_skills_testing_strategy_testcontainers, _opencode_skills_csharp_development_sqlite_abstraction [INFERRED 0.85]
 - **Shared FY computing foundation across BCA, BSc CS and BSc NT** — app_src_main_assets_cbcs_bca_fy_bca_first_year, app_src_main_assets_cbcs_bsc_cs_fy_bsc_computer_science_first_year, app_src_main_assets_cbcs_bsc_nt_fy_bsc_network_technology_first_year, app_src_main_assets_cbcs_bca_fy_basics_of_computer_system, app_src_main_assets_cbcs_bca_fy_programming_in_c [INFERRED 0.85]
 
-## Communities (63 total, 9 thin omitted)
+## Communities (61 total, 9 thin omitted)
 
 ### Community 0 - "Android Courses Activity"
 Cohesion: 0.08
@@ -134,8 +132,8 @@ Cohesion: 0.06
 Nodes (22): Application, CollegeAdmission.Views, App, ViewNavigationService, Vm, CoursesView, RoutedEventArgs, MainMenuView (+14 more)
 
 ### Community 2 - "B.Sc. Network Technology S.Y. Program"
-Cohesion: 0.06
-Nodes (53): Basics of Computer System, BCA First Year (Sem I-II), Communication and Soft Skills, Database Management System, Fundamental of Digital Logic, Programming in C, Statistical Techniques in Computer Science, Web Technology (+45 more)
+Cohesion: 0.05
+Nodes (54): Basics of Computer System, BCA First Year (Sem I-II), Communication and Soft Skills, Database Management System, Fundamental of Digital Logic, Programming in C, Statistical Techniques in Computer Science, Web Technology (+46 more)
 
 ### Community 3 - "B.Sc. Software Engineering T.Y. Program"
 Cohesion: 0.05
@@ -158,8 +156,8 @@ Cohesion: 0.07
 Nodes (29): Compiler Designing, Computer Algorithms, Computer Architecture and Microprocessor, Computer Graphics, Data Communications, Data Structure, Internet Technologies with PHP, Java Programming (+21 more)
 
 ### Community 8 - "RegistrationViewModel"
-Cohesion: 0.08
-Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
+Cohesion: 0.06
+Nodes (32): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+24 more)
 
 ### Community 9 - "Page"
 Cohesion: 0.07
@@ -183,11 +181,11 @@ Nodes (18): Biomolecules, BSc Biotechnology First Year, English and Science Comm
 
 ### Community 14 - "AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj"
 Cohesion: 0.10
-Nodes (19): Avalonia, Avalonia.Android, Avalonia.Desktop, Avalonia.Fonts.Inter, Avalonia.Themes.Fluent, AvaloniaUI.DiagnosticsSupport, Xamarin.AndroidX.Core.SplashScreen, CollegeAdmission.Android (+11 more)
+Nodes (20): Avalonia, Avalonia.Android, Avalonia.Desktop, Avalonia.Fonts.Inter, Avalonia.Labs.Lottie, Avalonia.Themes.Fluent, AvaloniaUI.DiagnosticsSupport, Xamarin.AndroidX.Core.SplashScreen (+12 more)
 
 ### Community 15 - "MainViewModel"
-Cohesion: 0.21
-Nodes (5): INavigationService, MainViewModel, Courses, Registration, IReadOnlyList
+Cohesion: 0.18
+Nodes (6): ILauncherService, INavigationService, MainViewModel, Courses, Registration, IReadOnlyList
 
 ### Community 16 - "CollegeAdmission.Tests"
 Cohesion: 0.10
@@ -210,8 +208,8 @@ Cohesion: 0.17
 Nodes (12): Client Server Technology, Computer System Security, Data Structures using C Plus Plus, Linux Operating System and Administration, Network Programming, Network Security, PHP and MySQL, M.Sc. Software Engineering F.Y. Program (+4 more)
 
 ### Community 21 - "UnitTest1"
-Cohesion: 0.29
-Nodes (4): CollegeAdmission.Tests, SetUp, UnitTest1, Test
+Cohesion: 0.40
+Nodes (3): SetUp, UnitTest1, Test
 
 ### Community 22 - "Shared Assets"
 Cohesion: 0.17
@@ -226,8 +224,8 @@ Cohesion: 0.20
 Nodes (7): AvaloniaAndroidApplication, AvaloniaMainActivity, CollegeAdmission.Android, Application, App, AppBuilder, MainActivity
 
 ### Community 25 - "App"
-Cohesion: 0.09
-Nodes (13): LaunchActivatedEventArgs, NavigationFailedEventArgs, Application, App, Launcher, MainWindow, Navigation, RootFrame (+5 more)
+Cohesion: 0.16
+Nodes (10): LaunchActivatedEventArgs, NavigationFailedEventArgs, Application, App, Launcher, MainWindow, Navigation, RootFrame (+2 more)
 
 ### Community 26 - "INavigationService"
 Cohesion: 0.20
@@ -258,32 +256,32 @@ Cohesion: 0.22
 Nodes (6): ApplicationActivity, CollegeAdmission.Droid, NativeApplication, Application, MainActivity, Bundle
 
 ### Community 33 - "BSc Computer Science Third Year"
-Cohesion: 0.23
-Nodes (12): BCA Third Year (Sem V-VI), Cloud Computing, Linux Administration, Linux and Shell Programming, Software Engineering, Software Testing, Windows Programming with C#.NET, Android Programming (+4 more)
+Cohesion: 0.25
+Nodes (11): BCA Third Year (Sem V-VI), Cloud Computing, Linux and Shell Programming, Software Engineering, Software Testing, Windows Programming with C#.NET, Android Programming, BSc Computer Science Third Year (+3 more)
 
 ### Community 34 - "Course Catalog UI"
 Cohesion: 0.28
 Nodes (9): Android Studio Project Structure, App Source Classes, Syllabus PDF Assets, Course Catalog UI, Course Detail Popup B.Sc. Software Engineering, Exit Confirmation Dialog, M.Sc. Software Engineering Detail, Registration Form UI (+1 more)
 
-### Community 35 - "FakeLauncher"
-Cohesion: 0.29
-Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
+### Community 35 - "CollegeAdmission"
+Cohesion: 0.25
+Nodes (3): CollegeAdmission, Program, STAThread
 
 ### Community 36 - "AvaloniaServices.cs"
 Cohesion: 0.20
 Nodes (8): Func, ILauncher, AppShell, Main, ShellView, AvaloniaLauncherService, Control, Task
 
 ### Community 37 - "CollegeAdmission.ViewModels"
-Cohesion: 0.24
-Nodes (4): CollegeAdmission.Models, CollegeAdmission.ViewModels, CollegeAdmission, CollegeAdmission.Services
+Cohesion: 0.15
+Nodes (9): CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission.Services, ObservableObject, ViewModelBase, CoursesViewModel, Courses (+1 more)
 
 ### Community 38 - ".BuildAvaloniaApp"
 Cohesion: 0.29
 Nodes (5): CollegeAdmission.Desktop, Program, App, AppBuilder, STAThread
 
 ### Community 39 - "Course"
-Cohesion: 0.17
-Nodes (11): Course, CardSubtitle, CardTitle, HasFy, HasSy, HasTy, PopupSubtitle, Subtitle (+3 more)
+Cohesion: 0.11
+Nodes (18): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList, Course (+10 more)
 
 ### Community 40 - "Uno Platform Rewrite Master Plan"
 Cohesion: 0.38
@@ -296,10 +294,6 @@ Nodes (6): Back Navigation Button, Applicant Form Illustration, Admission Flat I
 ### Community 42 - "gradlew"
 Cohesion: 0.70
 Nodes (4): gradlew script, die(), save(), warn()
-
-### Community 43 - "Course"
-Cohesion: 0.29
-Nodes (7): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList
 
 ### Community 44 - "College Branding Identity"
 Cohesion: 0.67
@@ -317,21 +311,17 @@ Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
 Cohesion: 0.25
 Nodes (5): Task, RelayCommand, Task, RelayCommand, Task
 
-### Community 61 - "CoursesViewModel"
-Cohesion: 0.33
-Nodes (5): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList
-
-### Community 62 - "ILauncherService"
-Cohesion: 0.33
-Nodes (3): ILauncherService, UnoLauncherService, Task
+### Community 62 - "FrameNavigationService"
+Cohesion: 0.20
+Nodes (3): FrameNavigationService, UnoLauncherService, Task
 
 ## Ambiguous Edges - Review These
 - `Admission Flat Illustration Set` → `Back Navigation Button`  [AMBIGUOUS]
   app/src/main/res/drawable/back.png · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **389 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+384 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 463 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **390 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+385 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 464 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -339,15 +329,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Admission Flat Illustration Set` and `Back Navigation Button`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`, `RegistrationViewModel`, `Course`, `.OpenUrlAsync`, `CoursesViewModel`, `ILauncherService`?**
+- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`, `Course`, `RegistrationViewModel`, `.OpenUrlAsync`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `CollegeAdmission.ViewModels`, `Page`, `MainViewModel`, `CoursesViewModel`?**
+- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `CollegeAdmission.ViewModels`, `Page`, `MainViewModel`?**
   _High betweenness centrality (0.040) - this node is a cross-community bridge._
-- **Why does `RegistrationPage` connect `Page` to `RegistrationViewModel`, `Page`, `CollegeAdmission.ViewModels`?**
+- **Why does `RegistrationPage` connect `Page` to `Page`, `RegistrationViewModel`, `CollegeAdmission`?**
   _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _389 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _390 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Android Courses Activity` be split into smaller, more focused modules?**
   _Cohesion score 0.08220211161387632 - nodes in this community are weakly interconnected._
 - **Should `.RootOf` be split into smaller, more focused modules?**
-  _Cohesion score 0.05565638233514821 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05639097744360902 - nodes in this community are weakly interconnected._
