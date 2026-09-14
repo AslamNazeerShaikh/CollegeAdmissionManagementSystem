@@ -1,72 +1,71 @@
-# Graph Report - CollegeAdmissionManagementSystem  (2026-09-13)
+# Graph Report - CollegeAdmissionManagementSystem  (2026-09-14)
 
 ## Corpus Check
-- 110 files · ~117,182 words
+- 73 files · ~303,162 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 784 nodes · 955 edges · 56 communities (43 shown, 9 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 78 edges (avg confidence: 0.83)
+- 794 nodes · 964 edges · 60 communities (47 shown, 9 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
-## Graph Freshness
-- Built from commit: `2a081b39`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
-
 ## Community Hubs (Navigation)
-- Registration
-- opencode.json
-- B.Sc. Network Technology T.Y. Program
-- B.Sc. Software Engineering S.Y. Program
-- B.Sc. Network Technology S.Y. Program
-- B.Sc. Software Engineering T.Y. Program
-- Opencode Configuration for College Admission Management System
-- ApplicationController REST Endpoints
-- BSc Biotechnology Third Year
-- M.Sc. Computer Science S.Y. Program
-- BBA First Year (Sem I-II)
-- MainViewModel
-- M.Sc. Computer Management S.Y. Program
-- M.Sc. Software Engineering F.Y. Program
-- BSc Computer Science Third Year
-- MSc Software Engineering Second Year (CBCS)
-- RegistrationViewModel
-- Graphify Knowledge Graph Pipeline
-- ExampleInstrumentedTest.java
-- B.Sc. Software Engineering F.Y. Program
-- M.Sc. Biotechnology F.Y. Program
-- M.Sc. Biotechnology S.Y. Program
-- Course Catalog UI
-- Uno Platform Rewrite Master Plan
-- Admission Flat Illustration Set
-- gradlew
-- College Branding Identity
-- Launcher Icon Foreground Layer
-- graphify.js
-- Uno Platform Theme Integration
-- Extra Exports Wiki Neo4j SVG Benchmark
-- Maintenance.java
-- App Branding
-- REST API Design Principles
-- Page
-- Page
-- CollegeAdmission.ViewModels
-- App.axaml.cs
-- CollegeAdmission.Tests
-- MainActivity
-- RegistrationViewModel
-- AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj
-- Application
-- CoursesViewModel
-- Course
-- .BuildAvaloniaApp
-- Course
-- UnitTest1
-- Here is a cheat sheet
-- ReadMe.md
-- ColorPaletteOverride.xaml
-- Readme.md
+- Android Courses Activity
+- Avalonia Main Navigation
+- BCA First Year Syllabus
+- BSc SE Third Year Syllabus
+- OpenCode Agent Config
+- Uno Registration ViewModel
+- BSc NT Third Year Syllabus
+- BSc SE Second Year Syllabus
+- Avalonia Registration ViewModel
+- Uno Registration Form Fields
+- Uno Courses Page
+- OpenCode Agents Commands
+- Backend Proposal Concepts
+- BSc Biotech First Year
+- Avalonia Android Dependencies
+- MSc Second Year Subjects
+- Uno Test SDK Packages
+- BBA Syllabus
+- MSc CM Second Year Subjects
+- BCA Third Year Syllabus
+- MSc SE First Year Subjects
+- Catalog Unit Tests
+- Android Resource Docs
+- MSc SE CBCS Codes
+- Avalonia Android App Entry
+- Uno App Lifecycle
+- Courses ViewModels Shared
+- Graphify Pipeline Docs
+- Android Instrumented Tests
+- BSc SE First Year Syllabus
+- MSc Biotech First Year Subjects
+- MSc Biotech Second Year Subjects
+- Uno Android App Entry
+- Avalonia MVVM Layer
+- Android UI Structure
+- Uno Course Model
+- Avalonia App Bootstrap
+- Uno App Entry Points
+- Avalonia Desktop Bootstrap
+- Avalonia Course Model
+- Rewrite Plans Audits
+- App Illustrations
+- Gradle Wrapper Scripts
+- Avalonia MainView Codebehind
+- Institution Brand Logos
+- Launcher Icon Variants
+- Graphify Plugin Reminder
+- Uno Scaffold Docs
+- Uno Material Theme
+- Graphify Export Interfaces
+- Maintenance Activity
+- App Icon Branding
+- Uno Getting Started Readme
+- Uno Theme Resources
+- Rider Run Config Readme
+- REST API Principles
 
 ## God Nodes (most connected - your core abstractions)
 1. `RegistrationViewModel` - 32 edges
@@ -87,7 +86,7 @@
   .opencode/skills/csharp-development.md → docs/modernization-master-plan.md
 - `NativeAOT Compatible Code Patterns` --conceptually_related_to--> `Uno Platform Rewrite Master Plan`  [INFERRED]
   .opencode/skills/csharp-development.md → docs/modernization-master-plan.md
-- `Page` --references--> `SaveDraftCommand`  [INFERRED]
+- `Page` --references--> `StatusMessage`  [INFERRED]
   src/PlatformUno/CollegeAdmission/CollegeAdmission/RegistrationPage.xaml → src/PlatformUno/CollegeAdmission/CollegeAdmission/ViewModels/RegistrationViewModel.cs
 - `Uno Platform Theme Integration` --conceptually_related_to--> `Material Theme System Dark Light`  [INFERRED]
   .opencode/skills/csharp-development.md → docs/modernization-master-plan.md
@@ -114,188 +113,205 @@
 - **Opencode agent team** — _opencode_agents_college_admission_assistant_college_admission_assistant, _opencode_agents_code_reviewer_code_reviewer, _opencode_agents_csharp_code_reviewer_csharp_code_reviewer, _opencode_agents_csharp_uno_agent_csharp_uno_agent, _opencode_agents_test_writer_test_writer, _opencode_agents_documentation_writer_documentation_writer, _opencode_agents_gradle_expert_gradle_expert [INFERRED 0.85]
 - **Persistence migration and testing flow** — _opencode_skills_database_migration_flyway_config, _opencode_skills_database_migration_migration_scripts, _opencode_skills_testing_strategy_testcontainers, _opencode_skills_csharp_development_sqlite_abstraction [INFERRED 0.85]
 - **Shared FY computing foundation across BCA, BSc CS and BSc NT** — app_src_main_assets_cbcs_bca_fy_bca_first_year, app_src_main_assets_cbcs_bsc_cs_fy_bsc_computer_science_first_year, app_src_main_assets_cbcs_bsc_nt_fy_bsc_network_technology_first_year, app_src_main_assets_cbcs_bca_fy_basics_of_computer_system, app_src_main_assets_cbcs_bca_fy_programming_in_c [INFERRED 0.85]
+- **Android resource and asset guidance docs** — src_avaloniaui_collegeadmission_collegeadmission_android_resources_aboutresources_android_resources, src_platformuno_collegeadmission_collegeadmission_platforms_android_assets_aboutassets_android_only_assets, src_platformuno_collegeadmission_collegeadmission_platforms_android_resources_aboutresources_android_only_resources [INFERRED 0.75]
 
-## Communities (56 total, 9 thin omitted)
+## Communities (60 total, 9 thin omitted)
 
-### Community 0 - "Registration"
+### Community 0 - "Android Courses Activity"
 Cohesion: 0.08
 Nodes (22): android.os.Bundle, android.view.View, android.widget.Button, android.widget.EditText, androidx.appcompat.app.AppCompatActivity, Courses, Override, Override (+14 more)
 
-### Community 1 - "opencode.json"
+### Community 1 - "Avalonia Main Navigation"
+Cohesion: 0.07
+Nodes (20): Control, MainViewModel, Courses, Registration, ILauncher, IReadOnlyList, Task, CoursesView (+12 more)
+
+### Community 2 - "BCA First Year Syllabus"
+Cohesion: 0.08
+Nodes (39): Basics of Computer System, BCA First Year (Sem I-II), Communication and Soft Skills, Database Management System, Fundamental of Digital Logic, Programming in C, Statistical Techniques in Computer Science, Web Technology (+31 more)
+
+### Community 3 - "BSc SE Third Year Syllabus"
+Cohesion: 0.05
+Nodes (39): ANN and Fuzzy Systems, Cyber Security, Data Mining and Data Warehousing, Digital Image Processing, Distributed Computing, ERP, JSP and Servlet, Linux and Shell Programming (+31 more)
+
+### Community 4 - "OpenCode Agent Config"
 Cohesion: 0.06
 Nodes (35): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+27 more)
 
-### Community 2 - "B.Sc. Network Technology T.Y. Program"
+### Community 5 - "Uno Registration ViewModel"
+Cohesion: 0.07
+Nodes (28): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+20 more)
+
+### Community 6 - "BSc NT Third Year Syllabus"
 Cohesion: 0.06
 Nodes (31): Adhoc and Sensor Network, CCENT, CCNA Security, Cloud Computing, Distributed System, Exchange Server 2010, Linux Administration Part II, Network Administration Part II (+23 more)
 
-### Community 3 - "B.Sc. Software Engineering S.Y. Program"
-Cohesion: 0.05
-Nodes (42): Compiler Designing, Computer Algorithms, Computer Architecture and Microprocessor, Computer Graphics, Data Communications, Data Structure, Internet Technologies with PHP, Java Programming (+34 more)
-
-### Community 4 - "B.Sc. Network Technology S.Y. Program"
-Cohesion: 0.08
-Nodes (40): Basics of Computer System, BCA First Year (Sem I-II), Communication and Soft Skills, Database Management System, Fundamental of Digital Logic, Programming in C, Statistical Techniques in Computer Science, Web Technology (+32 more)
-
-### Community 5 - "B.Sc. Software Engineering T.Y. Program"
-Cohesion: 0.07
-Nodes (28): ANN and Fuzzy Systems, Cyber Security, Data Mining and Data Warehousing, Digital Image Processing, Distributed Computing, ERP, JSP and Servlet, Linux and Shell Programming (+20 more)
-
-### Community 6 - "Opencode Configuration for College Admission Management System"
-Cohesion: 0.11
-Nodes (23): code-reviewer agent, college-admission-assistant agent, csharp-code-reviewer agent, csharp-uno-agent, documentation-writer agent, gradle-expert agent, test-writer agent, build command (Gradle) (+15 more)
-
-### Community 7 - "ApplicationController REST Endpoints"
-Cohesion: 0.12
-Nodes (18): ApplicationController REST Endpoints, Standardized Error Response Format, OpenAPI Configuration with SpringDoc, MCP Client AI Service Integration, Cross-Platform SQLite Abstraction, Flyway Configuration, Versioned SQL Migration Scripts, Gradle Kotlin DSL Build Configuration (+10 more)
-
-### Community 8 - "BSc Biotechnology Third Year"
-Cohesion: 0.12
-Nodes (18): Biomolecules, BSc Biotechnology First Year, English and Science Communication Skills, Fundamentals of Chemistry, Introduction to Biotechnology, Microbiology, Principles of Genetics, BSc Biotechnology Second Year (+10 more)
-
-### Community 9 - "M.Sc. Computer Science S.Y. Program"
-Cohesion: 0.12
-Nodes (16): Linux Administration, Advance Database Administration, Advanced Operating System, Artificial Intelligence, Cloud Computing, Data Mining and Data Warehousing, Digital Image Processing using MATLAB, Embedded System Design (+8 more)
-
-### Community 10 - "BBA First Year (Sem I-II)"
-Cohesion: 0.15
-Nodes (15): BBA First Year (Sem I-II), Business Communication, Business Economics, Business Statistics, Financial Accounting, Organisational Behavior, Principles of Management, BBA Second Year (Sem III-IV) (+7 more)
-
-### Community 11 - "MainViewModel"
+### Community 7 - "BSc SE Second Year Syllabus"
 Cohesion: 0.06
-Nodes (23): Control, MainViewModel, Courses, Registration, ILauncher, IReadOnlyList, Task, CoursesView (+15 more)
+Nodes (31): Compiler Designing, Computer Algorithms, Computer Architecture and Microprocessor, Computer Graphics, Data Communications, Data Structure, Internet Technologies with PHP, Java Programming (+23 more)
 
-### Community 12 - "M.Sc. Computer Management S.Y. Program"
-Cohesion: 0.13
-Nodes (15): Advanced Operating System, Data Mining, Distributed Database Concepts, Java Programming, JavaScript, Linux Operating System and Administration, Network Management, Operation Research (+7 more)
+### Community 8 - "Avalonia Registration ViewModel"
+Cohesion: 0.08
+Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
 
-### Community 13 - "M.Sc. Software Engineering F.Y. Program"
-Cohesion: 0.17
-Nodes (12): Client Server Technology, Computer System Security, Data Structures using C Plus Plus, Linux Operating System and Administration, Network Programming, Network Security, PHP and MySQL, M.Sc. Software Engineering F.Y. Program (+4 more)
-
-### Community 14 - "BSc Computer Science Third Year"
-Cohesion: 0.25
-Nodes (11): BCA Third Year (Sem V-VI), Cloud Computing, Linux and Shell Programming, Software Engineering, Software Testing, Windows Programming with C#.NET, Android Programming, BSc Computer Science Third Year (+3 more)
-
-### Community 15 - "MSc Software Engineering Second Year (CBCS)"
-Cohesion: 0.18
-Nodes (11): SE-302 Advanced Database Administration, SE-301 Advanced Java Programming, SE-403 ASP.NET Through C#.NET, SE-401 Data Mining, SE-402 Digital Image Processing, SE-303 Distributed Operating System, SE-305 Elective-III (Advanced Operating System / Mobile Programming / Research Methodology), SE-404 Elective-IV (Bioinformatics / Mobile Communications / Structured Systems Analysis and Design) (+3 more)
-
-### Community 16 - "RegistrationViewModel"
-Cohesion: 0.07
-Nodes (28): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+20 more)
-
-### Community 17 - "Graphify Knowledge Graph Pipeline"
-Cohesion: 0.22
-Nodes (9): URL Ingest and Watch Mode, Semantic Extraction Specification, GitHub Clone and Cross-Repo Merge, Commit Hook and Claude Integration, BFS DFS Traversal Query, Whisper Video Audio Transcription, Incremental Update and Cluster Only, Graphify Knowledge Graph Pipeline (+1 more)
-
-### Community 18 - "ExampleInstrumentedTest.java"
-Cohesion: 0.33
-Nodes (5): androidx.test.ext.junit.runners.AndroidJUnit4, ExampleInstrumentedTest, ExampleUnitTest, org.junit.runner.RunWith, org.junit.Test
-
-### Community 19 - "B.Sc. Software Engineering F.Y. Program"
-Cohesion: 0.22
-Nodes (9): Basics of Computer System, Communication and Soft Skills I, Communication and Soft Skills II, Database Management System, Fundamental of Digital Logic, B.Sc. Software Engineering F.Y. Program, Programming in C, Statistical Techniques in Computer Science (+1 more)
-
-### Community 20 - "M.Sc. Biotechnology F.Y. Program"
-Cohesion: 0.22
-Nodes (9): Biochemistry, Cell and Developmental Biology, Immunotechnology, Microbiology and Virology, Molecular Genetics, Process Biotechnology, M.Sc. Biotechnology F.Y. Program, System Physiology (+1 more)
-
-### Community 21 - "M.Sc. Biotechnology S.Y. Program"
-Cohesion: 0.22
-Nodes (9): Animal Biotechnology, Applied Biotechnology, Computational Biology and Biostatistics, Environmental Biotechnology, Genetic Engineering, Industrial Biotechnology, Pharmaceutical Biotechnology, Plant and Agriculture Biotechnology (+1 more)
-
-### Community 22 - "Course Catalog UI"
-Cohesion: 0.28
-Nodes (9): Android Studio Project Structure, App Source Classes, Syllabus PDF Assets, Course Catalog UI, Course Detail Popup B.Sc. Software Engineering, Exit Confirmation Dialog, M.Sc. Software Engineering Detail, Registration Form UI (+1 more)
-
-### Community 23 - "Uno Platform Rewrite Master Plan"
-Cohesion: 0.38
-Nodes (7): MVVM with CommunityToolkit, NativeAOT Compatible Code Patterns, Avalonia Path B Rewrite Plan, Legacy Android Audit Findings, Uno Platform Rewrite Master Plan, Uno vs Avalonia Verdict, College Admission Android App Overview
-
-### Community 24 - "Admission Flat Illustration Set"
-Cohesion: 0.40
-Nodes (6): Back Navigation Button, Applicant Form Illustration, Admission Flat Illustration Set, Certificate Document Illustration, Course Badge Illustration, Classroom Furniture Illustration
-
-### Community 25 - "gradlew"
-Cohesion: 0.70
-Nodes (4): gradlew script, die(), save(), warn()
-
-### Community 26 - "College Branding Identity"
-Cohesion: 0.67
-Nodes (3): College Branding Identity, Graduates Launcher Icon, Royal Education Society Latur Institution Logo
-
-### Community 27 - "Launcher Icon Foreground Layer"
-Cohesion: 1.00
-Nodes (3): Launcher Icon Foreground Layer, Launcher Icon, Launcher Icon Round Variant
-
-### Community 36 - "Page"
+### Community 9 - "Uno Registration Form Fields"
 Cohesion: 0.07
 Nodes (27): BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName, Gender (+19 more)
 
-### Community 37 - "Page"
-Cohesion: 0.05
-Nodes (30): Courses, DataContext.OpenSyllabusCommand, FySyllabusUrl, HasFy, HasSy, HasTy, Name, SelectedCourse (+22 more)
+### Community 10 - "Uno Courses Page"
+Cohesion: 0.09
+Nodes (21): Courses, DataContext.OpenSyllabusCommand, FySyllabusUrl, HasFy, HasSy, HasTy, Name, SelectedCourse (+13 more)
 
-### Community 38 - "CollegeAdmission.ViewModels"
-Cohesion: 0.23
-Nodes (4): CollegeAdmission.Views, CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels
+### Community 11 - "OpenCode Agents Commands"
+Cohesion: 0.11
+Nodes (23): code-reviewer agent, college-admission-assistant agent, csharp-code-reviewer agent, csharp-uno-agent, documentation-writer agent, gradle-expert agent, test-writer agent, build command (Gradle) (+15 more)
 
-### Community 39 - "App.axaml.cs"
-Cohesion: 0.25
-Nodes (4): Application, App, MainWindow, Window
+### Community 12 - "Backend Proposal Concepts"
+Cohesion: 0.12
+Nodes (18): ApplicationController REST Endpoints, Standardized Error Response Format, OpenAPI Configuration with SpringDoc, MCP Client AI Service Integration, Cross-Platform SQLite Abstraction, Flyway Configuration, Versioned SQL Migration Scripts, Gradle Kotlin DSL Build Configuration (+10 more)
 
-### Community 40 - "CollegeAdmission.Tests"
-Cohesion: 0.13
-Nodes (12): net10.0-desktop, coverlet.collector, FluentAssertions, Microsoft.NET.Test.Sdk, NUnit, NUnit3TestAdapter, Uno.Sdk, net10.0 (+4 more)
+### Community 13 - "BSc Biotech First Year"
+Cohesion: 0.12
+Nodes (18): Biomolecules, BSc Biotechnology First Year, English and Science Communication Skills, Fundamentals of Chemistry, Introduction to Biotechnology, Microbiology, Principles of Genetics, BSc Biotechnology Second Year (+10 more)
 
-### Community 41 - "MainActivity"
-Cohesion: 0.22
-Nodes (6): ApplicationActivity, CollegeAdmission.Droid, NativeApplication, Application, MainActivity, Bundle
-
-### Community 42 - "RegistrationViewModel"
-Cohesion: 0.07
-Nodes (28): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+20 more)
-
-### Community 43 - "AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj"
+### Community 14 - "Avalonia Android Dependencies"
 Cohesion: 0.12
 Nodes (16): Avalonia, Avalonia.Android, Avalonia.Desktop, Avalonia.Fonts.Inter, Avalonia.Themes.Fluent, AvaloniaUI.DiagnosticsSupport, CommunityToolkit.Mvvm, Xamarin.AndroidX.Core.SplashScreen (+8 more)
 
-### Community 44 - "Application"
+### Community 15 - "MSc Second Year Subjects"
+Cohesion: 0.12
+Nodes (16): Linux Administration, Advance Database Administration, Advanced Operating System, Artificial Intelligence, Cloud Computing, Data Mining and Data Warehousing, Digital Image Processing using MATLAB, Embedded System Design (+8 more)
+
+### Community 16 - "Uno Test SDK Packages"
+Cohesion: 0.13
+Nodes (12): net10.0-desktop, coverlet.collector, FluentAssertions, Microsoft.NET.Test.Sdk, NUnit, NUnit3TestAdapter, Uno.Sdk, net10.0 (+4 more)
+
+### Community 17 - "BBA Syllabus"
+Cohesion: 0.15
+Nodes (15): BBA First Year (Sem I-II), Business Communication, Business Economics, Business Statistics, Financial Accounting, Organisational Behavior, Principles of Management, BBA Second Year (Sem III-IV) (+7 more)
+
+### Community 18 - "MSc CM Second Year Subjects"
+Cohesion: 0.13
+Nodes (15): Advanced Operating System, Data Mining, Distributed Database Concepts, Java Programming, JavaScript, Linux Operating System and Administration, Network Management, Operation Research (+7 more)
+
+### Community 19 - "BCA Third Year Syllabus"
+Cohesion: 0.23
+Nodes (12): BCA Third Year (Sem V-VI), Cloud Computing, Linux Administration, Linux and Shell Programming, Software Engineering, Software Testing, Windows Programming with C#.NET, Android Programming (+4 more)
+
+### Community 20 - "MSc SE First Year Subjects"
+Cohesion: 0.17
+Nodes (12): Client Server Technology, Computer System Security, Data Structures using C Plus Plus, Linux Operating System and Administration, Network Programming, Network Security, PHP and MySQL, M.Sc. Software Engineering F.Y. Program (+4 more)
+
+### Community 21 - "Catalog Unit Tests"
+Cohesion: 0.18
+Nodes (6): CollegeAdmission.Tests, SetUp, CatalogTests, Test, UnitTest1, Test
+
+### Community 22 - "Android Resource Docs"
+Cohesion: 0.17
+Nodes (11): Android Resources, Android R Class, Asset Scale Variants, Examples, Here is a cheat sheet, Shared Assets, Table of scales, Android-Only Assets (+3 more)
+
+### Community 23 - "MSc SE CBCS Codes"
+Cohesion: 0.18
+Nodes (11): SE-302 Advanced Database Administration, SE-301 Advanced Java Programming, SE-403 ASP.NET Through C#.NET, SE-401 Data Mining, SE-402 Digital Image Processing, SE-303 Distributed Operating System, SE-305 Elective-III (Advanced Operating System / Mobile Programming / Research Methodology), SE-404 Elective-IV (Bioinformatics / Mobile Communications / Structured Systems Analysis and Design) (+3 more)
+
+### Community 24 - "Avalonia Android App Entry"
 Cohesion: 0.20
 Nodes (7): AvaloniaAndroidApplication, AvaloniaMainActivity, CollegeAdmission.Android, Application, App, AppBuilder, MainActivity
 
-### Community 45 - "CoursesViewModel"
+### Community 25 - "Uno App Lifecycle"
+Cohesion: 0.22
+Nodes (6): LaunchActivatedEventArgs, NavigationFailedEventArgs, Application, App, MainWindow, Window
+
+### Community 26 - "Courses ViewModels Shared"
 Cohesion: 0.20
 Nodes (7): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList, RelayCommand, Task
 
-### Community 46 - "Course"
+### Community 27 - "Graphify Pipeline Docs"
+Cohesion: 0.22
+Nodes (9): URL Ingest and Watch Mode, Semantic Extraction Specification, GitHub Clone and Cross-Repo Merge, Commit Hook and Claude Integration, BFS DFS Traversal Query, Whisper Video Audio Transcription, Incremental Update and Cluster Only, Graphify Knowledge Graph Pipeline (+1 more)
+
+### Community 28 - "Android Instrumented Tests"
+Cohesion: 0.33
+Nodes (5): androidx.test.ext.junit.runners.AndroidJUnit4, ExampleInstrumentedTest, ExampleUnitTest, org.junit.runner.RunWith, org.junit.Test
+
+### Community 29 - "BSc SE First Year Syllabus"
+Cohesion: 0.22
+Nodes (9): Basics of Computer System, Communication and Soft Skills I, Communication and Soft Skills II, Database Management System, Fundamental of Digital Logic, B.Sc. Software Engineering F.Y. Program, Programming in C, Statistical Techniques in Computer Science (+1 more)
+
+### Community 30 - "MSc Biotech First Year Subjects"
+Cohesion: 0.22
+Nodes (9): Biochemistry, Cell and Developmental Biology, Immunotechnology, Microbiology and Virology, Molecular Genetics, Process Biotechnology, M.Sc. Biotechnology F.Y. Program, System Physiology (+1 more)
+
+### Community 31 - "MSc Biotech Second Year Subjects"
+Cohesion: 0.22
+Nodes (9): Animal Biotechnology, Applied Biotechnology, Computational Biology and Biostatistics, Environmental Biotechnology, Genetic Engineering, Industrial Biotechnology, Pharmaceutical Biotechnology, Plant and Agriculture Biotechnology (+1 more)
+
+### Community 32 - "Uno Android App Entry"
+Cohesion: 0.22
+Nodes (6): ApplicationActivity, CollegeAdmission.Droid, NativeApplication, Application, MainActivity, Bundle
+
+### Community 33 - "Avalonia MVVM Layer"
+Cohesion: 0.28
+Nodes (3): CollegeAdmission.Views, CollegeAdmission.Models, CollegeAdmission.ViewModels
+
+### Community 34 - "Android UI Structure"
+Cohesion: 0.28
+Nodes (9): Android Studio Project Structure, App Source Classes, Syllabus PDF Assets, Course Catalog UI, Course Detail Popup B.Sc. Software Engineering, Exit Confirmation Dialog, M.Sc. Software Engineering Detail, Registration Form UI (+1 more)
+
+### Community 35 - "Uno Course Model"
 Cohesion: 0.22
 Nodes (8): Course, HasFy, HasSy, HasTy, Subtitle, CourseCatalog, All, IReadOnlyList
 
-### Community 47 - ".BuildAvaloniaApp"
+### Community 36 - "Avalonia App Bootstrap"
+Cohesion: 0.25
+Nodes (4): Application, App, MainWindow, Window
+
+### Community 37 - "Uno App Entry Points"
+Cohesion: 0.25
+Nodes (3): CollegeAdmission, Program, STAThread
+
+### Community 38 - "Avalonia Desktop Bootstrap"
 Cohesion: 0.29
 Nodes (5): CollegeAdmission.Desktop, Program, App, AppBuilder, STAThread
 
-### Community 48 - "Course"
+### Community 39 - "Avalonia Course Model"
 Cohesion: 0.29
 Nodes (7): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList
 
-### Community 49 - "UnitTest1"
-Cohesion: 0.33
-Nodes (3): SetUp, UnitTest1, Test
+### Community 40 - "Rewrite Plans Audits"
+Cohesion: 0.38
+Nodes (7): MVVM with CommunityToolkit, NativeAOT Compatible Code Patterns, Avalonia Path B Rewrite Plan, Legacy Android Audit Findings, Uno Platform Rewrite Master Plan, Uno vs Avalonia Verdict, College Admission Android App Overview
 
-### Community 50 - "Here is a cheat sheet"
+### Community 41 - "App Illustrations"
 Cohesion: 0.40
-Nodes (4): Examples, Here is a cheat sheet, Shared Assets, Table of scales
+Nodes (6): Back Navigation Button, Applicant Form Illustration, Admission Flat Illustration Set, Certificate Document Illustration, Course Badge Illustration, Classroom Furniture Illustration
+
+### Community 42 - "Gradle Wrapper Scripts"
+Cohesion: 0.70
+Nodes (4): gradlew script, die(), save(), warn()
+
+### Community 43 - "Avalonia MainView Codebehind"
+Cohesion: 0.40
+Nodes (3): MainView, Root, VisualTreeAttachmentEventArgs
+
+### Community 44 - "Institution Brand Logos"
+Cohesion: 0.67
+Nodes (3): College Branding Identity, Graduates Launcher Icon, Royal Education Society Latur Institution Logo
+
+### Community 45 - "Launcher Icon Variants"
+Cohesion: 1.00
+Nodes (3): Launcher Icon Foreground Layer, Launcher Icon, Launcher Icon Round Variant
+
+### Community 47 - "Uno Scaffold Docs"
+Cohesion: 0.67
+Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
 
 ## Ambiguous Edges - Review These
 - `Admission Flat Illustration Set` → `Back Navigation Button`  [AMBIGUOUS]
   app/src/main/res/drawable/back.png · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **373 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+368 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 426 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **379 isolated node(s):** `Maintenance`, `default`, `list`, `chmod 777 *`, `rm -rf *` (+374 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 432 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -303,15 +319,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Admission Flat Illustration Set` and `Back Navigation Button`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `MainViewModel`, `Page`, `CoursesViewModel`, `CollegeAdmission.ViewModels`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **Why does `M.Sc. Computer Management F.Y. Program` connect `B.Sc. Software Engineering S.Y. Program` to `B.Sc. Network Technology S.Y. Program`?**
+- **Why does `RegistrationViewModel` connect `Avalonia Registration ViewModel` to `Avalonia Main Navigation`, `Courses ViewModels Shared`, `Uno Registration Form Fields`, `Avalonia MVVM Layer`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `RegistrationViewModel`, `Page`, `CoursesViewModel`, `CollegeAdmission.ViewModels`?**
+- **Why does `M.Sc. Computer Management F.Y. Program` connect `BSc SE Third Year Syllabus` to `BCA First Year Syllabus`, `BSc SE Second Year Syllabus`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `RegistrationViewModel` connect `Uno Registration ViewModel` to `Uno Registration Form Fields`, `Courses ViewModels Shared`, `Catalog Unit Tests`, `Avalonia MVVM Layer`?**
   _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `RegistrationViewModel` (e.g. with `Page` and `.Registration_RequiresKeyFields()`) actually correct?**
   _`RegistrationViewModel` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `Page` (e.g. with `RegistrationViewModel` and `SaveDraftCommand`) actually correct?**
   _`Page` has 3 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _373 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Maintenance`, `default`, `list` to the rest of the system?**
+  _379 weakly-connected nodes found - possible documentation gaps or missing edges._
