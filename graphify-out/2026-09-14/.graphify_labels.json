@@ -34,7 +34,7 @@
   "32": "MainActivity",
   "33": "BSc Computer Science Third Year",
   "34": "Course Catalog UI",
-  "35": "FakeLauncher",
+  "35": "CollegeAdmission",
   "36": "AvaloniaServices.cs",
   "37": "CollegeAdmission.ViewModels",
   "38": ".BuildAvaloniaApp",
@@ -42,7 +42,6 @@
   "40": "Uno Platform Rewrite Master Plan",
   "41": "Admission Flat Illustration Set",
   "42": "gradlew",
-  "43": "Course",
   "44": "College Branding Identity",
   "45": "Launcher Icon Foreground Layer",
   "46": "graphify.js",
@@ -60,6 +59,5 @@
   "58": "CollegeAdmission/GlobalUsings.cs",
   "59": "CollegeAdmission.Tests/GlobalUsings.cs",
   "60": ".OpenUrlAsync",
-  "61": "CoursesViewModel",
-  "62": "ILauncherService"
+  "62": "FrameNavigationService"
 }
