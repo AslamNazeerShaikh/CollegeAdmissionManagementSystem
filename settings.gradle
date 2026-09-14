@@ -1,2 +1,3 @@
 include ':app'
+project(':app').projectDir = new File(settingsDir, 'src/Java/app')
 rootProject.name = "College Admission Management System"
