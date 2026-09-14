@@ -1,15 +1,17 @@
 plugins {
-    id 'com.android.application'
+    alias(libs.plugins.android.application)
 }
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion "30.0.3"
+    namespace 'in.org.cocsit.collegeadmissionmanagementsystem'
+    compileSdk {
+        version = release(37)
+    }
 
     defaultConfig {
         applicationId "in.org.cocsit.collegeadmissionmanagementsystem"
-        minSdkVersion 19
-        targetSdkVersion 33
+        minSdk 31
+        targetSdk 37
         versionCode 1
         versionName "1.0"
 
@@ -24,30 +26,29 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     dependenciesInfo {
         includeInApk false
         includeInBundle false
     }
-    namespace 'in.org.cocsit.collegeadmissionmanagementsystem'
 }
 
 dependencies {
-
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
 
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
-    implementation 'com.airbnb.android:lottie:3.6.0'
+    implementation 'com.daimajia.easing:library:1.0.1@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation libs.lottie
     implementation 'com.orhanobut:dialogplus:1.11@aar'
-    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-
+    implementation libs.pdf.viewer
+    implementation libs.okhttp
 }

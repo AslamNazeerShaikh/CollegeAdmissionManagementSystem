@@ -1,44 +1,43 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-14)
 
 ## Corpus Check
-- 125 files · ~139,093 words
+- 125 files · ~139,976 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 612 nodes · 810 edges · 49 communities (32 shown, 12 thin omitted)
+- 611 nodes · 808 edges · 48 communities (33 shown, 10 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 59 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e58d537e`
+- Built from commit: `4690af48`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - android.os.Bundle
 - .RootOf
-- FakeLauncher
+- CollegeAdmission.Views
 - Registration
 - opencode.json
 - RegistrationViewModel
-- CollegeAdmission
+- ILauncherService
 - .OpenUrlAsync
 - RegistrationViewModel
 - Page
 - Page
 - Opencode Configuration for College Admission Management System
 - ApplicationController REST Endpoints
-- ILauncherService
+- AvaloniaServices.cs
 - AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj
 - MainViewModel
 - CollegeAdmission.Tests
-- FrameNavigationService
+- CollegeAdmission.ViewModels
 - gradlew
 - Page
-- ViewNavigationService
-- AppShell
+- UnitTest1
+- CollegeAdmission
 - Shared Assets
-- .Main
 - Application
 - App
 - INavigationService
@@ -49,7 +48,7 @@
 - MainActivity
 - Course Catalog UI
 - .BuildAvaloniaApp
-- CollegeAdmission.ViewModels
+- Course
 - Uno Platform Rewrite Master Plan
 - graphify.js
 - Uno Platform Getting Started
@@ -97,19 +96,19 @@
 - **Opencode agent team** — _opencode_agents_college_admission_assistant_college_admission_assistant, _opencode_agents_code_reviewer_code_reviewer, _opencode_agents_csharp_code_reviewer_csharp_code_reviewer, _opencode_agents_csharp_uno_agent_csharp_uno_agent, _opencode_agents_test_writer_test_writer, _opencode_agents_documentation_writer_documentation_writer, _opencode_agents_gradle_expert_gradle_expert [INFERRED 0.85]
 - **Persistence migration and testing flow** — _opencode_skills_database_migration_flyway_config, _opencode_skills_database_migration_migration_scripts, _opencode_skills_testing_strategy_testcontainers, _opencode_skills_csharp_development_sqlite_abstraction [INFERRED 0.85]
 
-## Communities (49 total, 12 thin omitted)
+## Communities (48 total, 10 thin omitted)
 
 ### Community 0 - "android.os.Bundle"
 Cohesion: 0.13
 Nodes (14): android.os.Bundle, android.view.View, android.widget.Button, androidx.appcompat.app.AppCompatActivity, com.github.barteksc.pdfviewer.PDFView, OnClickListener, Courses, Override (+6 more)
 
 ### Community 1 - ".RootOf"
-Cohesion: 0.06
-Nodes (20): Application, CollegeAdmission.Views, App, CoursesView, RoutedEventArgs, MainMenuView, RoutedEventArgs, MainView (+12 more)
+Cohesion: 0.08
+Nodes (14): ViewNavigationService, Vm, CoursesView, RoutedEventArgs, MainMenuView, RoutedEventArgs, Control, RegistrationView (+6 more)
 
-### Community 2 - "FakeLauncher"
-Cohesion: 0.29
-Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
+### Community 2 - "CollegeAdmission.Views"
+Cohesion: 0.13
+Nodes (8): Application, CollegeAdmission.Views, App, MainView, Root, VisualTreeAttachmentEventArgs, MainWindow, Window
 
 ### Community 3 - "Registration"
 Cohesion: 0.20
@@ -123,17 +122,17 @@ Nodes (35): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, cust
 Cohesion: 0.08
 Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
 
-### Community 6 - "CollegeAdmission"
-Cohesion: 0.22
-Nodes (4): CollegeAdmission, CollegeAdmission.Services, UnoLauncherService, Task
+### Community 6 - "ILauncherService"
+Cohesion: 0.33
+Nodes (3): ILauncherService, UnoLauncherService, Task
 
 ### Community 7 - ".OpenUrlAsync"
 Cohesion: 0.25
 Nodes (5): Task, RelayCommand, Task, RelayCommand, Task
 
 ### Community 8 - "RegistrationViewModel"
-Cohesion: 0.08
-Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
+Cohesion: 0.06
+Nodes (32): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+24 more)
 
 ### Community 9 - "Page"
 Cohesion: 0.07
@@ -151,9 +150,9 @@ Nodes (23): code-reviewer agent, college-admission-assistant agent, csharp-code-
 Cohesion: 0.12
 Nodes (18): ApplicationController REST Endpoints, Standardized Error Response Format, OpenAPI Configuration with SpringDoc, MCP Client AI Service Integration, Cross-Platform SQLite Abstraction, Flyway Configuration, Versioned SQL Migration Scripts, Gradle Kotlin DSL Build Configuration (+10 more)
 
-### Community 13 - "ILauncherService"
-Cohesion: 0.29
-Nodes (5): Func, ILauncher, ILauncherService, AvaloniaLauncherService, Task
+### Community 13 - "AvaloniaServices.cs"
+Cohesion: 0.20
+Nodes (8): Func, ILauncher, AppShell, Main, ShellView, AvaloniaLauncherService, Control, Task
 
 ### Community 14 - "AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj"
 Cohesion: 0.10
@@ -167,17 +166,21 @@ Nodes (5): INavigationService, MainViewModel, Courses, Registration, IReadOnlyLi
 Cohesion: 0.10
 Nodes (17): net10.0-desktop, coverlet.collector, FluentAssertions, Microsoft.NET.Test.Sdk, NUnit, NUnit3TestAdapter, SkiaSharp.Skottie, SkiaSharp.Views.Uno.WinUI (+9 more)
 
+### Community 17 - "CollegeAdmission.ViewModels"
+Cohesion: 0.19
+Nodes (8): CollegeAdmission.Models, CollegeAdmission.ViewModels, CollegeAdmission.Services, ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList
+
 ### Community 18 - "gradlew"
-Cohesion: 0.70
-Nodes (4): gradlew script, die(), save(), warn()
+Cohesion: 0.83
+Nodes (3): gradlew script, die(), warn()
 
 ### Community 19 - "Page"
 Cohesion: 0.13
 Nodes (13): Page, ExitMessage, ExitOverlay, Page, WelcomeAnim, MainMenuPage, RoutedEventArgs, AnimatedVisualPlayer (+5 more)
 
-### Community 21 - "AppShell"
-Cohesion: 0.50
-Nodes (4): AppShell, Main, ShellView, Control
+### Community 20 - "UnitTest1"
+Cohesion: 0.29
+Nodes (4): CollegeAdmission.Tests, SetUp, UnitTest1, Test
 
 ### Community 22 - "Shared Assets"
 Cohesion: 0.17
@@ -188,8 +191,8 @@ Cohesion: 0.20
 Nodes (7): AvaloniaAndroidApplication, AvaloniaMainActivity, CollegeAdmission.Android, Application, App, AppBuilder, MainActivity
 
 ### Community 25 - "App"
-Cohesion: 0.16
-Nodes (10): LaunchActivatedEventArgs, NavigationFailedEventArgs, Application, App, Launcher, MainWindow, Navigation, RootFrame (+2 more)
+Cohesion: 0.09
+Nodes (13): LaunchActivatedEventArgs, NavigationFailedEventArgs, Application, App, Launcher, MainWindow, Navigation, RootFrame (+5 more)
 
 ### Community 26 - "INavigationService"
 Cohesion: 0.20
@@ -215,9 +218,9 @@ Nodes (9): Android Studio Project Structure, App Source Classes, Syllabus PDF As
 Cohesion: 0.29
 Nodes (5): CollegeAdmission.Desktop, Program, App, AppBuilder, STAThread
 
-### Community 39 - "CollegeAdmission.ViewModels"
-Cohesion: 0.06
-Nodes (29): CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, ObservableObject, SetUp, Course, HasFy, HasSy (+21 more)
+### Community 39 - "Course"
+Cohesion: 0.11
+Nodes (18): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList, Course (+10 more)
 
 ### Community 40 - "Uno Platform Rewrite Master Plan"
 Cohesion: 0.38
@@ -230,14 +233,14 @@ Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
 ## Knowledge Gaps
 - **196 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+191 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 272 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CollegeAdmission`, `.OpenUrlAsync`, `RegistrationViewModel`, `CollegeAdmission.ViewModels`, `ILauncherService`, `ViewNavigationService`, `AppShell`?**
+- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CollegeAdmission.Views`, `ILauncherService`, `.OpenUrlAsync`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`?**
   _High betweenness centrality (0.089) - this node is a cross-community bridge._
-- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `CollegeAdmission.ViewModels`, `Page`, `MainViewModel`?**
+- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `CollegeAdmission.ViewModels`, `Page`, `.RootOf`, `MainViewModel`?**
   _High betweenness centrality (0.085) - this node is a cross-community bridge._
 - **Why does `RegistrationPage` connect `Page` to `RegistrationViewModel`, `Page`, `CollegeAdmission`?**
   _High betweenness centrality (0.071) - this node is a cross-community bridge._
@@ -246,6 +249,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `android.os.Bundle` be split into smaller, more focused modules?**
   _Cohesion score 0.12643678160919541 - nodes in this community are weakly interconnected._
 - **Should `.RootOf` be split into smaller, more focused modules?**
-  _Cohesion score 0.06184012066365008 - nodes in this community are weakly interconnected._
-- **Should `opencode.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08292682926829269 - nodes in this community are weakly interconnected._
+- **Should `CollegeAdmission.Views` be split into smaller, more focused modules?**
+  _Cohesion score 0.1323529411764706 - nodes in this community are weakly interconnected._
