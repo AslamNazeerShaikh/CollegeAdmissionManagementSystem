@@ -1,6 +1,6 @@
 # Avalonia CRM Vision — Brand-New College Management App
 
-**Status:** Vision / pre-build — approved direction before any AXAML is written
+**Status:** Vision approved + CRM shell built and verified on-device (see §6 as-built note, 2026-09-15)
 **Date:** 2026-09-14
 **Scope:** `src/AvaloniaUi/` greenfield rebuild. Legacy Java (`src/AndroidJava/`) stays archived as behavior reference. Uno port (`src/PlatformUno/`) untouched.
 **Audience:** Backend-strong developer (Java 2017-2020 native Android → ASP.NET Core WebAPI/MVC since mid-2020, plus Angular/React/TS/Python/shell/gRPC/WebSocket/REST/GraphQL/Azure/AWS/SQL/NoSQL/Docker/Linux + AI agents). Self-declared gap: UI craft — MVVM structure, look-and-feel, UX/DX, palettes/branding, components, responsiveness, animation/physics/realism, XML/AXAML/XAML.
@@ -142,6 +142,8 @@ Old `#6200EE/#03DAC5/#FF9800/#F44336` retired except indigo lineage → `AccentS
 **Fees / Docs / Reports / Settings:** standard dense tables + detail rail; receipts printable; doc viewer = embedded PDF (WebView2/PDF.js spike per master plan Phase 3 — do not open external browser in new app).
 
 Responsive (`pbakaus/layout` adaptation): ≥1280 full 3-pane; 768-1279 rail becomes sheet; <768 single-pane + bottom nav (5 max: Pipeline, Apps, Fees, Courses, More), inputs 16px, board → horizontal lane pager.
+
+**As-built responsive (2026-09-15, `CrmShellView`, verified on Galaxy M51 1080×2400):** single width threshold 900dp (`ApplyLayout()` in code-behind, no VM changes). Wide (desktop, `MinWidth 1024`): unchanged 3-pane (232 nav + content + 340 rail). Narrow (portrait 19.5:9/20:9 phones, landscape phones): nav → `SplitView` overlay drawer + hamburger (drawn bars — `☰` font glyph renders blank on-device), top bar → search/actions row + scrollable stats strip (fixed 116dp height), rail → stacked below content (capped 360dp), funnel → `WrapPanel`, Applications 6-col table → stacked cards, pipeline lanes already horizontally scrollable. Deviations from plan: drawer instead of bottom nav, stacked rail instead of sheet — revisit if counsellor testing prefers sheet.
 
 ---
 

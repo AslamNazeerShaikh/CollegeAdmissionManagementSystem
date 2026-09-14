@@ -1,3 +1,4 @@
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using CollegeAdmission.Models;
@@ -7,14 +8,81 @@ namespace CollegeAdmission.Views;
 
 public partial class CrmShellView : UserControl
 {
+    // Phones in portrait (19.5:9/20:9 ≈ 360-430dp wide) and landscape (~800dp)
+    // go narrow; desktop (MinWidth 1024) always stays wide.
+    private const double NarrowThreshold = 900;
+    private bool wasNarrow;
+
     public CrmShellView()
     {
         InitializeComponent();
+        NavPanel.AddHandler(Button.ClickEvent, OnNavClick);
+    }
+
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+        if (change.Property == BoundsProperty)
+            ApplyLayout();
     }
 
     private CrmViewModel Vm => (CrmViewModel)DataContext!;
 
     private static MainViewModel RootOf(Control view) => MainView.RootOf(view);
+
+    private void OnNavToggle(object? sender, RoutedEventArgs e) =>
+        NavSplit.IsPaneOpen = !NavSplit.IsPaneOpen;
+
+    private void OnNavClick(object? sender, RoutedEventArgs e)
+    {
+        // Close the overlay drawer after picking a section on phones.
+        if (Bounds.Width < NarrowThreshold)
+            NavSplit.IsPaneOpen = false;
+    }
+
+    private void ApplyLayout()
+    {
+        var narrow = Bounds.Width < NarrowThreshold;
+
+        // Nav: inline pane on desktop, overlay drawer on phones.
+        NavSplit.DisplayMode = narrow ? SplitViewDisplayMode.Overlay : SplitViewDisplayMode.Inline;
+        if (narrow != wasNarrow)
+        {
+            NavSplit.IsPaneOpen = !narrow;
+            wasNarrow = narrow;
+        }
+        NavToggle.IsVisible = narrow;
+
+        // Top bar: fixed two-row height on phones so the stats strip can never
+        // paint over the content (Auto can measure stale on first layout).
+        ShellGrid.RowDefinitions = new RowDefinitions(narrow ? "116,*" : "60,*");
+        TopGrid.ColumnDefinitions = new ColumnDefinitions(
+            narrow ? "Auto,*,Auto,Auto" : "*,Auto,Auto,Auto,Auto,Auto");
+        Grid.SetColumn(SearchBox, narrow ? 1 : 0);
+        Grid.SetRow(StatsScroller, narrow ? 1 : 0);
+        Grid.SetColumn(StatsScroller, narrow ? 0 : 1);
+        Grid.SetColumnSpan(StatsScroller, narrow ? 4 : 1);
+
+        // Rail: right column on desktop, stacked below content on phones.
+        BodyGrid.ColumnDefinitions = new ColumnDefinitions(narrow ? "*" : "*,340");
+        BodyGrid.RowDefinitions = new RowDefinitions(narrow ? "*,Auto" : "*");
+        Grid.SetRow(RailBorder, narrow ? 1 : 0);
+        Grid.SetColumn(RailBorder, narrow ? 0 : 1);
+        RailBorder.MaxHeight = narrow ? 360 : double.PositiveInfinity;
+        RailBorder.BorderThickness = new Thickness(0, narrow ? 1 : 0, 0, 0);
+
+        // Pipeline header: side-by-side on desktop, stacked on phones.
+        PipeHeader.ColumnDefinitions = new ColumnDefinitions(narrow ? "*" : "*,Auto");
+        Grid.SetRow(PipeHint, narrow ? 1 : 0);
+        Grid.SetColumn(PipeHint, narrow ? 0 : 1);
+
+        // Applications: 6-column table on desktop, stacked cards on phones.
+        AppsHeader.IsVisible = !narrow;
+        AppsRows.IsVisible = !narrow;
+        AppsCards.IsVisible = narrow;
+
+        ShellGrid.InvalidateMeasure();
+    }
 
     private void OnApplicantClick(object? sender, RoutedEventArgs e)
     {

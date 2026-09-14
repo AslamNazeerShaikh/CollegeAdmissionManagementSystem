@@ -1,16 +1,16 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-15)
 
 ## Corpus Check
-- 130 files · ~169,415 words
+- 131 files · ~356,120 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 754 nodes · 999 edges · 55 communities (40 shown, 10 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 62 edges (avg confidence: 0.85)
+- 754 nodes · 1002 edges · 58 communities (43 shown, 10 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 63 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fc50fd62`
+- Built from commit: `df510b60`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,8 +21,8 @@
 - FakeLauncher
 - opencode.json
 - RegistrationViewModel
-- CollegeAdmission
-- ILauncherService
+- CollegeAdmission.Services
+- .OpenUrlAsync
 - RegistrationViewModel
 - Page
 - Page
@@ -57,10 +57,13 @@
 - CrmStage
 - CrmModels.cs
 - .OpenSyllabusAsync
+- MainView
 - graphify.js
 - Uno Platform Getting Started
 - Uno Platform Theme Integration
 - Extra Exports Wiki Neo4j SVG Benchmark
+- MainWindow
+- Toolchain — required versions (verified 2026-09-15)
 - ReadMe.md
 - ColorPaletteOverride.xaml
 - Readme.md
@@ -72,7 +75,7 @@
 3. `RegistrationViewModel` - 30 edges
 4. `RegistrationViewModel` - 28 edges
 5. `MainViewModel` - 22 edges
-6. `CrmShellView` - 16 edges
+6. `CrmShellView` - 20 edges
 7. `Page` - 16 edges
 8. `App` - 15 edges
 9. `Registration` - 13 edges
@@ -103,15 +106,15 @@
 - **Opencode agent team** — _opencode_agents_college_admission_assistant_college_admission_assistant, _opencode_agents_code_reviewer_code_reviewer, _opencode_agents_csharp_code_reviewer_csharp_code_reviewer, _opencode_agents_csharp_uno_agent_csharp_uno_agent, _opencode_agents_test_writer_test_writer, _opencode_agents_documentation_writer_documentation_writer, _opencode_agents_gradle_expert_gradle_expert [INFERRED 0.85]
 - **Persistence migration and testing flow** — _opencode_skills_database_migration_flyway_config, _opencode_skills_database_migration_migration_scripts, _opencode_skills_testing_strategy_testcontainers, _opencode_skills_csharp_development_sqlite_abstraction [INFERRED 0.85]
 
-## Communities (55 total, 10 thin omitted)
+## Communities (58 total, 10 thin omitted)
 
 ### Community 0 - "Registration"
 Cohesion: 0.08
 Nodes (22): android.os.Bundle, android.view.View, android.widget.Button, android.widget.EditText, androidx.appcompat.app.AppCompatActivity, com.github.barteksc.pdfviewer.PDFView, okhttp3.Response, okhttp3.WebSocket (+14 more)
 
 ### Community 1 - ".RootOf"
-Cohesion: 0.05
-Nodes (23): Application, CollegeAdmission.Views, Size, App, ViewNavigationService, Vm, CoursesView, RoutedEventArgs (+15 more)
+Cohesion: 0.08
+Nodes (14): ViewNavigationService, Vm, CoursesView, RoutedEventArgs, MainMenuView, RoutedEventArgs, Control, RegistrationView (+6 more)
 
 ### Community 2 - "CrmViewModel"
 Cohesion: 0.06
@@ -122,20 +125,20 @@ Cohesion: 0.29
 Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
 
 ### Community 4 - "opencode.json"
-Cohesion: 0.04
-Nodes (47): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+39 more)
+Cohesion: 0.05
+Nodes (38): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+30 more)
 
 ### Community 5 - "RegistrationViewModel"
 Cohesion: 0.08
 Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
 
-### Community 6 - "CollegeAdmission"
+### Community 6 - "CollegeAdmission.Services"
 Cohesion: 0.25
-Nodes (3): CollegeAdmission, UnoLauncherService, Task
+Nodes (4): CollegeAdmission.Services, ILauncherService, UnoLauncherService, Task
 
-### Community 7 - "ILauncherService"
-Cohesion: 0.29
-Nodes (4): ILauncherService, Task, RelayCommand, Task
+### Community 7 - ".OpenUrlAsync"
+Cohesion: 0.25
+Nodes (5): Task, RelayCommand, Task, RelayCommand, Task
 
 ### Community 8 - "RegistrationViewModel"
 Cohesion: 0.08
@@ -174,8 +177,8 @@ Cohesion: 0.10
 Nodes (17): net10.0-desktop, coverlet.collector, FluentAssertions, Microsoft.NET.Test.Sdk, NUnit, NUnit3TestAdapter, SkiaSharp.Skottie, SkiaSharp.Views.Uno.WinUI (+9 more)
 
 ### Community 17 - "CollegeAdmission.ViewModels"
-Cohesion: 0.29
-Nodes (4): CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission.Services
+Cohesion: 0.18
+Nodes (5): CollegeAdmission.Views, CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission
 
 ### Community 18 - "gradlew"
 Cohesion: 0.83
@@ -190,8 +193,8 @@ Cohesion: 0.33
 Nodes (3): SetUp, UnitTest1, Test
 
 ### Community 21 - "CoursesViewModel"
-Cohesion: 0.22
-Nodes (7): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList, RelayCommand, Task
+Cohesion: 0.29
+Nodes (5): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList
 
 ### Community 22 - "Shared Assets"
 Cohesion: 0.17
@@ -230,8 +233,8 @@ Cohesion: 0.28
 Nodes (9): Android Studio Project Structure, App Source Classes, Syllabus PDF Assets, Course Catalog UI, Course Detail Popup B.Sc. Software Engineering, Exit Confirmation Dialog, M.Sc. Software Engineering Detail, Registration Form UI (+1 more)
 
 ### Community 36 - "CrmShellView"
-Cohesion: 0.27
-Nodes (4): CrmShellView, Vm, Control, RoutedEventArgs
+Cohesion: 0.19
+Nodes (5): AvaloniaPropertyChangedEventArgs, CrmShellView, Vm, Control, RoutedEventArgs
 
 ### Community 37 - "Applicant"
 Cohesion: 0.23
@@ -261,29 +264,41 @@ Nodes (8): CrmStage, Applied, Enquiry, Enrolled, FeePaid, Merit, Offered, Verifi
 Cohesion: 0.33
 Nodes (5): CourseFill, Pct, PctLabel, CrmAction, CrmSeed
 
+### Community 45 - "MainView"
+Cohesion: 0.20
+Nodes (5): Application, App, MainView, Root, VisualTreeAttachmentEventArgs
+
 ### Community 47 - "Uno Platform Getting Started"
 Cohesion: 0.67
 Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
 
+### Community 50 - "MainWindow"
+Cohesion: 0.33
+Nodes (3): Size, MainWindow, Window
+
+### Community 51 - "Toolchain — required versions (verified 2026-09-15)"
+Cohesion: 0.50
+Nodes (3): Android deploy (M51, wireless), Gotchas hit so far, Toolchain — required versions (verified 2026-09-15)
+
 ## Knowledge Gaps
-- **284 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+279 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 368 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **281 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+276 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 367 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CrmViewModel`, `CrmShellView`, `ILauncherService`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
+- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CrmViewModel`, `CrmShellView`, `CollegeAdmission.Services`, `.OpenUrlAsync`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `MainView`, `CoursesViewModel`?**
+  _High betweenness centrality (0.094) - this node is a cross-community bridge._
+- **Why does `CrmViewModel` connect `CrmViewModel` to `CrmShellView`, `Applicant`, `CollegeAdmission.Services`, `Course`, `CrmModels.cs`, `.OpenSyllabusAsync`, `MainViewModel`, `CoursesViewModel`?**
   _High betweenness centrality (0.093) - this node is a cross-community bridge._
-- **Why does `CrmViewModel` connect `CrmViewModel` to `CrmShellView`, `Applicant`, `ILauncherService`, `Course`, `CrmModels.cs`, `.OpenSyllabusAsync`, `MainViewModel`, `CoursesViewModel`?**
-  _High betweenness centrality (0.089) - this node is a cross-community bridge._
 - **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `Page`, `MainViewModel`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+  _High betweenness centrality (0.079) - this node is a cross-community bridge._
 - **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _284 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _281 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Registration` be split into smaller, more focused modules?**
   _Cohesion score 0.0815686274509804 - nodes in this community are weakly interconnected._
 - **Should `.RootOf` be split into smaller, more focused modules?**
-  _Cohesion score 0.05076679005817028 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08013937282229965 - nodes in this community are weakly interconnected._
 - **Should `CrmViewModel` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
