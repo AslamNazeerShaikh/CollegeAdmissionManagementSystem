@@ -1,5 +1,7 @@
 # College Admission Management System
 
+Active apps: `src/AvaloniaUi/` (shipping) and `src/PlatformUno/` (retained port). Legacy Java Android app archived under `src/Java/` (see `src/Java/README.md`).
+
 The CollegeAdmissionManagementSystem project is a Java-based android application used by schools, colleges & institutions for various admission processes and online study material management. It's a very light weight yet highly feature-rich app. Developed by using the latest android native technologies and while keeping maximum performance and security in mind.
 
 The CollegeAdmissionManagementSystem can be very flexible as it provides you the flexibility to customize the software on the basis of your needs and requirements so as to run a smooth and efficient software.
