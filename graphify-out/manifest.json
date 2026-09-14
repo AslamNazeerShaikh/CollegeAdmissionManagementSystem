@@ -366,9 +366,9 @@
     "semantic_hash": "ea048dc17609bfcbbd80ae9e0e54970f"
   },
   "docs/modernization-master-plan.md": {
-    "mtime": 1789378466.9277525,
-    "seen": 1789378468.110325,
-    "ast_hash": "22b5122c0c20f148ae9613476e49ebc7",
+    "mtime": 1789379509.1149273,
+    "seen": 1789379510.1899421,
+    "ast_hash": "16ab578effa1df26c612777cf44f1be7",
     "semantic_hash": ""
   },
   "docs/opencode-go-vs-commandcode-goat-analysis.md": {
@@ -744,15 +744,15 @@
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj": {
-    "mtime": 1789378383.6698654,
-    "seen": 1789378468.1102872,
-    "ast_hash": "c14f46d98d741251271ced4d7c5fedbf",
+    "mtime": 1789378899.6445053,
+    "seen": 1789379510.189903,
+    "ast_hash": "d07b64ea387483422a3758e5619ab28d",
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs": {
-    "mtime": 1789378366.2986097,
-    "seen": 1789378468.110288,
-    "ast_hash": "8b8a0208cd35374080ab84609fc41720",
+    "mtime": 1789378921.4380023,
+    "seen": 1789379510.189904,
+    "ast_hash": "a99d10a139a537f3716f14de92d78593",
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainMenuView.axaml.cs": {
@@ -1179,6 +1179,24 @@
     "mtime": 1789378355.6731446,
     "seen": 1789378468.1102872,
     "ast_hash": "954149c5198d515624645e271a293d7c",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/Lottie/caution_anim.json": {
+    "mtime": 1789378899.6547644,
+    "seen": 1789379510.1899,
+    "ast_hash": "2133850922827f92c716b3e02cb256aa",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/Lottie/get_in_touch.json": {
+    "mtime": 1789378899.6541617,
+    "seen": 1789379510.189901,
+    "ast_hash": "5c7d19cff9a50c993886e1476bd4351e",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/Lottie/tutorials_online.json": {
+    "mtime": 1789378899.6545234,
+    "seen": 1789379510.189902,
+    "ast_hash": "9b40e2fa97d36871d916ecc31f02d462",
     "semantic_hash": ""
   }
 }

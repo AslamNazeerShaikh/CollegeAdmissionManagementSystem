@@ -1,11 +1,14 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:labs="using:Avalonia.Labs.Lottie"
              x:Class="CollegeAdmission.Views.MainMenuView"
              Background="White">
   <Panel>
     <ScrollViewer>
       <StackPanel Margin="10,42,10,42" Spacing="0">
-        <Border Height="1" Background="#6200EE" Margin="120,0,120,10" />
+        <labs:Lottie Path="/Assets/Lottie/get_in_touch.json" Height="245"
+                     HorizontalAlignment="Stretch" />
+        <Border Height="1" Background="#6200EE" Margin="120,10,120,10" />
         <Border Height="1" Background="#6200EE" Margin="32,0,32,10" />
         <TextBlock Text="'' Welcome to&#x0a;College of Computer Science &amp; Information&#x0a;technology's College admission management&#x0a;online system ''"
                    FontSize="12" FontWeight="Bold" FontStyle="Italic" Foreground="Black"

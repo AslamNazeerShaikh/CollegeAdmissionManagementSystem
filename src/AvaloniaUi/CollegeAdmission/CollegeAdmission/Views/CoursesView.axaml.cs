@@ -21,6 +21,18 @@ public partial class CoursesView : UserControl
         FyButton.IsEnabled = selected.HasFy;
         SyButton.IsEnabled = selected.HasSy;
         TyButton.IsEnabled = selected.HasTy;
+        // Mirrors the legacy app: the caution animation only plays when the
+        // FY syllabus is missing. Kept in-flow, never overlapping.
+        if (!selected.HasFy)
+        {
+            CautionAnim.IsVisible = true;
+            CautionAnim.Start();
+        }
+        else
+        {
+            CautionAnim.Stop();
+            CautionAnim.IsVisible = false;
+        }
         PopupOverlay.IsVisible = true;
     }
 
@@ -33,11 +45,17 @@ public partial class CoursesView : UserControl
     private void OnPdfTy(object? sender, RoutedEventArgs e) =>
         MainView.RootOf(this).OpenSyllabusCommand.Execute(selected?.TySyllabusUrl);
 
-    private void OnPopupCancel(object? sender, RoutedEventArgs e) =>
+    private void OnPopupCancel(object? sender, RoutedEventArgs e)
+    {
+        CautionAnim.Stop();
+        CautionAnim.IsVisible = false;
         PopupOverlay.IsVisible = false;
+    }
 
     private void OnPopupRegister(object? sender, RoutedEventArgs e)
     {
+        CautionAnim.Stop();
+        CautionAnim.IsVisible = false;
         PopupOverlay.IsVisible = false;
         MainView.RootOf(this).ShowRegistration();
     }

@@ -2,13 +2,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:CollegeAdmission.ViewModels"
              xmlns:models="using:CollegeAdmission.Models"
+             xmlns:labs="using:Avalonia.Labs.Lottie"
              x:Class="CollegeAdmission.Views.CoursesView"
              x:DataType="vm:MainViewModel"
              Background="White">
   <Panel>
     <ScrollViewer>
       <StackPanel Margin="10,42,10,42" Spacing="0">
-        <Border Height="1" Background="#6200EE" Margin="120,0,120,10" />
+        <labs:Lottie Path="/Assets/Lottie/tutorials_online.json" Height="240"
+                     HorizontalAlignment="Stretch" />
+        <Border Height="1" Background="#6200EE" Margin="120,10,120,10" />
         <Border Height="1" Background="#6200EE" Margin="32,0,32,10" />
         <TextBlock Text="Select one of the following UG or PG Course&#x0a;Scroll Down for more categories"
                    FontSize="12" FontStyle="Italic" Foreground="Black"
@@ -55,6 +58,9 @@
                    Width="120" Height="120" HorizontalAlignment="Center" />
             <Border Height="1" Background="#6200EE" Margin="120,0,120,0" />
             <Border Height="1" Background="#6200EE" Margin="120,0,120,0" />
+            <labs:Lottie x:Name="CautionAnim" Path="/Assets/Lottie/caution_anim.json"
+                         AutoPlay="False" Width="150" Height="150"
+                         HorizontalAlignment="Center" IsVisible="False" />
             <TextBlock x:Name="PopupTitle" FontSize="24" FontWeight="Bold"
                        Foreground="Black" TextAlignment="Center" TextWrapping="Wrap" />
             <TextBlock x:Name="PopupSubtitle" FontSize="14" Foreground="Black"
