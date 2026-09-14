@@ -16,6 +16,8 @@ sealed class Program
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
+            // ponytail: software rendering — GLX segfaults in Mesa gallium (Skia TexSubImage2D via Lottie). Revisit if Mesa/Skia fixed.
+            .With(new X11PlatformOptions { RenderingMode = new[] { X11RenderingMode.Software } })
             .WithInterFont()
             .LogToTrace();
 }
