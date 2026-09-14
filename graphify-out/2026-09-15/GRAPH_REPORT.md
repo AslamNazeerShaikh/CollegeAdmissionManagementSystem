@@ -1,28 +1,28 @@
-# Graph Report - CollegeAdmissionManagementSystem  (2026-09-15)
+# Graph Report - CollegeAdmissionManagementSystem  (2026-09-14)
 
 ## Corpus Check
-- 130 files · ~169,415 words
+- 125 files · ~326,397 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 754 nodes · 999 edges · 55 communities (40 shown, 10 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 62 edges (avg confidence: 0.85)
+- 620 nodes · 817 edges · 48 communities (34 shown, 9 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 59 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fc50fd62`
+- Built from commit: `fc970821`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Registration
 - .RootOf
-- CrmViewModel
+- CollegeAdmission.Views
 - FakeLauncher
 - opencode.json
 - RegistrationViewModel
-- CollegeAdmission
 - ILauncherService
+- .OpenUrlAsync
 - RegistrationViewModel
 - Page
 - Page
@@ -38,7 +38,6 @@
 - UnitTest1
 - CoursesViewModel
 - Shared Assets
-- Ouroboros — Detailed Guide for This Repo
 - Application
 - App
 - INavigationService
@@ -48,15 +47,9 @@
 - Legacy Java Android app (archived reference)
 - MainActivity
 - Course Catalog UI
-- CrmShellView
-- Applicant
 - .BuildAvaloniaApp
 - Course
 - Uno Platform Rewrite Master Plan
-- Avalonia CRM Vision — Brand-New College Management App
-- CrmStage
-- CrmModels.cs
-- .OpenSyllabusAsync
 - graphify.js
 - Uno Platform Getting Started
 - Uno Platform Theme Integration
@@ -67,16 +60,16 @@
 - REST API Design Principles
 
 ## God Nodes (most connected - your core abstractions)
-1. `CrmViewModel` - 52 edges
-2. `Page` - 32 edges
-3. `RegistrationViewModel` - 30 edges
-4. `RegistrationViewModel` - 28 edges
-5. `MainViewModel` - 22 edges
-6. `CrmShellView` - 16 edges
-7. `Page` - 16 edges
-8. `App` - 15 edges
-9. `Registration` - 13 edges
-10. `Applicant` - 13 edges
+1. `Page` - 32 edges
+2. `RegistrationViewModel` - 30 edges
+3. `RegistrationViewModel` - 28 edges
+4. `MainViewModel` - 18 edges
+5. `Page` - 16 edges
+6. `App` - 15 edges
+7. `Registration` - 13 edges
+8. `CoursesPage` - 13 edges
+9. `Opencode Configuration for College Admission Management System` - 13 edges
+10. `RegistrationView` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `MCP Client AI Service Integration` --semantically_similar_to--> `Best Value Models Ranking`  [INFERRED] [semantically similar]
@@ -103,39 +96,39 @@
 - **Opencode agent team** — _opencode_agents_college_admission_assistant_college_admission_assistant, _opencode_agents_code_reviewer_code_reviewer, _opencode_agents_csharp_code_reviewer_csharp_code_reviewer, _opencode_agents_csharp_uno_agent_csharp_uno_agent, _opencode_agents_test_writer_test_writer, _opencode_agents_documentation_writer_documentation_writer, _opencode_agents_gradle_expert_gradle_expert [INFERRED 0.85]
 - **Persistence migration and testing flow** — _opencode_skills_database_migration_flyway_config, _opencode_skills_database_migration_migration_scripts, _opencode_skills_testing_strategy_testcontainers, _opencode_skills_csharp_development_sqlite_abstraction [INFERRED 0.85]
 
-## Communities (55 total, 10 thin omitted)
+## Communities (48 total, 9 thin omitted)
 
 ### Community 0 - "Registration"
 Cohesion: 0.08
 Nodes (22): android.os.Bundle, android.view.View, android.widget.Button, android.widget.EditText, androidx.appcompat.app.AppCompatActivity, com.github.barteksc.pdfviewer.PDFView, okhttp3.Response, okhttp3.WebSocket (+14 more)
 
 ### Community 1 - ".RootOf"
-Cohesion: 0.05
-Nodes (23): Application, CollegeAdmission.Views, Size, App, ViewNavigationService, Vm, CoursesView, RoutedEventArgs (+15 more)
+Cohesion: 0.08
+Nodes (14): ViewNavigationService, Vm, CoursesView, RoutedEventArgs, MainMenuView, RoutedEventArgs, Control, RegistrationView (+6 more)
 
-### Community 2 - "CrmViewModel"
-Cohesion: 0.06
-Nodes (36): IEnumerable, ObservableCollection, CrmViewModel, ActionQueue, Applicants, CountApplied, CountEnquiry, CountEnrolled (+28 more)
+### Community 2 - "CollegeAdmission.Views"
+Cohesion: 0.12
+Nodes (9): Application, CollegeAdmission.Views, Size, App, MainView, Root, VisualTreeAttachmentEventArgs, MainWindow (+1 more)
 
 ### Community 3 - "FakeLauncher"
 Cohesion: 0.29
 Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
 
 ### Community 4 - "opencode.json"
-Cohesion: 0.04
-Nodes (47): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+39 more)
+Cohesion: 0.05
+Nodes (40): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+32 more)
 
 ### Community 5 - "RegistrationViewModel"
 Cohesion: 0.08
 Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
 
-### Community 6 - "CollegeAdmission"
-Cohesion: 0.25
-Nodes (3): CollegeAdmission, UnoLauncherService, Task
+### Community 6 - "ILauncherService"
+Cohesion: 0.33
+Nodes (3): ILauncherService, UnoLauncherService, Task
 
-### Community 7 - "ILauncherService"
-Cohesion: 0.29
-Nodes (4): ILauncherService, Task, RelayCommand, Task
+### Community 7 - ".OpenUrlAsync"
+Cohesion: 0.25
+Nodes (5): Task, RelayCommand, Task, RelayCommand, Task
 
 ### Community 8 - "RegistrationViewModel"
 Cohesion: 0.08
@@ -166,16 +159,16 @@ Cohesion: 0.10
 Nodes (20): Avalonia, Avalonia.Android, Avalonia.Desktop, Avalonia.Fonts.Inter, Avalonia.Labs.Lottie, Avalonia.Themes.Fluent, AvaloniaUI.DiagnosticsSupport, Xamarin.AndroidX.Core.SplashScreen (+12 more)
 
 ### Community 15 - "MainViewModel"
-Cohesion: 0.17
-Nodes (6): INavigationService, MainViewModel, Courses, Crm, Registration, IReadOnlyList
+Cohesion: 0.21
+Nodes (5): INavigationService, MainViewModel, Courses, Registration, IReadOnlyList
 
 ### Community 16 - "CollegeAdmission.Tests"
 Cohesion: 0.10
 Nodes (17): net10.0-desktop, coverlet.collector, FluentAssertions, Microsoft.NET.Test.Sdk, NUnit, NUnit3TestAdapter, SkiaSharp.Skottie, SkiaSharp.Views.Uno.WinUI (+9 more)
 
 ### Community 17 - "CollegeAdmission.ViewModels"
-Cohesion: 0.29
-Nodes (4): CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission.Services
+Cohesion: 0.20
+Nodes (5): CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission, CollegeAdmission.Services
 
 ### Community 18 - "gradlew"
 Cohesion: 0.83
@@ -190,16 +183,12 @@ Cohesion: 0.33
 Nodes (3): SetUp, UnitTest1, Test
 
 ### Community 21 - "CoursesViewModel"
-Cohesion: 0.22
-Nodes (7): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList, RelayCommand, Task
+Cohesion: 0.33
+Nodes (5): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList
 
 ### Community 22 - "Shared Assets"
 Cohesion: 0.17
 Nodes (11): Android Resources, Android R Class, Asset Scale Variants, Examples, Here is a cheat sheet, Shared Assets, Table of scales, Android-Only Assets (+3 more)
-
-### Community 23 - "Ouroboros — Detailed Guide for This Repo"
-Cohesion: 0.07
-Nodes (29): 1. What it is (30 seconds), 2. All pages / nodes map, 3.1 Interview (ch.5) — expose hidden assumptions, 3.2 Seed (ch.6) — freeze the spec, 3.3 Execute (ch.7) — Double Diamond, 3.4 Evaluate (ch.8) — 3-stage gate, 3.5 Iterate (ch.9) — evolve + ralph, 3.6 Existing projects (ch.10) — brownfield / pm / publish (+21 more)
 
 ### Community 24 - "Application"
 Cohesion: 0.20
@@ -229,14 +218,6 @@ Nodes (6): ApplicationActivity, CollegeAdmission.Droid, NativeApplication, Appli
 Cohesion: 0.28
 Nodes (9): Android Studio Project Structure, App Source Classes, Syllabus PDF Assets, Course Catalog UI, Course Detail Popup B.Sc. Software Engineering, Exit Confirmation Dialog, M.Sc. Software Engineering Detail, Registration Form UI (+1 more)
 
-### Community 36 - "CrmShellView"
-Cohesion: 0.27
-Nodes (4): CrmShellView, Vm, Control, RoutedEventArgs
-
-### Community 37 - "Applicant"
-Cohesion: 0.23
-Nodes (6): Applicant, DocsLabel, DocsPending, FeeLabel, StageName, RelayCommand
-
 ### Community 38 - ".BuildAvaloniaApp"
 Cohesion: 0.29
 Nodes (5): CollegeAdmission.Desktop, Program, App, AppBuilder, STAThread
@@ -249,41 +230,29 @@ Nodes (18): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList, Cour
 Cohesion: 0.38
 Nodes (7): MVVM with CommunityToolkit, NativeAOT Compatible Code Patterns, Avalonia Path B Rewrite Plan, Legacy Android Audit Findings, Uno Platform Rewrite Master Plan, Uno vs Avalonia Verdict, College Admission Android App Overview
 
-### Community 41 - "Avalonia CRM Vision — Brand-New College Management App"
-Cohesion: 0.18
-Nodes (10): 1. Where we are (honest baseline), 2. UI skills loaded (via `ui-skills` MCP `https://www.ui-skills.com/mcp`), 3. Design brief (per `pbakaus/shape`), 4. Information architecture — from 3 screens to CRM, 5. Design system (Avalonia Fluent + custom tokens), 6. Screen contracts (compact, info-dense — what "more on screen" means), 7. Non-functional floors (build these in, not later), 8. Greenfield build plan (Avalonia, from scratch) (+2 more)
-
-### Community 42 - "CrmStage"
-Cohesion: 0.25
-Nodes (8): CrmStage, Applied, Enquiry, Enrolled, FeePaid, Merit, Offered, Verified
-
-### Community 43 - "CrmModels.cs"
-Cohesion: 0.33
-Nodes (5): CourseFill, Pct, PctLabel, CrmAction, CrmSeed
-
 ### Community 47 - "Uno Platform Getting Started"
 Cohesion: 0.67
 Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
 
 ## Knowledge Gaps
-- **284 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+279 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 368 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **199 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+194 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 277 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CrmViewModel`, `CrmShellView`, `ILauncherService`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
-  _High betweenness centrality (0.093) - this node is a cross-community bridge._
-- **Why does `CrmViewModel` connect `CrmViewModel` to `CrmShellView`, `Applicant`, `ILauncherService`, `Course`, `CrmModels.cs`, `.OpenSyllabusAsync`, `MainViewModel`, `CoursesViewModel`?**
+- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CollegeAdmission.Views`, `ILauncherService`, `.OpenUrlAsync`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
   _High betweenness centrality (0.089) - this node is a cross-community bridge._
 - **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `Page`, `MainViewModel`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
+- **Why does `RegistrationPage` connect `Page` to `RegistrationViewModel`, `CollegeAdmission.ViewModels`, `Page`?**
+  _High betweenness centrality (0.069) - this node is a cross-community bridge._
 - **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _284 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _199 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Registration` be split into smaller, more focused modules?**
   _Cohesion score 0.0815686274509804 - nodes in this community are weakly interconnected._
 - **Should `.RootOf` be split into smaller, more focused modules?**
-  _Cohesion score 0.05076679005817028 - nodes in this community are weakly interconnected._
-- **Should `CrmViewModel` be split into smaller, more focused modules?**
-  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08292682926829269 - nodes in this community are weakly interconnected._
+- **Should `CollegeAdmission.Views` be split into smaller, more focused modules?**
+  _Cohesion score 0.11695906432748537 - nodes in this community are weakly interconnected._
