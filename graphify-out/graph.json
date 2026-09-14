@@ -131,7 +131,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "courses",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Courses.java",
@@ -144,7 +144,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "mainactivity",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/MainActivity.java",
@@ -157,11 +157,37 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "pdfviewer",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/PDFviewer.java",
       "source_location": "L15"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration",
+      "label": "Registration",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "registration",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener",
+      "label": "SocketListener",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "socketlistener",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L215"
     },
     {
       "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_splashscreen_splashscreen",
@@ -170,7 +196,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "splashscreen",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/SplashScreen.java",
@@ -373,45 +399,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_viewmodelbase_collegeadmission_viewmodels_viewmodelbase",
-      "label": "ViewModelBase",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.ViewModels",
-        "scope_chain": [
-          "s50"
-        ]
-      },
-      "norm_label": "viewmodelbase",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/ViewModelBase.cs",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_collegeadmission_viewmodels_coursesviewmodel",
-      "label": "CoursesViewModel",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "metadata": {
-        "is_partial": true,
-        "namespace": "CollegeAdmission.ViewModels",
-        "scope_chain": [
-          "s144"
-        ]
-      },
-      "norm_label": "coursesviewmodel",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs",
-      "source_location": "L8"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_mainmenupage_xaml_collegeadmission_mainmenupage",
       "label": "MainMenuPage",
       "_callable": true,
@@ -504,12 +491,12 @@
         "is_partial": true,
         "namespace": "CollegeAdmission.Views",
         "scope_chain": [
-          "s28"
+          "s45"
         ]
       },
       "norm_label": "mainwindow",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L5"
+      "source_location": "L6"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_tests_unittest1_collegeadmission_tests_unittest1",
@@ -529,6 +516,45 @@
       "norm_label": "unittest1",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/UnitTest1.cs",
       "source_location": "L3"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_viewmodelbase_collegeadmission_viewmodels_viewmodelbase",
+      "label": "ViewModelBase",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "CoursesViewModel",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.ViewModels",
+        "scope_chain": [
+          "s50"
+        ]
+      },
+      "norm_label": "viewmodelbase",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/ViewModelBase.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_collegeadmission_viewmodels_coursesviewmodel",
+      "label": "CoursesViewModel",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "CoursesViewModel",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "CollegeAdmission.ViewModels",
+        "scope_chain": [
+          "s144"
+        ]
+      },
+      "norm_label": "coursesviewmodel",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs",
+      "source_location": "L8"
     },
     {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_android_application_collegeadmission_android_application",
@@ -704,30 +730,43 @@
       "source_location": "L3"
     },
     {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration",
-      "label": "Registration",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests",
+      "label": "CatalogTests",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
-      "norm_label": "registration",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L30"
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "catalogtests",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L7"
     },
     {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener",
-      "label": "SocketListener",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher",
+      "label": "FakeLauncher",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
-      "norm_label": "socketlistener",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L215"
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "fakelauncher",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L51"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_platforms_android_main_android_collegeadmission_droid_application",
@@ -941,45 +980,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests",
-      "label": "CatalogTests",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "catalogtests",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher",
-      "label": "FakeLauncher",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "is_nested_type": true,
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "fakelauncher",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L51"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_registrationpage_xaml_collegeadmission_registrationpage",
       "label": "RegistrationPage",
       "_callable": true,
@@ -1005,7 +1005,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1027,7 +1027,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1055,7 +1055,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1077,7 +1077,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1165,7 +1165,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1187,7 +1187,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1215,7 +1215,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1237,7 +1237,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1313,7 +1313,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1347,7 +1347,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1364,12 +1364,330 @@
       "source_location": "L54"
     },
     {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_instantiatewebsocket",
+      "label": ".instantiateWebSocket()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "newWebSocket",
+            "receiver_type": "OkHttpClient",
+            "lang": "java",
+            "line": "L260"
+          }
+        ]
+      },
+      "norm_label": ".instantiatewebsocket()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L253"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_oncreate",
+      "label": ".onCreate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "setOnClickListener",
+            "receiver_type": "Button",
+            "lang": "java",
+            "line": "L90"
+          }
+        ]
+      },
+      "norm_label": ".oncreate()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_onwindowfocuschanged",
+      "label": ".onWindowFocusChanged()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "setSystemUiVisibility",
+            "receiver_type": "View",
+            "lang": "java",
+            "line": "L171"
+          }
+        ]
+      },
+      "norm_label": ".onwindowfocuschanged()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L166"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_senddatatosever",
+      "label": ".sendDataToSever()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getText",
+            "receiver_type": "EditText",
+            "lang": "java",
+            "line": "L184"
+          },
+          {
+            "callee": "send",
+            "receiver_type": "WebSocket",
+            "lang": "java",
+            "line": "L211"
+          }
+        ]
+      },
+      "norm_label": ".senddatatosever()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L180"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_showcancelregdialog",
+      "label": ".showCancelRegDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "setContentView",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L104"
+          },
+          {
+            "callee": "findViewById",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L106"
+          },
+          {
+            "callee": "setText",
+            "receiver_type": "Button",
+            "lang": "java",
+            "line": "L110"
+          },
+          {
+            "callee": "setText",
+            "receiver_type": "TextView",
+            "lang": "java",
+            "line": "L113"
+          },
+          {
+            "callee": "setOnClickListener",
+            "receiver_type": "Button",
+            "lang": "java",
+            "line": "L115"
+          },
+          {
+            "callee": "e",
+            "receiver_type": "Log",
+            "lang": "java",
+            "line": "L117"
+          },
+          {
+            "callee": "postDelayed",
+            "receiver_type": "Handler",
+            "lang": "java",
+            "line": "L120"
+          },
+          {
+            "callee": "makeText",
+            "receiver_type": "Toast",
+            "lang": "java",
+            "line": "L121"
+          },
+          {
+            "callee": "dismiss",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L126"
+          },
+          {
+            "callee": "show",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L130"
+          }
+        ]
+      },
+      "norm_label": ".showcancelregdialog()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L101"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_shownextregdialog",
+      "label": ".showNextRegDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "setContentView",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L136"
+          },
+          {
+            "callee": "findViewById",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L138"
+          },
+          {
+            "callee": "setText",
+            "receiver_type": "Button",
+            "lang": "java",
+            "line": "L142"
+          },
+          {
+            "callee": "setText",
+            "receiver_type": "TextView",
+            "lang": "java",
+            "line": "L145"
+          },
+          {
+            "callee": "setOnClickListener",
+            "receiver_type": "Button",
+            "lang": "java",
+            "line": "L147"
+          },
+          {
+            "callee": "e",
+            "receiver_type": "Log",
+            "lang": "java",
+            "line": "L149"
+          },
+          {
+            "callee": "postDelayed",
+            "receiver_type": "Handler",
+            "lang": "java",
+            "line": "L152"
+          },
+          {
+            "callee": "makeText",
+            "receiver_type": "Toast",
+            "lang": "java",
+            "line": "L153"
+          },
+          {
+            "callee": "dismiss",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L158"
+          },
+          {
+            "callee": "show",
+            "receiver_type": "Dialog",
+            "lang": "java",
+            "line": "L162"
+          }
+        ]
+      },
+      "norm_label": ".shownextregdialog()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L133"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onclosed",
+      "label": ".onClosed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": ".onclosed()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L222"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onclosing",
+      "label": ".onClosing()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": ".onclosing()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L227"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onfailure",
+      "label": ".onFailure()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": ".onfailure()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L232"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onmessage",
+      "label": ".onMessage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": ".onmessage()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L237"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onopen",
+      "label": ".onOpen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": ".onopen()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L247"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_socketlistener",
+      "label": ".SocketListener()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": ".socketlistener()",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L218"
+    },
+    {
       "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_splashscreen_splashscreen_oncreate",
       "label": ".onCreate()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1397,7 +1715,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -2356,6 +2674,50 @@
       "source_location": "L20"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_enforceratio",
+      "label": ".EnforceRatio()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Views",
+        "scope_chain": [
+          "s45"
+        ]
+      },
+      "norm_label": ".enforceratio()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_fittoscreen",
+      "label": ".FitToScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Views",
+        "scope_chain": [
+          "s45"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "ScreenFromVisual",
+            "receiver_type": "Screens",
+            "lang": "csharp",
+            "line": "L22"
+          }
+        ]
+      },
+      "norm_label": ".fittoscreen()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L20"
+    },
+    {
       "id": "src_platformuno_collegeadmission_collegeadmission_tests_unittest1_collegeadmission_tests_unittest1_setup",
       "label": ".Setup()",
       "_callable": true,
@@ -2776,322 +3138,112 @@
       "source_location": "L13"
     },
     {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_instantiatewebsocket",
-      "label": ".instantiateWebSocket()",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_catalog_coversalllegacycourses",
+      "label": ".Catalog_CoversAllLegacyCourses()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
       "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
         "unresolved_calls": [
           {
-            "callee": "newWebSocket",
-            "receiver_type": "OkHttpClient",
-            "lang": "java",
-            "line": "L260"
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L20"
+          },
+          {
+            "callee": "Contain",
+            "receiver_type": "Does",
+            "lang": "csharp",
+            "line": "L20"
           }
         ]
       },
-      "norm_label": ".instantiatewebsocket()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L253"
+      "norm_label": ".catalog_coversalllegacycourses()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L9"
     },
     {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_oncreate",
-      "label": ".onCreate()",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_opensyllabus_skipsempty_opensvalid",
+      "label": ".OpenSyllabus_SkipsEmpty_OpensValid()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
       "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
         "unresolved_calls": [
           {
-            "callee": "setOnClickListener",
-            "receiver_type": "Button",
-            "lang": "java",
-            "line": "L90"
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L45"
+          },
+          {
+            "callee": "EqualTo",
+            "receiver_type": "Is",
+            "lang": "csharp",
+            "line": "L48"
           }
         ]
       },
-      "norm_label": ".oncreate()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L41"
+      "norm_label": ".opensyllabus_skipsempty_opensvalid()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L37"
     },
     {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_onwindowfocuschanged",
-      "label": ".onWindowFocusChanged()",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_registration_requireskeyfields",
+      "label": ".Registration_RequiresKeyFields()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
       "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
         "unresolved_calls": [
           {
-            "callee": "setSystemUiVisibility",
-            "receiver_type": "View",
-            "lang": "java",
-            "line": "L171"
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L27"
           }
         ]
       },
-      "norm_label": ".onwindowfocuschanged()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L166"
+      "norm_label": ".registration_requireskeyfields()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L23"
     },
     {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_senddatatosever",
-      "label": ".sendDataToSever()",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_openurlasync",
+      "label": ".OpenUrlAsync()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
       "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "getText",
-            "receiver_type": "EditText",
-            "lang": "java",
-            "line": "L184"
-          },
-          {
-            "callee": "send",
-            "receiver_type": "WebSocket",
-            "lang": "java",
-            "line": "L211"
-          }
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
         ]
       },
-      "norm_label": ".senddatatosever()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L180"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_showcancelregdialog",
-      "label": ".showCancelRegDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "setContentView",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L104"
-          },
-          {
-            "callee": "findViewById",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L106"
-          },
-          {
-            "callee": "setText",
-            "receiver_type": "Button",
-            "lang": "java",
-            "line": "L110"
-          },
-          {
-            "callee": "setText",
-            "receiver_type": "TextView",
-            "lang": "java",
-            "line": "L113"
-          },
-          {
-            "callee": "setOnClickListener",
-            "receiver_type": "Button",
-            "lang": "java",
-            "line": "L115"
-          },
-          {
-            "callee": "e",
-            "receiver_type": "Log",
-            "lang": "java",
-            "line": "L117"
-          },
-          {
-            "callee": "postDelayed",
-            "receiver_type": "Handler",
-            "lang": "java",
-            "line": "L120"
-          },
-          {
-            "callee": "makeText",
-            "receiver_type": "Toast",
-            "lang": "java",
-            "line": "L121"
-          },
-          {
-            "callee": "dismiss",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L126"
-          },
-          {
-            "callee": "show",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L130"
-          }
-        ]
-      },
-      "norm_label": ".showcancelregdialog()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L101"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_registration_shownextregdialog",
-      "label": ".showNextRegDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "setContentView",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L136"
-          },
-          {
-            "callee": "findViewById",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L138"
-          },
-          {
-            "callee": "setText",
-            "receiver_type": "Button",
-            "lang": "java",
-            "line": "L142"
-          },
-          {
-            "callee": "setText",
-            "receiver_type": "TextView",
-            "lang": "java",
-            "line": "L145"
-          },
-          {
-            "callee": "setOnClickListener",
-            "receiver_type": "Button",
-            "lang": "java",
-            "line": "L147"
-          },
-          {
-            "callee": "e",
-            "receiver_type": "Log",
-            "lang": "java",
-            "line": "L149"
-          },
-          {
-            "callee": "postDelayed",
-            "receiver_type": "Handler",
-            "lang": "java",
-            "line": "L152"
-          },
-          {
-            "callee": "makeText",
-            "receiver_type": "Toast",
-            "lang": "java",
-            "line": "L153"
-          },
-          {
-            "callee": "dismiss",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L158"
-          },
-          {
-            "callee": "show",
-            "receiver_type": "Dialog",
-            "lang": "java",
-            "line": "L162"
-          }
-        ]
-      },
-      "norm_label": ".shownextregdialog()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L133"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onclosed",
-      "label": ".onClosed()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": ".onclosed()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L222"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onclosing",
-      "label": ".onClosing()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": ".onclosing()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L227"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onfailure",
-      "label": ".onFailure()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": ".onfailure()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L232"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onmessage",
-      "label": ".onMessage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": ".onmessage()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L237"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_onopen",
-      "label": ".onOpen()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": ".onopen()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L247"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_socketlistener_socketlistener",
-      "label": ".SocketListener()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": ".socketlistener()",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L218"
+      "norm_label": ".openurlasync()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L55"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_platforms_android_mainactivity_android_collegeadmission_droid_mainactivity_oncreate",
@@ -3532,114 +3684,6 @@
       "source_location": "L34"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_catalog_coversalllegacycourses",
-      "label": ".Catalog_CoversAllLegacyCourses()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L20"
-          },
-          {
-            "callee": "Contain",
-            "receiver_type": "Does",
-            "lang": "csharp",
-            "line": "L20"
-          }
-        ]
-      },
-      "norm_label": ".catalog_coversalllegacycourses()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_opensyllabus_skipsempty_opensvalid",
-      "label": ".OpenSyllabus_SkipsEmpty_OpensValid()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L45"
-          },
-          {
-            "callee": "EqualTo",
-            "receiver_type": "Is",
-            "lang": "csharp",
-            "line": "L48"
-          }
-        ]
-      },
-      "norm_label": ".opensyllabus_skipsempty_opensvalid()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L37"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_registration_requireskeyfields",
-      "label": ".Registration_RequiresKeyFields()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L27"
-          }
-        ]
-      },
-      "norm_label": ".registration_requireskeyfields()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L23"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_openurlasync",
-      "label": ".OpenUrlAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".openurlasync()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L55"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_registrationpage_xaml_collegeadmission_registrationpage_oncancelclick",
       "label": ".OnCancelClick()",
       "_callable": true,
@@ -3786,7 +3830,7 @@
       "label": "android.os.Bundle",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "android.os.bundle",
       "source_file": "",
@@ -3797,7 +3841,7 @@
       "label": "android.view.View",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "android.view.view",
       "source_file": "",
@@ -3808,9 +3852,20 @@
       "label": "android.widget.Button",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "android.widget.button",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "android_widget_edittext",
+      "label": "android.widget.EditText",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "android.widget.edittext",
       "source_file": "",
       "source_location": ""
     },
@@ -3819,7 +3874,7 @@
       "label": "androidx.appcompat.app.AppCompatActivity",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "androidx.appcompat.app.appcompatactivity",
       "source_file": "",
@@ -3830,9 +3885,53 @@
       "label": "com.github.barteksc.pdfviewer.PDFView",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "com.github.barteksc.pdfviewer.pdfview",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "okhttp3_response",
+      "label": "okhttp3.Response",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "okhttp3.response",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "okhttp3_websocket",
+      "label": "okhttp3.WebSocket",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "okhttp3.websocket",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "okhttp3_websocketlistener",
+      "label": "okhttp3.WebSocketListener",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "okhttp3.websocketlistener",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "okio_bytestring",
+      "label": "okio.ByteString",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "okio.bytestring",
       "source_file": "",
       "source_location": ""
     },
@@ -3841,7 +3940,7 @@
       "label": "OnClickListener",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "onclicklistener",
       "source_file": "",
@@ -3852,7 +3951,7 @@
       "label": "Courses.java",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "courses.java",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Courses.java",
@@ -3863,7 +3962,7 @@
       "label": "Override",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "override",
       "source_file": "",
@@ -3874,7 +3973,7 @@
       "label": "MainActivity.java",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "mainactivity.java",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/MainActivity.java",
@@ -3885,7 +3984,7 @@
       "label": "Override",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "override",
       "source_file": "",
@@ -3896,7 +3995,7 @@
       "label": "PDFviewer.java",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "pdfviewer.java",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/PDFviewer.java",
@@ -3907,7 +4006,29 @@
       "label": "Override",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration",
+      "label": "Registration.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
+      "file_type": "code",
+      "norm_label": "registration.java",
+      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_java_override",
+      "label": "Override",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "override",
       "source_file": "",
@@ -3918,7 +4039,7 @@
       "label": "SplashScreen.java",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "splashscreen.java",
       "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/SplashScreen.java",
@@ -3929,7 +4050,7 @@
       "label": "Override",
       "_origin": "ast",
       "community": 0,
-      "community_name": "android.os.Bundle",
+      "community_name": "Registration",
       "file_type": "code",
       "norm_label": "override",
       "source_file": "",
@@ -4929,6 +5050,22 @@
       "type": "namespace"
     },
     {
+      "id": "csharp_namespace:56a0d3080b910c4a",
+      "label": "CollegeAdmission.Tests",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission.Tests"
+      },
+      "norm_label": "collegeadmission.tests",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L5",
+      "type": "namespace"
+    },
+    {
       "id": "csharp_namespace:5bed85bcf5d6061b",
       "label": "CollegeAdmission.ViewModels",
       "_origin": "ast",
@@ -4942,6 +5079,22 @@
       "norm_label": "collegeadmission.viewmodels",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/MainViewModel.cs",
       "source_location": "L6",
+      "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:6e1e2c707f7e2461",
+      "label": "CollegeAdmission",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission"
+      },
+      "norm_label": "collegeadmission",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L7",
       "type": "namespace"
     },
     {
@@ -4959,17 +5112,6 @@
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
       "source_location": "L1",
       "type": "namespace"
-    },
-    {
-      "id": "observableobject",
-      "label": "ObservableObject",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "norm_label": "observableobject",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_mainviewmodel",
@@ -4994,14 +5136,25 @@
       "source_location": "L1"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_viewmodelbase",
-      "label": "ViewModelBase.cs",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_coursesview_axaml",
+      "label": "CoursesView.axaml.cs",
       "_origin": "ast",
       "community": 17,
       "community_name": "CollegeAdmission.ViewModels",
       "file_type": "code",
-      "norm_label": "viewmodelbase.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/ViewModelBase.cs",
+      "norm_label": "coursesview.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml",
+      "label": "App.xaml.cs",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "app.xaml.cs",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
       "source_location": "L1"
     },
     {
@@ -5014,34 +5167,6 @@
       "norm_label": "coursesviewmodel.cs",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs",
       "source_location": "L1"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_collegeadmission_viewmodels_coursesviewmodel_courses",
-      "label": "Courses",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.ViewModels",
-        "scope_chain": [
-          "s144"
-        ]
-      },
-      "norm_label": "courses",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_registrationviewmodel",
@@ -5063,6 +5188,28 @@
       "file_type": "code",
       "norm_label": "coursespage.xaml.cs",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/CoursesPage.xaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_mainmenupage_xaml",
+      "label": "MainMenuPage.xaml.cs",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "mainmenupage.xaml.cs",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/MainMenuPage.xaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_registrationpage_xaml",
+      "label": "RegistrationPage.xaml.cs",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "registrationpage.xaml.cs",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/RegistrationPage.xaml.cs",
       "source_location": "L1"
     },
     {
@@ -5318,6 +5465,17 @@
       "type": "namespace"
     },
     {
+      "id": "size",
+      "label": "Size",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "norm_label": "size",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml",
       "label": "App.axaml.cs",
       "_origin": "ast",
@@ -5326,17 +5484,6 @@
       "file_type": "code",
       "norm_label": "app.axaml.cs",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_coursesview_axaml",
-      "label": "CoursesView.axaml.cs",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "CollegeAdmission.Views",
-      "file_type": "code",
-      "norm_label": "coursesview.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs",
       "source_location": "L1"
     },
     {
@@ -5423,22 +5570,6 @@
       "source_location": ""
     },
     {
-      "id": "csharp_namespace:56a0d3080b910c4a",
-      "label": "CollegeAdmission.Tests",
-      "_origin": "ast",
-      "community": 20,
-      "community_name": "UnitTest1",
-      "file_type": "code",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission.Tests"
-      },
-      "norm_label": "collegeadmission.tests",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L5",
-      "type": "namespace"
-    },
-    {
       "id": "setup",
       "label": "SetUp",
       "_origin": "ast",
@@ -5472,53 +5603,54 @@
       "source_location": ""
     },
     {
-      "id": "csharp_namespace:6e1e2c707f7e2461",
-      "label": "CollegeAdmission",
+      "id": "observableobject",
+      "label": "ObservableObject",
       "_origin": "ast",
       "community": 21,
-      "community_name": "CollegeAdmission",
+      "community_name": "CoursesViewModel",
+      "file_type": "code",
+      "norm_label": "observableobject",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_viewmodelbase",
+      "label": "ViewModelBase.cs",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "CoursesViewModel",
+      "file_type": "code",
+      "norm_label": "viewmodelbase.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/ViewModelBase.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_collegeadmission_viewmodels_coursesviewmodel_courses",
+      "label": "Courses",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "CoursesViewModel",
       "file_type": "code",
       "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission"
+        "namespace": "CollegeAdmission.ViewModels",
+        "scope_chain": [
+          "s144"
+        ]
       },
-      "norm_label": "collegeadmission",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L7",
-      "type": "namespace"
+      "norm_label": "courses",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs",
+      "source_location": "L17"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml",
-      "label": "App.xaml.cs",
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_cs_ireadonlylist",
+      "label": "IReadOnlyList",
       "_origin": "ast",
       "community": 21,
-      "community_name": "CollegeAdmission",
+      "community_name": "CoursesViewModel",
       "file_type": "code",
-      "norm_label": "app.xaml.cs",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_mainmenupage_xaml",
-      "label": "MainMenuPage.xaml.cs",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "CollegeAdmission",
-      "file_type": "code",
-      "norm_label": "mainmenupage.xaml.cs",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/MainMenuPage.xaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_registrationpage_xaml",
-      "label": "RegistrationPage.xaml.cs",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "CollegeAdmission",
-      "file_type": "code",
-      "norm_label": "registrationpage.xaml.cs",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/RegistrationPage.xaml.cs",
-      "source_location": "L1"
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_assets_sharedassets",
@@ -5901,79 +6033,52 @@
       "source_location": "L1"
     },
     {
-      "id": "android_widget_edittext",
-      "label": "android.widget.EditText",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_opened",
+      "label": "Opened",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
-      "norm_label": "android.widget.edittext",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "opened",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_list",
+      "label": "List",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "FakeLauncher",
+      "file_type": "code",
+      "norm_label": "list",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "okhttp3_response",
-      "label": "okhttp3.Response",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_task",
+      "label": "Task",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
-      "norm_label": "okhttp3.response",
+      "norm_label": "task",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "okhttp3_websocket",
-      "label": "okhttp3.WebSocket",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_test",
+      "label": "Test",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Registration",
+      "community_name": "FakeLauncher",
       "file_type": "code",
-      "norm_label": "okhttp3.websocket",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "okhttp3_websocketlistener",
-      "label": "okhttp3.WebSocketListener",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": "okhttp3.websocketlistener",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "okio_bytestring",
-      "label": "okio.ByteString",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": "okio.bytestring",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration",
-      "label": "Registration.java",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": "registration.java",
-      "source_file": "src/AndroidJava/app/src/main/java/in/org/cocsit/collegeadmissionmanagementsystem/Registration.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_registration_java_override",
-      "label": "Override",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Registration",
-      "file_type": "code",
-      "norm_label": "override",
+      "norm_label": "test",
       "source_file": "",
       "source_location": ""
     },
@@ -5982,7 +6087,7 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 30,
-      "community_name": "README.md",
+      "community_name": "Legacy Java Android app (archived reference)",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
@@ -5994,12 +6099,24 @@
       "label": "Legacy Java Android app (archived reference)",
       "_origin": "ast",
       "community": 30,
-      "community_name": "README.md",
+      "community_name": "Legacy Java Android app (archived reference)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "legacy java android app (archived reference)",
       "source_file": "src/AndroidJava/README.md",
       "source_location": "L1"
+    },
+    {
+      "id": "src_androidjava_readme_toolchain_modernized_2026_09_14_mirrors_mydemoapp_reference",
+      "label": "Toolchain (modernized 2026-09-14, mirrors `MyDemoApp` reference)",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "Legacy Java Android app (archived reference)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "toolchain (modernized 2026-09-14, mirrors `mydemoapp` reference)",
+      "source_file": "src/AndroidJava/README.md",
+      "source_location": "L16"
     },
     {
       "id": "src_androidjava_app_build",
@@ -6623,6 +6740,28 @@
       "source_location": "L75"
     },
     {
+      "id": "opencode_opencode_mcp",
+      "label": "mcp",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "mcp",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L86"
+    },
+    {
+      "id": "opencode_opencode_mcp_ui_skills",
+      "label": "ui-skills",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "ui-skills",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L87"
+    },
+    {
       "id": "opencode_opencode_permission",
       "label": "permission",
       "_origin": "ast",
@@ -6797,6 +6936,39 @@
       "norm_label": "enabled",
       "source_file": ".opencode/opencode.json",
       "source_location": "L21"
+    },
+    {
+      "id": "opencode_opencode_ui_skills_enabled",
+      "label": "enabled",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "enabled",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L90"
+    },
+    {
+      "id": "opencode_opencode_ui_skills_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L88"
+    },
+    {
+      "id": "opencode_opencode_ui_skills_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L89"
     },
     {
       "id": "opencode_opencode_version",
@@ -7798,56 +7970,6 @@
       "community_name": "RegistrationViewModel",
       "file_type": "code",
       "norm_label": "validationresult",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_opened",
-      "label": "Opened",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "opened",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L53"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_list",
-      "label": "List",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "norm_label": "list",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_test",
-      "label": "Test",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "norm_label": "test",
       "source_file": "",
       "source_location": ""
     },
@@ -13379,6 +13501,21 @@
       "weight": 1.0
     },
     {
+      "source": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_enforceratio",
+      "target": "size",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Size"
+      },
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
       "source": "src_avaloniaui_collegeadmission_collegeadmission_views_mainview_axaml_collegeadmission_views_mainview_onattachedtovisualtree",
       "target": "src_avaloniaui_collegeadmission_collegeadmission_views_mainview_axaml_cs_visualtreeattachmenteventargs",
       "relation": "references",
@@ -14490,7 +14627,7 @@
         "ref_token": "Window"
       },
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -14579,6 +14716,17 @@
       "confidence_score": 1.0,
       "source_file": ".opencode/opencode.json",
       "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_mcp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -14722,6 +14870,50 @@
       "confidence_score": 1.0,
       "source_file": ".opencode/opencode.json",
       "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_opencode_mcp",
+      "target": "opencode_opencode_mcp_ui_skills",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_opencode_mcp_ui_skills",
+      "target": "opencode_opencode_ui_skills_type",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_opencode_mcp_ui_skills",
+      "target": "opencode_opencode_ui_skills_url",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_opencode_mcp_ui_skills",
+      "target": "opencode_opencode_ui_skills_enabled",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -15008,6 +15200,17 @@
       "confidence_score": 1.0,
       "source_file": "src/AndroidJava/README.md",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_androidjava_readme_legacy_java_android_app_archived_reference",
+      "target": "src_androidjava_readme_toolchain_modernized_2026_09_14_mirrors_mydemoapp_reference",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AndroidJava/README.md",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -15388,7 +15591,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -15399,7 +15602,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -17209,6 +17412,28 @@
       "confidence_score": 1.0,
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainView.axaml.cs",
       "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
+      "target": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_fittoscreen",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
+      "target": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_enforceratio",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -19257,5 +19482,5 @@
       "source_file": ".opencode/skills/database-migration.md"
     }
   ],
-  "built_at_commit": "4690af4800391ec02face424675cef1b0092054e"
+  "built_at_commit": "fc970821ddbc448cc256ca7f0d2648cd0fe6b87a"
 }

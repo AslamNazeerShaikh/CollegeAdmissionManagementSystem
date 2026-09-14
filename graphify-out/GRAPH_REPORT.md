@@ -1,24 +1,24 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-14)
 
 ## Corpus Check
-- 125 files · ~139,976 words
+- 125 files · ~326,397 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 611 nodes · 808 edges · 48 communities (33 shown, 10 thin omitted)
+- 620 nodes · 817 edges · 48 communities (34 shown, 9 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 59 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4690af48`
+- Built from commit: `fc970821`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- android.os.Bundle
+- Registration
 - .RootOf
 - CollegeAdmission.Views
-- Registration
+- FakeLauncher
 - opencode.json
 - RegistrationViewModel
 - ILauncherService
@@ -36,7 +36,7 @@
 - gradlew
 - Page
 - UnitTest1
-- CollegeAdmission
+- CoursesViewModel
 - Shared Assets
 - Application
 - App
@@ -44,7 +44,7 @@
 - Graphify Knowledge Graph Pipeline
 - org.junit.Test
 - Maintenance.java
-- README.md
+- Legacy Java Android app (archived reference)
 - MainActivity
 - Course Catalog UI
 - .BuildAvaloniaApp
@@ -96,27 +96,27 @@
 - **Opencode agent team** — _opencode_agents_college_admission_assistant_college_admission_assistant, _opencode_agents_code_reviewer_code_reviewer, _opencode_agents_csharp_code_reviewer_csharp_code_reviewer, _opencode_agents_csharp_uno_agent_csharp_uno_agent, _opencode_agents_test_writer_test_writer, _opencode_agents_documentation_writer_documentation_writer, _opencode_agents_gradle_expert_gradle_expert [INFERRED 0.85]
 - **Persistence migration and testing flow** — _opencode_skills_database_migration_flyway_config, _opencode_skills_database_migration_migration_scripts, _opencode_skills_testing_strategy_testcontainers, _opencode_skills_csharp_development_sqlite_abstraction [INFERRED 0.85]
 
-## Communities (48 total, 10 thin omitted)
+## Communities (48 total, 9 thin omitted)
 
-### Community 0 - "android.os.Bundle"
-Cohesion: 0.13
-Nodes (14): android.os.Bundle, android.view.View, android.widget.Button, androidx.appcompat.app.AppCompatActivity, com.github.barteksc.pdfviewer.PDFView, OnClickListener, Courses, Override (+6 more)
+### Community 0 - "Registration"
+Cohesion: 0.08
+Nodes (22): android.os.Bundle, android.view.View, android.widget.Button, android.widget.EditText, androidx.appcompat.app.AppCompatActivity, com.github.barteksc.pdfviewer.PDFView, okhttp3.Response, okhttp3.WebSocket (+14 more)
 
 ### Community 1 - ".RootOf"
 Cohesion: 0.08
 Nodes (14): ViewNavigationService, Vm, CoursesView, RoutedEventArgs, MainMenuView, RoutedEventArgs, Control, RegistrationView (+6 more)
 
 ### Community 2 - "CollegeAdmission.Views"
-Cohesion: 0.13
-Nodes (8): Application, CollegeAdmission.Views, App, MainView, Root, VisualTreeAttachmentEventArgs, MainWindow, Window
+Cohesion: 0.12
+Nodes (9): Application, CollegeAdmission.Views, Size, App, MainView, Root, VisualTreeAttachmentEventArgs, MainWindow (+1 more)
 
-### Community 3 - "Registration"
-Cohesion: 0.20
-Nodes (8): android.widget.EditText, okhttp3.Response, okhttp3.WebSocket, okhttp3.WebSocketListener, okio.ByteString, Override, Registration, SocketListener
+### Community 3 - "FakeLauncher"
+Cohesion: 0.29
+Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
 
 ### Community 4 - "opencode.json"
-Cohesion: 0.06
-Nodes (35): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+27 more)
+Cohesion: 0.05
+Nodes (40): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+32 more)
 
 ### Community 5 - "RegistrationViewModel"
 Cohesion: 0.08
@@ -131,8 +131,8 @@ Cohesion: 0.25
 Nodes (5): Task, RelayCommand, Task, RelayCommand, Task
 
 ### Community 8 - "RegistrationViewModel"
-Cohesion: 0.06
-Nodes (32): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+24 more)
+Cohesion: 0.08
+Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
 
 ### Community 9 - "Page"
 Cohesion: 0.07
@@ -167,8 +167,8 @@ Cohesion: 0.10
 Nodes (17): net10.0-desktop, coverlet.collector, FluentAssertions, Microsoft.NET.Test.Sdk, NUnit, NUnit3TestAdapter, SkiaSharp.Skottie, SkiaSharp.Views.Uno.WinUI (+9 more)
 
 ### Community 17 - "CollegeAdmission.ViewModels"
-Cohesion: 0.19
-Nodes (8): CollegeAdmission.Models, CollegeAdmission.ViewModels, CollegeAdmission.Services, ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList
+Cohesion: 0.20
+Nodes (5): CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission, CollegeAdmission.Services
 
 ### Community 18 - "gradlew"
 Cohesion: 0.83
@@ -179,8 +179,12 @@ Cohesion: 0.13
 Nodes (13): Page, ExitMessage, ExitOverlay, Page, WelcomeAnim, MainMenuPage, RoutedEventArgs, AnimatedVisualPlayer (+5 more)
 
 ### Community 20 - "UnitTest1"
-Cohesion: 0.29
-Nodes (4): CollegeAdmission.Tests, SetUp, UnitTest1, Test
+Cohesion: 0.33
+Nodes (3): SetUp, UnitTest1, Test
+
+### Community 21 - "CoursesViewModel"
+Cohesion: 0.33
+Nodes (5): ObservableObject, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList
 
 ### Community 22 - "Shared Assets"
 Cohesion: 0.17
@@ -231,24 +235,24 @@ Cohesion: 0.67
 Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
 
 ## Knowledge Gaps
-- **196 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+191 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 272 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **199 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+194 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 277 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CollegeAdmission.Views`, `ILauncherService`, `.OpenUrlAsync`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`?**
+- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CollegeAdmission.Views`, `ILauncherService`, `.OpenUrlAsync`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
   _High betweenness centrality (0.089) - this node is a cross-community bridge._
-- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `CollegeAdmission.ViewModels`, `Page`, `.RootOf`, `MainViewModel`?**
-  _High betweenness centrality (0.085) - this node is a cross-community bridge._
-- **Why does `RegistrationPage` connect `Page` to `RegistrationViewModel`, `Page`, `CollegeAdmission`?**
-  _High betweenness centrality (0.071) - this node is a cross-community bridge._
+- **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `Page`, `MainViewModel`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
+- **Why does `RegistrationPage` connect `Page` to `RegistrationViewModel`, `CollegeAdmission.ViewModels`, `Page`?**
+  _High betweenness centrality (0.069) - this node is a cross-community bridge._
 - **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _196 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `android.os.Bundle` be split into smaller, more focused modules?**
-  _Cohesion score 0.12643678160919541 - nodes in this community are weakly interconnected._
+  _199 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Registration` be split into smaller, more focused modules?**
+  _Cohesion score 0.0815686274509804 - nodes in this community are weakly interconnected._
 - **Should `.RootOf` be split into smaller, more focused modules?**
   _Cohesion score 0.08292682926829269 - nodes in this community are weakly interconnected._
 - **Should `CollegeAdmission.Views` be split into smaller, more focused modules?**
-  _Cohesion score 0.1323529411764706 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11695906432748537 - nodes in this community are weakly interconnected._
