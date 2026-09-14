@@ -20,6 +20,7 @@ public partial class MainView : UserControl
     protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
     {
         base.OnAttachedToVisualTree(e);
+        AppShell.ShellView = this;
         if (Root.CurrentView is null)
             Root.ShowSplash();
     }

@@ -1,15 +1,14 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 15.0.26124.0
-
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{858FCBEA-AB84-454E-B98C-89ACCC6FD155}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegeAdmission", "CollegeAdmission\CollegeAdmission.csproj", "{DF4CA9F5-A38F-4605-AA8B-9E2941BD161F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegeAdmission.Tests", "CollegeAdmission.Tests\CollegeAdmission.Tests.csproj", "{3AF7E378-3437-4FFD-A16A-BC527230EE7A}"
 EndProject
-
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BADA71DC-7FFD-4EDC-9F28-FB74AEADC713}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -20,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Packages.props = Directory.Packages.props
 		global.json = global.json
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeAdmission.Core", "CollegeAdmission.Core\CollegeAdmission.Core.csproj", "{C837C5B0-18FD-4264-A0DB-462D6175C4AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +110,34 @@ Global
 		{3AF7E378-3437-4FFD-A16A-BC527230EE7A}.Release|x64.Build.0 = Release|Any CPU
 		{3AF7E378-3437-4FFD-A16A-BC527230EE7A}.Release|x86.ActiveCfg = Release|Any CPU
 		{3AF7E378-3437-4FFD-A16A-BC527230EE7A}.Release|x86.Build.0 = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|ARM.Build.0 = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|ARM64.Build.0 = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|iPhone.Build.0 = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|x64.Build.0 = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{C837C5B0-18FD-4264-A0DB-462D6175C4AB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,6 +15,11 @@ public sealed record Course(
     public bool HasSy => SySyllabusUrl is not null;
     public bool HasTy => TySyllabusUrl is not null;
     public string Subtitle => $"{Eligibility} · {Duration} · ₹{FeePerYear}/yr";
+
+    // Card UI text mirroring the legacy Java/Avalonia course cards.
+    public string CardTitle => Name;
+    public string CardSubtitle => $"Eligibility : {Eligibility}\nDuration : {Duration}";
+    public string PopupSubtitle => $"Eligibility : {Eligibility}\nDuration : {Duration}\nFees/Year : {FeePerYear} Rs.";
 }
 
 public static class CourseCatalog

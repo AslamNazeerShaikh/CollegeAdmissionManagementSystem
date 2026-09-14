@@ -2,7 +2,6 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using CollegeAdmission.ViewModels;
 using CollegeAdmission.Views;
 
 namespace CollegeAdmission;
@@ -23,18 +22,18 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainViewModel()
+                DataContext = AppShell.Main
             };
         }
         else if (ApplicationLifetime is IActivityApplicationLifetime singleViewFactoryApplicationLifetime)
         {
             singleViewFactoryApplicationLifetime.MainViewFactory = () =>
-                new MainView { DataContext = new MainViewModel() };
+                new MainView { DataContext = AppShell.Main };
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
             singleViewPlatform.MainView =
-                new MainView { DataContext = new MainViewModel() };
+                new MainView { DataContext = AppShell.Main };
         }
 
         base.OnFrameworkInitializationCompleted();
