@@ -73,57 +73,44 @@ public class Courses extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        int id = v.getId();
 
-        switch (v.getId()){
-
-            case R.id.courseRegBscCS:
-                showCoursePopup(v,"B.Sc. Computer Science","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
-                                 ,"cbcs_bsc_cs_fy.pdf","cbcs_bsc_cs_sy.pdf","cbcs_bsc_cs_ty.pdf");
-                break;
-            case R.id.courseRegBscSE:
-                showCoursePopup(v,"B.Sc. Software Engineering","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
-                                 ,"cbcs_bsc_se_fy.pdf","cbcs_bsc_se_sy.pdf","cbcs_bsc_se_ty.pdf");
-                break;
-            case R.id.courseRegBscNT:
-                showCoursePopup(v,"B.Sc. Network Technology","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
-                                 ,"cbcs_bsc_nt_fy.pdf","cbcs_bsc_nt_sy.pdf","cbcs_bsc_nt_ty.pdf");
-                break;
-            case R.id.courseRegMscCS:
-                showCoursePopup(v,"M.Sc. Computer Science","Eligibility : Any Computer UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
-                        ,"cbcs_msc_cs_fy.pdf","cbcs_msc_cs_sy.pdf","0");
-                break;
-            case R.id.courseRegMscSE:
-                showCoursePopup(v,"M.Sc. Software Engineering","Eligibility : Any Computer UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
-                        ,"cbcs_msc_se_fy.pdf","cbcs_msc_se_sy.pdf","0");
-                break;
-            case R.id.courseRegMscSA:
-                showCoursePopup(v,"M.Sc. System Admin. & N/W","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
-                        ,"cbcs_msc_sa_fy.pdf","cbcs_msc_sa_sy.pdf","0");
-                break;
-            case R.id.courseRegMscCM:
-                showCoursePopup(v,"M.Sc. Computer Management","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
-                        ,"cbcs_msc_cm_fy.pdf","cbcs_msc_cm_sy.pdf","0");
-                break;
-            case R.id.courseRegBCA:
-                showCoursePopup(v,"BCA - Bachelor of\nComputer Application","Eligibility : Any 12th\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
-                        ,"cbcs_bca_fy.pdf","cbcs_bca_sy.pdf","cbcs_bca_ty.pdf");
-                break;
-            case R.id.courseRegBscBT:
-                showCoursePopup(v,"B.Sc. Biotechnology","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
-                        ,"cbcs_bsc_bt_fy.pdf","cbcs_bsc_bt_sy.pdf","cbcs_bsc_bt_ty.pdf");
-                break;
-            case R.id.courseRegMscBT:
-                showCoursePopup(v,"M.Sc. Biotechnology","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
-                        ,"cbcs_msc_bt_fy.pdf","cbcs_msc_bt_sy.pdf","0");
-                break;
-            case R.id.courseRegBBA:
-                showCoursePopup(v,"BBA - Bachelor of\nBusiness Administration","Eligibility : Any 12th\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
-                        ,"cbcs_bba_fy.pdf","cbcs_bba_sy.pdf","cbcs_bba_ty.pdf");
-                break;
-            case R.id.courseRegMBA:
-                showCoursePopup(v,"MBA - Master of\nBusiness Administration","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 17,900.0 Rs."
-                        ,"0","0","0");
-                break;
+        if (id == R.id.courseRegBscCS) {
+            showCoursePopup(v,"B.Sc. Computer Science","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                             ,"cbcs_bsc_cs_fy.pdf","cbcs_bsc_cs_sy.pdf","cbcs_bsc_cs_ty.pdf");
+        } else if (id == R.id.courseRegBscSE) {
+            showCoursePopup(v,"B.Sc. Software Engineering","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                             ,"cbcs_bsc_se_fy.pdf","cbcs_bsc_se_sy.pdf","cbcs_bsc_se_ty.pdf");
+        } else if (id == R.id.courseRegBscNT) {
+            showCoursePopup(v,"B.Sc. Network Technology","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                             ,"cbcs_bsc_nt_fy.pdf","cbcs_bsc_nt_sy.pdf","cbcs_bsc_nt_ty.pdf");
+        } else if (id == R.id.courseRegMscCS) {
+            showCoursePopup(v,"M.Sc. Computer Science","Eligibility : Any Computer UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                    ,"cbcs_msc_cs_fy.pdf","cbcs_msc_cs_sy.pdf","0");
+        } else if (id == R.id.courseRegMscSE) {
+            showCoursePopup(v,"M.Sc. Software Engineering","Eligibility : Any Computer UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                    ,"cbcs_msc_se_fy.pdf","cbcs_msc_se_sy.pdf","0");
+        } else if (id == R.id.courseRegMscSA) {
+            showCoursePopup(v,"M.Sc. System Admin. & N/W","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                    ,"cbcs_msc_sa_fy.pdf","cbcs_msc_sa_sy.pdf","0");
+        } else if (id == R.id.courseRegMscCM) {
+            showCoursePopup(v,"M.Sc. Computer Management","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                    ,"cbcs_msc_cm_fy.pdf","cbcs_msc_cm_sy.pdf","0");
+        } else if (id == R.id.courseRegBCA) {
+            showCoursePopup(v,"BCA - Bachelor of\nComputer Application","Eligibility : Any 12th\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                    ,"cbcs_bca_fy.pdf","cbcs_bca_sy.pdf","cbcs_bca_ty.pdf");
+        } else if (id == R.id.courseRegBscBT) {
+            showCoursePopup(v,"B.Sc. Biotechnology","Eligibility : 12th Science\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                    ,"cbcs_bsc_bt_fy.pdf","cbcs_bsc_bt_sy.pdf","cbcs_bsc_bt_ty.pdf");
+        } else if (id == R.id.courseRegMscBT) {
+            showCoursePopup(v,"M.Sc. Biotechnology","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 29,900.0 Rs."
+                    ,"cbcs_msc_bt_fy.pdf","cbcs_msc_bt_sy.pdf","0");
+        } else if (id == R.id.courseRegBBA) {
+            showCoursePopup(v,"BBA - Bachelor of\nBusiness Administration","Eligibility : Any 12th\nDuration : 3 Years\nSemesters : Total 6\nFees/Year : 17,900.0 Rs."
+                    ,"cbcs_bba_fy.pdf","cbcs_bba_sy.pdf","cbcs_bba_ty.pdf");
+        } else if (id == R.id.courseRegMBA) {
+            showCoursePopup(v,"MBA - Master of\nBusiness Administration","Eligibility : Any UG\nDuration : 2 Years\nSemesters : Total 4\nFees/Year : 17,900.0 Rs."
+                    ,"0","0","0");
         }
 
 

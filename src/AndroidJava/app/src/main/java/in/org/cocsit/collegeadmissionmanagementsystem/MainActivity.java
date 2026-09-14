@@ -83,16 +83,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
-        switch (v.getId()) {
-            case R.id.mainScreenRegistrationCard:
-                Intent i = new Intent(this, Courses.class);
-                startActivity(i);
-                break;
-            case R.id.mainScreenWalkthroughCard:
-                Intent j = new Intent(this, SplashScreen.class);
-                startActivity(j);
-                break;
+        int id = v.getId();
+        if (id == R.id.mainScreenRegistrationCard) {
+            Intent i = new Intent(this, Courses.class);
+            startActivity(i);
+        } else if (id == R.id.mainScreenWalkthroughCard) {
+            Intent j = new Intent(this, SplashScreen.class);
+            startActivity(j);
         }
     }
 
