@@ -1,0 +1,2248 @@
+Yes. These screenshots are actually **very good reference material for an LLM-driven UI recreation** because they show multiple states of the same app rather than just one static screen.
+
+The right approach is **not** to tell the LLM “make it look like this screenshot.” That usually produces something vaguely similar.
+
+Instead, give the LLM:
+
+1. **all six screenshots as visual references**
+2. a **design-system specification**
+3. a **layout specification**
+4. a **component/state specification**
+5. explicit instructions about **what must NOT change**
+6. instructions to **measure proportions from the references rather than inventing a new design**
+
+Below I've converted what I see in the screenshots into a reusable **UI/UX reverse-engineering prompt**.
+
+---
+
+# 1. What the screenshots establish
+
+Across the six screenshots, the app appears to be a **macOS-native-feeling desktop CRM for a carpet-cleaning/service business**.
+
+There are six important UI states:
+
+### Screenshot 1 — Today dashboard
+
+Main elements:
+
+* macOS-style application window
+* left navigation sidebar
+* top page header
+* date navigation
+* summary KPI cards
+* job schedule grouped by van
+* route map panel
+* job cards with status/actions
+* subtle green primary actions
+* blue/orange van identity colors
+
+### Screenshot 2 — Job details
+
+A right-side/overlay **job detail panel** appears over the dashboard.
+
+Contains:
+
+* job header
+* status progression
+* primary payment action
+* edit action
+* cancel action
+* address section
+* crew section
+* contact information
+* work details
+* invoice information
+* activity notes
+
+### Screenshot 3 — Edit Job
+
+Large centered **modal dialog**:
+
+* dimmed/blurred background
+* large white modal
+* rounded corners
+* form layout
+* two-column fields
+* segmented/pill selections
+* service item editor
+* notes
+* sticky-looking footer area
+* total price
+
+### Screenshot 4 — New Customer
+
+Another large modal:
+
+* customer type segmented control
+* first/last name
+* phone fields
+* email
+* referral source
+* tags
+* notes
+* property address
+* generous spacing
+* form-oriented visual hierarchy
+
+### Screenshot 5 — Jobs / Open
+
+Full-page data table:
+
+* page heading + aggregate count/value
+* status tabs
+* van filter
+* search box
+* grouped date rows
+* table-like columns
+* status pills
+* customer avatar initials
+* phone number secondary text
+* address secondary text
+* van/crew information
+* monetary value aligned right
+
+### Screenshot 6 — Jobs / All
+
+Same underlying component but with:
+
+* different selected tab
+* larger dataset/count
+* same visual language
+* same table architecture
+
+This is important:
+
+> **The application uses consistent design primitives across dashboards, lists, modals and detail views.**
+
+That's one of the biggest things your target LLM should understand.
+
+---
+
+# 2. The visual language I would extract
+
+The screenshots have a very specific feel.
+
+## Overall style
+
+Think:
+
+> **modern macOS business application + Linear-like cleanliness + Apple-style restraint + soft SaaS CRM UI**
+
+Not:
+
+* Material UI
+* Bootstrap
+* enterprise Angular
+* overly rounded “AI SaaS”
+* dark/neon startup
+* glassmorphism
+* excessive shadows
+
+The design is **quiet, soft, spacious and functional**.
+
+---
+
+# 3. Color system
+
+The dominant background is **warm/neutral off-white**, not pure cold white.
+
+Approximate palette to give the model:
+
+```text
+APP WINDOW BACKGROUND
+#F7F6F3 / #F8F7F4
+
+SIDEBAR
+#F5F4F1
+
+PRIMARY SURFACE
+#FFFFFF
+
+SECONDARY SURFACE
+#FBFBFA
+
+PRIMARY TEXT
+#171717
+
+SECONDARY TEXT
+#666666
+
+TERTIARY TEXT
+#8A8A8A
+
+DIVIDER
+#E7E7E3
+
+BORDER
+#DDDDD8
+
+PRIMARY GREEN
+#147A5A / #167A5C
+
+LIGHT GREEN SURFACE
+#E7F5ED
+
+SUCCESS TEXT
+#2B7D5A
+
+RED / OVERDUE
+#A94444
+
+LIGHT RED
+#FBECEC
+
+BLUE
+#3D73D9
+
+ORANGE
+#D97A18
+
+SOFT BLUE SURFACE
+#EDF3FF
+
+SOFT ORANGE SURFACE
+#FFF3E4
+```
+
+These are **visual estimates**, not sampled pixel values.
+
+For exact reproduction, instruct the LLM to **sample/derive colors from the reference screenshots rather than blindly using these approximate hex values**.
+
+---
+
+# 4. Borders
+
+This is one of the most important characteristics.
+
+The UI does **not** use heavy borders.
+
+Use:
+
+```text
+border: 1px solid rgba(0,0,0,0.08)
+```
+
+or equivalent neutral gray.
+
+Typical visual weight:
+
+```text
+1px
+```
+
+Never:
+
+```text
+2px dark border
+```
+
+unless used for a deliberate focus state.
+
+Inputs, cards, tables, buttons and modals all use **very subtle boundaries**.
+
+---
+
+# 5. Corner radii
+
+The screenshots consistently use rounded corners.
+
+Approximate scale:
+
+```text
+App window:        18–22px
+Large modal:       16–18px
+Cards:              12–14px
+Inputs:             8–10px
+Buttons:            8–10px
+Status pills:       999px
+Avatars:            50%
+```
+
+Important:
+
+> Don't make everything `border-radius: 20px`.
+
+The hierarchy should be visible.
+
+---
+
+# 6. Shadows
+
+The shadows are extremely subtle.
+
+Think:
+
+```css
+box-shadow:
+  0 1px 2px rgba(0,0,0,0.03),
+  0 8px 24px rgba(0,0,0,0.06);
+```
+
+For modal:
+
+```css
+box-shadow:
+  0 20px 60px rgba(0,0,0,0.12);
+```
+
+For drawer:
+
+```css
+box-shadow:
+  -12px 0 40px rgba(0,0,0,0.08);
+```
+
+Not:
+
+```css
+box-shadow: 0 10px 30px black;
+```
+
+The application should feel **soft and elevated**, not floating dramatically.
+
+---
+
+# 7. Typography
+
+This is very important to getting the macOS feeling.
+
+Use:
+
+### Preferred
+
+**SF Pro / system-ui / -apple-system**
+
+CSS:
+
+```css
+font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "SF Pro Display",
+  "SF Pro Text",
+  system-ui,
+  sans-serif;
+```
+
+Typography characteristics:
+
+```text
+Page title:
+24–28px
+600 weight
+
+Section heading:
+15–18px
+600
+
+Body:
+14px
+
+Secondary:
+13px
+
+Tiny metadata:
+11–12px
+
+Numbers / KPI:
+24–30px
+600–700
+```
+
+Avoid overly bold typography.
+
+The screenshots have a lot of **medium-weight text rather than black/bold text everywhere**.
+
+---
+
+# 8. Spacing system
+
+The spacing is highly consistent.
+
+Tell your LLM to use an **8px base grid**:
+
+```text
+4px
+8px
+12px
+16px
+20px
+24px
+32px
+40px
+48px
+```
+
+Typical:
+
+```text
+Sidebar padding:      16–20px
+Page content:         32px
+Card padding:         18–22px
+Input height:         40–44px
+Button height:        38–42px
+Table row:            60–76px
+```
+
+The screenshots are deliberately **not cramped**.
+
+---
+
+# 9. Sidebar
+
+The sidebar is one of the strongest visual anchors.
+
+Approximately:
+
+```text
+Width: 280–310px
+```
+
+It contains:
+
+### Brand block
+
+```text
+[logo/icon]
+Brightway Carpet
+Care
+CRM
+```
+
+Then:
+
+### Search
+
+Large rounded search field.
+
+Then nav:
+
+```text
+Today
+Calendar
+Jobs
+Customers
+Quotes
+Invoices
+```
+
+Then divider/section:
+
+```text
+BUSINESS
+
+Settings
+```
+
+Then bottom metadata:
+
+```text
+2 vans · 3 cleaners
+Saturday 5 September
+```
+
+### Sidebar behavior
+
+Important:
+
+* fixed width
+* visually separated from main content
+* background slightly darker than content
+* active item gets soft filled background
+* icon + label aligned
+* no thick borders
+* active state subtle
+
+---
+
+# 10. Navigation active state
+
+The active item uses:
+
+```text
+soft neutral background
+rounded ~8px
+```
+
+Not a colored block.
+
+Example concept:
+
+```text
+┌───────────────────────────┐
+│  ☼   Today                │
+└───────────────────────────┘
+```
+
+with a very subtle background.
+
+---
+
+# 11. Page header
+
+The main content begins with:
+
+```text
+Today
+
+Saturday 5 September 2026 · 4 jobs · 3 done
+```
+
+then right aligned actions:
+
+```text
+<   Today   >
+[ Week ]
+[ + New job ]
+```
+
+This is a very Apple-like hierarchy:
+
+* title
+* quiet metadata
+* controls
+* clear primary CTA
+
+---
+
+# 12. KPI cards
+
+The dashboard uses five horizontally arranged metric cards:
+
+```text
+Today's value
+£847.40
+4 jobs across 2 vans
+```
+
+etc.
+
+They are:
+
+* white
+* lightly bordered
+* rounded ~12–14px
+* almost no shadow
+* generous padding
+* strong headline value
+* small secondary label
+
+The **Overdue** card uses a red accent for the value.
+
+The card should *not* look like a generic analytics dashboard with charts everywhere.
+
+---
+
+# 13. Job schedule cards
+
+The job cards have:
+
+```text
+Van header
+ ├── icon
+ ├── Van 1
+ ├── vehicle registration
+ ├── cleaner
+ ├── time window
+ ├── number of stops
+ └── total
+```
+
+Then individual jobs beneath.
+
+A job row contains:
+
+```text
+time
+duration
+
+stop number
+
+customer/job
+address
+amount
+note
+
+status
+action button
+```
+
+The hierarchy is extremely clear.
+
+---
+
+# 14. Van colors
+
+This needs to be preserved.
+
+### Van 1
+
+Blue identity.
+
+```text
+dot/icon
+#3D73D9
+```
+
+### Van 2
+
+Orange identity.
+
+```text
+#D97A18
+```
+
+Use the color sparingly.
+
+Don't make entire cards blue/orange.
+
+Only use:
+
+* dot
+* icon background
+* numbering
+* small accent
+
+That's an important design principle.
+
+---
+
+# 15. Status pills
+
+Examples:
+
+```text
+Done
+In progress
+Booked
+Paid
+```
+
+They are small pill-shaped labels.
+
+### Done
+
+Green text + pale green background.
+
+### In progress
+
+Warm amber/brown.
+
+### Booked
+
+Blue.
+
+### Paid
+
+Neutral/green-ish.
+
+Typical style:
+
+```css
+border-radius: 999px;
+font-size: 12px;
+font-weight: 600;
+padding: 4px 9px;
+```
+
+---
+
+# 16. Buttons
+
+Primary button:
+
+```text
+green background
+white text
+rounded corners
+medium weight
+```
+
+Examples:
+
+```text
++ New job
+Done
+Record payment
+```
+
+Secondary:
+
+```text
+white/neutral background
+subtle border
+dark text
+```
+
+Danger action:
+
+```text
+Cancel job
+```
+
+but appears more like a quiet textual action rather than a giant red destructive button.
+
+That restraint should be preserved.
+
+---
+
+# 17. Job detail drawer
+
+This is especially important.
+
+When opening a job:
+
+```text
+main page
+   ↓
+dim
+   ↓
+right-side detail drawer
+```
+
+The drawer:
+
+* is white
+* large
+* rounded at its outer left corners
+* approximately 45–50% of viewport width
+* has its own scroll
+* floats above the main page
+* casts a subtle shadow
+
+The content starts:
+
+```text
+icon
+Bishopston Nursery
+job ID
+date/time
+```
+
+Then a horizontal status stepper:
+
+```text
+Booked ─── In progress ─── Done ─── Paid
+```
+
+This is a major component and should be implemented as a reusable component rather than hardcoded.
+
+---
+
+# 18. Edit Job modal
+
+The modal is approximately:
+
+```text
+width: 950–1050px
+```
+
+with:
+
+```text
+overlay:
+rgba(0,0,0,0.18–0.28)
+```
+
+Modal:
+
+```text
+white
+16–18px radius
+subtle shadow
+```
+
+Header:
+
+```text
+Edit job                         ×
+```
+
+Then form sections.
+
+Important:
+
+### Two-column layout
+
+```text
+Customer                 Property
+Date                     Start
+Duration                 ...
+Van                      Crew
+```
+
+The layout should collapse intelligently at smaller widths.
+
+---
+
+# 19. Segmented controls
+
+Example:
+
+```text
+[ Van 1 ] [ Van 2 ]
+```
+
+and:
+
+```text
+[ Marcus ] [ Priya ] [ Jake ]
+```
+
+These are **segmented pills**, not standard buttons.
+
+Selected:
+
+```text
+soft filled background
+```
+
+Unselected:
+
+```text
+white background
+subtle border
+```
+
+---
+
+# 20. Inputs
+
+Inputs should look like:
+
+```text
+height: 40–44px
+background: #FFFFFF
+border: 1px solid #DCDDD8
+radius: 8–10px
+padding: 10–12px
+font-size: 14px
+```
+
+Focus:
+
+```text
+subtle green/gray focus ring
+```
+
+Don't use a giant glowing blue browser focus ring.
+
+---
+
+# 21. Form labels
+
+Labels are:
+
+* 13–14px
+* medium weight
+* dark gray
+* positioned above input
+* 6–8px spacing from control
+
+Example:
+
+```text
+Customer
+
+[ Bishopston Nursery                         × ]
+```
+
+not floating labels.
+
+---
+
+# 22. Service line editor
+
+This is another reusable component:
+
+```text
+WORK
+
+ITEM                 QTY       UNIT
+Office carpet        217       2.2
+
+[ + Add service ]
+```
+
+Very subtle table/form hybrid.
+
+Bottom:
+
+```text
+Total £477.40 · 4h
+```
+
+This should stay visually lightweight.
+
+---
+
+# 23. New Customer modal
+
+This modal uses exactly the same design system.
+
+Important:
+
+```text
+Customer type
+
+[ Residential ] [ Commercial ]
+```
+
+Then a **two-column form**.
+
+Rows:
+
+```text
+First name        Last name
+Mobile / phone    Alternative phone
+Email             How did they find us?
+```
+
+Tags:
+
+```text
+[regular] [pets] [landlord] [VIP] [key holder] [referrer]
+```
+
+Notes field.
+
+Then address fields.
+
+The most important point:
+
+> It should look like the same application, not a different form designer.
+
+---
+
+# 24. Jobs table
+
+The Jobs screen is not a traditional heavy enterprise table.
+
+It is a **lightweight SaaS data table**.
+
+Top:
+
+```text
+Jobs
+107 jobs · £17,176.20
+```
+
+Tabs:
+
+```text
+Upcoming
+Today
+Open
+Awaiting payment
+Paid
+Cancelled
+All
+```
+
+Then:
+
+```text
+All vans
+[ search... ]
+```
+
+Then column headers:
+
+```text
+WHEN
+CUSTOMER
+ADDRESS
+VAN · CREW
+STATUS
+TOTAL
+```
+
+Rows:
+
+* generous height
+* thin horizontal separators
+* no vertical grid lines
+* grouped dates
+* lots of whitespace
+* customer avatars
+* metadata beneath primary text
+
+This is very important.
+
+### Avoid this:
+
+```text
+| WHEN | CUSTOMER | ADDRESS | CREW | STATUS |
+|------|----------|---------|------|--------|
+```
+
+with dark grid lines.
+
+Instead use:
+
+```text
+WHEN           CUSTOMER       ADDRESS               STATUS
+12:15–2:15     Joseph Jenkins 108 Egerton Road       ● Booked
+               07849...       Bishopston...
+```
+
+---
+
+# 25. Customer avatars
+
+The table uses colored circular initials:
+
+```text
+JJ
+PR
+NS
+KH
+MW
+AR
+PD
+FF
+```
+
+Use:
+
+```text
+32–36px
+circle
+12–13px bold initials
+```
+
+The avatar color can vary deterministically.
+
+---
+
+# 26. Search field
+
+The Jobs search field is:
+
+```text
+width ~250–300px
+height ~40px
+rounded ~9px
+subtle border
+search icon
+```
+
+Placeholder:
+
+```text
+Customer, address, postcode...
+```
+
+Again, nothing flashy.
+
+---
+
+# 27. Table date groups
+
+Date grouping is very important:
+
+```text
+SATURDAY 26 SEPTEMBER 2026
+────────────────────────────────────
+
+jobs...
+
+FRIDAY 25 SEPTEMBER 2026
+────────────────────────────────────
+
+jobs...
+```
+
+Date group headers should be:
+
+* uppercase
+* small
+* letter-spaced slightly
+* muted gray
+* visually separated from row content
+
+---
+
+# 28. macOS window treatment
+
+The screenshots clearly show the macOS traffic light controls:
+
+```text
+● ● ●
+```
+
+at top-left.
+
+The overall application window itself has:
+
+* rounded outer corners
+* slight shadow
+* warm white/gray background
+* macOS proportions
+* no giant browser-like top navigation
+
+Tell the LLM:
+
+> Treat this as a desktop application first, not a web dashboard pretending to be macOS.
+
+That's a very useful instruction.
+
+---
+
+# 29. Very important: the circular person/video overlay
+
+Every screenshot has a circular video overlay of the YouTube creator.
+
+**Do NOT reproduce this in your app.**
+
+This is part of the YouTube recording, not the application UI.
+
+Tell your LLM explicitly:
+
+> Ignore the circular presenter/webcam overlay, cursor, recording artifacts, browser/window artifacts and video-specific elements. They are not part of the product UI.
+
+This is critical.
+
+---
+
+# 30. How I would actually feed the images to an LLM
+
+Don't send only one screenshot.
+
+Send all six as:
+
+```text
+reference-01-dashboard.png
+reference-02-job-detail.png
+reference-03-edit-job.png
+reference-04-new-customer.png
+reference-05-jobs-open.png
+reference-06-jobs-all.png
+```
+
+Then tell the LLM:
+
+> These are reference screenshots from the same product. Infer a shared design system from all screenshots. Do not recreate each screen independently.
+
+That one sentence prevents a lot of bad AI-generated UI.
+
+---
+
+# 🔥 MASTER PROMPT
+
+Here is the prompt I'd actually use with a strong coding LLM.
+
+Copy this as your **system/project prompt**, then attach the six screenshots.
+
+```text
+You are an expert product designer and senior frontend engineer specializing in
+high-fidelity macOS desktop applications.
+
+I am providing multiple screenshots of the SAME desktop CRM application.
+
+Your task is to reverse-engineer the visual design system and reproduce the UI/UX
+with extremely high visual fidelity.
+
+IMPORTANT:
+Do NOT treat each screenshot as an independent design.
+Infer ONE shared design system and ONE reusable component system that explains
+all screenshots.
+
+The attached screenshots are the visual source of truth.
+
+Ignore:
+- the circular YouTube presenter/webcam overlay
+- the mouse cursor
+- video recording artifacts
+- browser/YouTube artifacts
+- anything that is clearly outside the application UI
+
+Those must NOT be implemented.
+
+==================================================
+PRODUCT STYLE
+==================================================
+
+The application is a premium macOS desktop CRM for a field-service/carpet-cleaning
+business.
+
+Visual direction:
+
+- native macOS feeling
+- clean
+- calm
+- restrained
+- premium
+- spacious
+- highly functional
+- subtle SaaS aesthetic
+- soft neutral backgrounds
+- minimal shadows
+- thin borders
+- medium-weight typography
+- rounded controls
+- excellent information hierarchy
+
+Do NOT use:
+- Material Design styling
+- Bootstrap styling
+- generic admin-dashboard appearance
+- excessive gradients
+- glassmorphism
+- neon colors
+- excessive shadows
+- giant rounded "AI SaaS" cards
+- dark mode unless explicitly requested
+- thick borders
+- dense enterprise-table styling
+
+The result should feel like a polished native macOS business application.
+
+==================================================
+DESIGN SYSTEM
+==================================================
+
+Use a neutral warm-white palette.
+
+Approximate base palette:
+
+App background:
+#F7F6F3
+
+Sidebar:
+#F5F4F1
+
+Primary surface:
+#FFFFFF
+
+Secondary surface:
+#FBFBFA
+
+Primary text:
+#171717
+
+Secondary text:
+#666666
+
+Tertiary text:
+#8A8A8A
+
+Border:
+#DDDDD8
+
+Divider:
+#E7E7E3
+
+Primary green:
+#147A5A
+
+Light green:
+#E7F5ED
+
+Danger:
+#A94444
+
+Light danger:
+#FBECEC
+
+Blue:
+#3D73D9
+
+Orange:
+#D97A18
+
+Use these as approximate starting values only.
+Where possible, infer colors from the reference screenshots.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use a macOS-native system font stack:
+
+-apple-system
+BlinkMacSystemFont
+"SF Pro Display"
+"SF Pro Text"
+system-ui
+sans-serif
+
+Typography should be restrained and medium-weight.
+
+Approximate sizes:
+
+Page title:
+24–28px, font-weight 600
+
+Section title:
+15–18px, 600
+
+Body:
+14px, 400–500
+
+Secondary:
+13px
+
+Metadata:
+11–12px
+
+KPI numbers:
+24–30px, 600–700
+
+Avoid excessive bold typography.
+
+==================================================
+SPACING
+==================================================
+
+Use an 8px spacing system:
+
+4
+8
+12
+16
+20
+24
+32
+40
+48
+
+Prefer generous whitespace over dense layouts.
+
+Typical spacing:
+
+Sidebar internal padding:
+16–20px
+
+Main page padding:
+28–32px
+
+Card padding:
+18–22px
+
+Form spacing:
+16–24px
+
+Input height:
+40–44px
+
+Button height:
+38–42px
+
+Table row height:
+approximately 60–76px
+
+==================================================
+BORDERS
+==================================================
+
+Borders are subtle and approximately 1px.
+
+Use very light neutral borders.
+
+Never use heavy 2px dark borders unless required for a specific focus/error state.
+
+Typical:
+border: 1px solid rgba(0,0,0,0.08)
+
+Avoid excessive visible outlines.
+
+==================================================
+CORNER RADIUS
+==================================================
+
+Use a clear hierarchy:
+
+Application window:
+18–22px
+
+Large modal:
+16–18px
+
+Cards:
+12–14px
+
+Inputs:
+8–10px
+
+Buttons:
+8–10px
+
+Pills:
+999px
+
+Avatars:
+50%
+
+Do not make every component use the same radius.
+
+==================================================
+SHADOWS
+==================================================
+
+Shadows must be subtle.
+
+Cards:
+very subtle or none
+
+Modal:
+soft large elevation
+
+Drawer:
+soft lateral elevation
+
+Example card:
+0 1px 2px rgba(0,0,0,0.03)
+
+Example modal:
+0 20px 60px rgba(0,0,0,0.12)
+
+Example drawer:
+-12px 0 40px rgba(0,0,0,0.08)
+
+Never use dark dramatic drop shadows.
+
+==================================================
+WINDOW
+==================================================
+
+Build this as a desktop-first macOS application.
+
+Outer application window:
+- rounded corners
+- subtle shadow
+- macOS traffic-light controls
+- visually separated from desktop background
+
+Do not make the layout look like a normal responsive website.
+
+==================================================
+SIDEBAR
+==================================================
+
+Create a fixed left sidebar approximately 280–310px wide.
+
+Contents:
+
+Brand:
+- icon/logo
+- "Brightway Carpet Care"
+- "CRM"
+
+Search field.
+
+Navigation:
+
+Today
+Calendar
+Jobs
+Customers
+Quotes
+Invoices
+
+Section label:
+BUSINESS
+
+Settings
+
+Bottom metadata:
+"2 vans · 3 cleaners"
+date text
+
+Sidebar styling:
+- slightly darker than main content
+- soft neutral background
+- subtle active navigation background
+- icons aligned consistently
+- generous vertical rhythm
+
+Active navigation:
+- soft neutral fill
+- rounded approximately 8px
+- no strong color block
+
+==================================================
+TODAY DASHBOARD
+==================================================
+
+Header:
+
+Title:
+Today
+
+Subtitle:
+Saturday 5 September 2026 · 4 jobs · 3 done
+
+Top-right controls:
+previous date
+Today
+next date
+Week button
++ New job
+
+Create five summary KPI cards.
+
+Cards must:
+- white
+- subtle border
+- 12–14px radius
+- generous padding
+- little/no shadow
+- large primary value
+- small supporting text
+
+Examples:
+
+Today's value
+£847.40
+4 jobs across 2 vans
+
+This week
+£5,252.00
+33 jobs booked
+
+Awaiting payment
+£6,258.80
+33 invoices
+
+Overdue
+£2,616.20
+12 invoices past due
+
+Quotes out
+£1,134.60
+8 waiting on customers
+
+==================================================
+VAN / JOB SCHEDULE
+==================================================
+
+Create reusable VanSection components.
+
+Van header:
+
+icon
+Van 1
+vehicle registration
+cleaner
+time range
+stop count
+total amount
+
+Van colors:
+
+Van 1 = blue accent
+Van 2 = orange accent
+
+Use the accent only for:
+- icon
+- dot
+- numbering
+- tiny identity accents
+
+Do NOT color the entire card.
+
+Each job row contains:
+
+time
+duration
+stop number
+customer/job title
+address
+amount
+small note
+status
+action
+
+Status pills:
+
+Done = green
+In progress = amber
+Booked = blue
+Paid = neutral/green
+
+Status pills:
+- pill shaped
+- 999px radius
+- 11–12px text
+- 4–9px horizontal padding
+
+==================================================
+ROUTE MAP
+==================================================
+
+Dashboard contains a large map panel to the right of the job schedule.
+
+Map container:
+- white card
+- subtle border
+- 12–14px radius
+- no excessive shadow
+- header with "Route map"
+- small legend for Van 1 / Van 2
+
+Use a map placeholder if real maps are not required.
+
+==================================================
+JOB DETAIL DRAWER
+==================================================
+
+Clicking a job opens a right-side detail drawer.
+
+Background page becomes dimmed.
+
+Drawer:
+- white
+- approximately 45–50vw
+- rounded outer corners
+- subtle shadow
+- independent scrolling
+
+Header:
+job icon
+job/customer name
+job ID
+date
+time
+close button
+
+Status progression:
+
+Booked
+In progress
+Done
+Paid
+
+Render as a horizontal status stepper.
+
+Primary actions:
+Record payment
+Edit
+
+Secondary destructive action:
+Cancel job
+
+Sections:
+
+ADDRESS
+address
+city/postcode
+location notes
+parking/access notes
+
+CREW
+van
+vehicle registration
+cleaner
+hours allowed
+
+CONTACT
+phone/email
+
+WORK
+item/service details
+
+INVOICE
+invoice identifier
+payment status
+
+ACTIVITY
+notes
+add-note input
+
+==================================================
+EDIT JOB MODAL
+==================================================
+
+Large centered modal.
+
+Background:
+dim overlay
+
+Modal:
+white
+16–18px radius
+~950–1050px width
+soft large shadow
+
+Header:
+Edit job
+close icon
+
+Form sections:
+
+Customer
+Property
+
+Date
+Start
+Duration
+
+Van
+Crew
+
+WORK
+
+Service item table/editor:
+Item
+Qty
+Unit
+
+Example:
+Office carpet | 217 | 2.2
+
+Button:
++ Add service
+
+Notes for crew
+Office notes
+
+Footer:
+Total £477.40 · 4h
+
+Use a two-column grid where appropriate.
+
+Inputs:
+40–44px high
+subtle 1px border
+8–10px radius
+12px horizontal padding
+
+Focus states should be subtle and premium.
+
+==================================================
+SEGMENTED CONTROLS
+==================================================
+
+For customer type, van selection and crew selection use segmented/pill controls.
+
+Example:
+
+[ Residential ] [ Commercial ]
+
+[ Van 1 ] [ Van 2 ]
+
+[ Marcus ] [ Priya ] [ Jake ]
+
+Selected:
+soft filled background
+
+Unselected:
+white/neutral surface with subtle border
+
+Do NOT use generic browser buttons.
+
+==================================================
+NEW CUSTOMER MODAL
+==================================================
+
+Same modal system as Edit Job.
+
+Header:
+New customer
+
+Customer type:
+Residential / Commercial segmented control
+
+Two-column form:
+
+First name
+Last name
+
+Mobile / phone
+Alternative phone
+
+Email
+How did they find us?
+
+Tags:
+
+regular
+pets
+landlord
+VIP
+key holder
+referrer
+
+Use pill tags.
+
+Notes textarea.
+
+PROPERTY ADDRESS section.
+
+Fields should have:
+- clear labels
+- generous spacing
+- soft borders
+- consistent widths
+- same typography as rest of app
+
+==================================================
+JOBS PAGE
+==================================================
+
+Create a reusable data-table page.
+
+Header:
+
+Jobs
+107 jobs · £17,176.20
+
+Tabs:
+
+Upcoming
+Today
+Open
+Awaiting payment
+Paid
+Cancelled
+All
+
+Filter:
+All vans
+
+Search:
+Customer, address, postcode...
+
+Table columns:
+
+WHEN
+CUSTOMER
+ADDRESS
+VAN · CREW
+STATUS
+TOTAL
+
+Do not use heavy vertical table borders.
+
+Use:
+- subtle horizontal separators
+- generous whitespace
+- grouped date rows
+- clean alignment
+
+Date group headers:
+SATURDAY 26 SEPTEMBER 2026
+FRIDAY 25 SEPTEMBER 2026
+
+Date group headers:
+- uppercase
+- muted
+- small
+- slightly letter-spaced
+
+Customer cell:
+colored circular initials avatar
+primary customer name
+secondary phone number
+
+Address:
+primary address
+secondary neighborhood/postcode
+
+Van/crew:
+colored van dot
+van name
+cleaner name
+
+Status:
+small pill
+
+Total:
+right aligned
+semibold
+
+==================================================
+AVATARS
+==================================================
+
+Circular initials avatars.
+
+Examples:
+JJ
+PR
+NS
+KH
+MW
+AR
+PD
+FF
+
+Approx:
+32–36px
+
+Use muted deterministic colors.
+
+==================================================
+ICONOGRAPHY
+==================================================
+
+Use a consistent modern line-icon system.
+
+Icons should be:
+- thin
+- simple
+- approximately 16–20px
+- visually quiet
+
+Do not mix multiple icon styles.
+
+Suggested libraries:
+Lucide or another coherent outline icon system.
+
+==================================================
+INTERACTION
+==================================================
+
+Preserve the interaction hierarchy shown in the screenshots.
+
+Examples:
+
+Click a job:
+→ open detail drawer
+
+Click Edit:
+→ open Edit Job modal
+
+Click New Job:
+→ open job creation workflow
+
+Click New Customer:
+→ open New Customer modal
+
+Click Done:
+→ update job status
+
+Click Record payment:
+→ update payment status
+
+Click tabs:
+→ change dataset without changing overall layout
+
+All overlays:
+- dim background
+- animate subtly
+- never use aggressive animation
+
+Preferred animation:
+150–220ms
+ease-out
+
+==================================================
+RESPONSIVENESS
+==================================================
+
+This is a desktop application.
+
+Optimize first for:
+1440×900
+1600×1000
+1920×1080
+
+Maintain the visual composition of the reference screenshots.
+
+Do not redesign the application when width changes.
+
+At smaller desktop widths:
+- preserve hierarchy
+- collapse secondary content intelligently
+- avoid horizontal page scrolling where possible
+
+==================================================
+COMPONENT ARCHITECTURE
+==================================================
+
+Create reusable components rather than one giant page component.
+
+Suggested components:
+
+AppShell
+Sidebar
+SidebarNavItem
+PageHeader
+SummaryCard
+VanSection
+JobCard
+JobRow
+StatusPill
+Avatar
+SegmentedControl
+SearchField
+FilterSelect
+DataTable
+TableGroupHeader
+JobDetailDrawer
+StatusStepper
+Modal
+FormField
+ServiceLineEditor
+Tag
+TextArea
+RouteMapCard
+Button
+IconButton
+
+The same design tokens must be reused by every component.
+
+==================================================
+DESIGN TOKENS
+==================================================
+
+Centralize:
+
+colors
+spacing
+radii
+shadows
+typography
+component heights
+border colors
+
+Do NOT scatter random values throughout the implementation.
+
+==================================================
+HIGH FIDELITY REQUIREMENT
+==================================================
+
+Do not merely create a UI that is "similar."
+
+Recreate:
+
+- relative proportions
+- alignment
+- spacing
+- visual hierarchy
+- card dimensions
+- sidebar width
+- modal width
+- drawer width
+- text density
+- border subtlety
+- radius hierarchy
+- shadow softness
+- button proportions
+- status-pill appearance
+- table row height
+- icon placement
+- typography hierarchy
+
+Use the screenshots as the source of truth.
+
+When uncertain, prefer:
+- less visual noise
+- lighter borders
+- softer shadows
+- more whitespace
+- smaller icons
+- restrained typography
+
+rather than inventing new visual patterns.
+
+==================================================
+IMPLEMENTATION RULE
+==================================================
+
+Before coding:
+
+1. Analyze ALL screenshots.
+2. Infer the common design system.
+3. Create design tokens.
+4. Create reusable components.
+5. Implement the shared application shell.
+6. Implement each screen/state using the same components.
+7. Compare output against the reference screenshots.
+8. Correct visual mismatches iteratively.
+
+Do NOT start by coding one screenshot and then copy-pasting styles into the others.
+
+The goal is ONE coherent application whose different states reproduce the
+reference screenshots.
+
+==================================================
+TECHNICAL QUALITY
+==================================================
+
+The implementation must be:
+
+- production-quality
+- accessible
+- keyboard friendly
+- componentized
+- maintainable
+- type-safe
+- responsive on desktop
+- free of unnecessary dependencies
+- visually consistent
+
+Do not sacrifice visual accuracy for generic framework conventions.
+
+The screenshots are the visual specification.
+```
+
+---
+
+# 31. I would add one more prompt after the initial generation
+
+This is the **most useful trick** when working with coding LLMs.
+
+After the LLM creates the first version, upload/reference the screenshots again and send:
+
+```text
+Now perform a visual fidelity audit against ALL reference screenshots.
+
+Do not redesign anything.
+
+Compare the implementation against the screenshots in these categories:
+
+1. Overall geometry
+2. Sidebar width and spacing
+3. Page margins
+4. Header alignment
+5. Typography sizes and weights
+6. Card dimensions
+7. Card padding
+8. Borders
+9. Corner radii
+10. Shadows
+11. Button dimensions
+12. Status pill dimensions
+13. Table column widths
+14. Table row heights
+15. Modal size and position
+16. Drawer width
+17. Form field dimensions
+18. Icon sizing and alignment
+19. Color accuracy
+20. Whitespace and information density
+
+For every mismatch:
+- identify the mismatch
+- explain the expected visual behavior
+- modify the implementation
+- re-check the affected components
+
+Do NOT add new UI patterns.
+
+Do NOT simplify elements visible in the references.
+
+Do NOT replace the design with framework defaults.
+
+The reference screenshots remain the source of truth.
+```
+
+That second pass is often **more valuable than adding another 2,000 words to the initial prompt**.
+
+---
+
+# 32. Best way to give the screenshots to Qwen / Claude / Codex
+
+For a multimodal coding LLM, I would structure the input like:
+
+```text
+/references
+   01-dashboard.png
+   02-job-detail.png
+   03-edit-job.png
+   04-new-customer.png
+   05-jobs-open.png
+   06-jobs-all.png
+
+/design
+   DESIGN-SPEC.md
+
+/src
+   ...
+```
+
+And your prompt:
+
+```text
+The /references directory contains six screenshots of the target application.
+
+DESIGN-SPEC.md contains the reverse-engineered visual system.
+
+Treat the screenshots as the visual source of truth.
+
+Treat DESIGN-SPEC.md as the implementation guidance.
+
+Never invent a new visual language.
+```
+
+This works better than putting the entire design description into one enormous user prompt every time.
+
+---
+
+# 33. One major improvement I recommend for your .NET development
+
+Since you're a .NET developer and likely building the backend separately, **don't let the UI agent mix the design task with your entire backend architecture initially.**
+
+Do it in stages:
+
+```text
+Phase 1
+Design system
+        ↓
+Phase 2
+App Shell
+        ↓
+Phase 3
+Today Dashboard
+        ↓
+Phase 4
+Job Drawer
+        ↓
+Phase 5
+Edit Job
+        ↓
+Phase 6
+New Customer
+        ↓
+Phase 7
+Jobs Table
+        ↓
+Phase 8
+Interactions
+        ↓
+Phase 9
+API integration
+        ↓
+Phase 10
+Visual QA
+```
+
+For a large codebase, this dramatically reduces the chance that the model destroys a good implementation while trying to do everything in one prompt.
+
+---
+
+# 34. Most important visual characteristics to preserve
+
+If you only wanted to give an LLM the **10 most important rules**, I'd use these:
+
+```text
+1. macOS-native desktop application feel
+2. Warm off-white surfaces
+3. Very subtle 1px borders
+4. Very soft shadows
+5. 8px spacing system
+6. 8–14px component radii, larger only for modals/window
+7. SF Pro/system typography
+8. Generous whitespace
+9. Green primary actions with restrained blue/orange accents
+10. Extremely clean, quiet SaaS information hierarchy
+```
+
+Those ten will get you much closer than simply saying:
+
+> “Make it look like the screenshots.”
+
+---
+
+## One final point
+
+These screenshots are good enough to reproduce the **design language and interaction structure very closely**, but an LLM cannot reliably derive truly **pixel-perfect values** for every dimension from screenshots alone. For true pixel-level matching, the ideal workflow is:
+
+**screenshots → initial implementation → screenshot of implementation → visual comparison → iterative correction**
+
+That gives the model an actual feedback loop rather than asking it to estimate everything once. 🎯
+
+For your particular use case, **Qwen3.8-Max's 1M context or Claude Sonnet/Fable through a coding agent would be especially well suited to keeping this full design specification + existing frontend code + multiple reference screenshots in context simultaneously.**
