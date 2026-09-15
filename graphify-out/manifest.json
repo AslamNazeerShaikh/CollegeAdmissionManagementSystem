@@ -1264,5 +1264,71 @@
     "seen": 1789416749.1307719,
     "ast_hash": "0fcaa644c256f3b5292cacac505c5ac4",
     "semantic_hash": ""
+  },
+  "docs/ReferenceUi/LLM-Chat.txt": {
+    "mtime": 1789463887.8299685,
+    "seen": 1789464774.909953,
+    "ast_hash": "a320e47ffc9d3b02a9224fb6ff3280d9",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Reference-UI-Analysis.md": {
+    "mtime": 1789464591.2907257,
+    "seen": 1789464774.909954,
+    "ast_hash": "065071549bc7ea96bac9cb2c8e9053b5",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/UiPrompt.md": {
+    "mtime": 1789463969.0796554,
+    "seen": 1789464774.909954,
+    "ast_hash": "537c11481a30201597be65a3325ffaed",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.37.01\u202fPM.png": {
+    "mtime": 1789463991.2538738,
+    "seen": 1789464774.909975,
+    "ast_hash": "558ea57faf74480ad1f0384d45b8c18d",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.37.48\u202fPM.png": {
+    "mtime": 1789463991.2606494,
+    "seen": 1789464774.909975,
+    "ast_hash": "ed8c3e6f16d2d9639cb30f9a043c9db8",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.37.58\u202fPM.png": {
+    "mtime": 1789463991.2661617,
+    "seen": 1789464774.909976,
+    "ast_hash": "e19965f09f2198125c0428f6cde574fc",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.38.35\u202fPM.png": {
+    "mtime": 1789463991.269318,
+    "seen": 1789464774.909976,
+    "ast_hash": "d1d67754c0e79753448fdf48976ba3ce",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.38.45\u202fPM.png": {
+    "mtime": 1789463991.272049,
+    "seen": 1789464774.9099772,
+    "ast_hash": "c2d47a54a9f04cd5da9f17fac1f2eb87",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.38.55\u202fPM.png": {
+    "mtime": 1789463991.2767155,
+    "seen": 1789464774.9099772,
+    "ast_hash": "690883a4cfe73463df8bd828c6b67c79",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.39.09\u202fPM.png": {
+    "mtime": 1789463991.2794042,
+    "seen": 1789464774.9099772,
+    "ast_hash": "b8b518d2f5f1e3becf24e9f604f6fc5d",
+    "semantic_hash": ""
+  },
+  "docs/ReferenceUi/Screenshot 2026-09-15 at 2.39.29\u202fPM.png": {
+    "mtime": 1789463991.284937,
+    "seen": 1789464774.9099782,
+    "ast_hash": "de70faac439056abd2cde86fa49721b1",
+    "semantic_hash": ""
   }
 }
