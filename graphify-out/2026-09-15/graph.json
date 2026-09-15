@@ -399,6 +399,25 @@
       "source_location": "L8"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmseed",
+      "label": "CrmSeed",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.ViewModels",
+        "scope_chain": [
+          "s144"
+        ]
+      },
+      "norm_label": "crmseed",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
+      "source_location": "L169"
+    },
+    {
       "id": "src_platformuno_collegeadmission_collegeadmission_mainmenupage_xaml_collegeadmission_mainmenupage",
       "label": "MainMenuPage",
       "_callable": true,
@@ -690,45 +709,6 @@
       "source_location": "L3"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests",
-      "label": "CatalogTests",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "catalogtests",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher",
-      "label": "FakeLauncher",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "metadata": {
-        "is_nested_type": true,
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "fakelauncher",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L51"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_platforms_android_main_android_collegeadmission_droid_application",
       "label": "Application",
       "_callable": true,
@@ -958,32 +938,13 @@
       "source_location": "L48"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmseed",
-      "label": "CrmSeed",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "CrmModels.cs",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.ViewModels",
-        "scope_chain": [
-          "s144"
-        ]
-      },
-      "norm_label": "crmseed",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
-      "source_location": "L169"
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app",
       "label": "App",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "metadata": {
         "is_partial": true,
@@ -1003,7 +964,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "metadata": {
         "is_partial": true,
@@ -1015,6 +976,26 @@
       "norm_label": "mainview",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainView.axaml.cs",
       "source_location": "L8"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
+      "label": "MainWindow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "CollegeAdmission.Views",
+        "scope_chain": [
+          "s45"
+        ]
+      },
+      "norm_label": "mainwindow",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L6"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_registrationviewmodel_collegeadmission_viewmodels_registrationviewmodel",
@@ -1037,24 +1018,43 @@
       "source_location": "L8"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
-      "label": "MainWindow",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests",
+      "label": "CatalogTests",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 50,
-      "community_name": "MainWindow",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
       "file_type": "code",
       "metadata": {
-        "is_partial": true,
-        "namespace": "CollegeAdmission.Views",
+        "namespace": "CollegeAdmission.Tests",
         "scope_chain": [
-          "s45"
+          "s100"
         ]
       },
-      "norm_label": "mainwindow",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L6"
+      "norm_label": "catalogtests",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher",
+      "label": "FakeLauncher",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "fakelauncher",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L51"
     },
     {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_ilauncherservice",
@@ -1063,7 +1063,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Services",
@@ -1082,7 +1082,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
@@ -3221,114 +3221,6 @@
       "source_location": "L13"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_catalog_coversalllegacycourses",
-      "label": ".Catalog_CoversAllLegacyCourses()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L20"
-          },
-          {
-            "callee": "Contain",
-            "receiver_type": "Does",
-            "lang": "csharp",
-            "line": "L20"
-          }
-        ]
-      },
-      "norm_label": ".catalog_coversalllegacycourses()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_opensyllabus_skipsempty_opensvalid",
-      "label": ".OpenSyllabus_SkipsEmpty_OpensValid()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L45"
-          },
-          {
-            "callee": "EqualTo",
-            "receiver_type": "Is",
-            "lang": "csharp",
-            "line": "L48"
-          }
-        ]
-      },
-      "norm_label": ".opensyllabus_skipsempty_opensvalid()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L37"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_registration_requireskeyfields",
-      "label": ".Registration_RequiresKeyFields()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L27"
-          }
-        ]
-      },
-      "norm_label": ".registration_requireskeyfields()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L23"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_openurlasync",
-      "label": ".OpenUrlAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".openurlasync()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L55"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_platforms_android_mainactivity_android_collegeadmission_droid_mainactivity_oncreate",
       "label": ".OnCreate()",
       "_callable": true,
@@ -3836,7 +3728,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
@@ -3862,7 +3754,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
@@ -3880,7 +3772,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Views",
@@ -3890,6 +3782,50 @@
       },
       "norm_label": ".onattachedtovisualtree()",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainView.axaml.cs",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_enforceratio",
+      "label": ".EnforceRatio()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Views",
+        "scope_chain": [
+          "s45"
+        ]
+      },
+      "norm_label": ".enforceratio()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_fittoscreen",
+      "label": ".FitToScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Views",
+        "scope_chain": [
+          "s45"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "ScreenFromVisual",
+            "receiver_type": "Screens",
+            "lang": "csharp",
+            "line": "L22"
+          }
+        ]
+      },
+      "norm_label": ".fittoscreen()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
       "source_location": "L20"
     },
     {
@@ -4051,48 +3987,112 @@
       "source_location": "L34"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_enforceratio",
-      "label": ".EnforceRatio()",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_catalog_coversalllegacycourses",
+      "label": ".Catalog_CoversAllLegacyCourses()",
       "_callable": true,
       "_origin": "ast",
-      "community": 50,
-      "community_name": "MainWindow",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
       "file_type": "code",
       "metadata": {
-        "namespace": "CollegeAdmission.Views",
+        "namespace": "CollegeAdmission.Tests",
         "scope_chain": [
-          "s45"
-        ]
-      },
-      "norm_label": ".enforceratio()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow_fittoscreen",
-      "label": ".FitToScreen()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "MainWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Views",
-        "scope_chain": [
-          "s45"
+          "s100"
         ],
         "unresolved_calls": [
           {
-            "callee": "ScreenFromVisual",
-            "receiver_type": "Screens",
+            "callee": "That",
+            "receiver_type": "Assert",
             "lang": "csharp",
-            "line": "L22"
+            "line": "L20"
+          },
+          {
+            "callee": "Contain",
+            "receiver_type": "Does",
+            "lang": "csharp",
+            "line": "L20"
           }
         ]
       },
-      "norm_label": ".fittoscreen()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L20"
+      "norm_label": ".catalog_coversalllegacycourses()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_opensyllabus_skipsempty_opensvalid",
+      "label": ".OpenSyllabus_SkipsEmpty_OpensValid()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L45"
+          },
+          {
+            "callee": "EqualTo",
+            "receiver_type": "Is",
+            "lang": "csharp",
+            "line": "L48"
+          }
+        ]
+      },
+      "norm_label": ".opensyllabus_skipsempty_opensvalid()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_registration_requireskeyfields",
+      "label": ".Registration_RequiresKeyFields()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L27"
+          }
+        ]
+      },
+      "norm_label": ".registration_requireskeyfields()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_openurlasync",
+      "label": ".OpenUrlAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": ".openurlasync()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L55"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_unolauncherservice_openurlasync",
@@ -4100,7 +4100,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
@@ -5680,22 +5680,6 @@
       "source_location": null
     },
     {
-      "id": "csharp_namespace:0424cab659d0cfe2",
-      "label": "CollegeAdmission.Views",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission.Views"
-      },
-      "norm_label": "collegeadmission.views",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs",
-      "source_location": "L5",
-      "type": "namespace"
-    },
-    {
       "id": "csharp_namespace:0777847fcf7033c1",
       "label": "CollegeAdmission.Models",
       "_origin": "ast",
@@ -5760,6 +5744,44 @@
       "type": "namespace"
     },
     {
+      "id": "csharp_namespace:f9e7dd2d22cc4c26",
+      "label": "CollegeAdmission.Services",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission.Services"
+      },
+      "norm_label": "collegeadmission.services",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel",
+      "label": "CrmViewModel.cs",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "crmviewmodel.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_mainviewmodel",
+      "label": "MainViewModel.cs",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "mainviewmodel.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/MainViewModel.cs",
+      "source_location": "L1"
+    },
+    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_registrationviewmodel",
       "label": "AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/RegistrationViewModel.cs",
       "_origin": "ast",
@@ -5768,17 +5790,6 @@
       "file_type": "code",
       "norm_label": "avaloniaui/collegeadmission/collegeadmission.core/viewmodels/registrationviewmodel.cs",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/RegistrationViewModel.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_coursesview_axaml",
-      "label": "CoursesView.axaml.cs",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "norm_label": "coursesview.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs",
       "source_location": "L1"
     },
     {
@@ -5793,25 +5804,14 @@
       "source_location": "L1"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainmenuview_axaml",
-      "label": "MainMenuView.axaml.cs",
+      "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml",
+      "label": "App.xaml.cs",
       "_origin": "ast",
       "community": 17,
       "community_name": "CollegeAdmission.ViewModels",
       "file_type": "code",
-      "norm_label": "mainmenuview.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainMenuView.axaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_registrationview_axaml",
-      "label": "RegistrationView.axaml.cs",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "norm_label": "registrationview.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/RegistrationView.axaml.cs",
+      "norm_label": "app.xaml.cs",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
       "source_location": "L1"
     },
     {
@@ -7495,54 +7495,472 @@
       "source_location": "L1"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_opened",
-      "label": "Opened",
+      "id": "docs_referenceui_reference_ui_analysis",
+      "label": "Reference-UI-Analysis.md",
       "_origin": "ast",
       "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "opened",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L53"
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "reference-ui-analysis.md",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L1"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_list",
-      "label": "List",
+      "id": "docs_referenceui_reference_ui_analysis_10_second_order_details_easily_missed",
+      "label": "10. Second-order details easily missed",
       "_origin": "ast",
       "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "norm_label": "list",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. second-order details easily missed",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L279"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_task",
-      "label": "Task",
+      "id": "docs_referenceui_reference_ui_analysis_11_ux_principles_reinforced_by_second_pass",
+      "label": "11. UX principles reinforced by second pass",
       "_origin": "ast",
       "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "11. ux principles reinforced by second pass",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L292"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_test",
-      "label": "Test",
+      "id": "docs_referenceui_reference_ui_analysis_12_dx_build_tokens_distilled_from_pixels",
+      "label": "12. DX \u2014 build tokens distilled from pixels",
       "_origin": "ast",
       "community": 3,
-      "community_name": "FakeLauncher",
-      "file_type": "code",
-      "norm_label": "test",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "12. dx \u2014 build tokens distilled from pixels",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L300"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_13_what_screenshots_don_t_show_design_ourselves_same_language",
+      "label": "13. What screenshots don't show (design ourselves, same language)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "13. what screenshots don't show (design ourselves, same language)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L316"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_1_what_the_8_images_actually_show",
+      "label": "1. What the 8 images actually show",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. what the 8 images actually show",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_2_1_palette_warm_neutral_not_cold_gray",
+      "label": "2.1 Palette \u2014 warm neutral, not cold gray",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.1 palette \u2014 warm neutral, not cold gray",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_2_2_typography_macos_native_medium_not_bold",
+      "label": "2.2 Typography \u2014 macOS native, medium not bold",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.2 typography \u2014 macos native, medium not bold",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L46"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_2_3_spacing_8px_grid_generous",
+      "label": "2.3 Spacing \u2014 8px grid, generous",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.3 spacing \u2014 8px grid, generous",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_2_4_borders_radius_shadow_subtle_hierarchy",
+      "label": "2.4 Borders / radius / shadow \u2014 subtle hierarchy",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.4 borders / radius / shadow \u2014 subtle hierarchy",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L61"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_2_5_iconography",
+      "label": "2.5 Iconography",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.5 iconography",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_2_visual_design_system_steal_verbatim",
+      "label": "2. Visual design system (steal verbatim)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. visual design system (steal verbatim)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L28"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_3_1_appshell_sidebar_280_310px_fixed",
+      "label": "3.1 AppShell + Sidebar (280\u2013310px fixed)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.1 appshell + sidebar (280\u2013310px fixed)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L73"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_3_2_today_dashboard_img_1",
+      "label": "3.2 Today dashboard (Img 1)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.2 today dashboard (img 1)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_3_3_job_detail_drawer_img_2",
+      "label": "3.3 Job detail drawer (Img 2)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.3 job detail drawer (img 2)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L93"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_3_4_edit_job_modal_img_3_new_customer_modal_img_4_same_system",
+      "label": "3.4 Edit Job modal (Img 3) + New Customer modal (Img 4) \u2014 same system",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.4 edit job modal (img 3) + new customer modal (img 4) \u2014 same system",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L100"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_3_5_jobs_table_img_5_6_8",
+      "label": "3.5 Jobs table (Img 5/6/8)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.5 jobs table (img 5/6/8)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L107"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_3_6_settings_img_7",
+      "label": "3.6 Settings (Img 7)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.6 settings (img 7)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L113"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "label": "3. Layout / components per screen",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. layout / components per screen",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_4_ux_learnings",
+      "label": "4. UX learnings",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. ux learnings",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_5_dx_architecture_learnings",
+      "label": "5. DX / architecture learnings",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. dx / architecture learnings",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L132"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_6_mapping_to_our_college_admission_crm",
+      "label": "6. Mapping to our College Admission CRM",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. mapping to our college admission crm",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L141"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_7_what_to_avoid_explicit_non_goals",
+      "label": "7. What to avoid (explicit non-goals)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. what to avoid (explicit non-goals)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L159"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_8_implementation_checklist_for_our_crm",
+      "label": "8. Implementation checklist for our CRM",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. implementation checklist for our crm",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L165"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_10_edit_job_modal_img_3_1000px_centered",
+      "label": "9.10 Edit Job modal (Img 3, ~1000px centered)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.10 edit job modal (img 3, ~1000px centered)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L238"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_11_new_customer_modal_img_4_same_shell",
+      "label": "9.11 New Customer modal (Img 4, same shell)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.11 new customer modal (img 4, same shell)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L249"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_12_jobs_table_img_5_6_8_most_information_dense",
+      "label": "9.12 Jobs table (Img 5/6/8 \u2014 most information-dense)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.12 jobs table (img 5/6/8 \u2014 most information-dense)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L257"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_13_settings_img_7",
+      "label": "9.13 Settings (Img 7)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.13 settings (img 7)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L271"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_1_window_chrome_all_images",
+      "label": "9.1 Window chrome (all images)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.1 window chrome (all images)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L183"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_2_sidebar_280_310px_f5f4f1",
+      "label": "9.2 Sidebar (280\u2013310px, #F5F4F1)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.2 sidebar (280\u2013310px, #f5f4f1)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L188"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_3_page_header_cluster",
+      "label": "9.3 Page header cluster",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.3 page header cluster",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L196"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_4_kpi_cards_img_1_5_across",
+      "label": "9.4 KPI cards (Img 1, 5 across)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.4 kpi cards (img 1, 5 across)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_5_vansection_jobrow_img_1",
+      "label": "9.5 VanSection + JobRow (Img 1)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.5 vansection + jobrow (img 1)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L204"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_6_route_map_card_img_1_right",
+      "label": "9.6 Route map card (Img 1 right)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.6 route map card (img 1 right)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L212"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_7_status_pills_action_buttons_all_images",
+      "label": "9.7 Status pills + action buttons (all images)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.7 status pills + action buttons (all images)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L216"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_8_job_detail_drawer_img_2_right_45_50vw",
+      "label": "9.8 Job detail drawer (Img 2, right ~45\u201350vw)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.8 job detail drawer (img 2, right ~45\u201350vw)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L224"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_9_status_stepper_drawer_top",
+      "label": "9.9 Status stepper (drawer top)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9.9 status stepper (drawer top)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L235"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "label": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. deep element-by-element analysis (second pass, all 8 images)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L179"
+    },
+    {
+      "id": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "label": "Reference UI Analysis \u2014 Brightway Carpet Care CRM (8 Screenshots)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "9. Deep element-by-element analysis (second pass, all 8 images)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "reference ui analysis \u2014 brightway carpet care crm (8 screenshots)",
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L1"
     },
     {
       "id": "src_androidjava_readme",
@@ -8847,17 +9265,6 @@
       "source_location": "L53"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel",
-      "label": "CrmViewModel.cs",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "CrmModels.cs",
-      "file_type": "code",
-      "norm_label": "crmviewmodel.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
-      "source_location": "L1"
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_cs_task",
       "label": "Task",
       "_origin": "ast",
@@ -8873,9 +9280,36 @@
       "label": "Application",
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "norm_label": "application",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "csharp_namespace:0424cab659d0cfe2",
+      "label": "CollegeAdmission.Views",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission.Views"
+      },
+      "norm_label": "collegeadmission.views",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs",
+      "source_location": "L5",
+      "type": "namespace"
+    },
+    {
+      "id": "size",
+      "label": "Size",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "norm_label": "size",
       "source_file": "",
       "source_location": ""
     },
@@ -8884,10 +9318,32 @@
       "label": "App.axaml.cs",
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "norm_label": "app.axaml.cs",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_coursesview_axaml",
+      "label": "CoursesView.axaml.cs",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "norm_label": "coursesview.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainmenuview_axaml",
+      "label": "MainMenuView.axaml.cs",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "norm_label": "mainmenuview.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainMenuView.axaml.cs",
       "source_location": "L1"
     },
     {
@@ -8895,7 +9351,7 @@
       "label": "MainView.axaml.cs",
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "norm_label": "mainview.axaml.cs",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainView.axaml.cs",
@@ -8906,7 +9362,7 @@
       "label": "Root",
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Views",
@@ -8923,9 +9379,42 @@
       "label": "VisualTreeAttachmentEventArgs",
       "_origin": "ast",
       "community": 45,
-      "community_name": "MainView",
+      "community_name": "CollegeAdmission.Views",
       "file_type": "code",
       "norm_label": "visualtreeattachmenteventargs",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml",
+      "label": "MainWindow.axaml.cs",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "norm_label": "mainwindow.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_registrationview_axaml",
+      "label": "RegistrationView.axaml.cs",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "norm_label": "registrationview.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/RegistrationView.axaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "window",
+      "label": "Window",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "CollegeAdmission.Views",
+      "file_type": "code",
+      "norm_label": "window",
       "source_file": "",
       "source_location": ""
     },
@@ -9347,37 +9836,66 @@
       "source_location": ""
     },
     {
-      "id": "size",
-      "label": "Size",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_opened",
+      "label": "Opened",
       "_origin": "ast",
-      "community": 50,
-      "community_name": "MainWindow",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
       "file_type": "code",
-      "norm_label": "size",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "opened",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_list",
+      "label": "List",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
+      "file_type": "code",
+      "norm_label": "list",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml",
-      "label": "MainWindow.axaml.cs",
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_test",
+      "label": "Test",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "RegistrationViewModel",
+      "file_type": "code",
+      "norm_label": "test",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "docs_referenceui_uiprompt",
+      "label": "UiPrompt.md",
       "_origin": "ast",
       "community": 50,
-      "community_name": "MainWindow",
-      "file_type": "code",
-      "norm_label": "mainwindow.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "community_name": "UiPrompt.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "uiprompt.md",
+      "source_file": "docs/ReferenceUi/UiPrompt.md",
       "source_location": "L1"
-    },
-    {
-      "id": "window",
-      "label": "Window",
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "MainWindow",
-      "file_type": "code",
-      "norm_label": "window",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "docs_toolchain",
@@ -9520,52 +10038,14 @@
       "source_location": "L1"
     },
     {
-      "id": "csharp_namespace:f9e7dd2d22cc4c26",
-      "label": "CollegeAdmission.Services",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "CollegeAdmission.Services",
-      "file_type": "code",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission.Services"
-      },
-      "norm_label": "collegeadmission.services",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L1",
-      "type": "namespace"
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_services_appservices",
       "label": "AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
       "_origin": "ast",
       "community": 6,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "norm_label": "avaloniaui/collegeadmission/collegeadmission.core/services/appservices.cs",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_mainviewmodel",
-      "label": "MainViewModel.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "CollegeAdmission.Services",
-      "file_type": "code",
-      "norm_label": "mainviewmodel.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/MainViewModel.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml",
-      "label": "App.xaml.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "CollegeAdmission.Services",
-      "file_type": "code",
-      "norm_label": "app.xaml.cs",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
       "source_location": "L1"
     },
     {
@@ -9573,7 +10053,7 @@
       "label": "UnoServices.cs",
       "_origin": "ast",
       "community": 6,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "norm_label": "unoservices.cs",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
@@ -9584,7 +10064,7 @@
       "label": "Task",
       "_origin": "ast",
       "community": 6,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "norm_label": "task",
       "source_file": "",
@@ -18526,6 +19006,424 @@
       "weight": 1.0
     },
     {
+      "source": "docs_referenceui_reference_ui_analysis",
+      "target": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_2_visual_design_system_steal_verbatim",
+      "target": "docs_referenceui_reference_ui_analysis_2_1_palette_warm_neutral_not_cold_gray",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_2_visual_design_system_steal_verbatim",
+      "target": "docs_referenceui_reference_ui_analysis_2_2_typography_macos_native_medium_not_bold",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_2_visual_design_system_steal_verbatim",
+      "target": "docs_referenceui_reference_ui_analysis_2_3_spacing_8px_grid_generous",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_2_visual_design_system_steal_verbatim",
+      "target": "docs_referenceui_reference_ui_analysis_2_4_borders_radius_shadow_subtle_hierarchy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_2_visual_design_system_steal_verbatim",
+      "target": "docs_referenceui_reference_ui_analysis_2_5_iconography",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "target": "docs_referenceui_reference_ui_analysis_3_4_edit_job_modal_img_3_new_customer_modal_img_4_same_system",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "target": "docs_referenceui_reference_ui_analysis_3_5_jobs_table_img_5_6_8",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "target": "docs_referenceui_reference_ui_analysis_3_6_settings_img_7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "target": "docs_referenceui_reference_ui_analysis_3_1_appshell_sidebar_280_310px_fixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "target": "docs_referenceui_reference_ui_analysis_3_2_today_dashboard_img_1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "target": "docs_referenceui_reference_ui_analysis_3_3_job_detail_drawer_img_2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_1_window_chrome_all_images",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_2_sidebar_280_310px_f5f4f1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_3_page_header_cluster",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_4_kpi_cards_img_1_5_across",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_5_vansection_jobrow_img_1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_6_route_map_card_img_1_right",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L212",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_7_status_pills_action_buttons_all_images",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_8_job_detail_drawer_img_2_right_45_50vw",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_9_status_stepper_drawer_top",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_10_edit_job_modal_img_3_1000px_centered",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L238",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_11_new_customer_modal_img_4_same_shell",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_12_jobs_table_img_5_6_8_most_information_dense",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L257",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "target": "docs_referenceui_reference_ui_analysis_9_13_settings_img_7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L271",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_1_what_the_8_images_actually_show",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_4_ux_learnings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_5_dx_architecture_learnings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_6_mapping_to_our_college_admission_crm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_7_what_to_avoid_explicit_non_goals",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_8_implementation_checklist_for_our_crm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_9_deep_element_by_element_analysis_second_pass_all_8_images",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_10_second_order_details_easily_missed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L279",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_2_visual_design_system_steal_verbatim",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_11_ux_principles_reinforced_by_second_pass",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L292",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_12_dx_build_tokens_distilled_from_pixels",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L300",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_13_what_screenshots_don_t_show_design_ourselves_same_language",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L316",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_referenceui_reference_ui_analysis_reference_ui_analysis_brightway_carpet_care_crm_8_screenshots",
+      "target": "docs_referenceui_reference_ui_analysis_3_layout_components_per_screen",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ReferenceUi/Reference-UI-Analysis.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
       "source": "docs_toolchain",
       "target": "docs_toolchain_toolchain_required_versions_verified_2026_09_15",
       "relation": "contains",
@@ -23832,5 +24730,5 @@
       "source_file": ".opencode/skills/database-migration.md"
     }
   ],
-  "built_at_commit": "df510b60916b1aa459a01d63f5a882fcb33352ee"
+  "built_at_commit": "8c53afa3f954d3d50f1637bfb9990aefb8640f12"
 }

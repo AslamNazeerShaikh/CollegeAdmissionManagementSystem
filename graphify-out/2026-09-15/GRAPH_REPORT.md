@@ -1,16 +1,16 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-15)
 
 ## Corpus Check
-- 131 files · ~356,120 words
+- 133 files · ~672,441 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 754 nodes · 1002 edges · 58 communities (43 shown, 10 thin omitted)
+- 794 nodes · 1040 edges · 58 communities (42 shown, 10 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 63 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `df510b60`
+- Built from commit: `8c53afa3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -18,10 +18,10 @@
 - Registration
 - .RootOf
 - CrmViewModel
-- FakeLauncher
+- 9. Deep element-by-element analysis (second pass, all 8 images)
 - opencode.json
 - RegistrationViewModel
-- CollegeAdmission.Services
+- ILauncherService
 - .OpenUrlAsync
 - RegistrationViewModel
 - Page
@@ -57,12 +57,11 @@
 - CrmStage
 - CrmModels.cs
 - .OpenSyllabusAsync
-- MainView
+- CollegeAdmission.Views
 - graphify.js
 - Uno Platform Getting Started
 - Uno Platform Theme Integration
 - Extra Exports Wiki Neo4j SVG Benchmark
-- MainWindow
 - Toolchain — required versions (verified 2026-09-15)
 - ReadMe.md
 - ColorPaletteOverride.xaml
@@ -78,8 +77,8 @@
 6. `CrmShellView` - 20 edges
 7. `Page` - 16 edges
 8. `App` - 15 edges
-9. `Registration` - 13 edges
-10. `Applicant` - 13 edges
+9. `Reference UI Analysis — Brightway Carpet Care CRM (8 Screenshots)` - 14 edges
+10. `9. Deep element-by-element analysis (second pass, all 8 images)` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `MCP Client AI Service Integration` --semantically_similar_to--> `Best Value Models Ranking`  [INFERRED] [semantically similar]
@@ -120,21 +119,21 @@ Nodes (14): ViewNavigationService, Vm, CoursesView, RoutedEventArgs, MainMenuVie
 Cohesion: 0.06
 Nodes (36): IEnumerable, ObservableCollection, CrmViewModel, ActionQueue, Applicants, CountApplied, CountEnquiry, CountEnrolled (+28 more)
 
-### Community 3 - "FakeLauncher"
-Cohesion: 0.29
-Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
+### Community 3 - "9. Deep element-by-element analysis (second pass, all 8 images)"
+Cohesion: 0.05
+Nodes (38): 10. Second-order details easily missed, 11. UX principles reinforced by second pass, 12. DX — build tokens distilled from pixels, 13. What screenshots don't show (design ourselves, same language), 1. What the 8 images actually show, 2.1 Palette — warm neutral, not cold gray, 2.2 Typography — macOS native, medium not bold, 2.3 Spacing — 8px grid, generous (+30 more)
 
 ### Community 4 - "opencode.json"
 Cohesion: 0.05
 Nodes (38): agents, default, list, chmod 777 *, rm -rf *, sudo *, commands, custom (+30 more)
 
 ### Community 5 - "RegistrationViewModel"
-Cohesion: 0.08
-Nodes (26): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+18 more)
+Cohesion: 0.06
+Nodes (32): RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress, FirstName (+24 more)
 
-### Community 6 - "CollegeAdmission.Services"
-Cohesion: 0.25
-Nodes (4): CollegeAdmission.Services, ILauncherService, UnoLauncherService, Task
+### Community 6 - "ILauncherService"
+Cohesion: 0.33
+Nodes (3): ILauncherService, UnoLauncherService, Task
 
 ### Community 7 - ".OpenUrlAsync"
 Cohesion: 0.25
@@ -177,8 +176,8 @@ Cohesion: 0.10
 Nodes (17): net10.0-desktop, coverlet.collector, FluentAssertions, Microsoft.NET.Test.Sdk, NUnit, NUnit3TestAdapter, SkiaSharp.Skottie, SkiaSharp.Views.Uno.WinUI (+9 more)
 
 ### Community 17 - "CollegeAdmission.ViewModels"
-Cohesion: 0.18
-Nodes (5): CollegeAdmission.Views, CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission
+Cohesion: 0.19
+Nodes (6): CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission, CollegeAdmission.Services, CrmSeed
 
 ### Community 18 - "gradlew"
 Cohesion: 0.83
@@ -261,41 +260,37 @@ Cohesion: 0.25
 Nodes (8): CrmStage, Applied, Enquiry, Enrolled, FeePaid, Merit, Offered, Verified
 
 ### Community 43 - "CrmModels.cs"
-Cohesion: 0.33
-Nodes (5): CourseFill, Pct, PctLabel, CrmAction, CrmSeed
+Cohesion: 0.40
+Nodes (4): CourseFill, Pct, PctLabel, CrmAction
 
-### Community 45 - "MainView"
-Cohesion: 0.20
-Nodes (5): Application, App, MainView, Root, VisualTreeAttachmentEventArgs
+### Community 45 - "CollegeAdmission.Views"
+Cohesion: 0.11
+Nodes (9): Application, CollegeAdmission.Views, Size, App, MainView, Root, VisualTreeAttachmentEventArgs, MainWindow (+1 more)
 
 ### Community 47 - "Uno Platform Getting Started"
 Cohesion: 0.67
 Nodes (3): Rider IDE Support, Uno Platform Getting Started, Uno.Sdk
-
-### Community 50 - "MainWindow"
-Cohesion: 0.33
-Nodes (3): Size, MainWindow, Window
 
 ### Community 51 - "Toolchain — required versions (verified 2026-09-15)"
 Cohesion: 0.50
 Nodes (3): Android deploy (M51, wireless), Gotchas hit so far, Toolchain — required versions (verified 2026-09-15)
 
 ## Knowledge Gaps
-- **281 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+276 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 367 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **315 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+310 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 403 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CrmViewModel`, `CrmShellView`, `CollegeAdmission.Services`, `.OpenUrlAsync`, `RegistrationViewModel`, `Course`, `AvaloniaServices.cs`, `MainView`, `CoursesViewModel`?**
-  _High betweenness centrality (0.094) - this node is a cross-community bridge._
-- **Why does `CrmViewModel` connect `CrmViewModel` to `CrmShellView`, `Applicant`, `CollegeAdmission.Services`, `Course`, `CrmModels.cs`, `.OpenSyllabusAsync`, `MainViewModel`, `CoursesViewModel`?**
-  _High betweenness centrality (0.093) - this node is a cross-community bridge._
+- **Why does `MainViewModel` connect `MainViewModel` to `.RootOf`, `CrmViewModel`, `CrmShellView`, `ILauncherService`, `.OpenUrlAsync`, `Course`, `RegistrationViewModel`, `AvaloniaServices.cs`, `CollegeAdmission.Views`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
+- **Why does `CrmViewModel` connect `CrmViewModel` to `CrmShellView`, `Applicant`, `ILauncherService`, `Course`, `CrmModels.cs`, `.OpenSyllabusAsync`, `MainViewModel`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
 - **Why does `RegistrationViewModel` connect `RegistrationViewModel` to `.RootOf`, `Page`, `MainViewModel`, `CollegeAdmission.ViewModels`, `CoursesViewModel`?**
-  _High betweenness centrality (0.079) - this node is a cross-community bridge._
+  _High betweenness centrality (0.071) - this node is a cross-community bridge._
 - **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _281 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _315 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Registration` be split into smaller, more focused modules?**
   _Cohesion score 0.0815686274509804 - nodes in this community are weakly interconnected._
 - **Should `.RootOf` be split into smaller, more focused modules?**

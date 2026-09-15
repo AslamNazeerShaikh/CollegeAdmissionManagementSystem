@@ -66,12 +66,12 @@ Stack: `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", syst
 ### 2.5 Iconography
 Single thin outline set (Lucide-style), 16–20px, quiet gray. Nav icons left-aligned, consistent width. Brand mark: dark-green rounded square with sparkle.
 
-### 2.6 Font files & sourcing (Nerd Fonts)
-- Source: https://www.nerdfonts.com/font-downloads — pick a font → `Download` (zip from GitHub releases) → extract → use the contained `.otf` / `.ttf` files as needed.
-- Current Android bundle (`src/AndroidJava/app/src/main/res/font/`): `sf_pro_display_regular.ttf` (400) + `sf_pro_display_bold.ttf` (700) only. Used as `@font/sf_pro_display_bold` (titles/labels/buttons) and `@font/sf_pro_display_regular` (body/secondary) across all layouts.
-- Gaps to fill from Nerd Fonts as needed: **Medium/Semibold (500/600)** — the reference UI sets almost all emphasis at 500–600, full 700 bold renders heavier than spec; and **SF Pro Text** (or equivalent) for 11–13px metadata/small text where Display looks cramped.
-- Android wiring: drop new `.ttf`/`.otf` into `res/font/` (lowercase underscores, e.g. `sf_pro_display_medium.ttf`), reference via `android:fontFamily="@font/sf_pro_display_medium"`. No code changes needed.
-- If icon glyphs are needed in-app (drawer section icons, nav icons), prefer a Nerd-Font-patched variant (same download page, `*NerdFont*.ttf` inside the zip) so icons render as text glyphs instead of image assets.
+### 2.6 Font files & sourcing — FINAL CHOICE: Inter (OFL)
+- **Final decision: Inter** — https://fonts.google.com/specimen/Inter. Agreed over Nerd-Fonts alternatives (Arimo/UbuntuSans) because: designed specifically for UI text at small sizes (the spec's 11–14px metadata/body); metrics and feel closest to SF Pro of any open font; full weight range 100–900 including the **Medium 500 / SemiBold 600** the reference UI uses for almost all emphasis; tabular-numbers feature (`tnum`) keeps £ amount columns aligned; **OFL licensed**, safe to bundle in the Android APK (unlike SF Pro, whose Apple license forbids redistribution outside Apple-platform work — the bundled `sf_pro_display_*` TTFs are license-gray on Android and should be replaced).
+- Sourcing: specimen page → `Get font` → zip contains static `.ttf` per weight + variable font. Take statics: `Inter-Regular (400)`, `Inter-Medium (500)`, `Inter-SemiBold (600)`, `Inter-Bold (700)`. Text vs Display split not needed — Inter covers both roles.
+- Android wiring: drop into `src/AndroidJava/app/src/main/res/font/` as `inter_regular.ttf`, `inter_medium.ttf`, `inter_semibold.ttf`, `inter_bold.ttf`; remap usages — titles/labels/buttons/pills: `semibold` (was `sf_pro_display_bold`), body/secondary: `regular`/`medium`. No code changes beyond `android:fontFamily`.
+- Nerd Fonts (https://www.nerdfonts.com/font-downloads — Download zip → extract `.otf`/`.ttf`) stays as fallback source only if icon-as-text-glyphs are ever needed; not needed for body text now.
+- Migration status: **pending** — `res/font/` still contains only `sf_pro_display_regular/bold.ttf`; swap to Inter files on implementation.
 
 ---
 
