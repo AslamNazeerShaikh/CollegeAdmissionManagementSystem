@@ -7,8 +7,8 @@
              Background="{StaticResource CrmPaperBg}">
   <UserControl.Styles>
     <Style Selector="Button.nav-active">
-      <Setter Property="Background" Value="{StaticResource CrmAccentSoft}" />
-      <Setter Property="Foreground" Value="{StaticResource CrmAccent}" />
+      <Setter Property="Background" Value="{StaticResource CrmPaperBg}" />
+      <Setter Property="Foreground" Value="{StaticResource CrmInk}" />
       <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
   </UserControl.Styles>
@@ -32,7 +32,7 @@
           </StackPanel>
         </Button>
         <TextBox x:Name="SearchBox" Grid.Column="0" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
-                 PlaceholderText="Search name, course, phone… (Ctrl+K)" MaxWidth="420"
+                 PlaceholderText="Search name, course, phone…  ⌘K" MaxWidth="420"
                  HorizontalAlignment="Stretch" Margin="0,0,16,0"
                  VerticalAlignment="Center" FontSize="13" />
         <ScrollViewer x:Name="StatsScroller" Grid.Column="1"
@@ -54,53 +54,56 @@
                 Background="{StaticResource CrmAccent}" Foreground="{StaticResource CrmAccentInk}"
                 FontWeight="SemiBold" CornerRadius="6" Padding="14,8" Margin="0,0,8,0"
                 VerticalAlignment="Center" MinHeight="40" />
-        <Button Grid.Column="3" Content="Classic app" Click="OnClassicApp"
+        <Button Grid.Column="3" Content="+ New application" Command="{Binding AddApplicationCommand}"
                 Background="Transparent" Foreground="{StaticResource CrmInk2}"
                 BorderBrush="{StaticResource CrmLine}" BorderThickness="1"
-                CornerRadius="6" Padding="12,8" VerticalAlignment="Center" MinHeight="40" />
+                CornerRadius="8" Padding="12,8" VerticalAlignment="Center" MinHeight="40" />
       </Grid>
     </Border>
 
     <!-- ══ Body: nav lives in a SplitView (Inline pane on desktop, Overlay drawer on phones) ══ -->
-    <SplitView x:Name="NavSplit" Grid.Row="1" OpenPaneLength="232"
+    <SplitView x:Name="NavSplit" Grid.Row="1" OpenPaneLength="300"
                DisplayMode="Inline" IsPaneOpen="True">
       <SplitView.Pane>
       <!-- ── Nav ── -->
       <Border Background="{StaticResource CrmSurface}"
-              BorderBrush="{StaticResource CrmLine}" BorderThickness="0,0,1,0" Padding="12">
+              BorderBrush="{StaticResource CrmLine}" BorderThickness="0,0,1,0" Padding="16">
         <StackPanel x:Name="NavPanel" Spacing="2">
-          <TextBlock Text="COCSIT" FontSize="17" FontWeight="Bold" Foreground="{StaticResource CrmInk}" />
-          <TextBlock Text="Admissions CRM · 2026-27" FontSize="11" Foreground="{StaticResource CrmMuted}" Margin="0,0,0,12" />
-          <Button Content="◇  Dashboard" Command="{Binding SelectSectionCommand}" CommandParameter="Dashboard"
+          <StackPanel Orientation="Horizontal" Spacing="10" Margin="0,0,0,2">
+            <Border Width="36" Height="36" CornerRadius="10" Background="{StaticResource CrmAccent}"
+                    VerticalAlignment="Center">
+              <TextBlock Text="✦" FontSize="18" Foreground="White"
+                         HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <StackPanel VerticalAlignment="Center" Spacing="0">
+              <TextBlock Text="College Admissions" FontSize="15" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" />
+              <TextBlock Text="CRM" FontSize="12" Foreground="{StaticResource CrmMuted}" />
+            </StackPanel>
+          </StackPanel>
+          <TextBlock Text="2026–27 admission cycle" FontSize="11" Foreground="{StaticResource CrmMuted}" Margin="0,0,0,12" />
+          <Button Content="Dashboard" Command="{Binding SelectSectionCommand}" CommandParameter="Dashboard"
                   Classes.nav-active="{Binding ShowDashboard}"
                   Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                  Padding="10,8" CornerRadius="6" MinHeight="40" FontSize="13" />
-          <Button Content="▤  Pipeline" Command="{Binding SelectSectionCommand}" CommandParameter="Pipeline"
+                  Padding="10,8" CornerRadius="8" MinHeight="40" FontSize="14" />
+          <Button Content="Pipeline" Command="{Binding SelectSectionCommand}" CommandParameter="Pipeline"
                   Classes.nav-active="{Binding ShowPipeline}"
                   Background="Transparent"
                   HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                  Padding="10,8" CornerRadius="6" MinHeight="40" FontSize="13" />
-          <Button Content="☰  Applications" Command="{Binding SelectSectionCommand}" CommandParameter="Applications"
+                  Padding="10,8" CornerRadius="8" MinHeight="40" FontSize="14" />
+          <Button Content="Applications" Command="{Binding SelectSectionCommand}" CommandParameter="Applications"
                   Classes.nav-active="{Binding ShowApplications}"
                   Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                  Padding="10,8" CornerRadius="6" MinHeight="40" FontSize="13" />
-          <Button Content="✎  Courses" Command="{Binding SelectSectionCommand}" CommandParameter="Courses"
+                  Padding="10,8" CornerRadius="8" MinHeight="40" FontSize="14" />
+          <Button Content="Courses" Command="{Binding SelectSectionCommand}" CommandParameter="Courses"
                   Classes.nav-active="{Binding ShowCourses}"
                   Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                  Padding="10,8" CornerRadius="6" MinHeight="40" FontSize="13" />
-          <Button Content="₹  Fees" Command="{Binding SelectSectionCommand}" CommandParameter="Fees"
+                  Padding="10,8" CornerRadius="8" MinHeight="40" FontSize="14" />
+          <Button Content="Fees" Command="{Binding SelectSectionCommand}" CommandParameter="Fees"
                   Classes.nav-active="{Binding ShowFees}"
                   Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                  Padding="10,8" CornerRadius="6" MinHeight="40" FontSize="13" />
+                  Padding="10,8" CornerRadius="8" MinHeight="40" FontSize="14" />
           <Border Height="1" Background="{StaticResource CrmLineSoft}" Margin="0,12" />
-          <TextBlock Text="CLASSIC" FontSize="10" Foreground="{StaticResource CrmMuted}" Margin="10,0,0,4" />
-          <Button Content="Course catalog" Click="OnClassicCourses"
-                  Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                  Padding="10,8" CornerRadius="6" MinHeight="40" FontSize="13" />
-          <Button Content="Registration form" Click="OnClassicRegister"
-                  Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                  Padding="10,8" CornerRadius="6" MinHeight="40" FontSize="13" />
-          <Border Height="1" Background="{StaticResource CrmLineSoft}" Margin="0,12" />
+          <TextBlock Text="MANAGEMENT" FontSize="11" Foreground="{StaticResource CrmMuted}" Margin="10,0,0,4" />
           <Border Background="{StaticResource CrmPaperBg}" CornerRadius="8" Padding="10">
             <StackPanel Spacing="2">
               <TextBlock Text="Counsellor desk · Latur" FontSize="12" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" />
@@ -119,7 +122,28 @@
 
           <!-- DASHBOARD -->
           <StackPanel Spacing="12" IsVisible="{Binding ShowDashboard}">
-            <TextBlock Text="Needs action today" FontSize="20" FontWeight="Bold" Foreground="{StaticResource CrmInk}" />
+            <StackPanel Spacing="2">
+              <TextBlock Text="Dashboard" FontSize="26" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" />
+              <TextBlock Text="{Binding TotalApplicants, StringFormat='{}{0} applicants · 2026–27 cycle'}" FontSize="13" Foreground="{StaticResource CrmMuted}" />
+            </StackPanel>
+            <WrapPanel Orientation="Horizontal">
+              <Border MinWidth="160" Background="{StaticResource CrmSurface}" CornerRadius="12" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="18,16" Margin="0,0,12,12">
+                <StackPanel Spacing="2"><TextBlock Text="Total applicants" FontSize="13" Foreground="{StaticResource CrmMuted}" /><TextBlock Text="{Binding TotalApplicants}" FontSize="26" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" /><TextBlock Text="2026–27 cycle" FontSize="13" Foreground="{StaticResource CrmMuted}" /></StackPanel>
+              </Border>
+              <Border MinWidth="160" Background="{StaticResource CrmSurface}" CornerRadius="12" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="18,16" Margin="0,0,12,12">
+                <StackPanel Spacing="2"><TextBlock Text="New enquiries" FontSize="13" Foreground="{StaticResource CrmMuted}" /><TextBlock Text="{Binding CountEnquiry}" FontSize="26" FontWeight="SemiBold" Foreground="{StaticResource CrmInfo}" /><TextBlock Text="need counsellor" FontSize="13" Foreground="{StaticResource CrmMuted}" /></StackPanel>
+              </Border>
+              <Border MinWidth="160" Background="{StaticResource CrmSurface}" CornerRadius="12" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="18,16" Margin="0,0,12,12">
+                <StackPanel Spacing="2"><TextBlock Text="Enrolled" FontSize="13" Foreground="{StaticResource CrmMuted}" /><TextBlock Text="{Binding EnrolledCount}" FontSize="26" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" /><TextBlock Text="admissions confirmed" FontSize="13" Foreground="{StaticResource CrmMuted}" /></StackPanel>
+              </Border>
+              <Border MinWidth="160" Background="{StaticResource CrmSurface}" CornerRadius="12" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="18,16" Margin="0,0,12,12">
+                <StackPanel Spacing="2"><TextBlock Text="Fees due" FontSize="13" Foreground="{StaticResource CrmMuted}" /><TextBlock Text="{Binding FeeDueLabel}" FontSize="26" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" /><TextBlock Text="{Binding FeeDueCount, StringFormat='{}{0} applicants'}" FontSize="13" Foreground="{StaticResource CrmMuted}" /></StackPanel>
+              </Border>
+              <Border MinWidth="160" Background="{StaticResource CrmSurface}" CornerRadius="12" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="18,16" Margin="0,0,12,12">
+                <StackPanel Spacing="2"><TextBlock Text="Docs pending" FontSize="13" Foreground="{StaticResource CrmMuted}" /><TextBlock Text="{Binding DocsPendingCount}" FontSize="26" FontWeight="SemiBold" Foreground="{StaticResource CrmBad}" /><TextBlock Text="awaiting verification" FontSize="13" Foreground="{StaticResource CrmMuted}" /></StackPanel>
+              </Border>
+            </WrapPanel>
+            <TextBlock Text="Needs action today" FontSize="18" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" />
             <ItemsControl ItemsSource="{Binding ActionQueue}">
               <ItemsControl.ItemTemplate>
                 <DataTemplate x:DataType="models:CrmAction">
@@ -274,7 +298,7 @@
                                 IsEnabled="{Binding HasSy}" Padding="10,6" CornerRadius="6" FontSize="12" MinHeight="36" />
                         <Button Tag="{Binding TySyllabusUrl}" Click="OnSyllabusClick" Content="TY syllabus"
                                 IsEnabled="{Binding HasTy}" Padding="10,6" CornerRadius="6" FontSize="12" MinHeight="36" />
-                        <Button Tag="{Binding CardTitle}" Click="OnApplyClick" Content="Apply →"
+                        <Button Tag="{Binding Id}" Click="OnApplyClick" Content="Apply →"
                                 Background="{StaticResource CrmAccent}" Foreground="{StaticResource CrmAccentInk}"
                                 Padding="10,6" CornerRadius="6" FontSize="12" FontWeight="SemiBold" MinHeight="36" />
                       </StackPanel>
@@ -352,7 +376,7 @@
                     Background="{StaticResource CrmOk}" Foreground="White"
                     FontWeight="SemiBold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
                     Padding="12,10" CornerRadius="6" MinHeight="44" />
-            <Button Content="Open registration" Click="OnRailRegisterClick"
+            <Button Content="New application" Click="OnRailRegisterClick"
                     Background="Transparent" Foreground="{StaticResource CrmInk2}"
                     BorderBrush="{StaticResource CrmLine}" BorderThickness="1"
                     HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"

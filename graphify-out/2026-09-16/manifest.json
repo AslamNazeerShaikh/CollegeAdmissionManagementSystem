@@ -252,10 +252,40 @@
     "semantic_hash": "6a47d64fcc136324ca395065a707ef76"
   },
   "README.md": {
-    "mtime": 1789504602.0283618,
-    "seen": 1789505020.755713,
-    "ast_hash": "763cf2213023810b3c49c5016721afbc",
+    "mtime": 1789404258.4108706,
+    "seen": 1789416749.1307678,
+    "ast_hash": "6c827488de988860633e36ae4f17ade4",
     "semantic_hash": ""
+  },
+  "docs/avalonia-migration-plan.html": {
+    "mtime": 1789141863.3700035,
+    "seen": 1789416749.130769,
+    "ast_hash": "fbd30f052f0272eb3c678a4d22f479de",
+    "semantic_hash": "fbd30f052f0272eb3c678a4d22f479de"
+  },
+  "docs/modernization-audit.html": {
+    "mtime": 1789141863.370079,
+    "seen": 1789416749.13077,
+    "ast_hash": "ea048dc17609bfcbbd80ae9e0e54970f",
+    "semantic_hash": "ea048dc17609bfcbbd80ae9e0e54970f"
+  },
+  "docs/modernization-master-plan.md": {
+    "mtime": 1789404258.4136589,
+    "seen": 1789416749.13077,
+    "ast_hash": "cff546aa7e0ba6570dfde65d7f68f76b",
+    "semantic_hash": ""
+  },
+  "docs/opencode-go-vs-commandcode-goat-analysis.md": {
+    "mtime": 1789199218.9612381,
+    "seen": 1789416749.13077,
+    "ast_hash": "938395ea456540d5fcbad92fd55527fb",
+    "semantic_hash": "938395ea456540d5fcbad92fd55527fb"
+  },
+  "docs/uno-platform-migration-plan.html": {
+    "mtime": 1789141863.3702087,
+    "seen": 1789416749.1307719,
+    "ast_hash": "17cc219117e9ec01571100ec1ca675eb",
+    "semantic_hash": "17cc219117e9ec01571100ec1ca675eb"
   },
   "Images & Documents/0.jpg": {
     "mtime": 1789141863.3351276,
@@ -312,21 +342,51 @@
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs": {
-    "mtime": 1789504817.20269,
-    "seen": 1789505020.75568,
-    "ast_hash": "974c7633bf52d2ac7624757162ef5575",
+    "mtime": 1789378366.2985044,
+    "seen": 1789416749.130736,
+    "ast_hash": "001004f778ad5f55922ca3b0bf2d944a",
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj": {
-    "mtime": 1789504834.9942374,
-    "seen": 1789505020.755681,
-    "ast_hash": "6e6c81ae5de4cb82cbc14bbb88a9a391",
+    "mtime": 1789413180.2528274,
+    "seen": 1789416749.130738,
+    "ast_hash": "6ba69d05b88ad93d7627a8e89a4ce994",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CoursesView.axaml.cs": {
+    "mtime": 1789378921.4380023,
+    "seen": 1789416749.130738,
+    "ast_hash": "a99d10a139a537f3716f14de92d78593",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainMenuView.axaml.cs": {
+    "mtime": 1789331101.7050025,
+    "seen": 1789416749.130739,
+    "ast_hash": "248f5adf07eb8c4151db76f09d9a25ec",
+    "semantic_hash": "248f5adf07eb8c4151db76f09d9a25ec"
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainView.axaml.cs": {
+    "mtime": 1789378366.2918293,
+    "seen": 1789416749.13074,
+    "ast_hash": "4c9a0f7ba60e4b7a34f24b02f5f98ce2",
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs": {
-    "mtime": 1789504817.2034397,
-    "seen": 1789505020.755682,
-    "ast_hash": "a543c9d94f020b7d2d577e1a2fd9ede6",
+    "mtime": 1789404258.4551594,
+    "seen": 1789416749.13074,
+    "ast_hash": "67862c94bd6811e40386afb9eb155a79",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/RegistrationView.axaml.cs": {
+    "mtime": 1789331101.7053783,
+    "seen": 1789416749.13074,
+    "ast_hash": "e3e5d34a05a550de0622efaa736283aa",
+    "semantic_hash": "e3e5d34a05a550de0622efaa736283aa"
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/SplashView.axaml.cs": {
+    "mtime": 1789413180.2537503,
+    "seen": 1789416749.130741,
+    "ast_hash": "a63b3732953b1c0c46b9b8d8cf7fa142",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/.vscode/extensions.json": {
@@ -515,6 +575,42 @@
     "ast_hash": "4bb5b4e49f55815645b13f9867cae5b8",
     "semantic_hash": ""
   },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/back.png": {
+    "mtime": 1789331101.7036598,
+    "seen": 1789416749.130796,
+    "ast_hash": "185b7f63f7a1bf113b35a322144d4c24",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/boy_paper.jpg": {
+    "mtime": 1789331101.7038302,
+    "seen": 1789416749.130796,
+    "ast_hash": "6561143a40df448ba4bc44944bf60ec8",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/certificate_flat.jpg": {
+    "mtime": 1789331101.7039938,
+    "seen": 1789416749.1307971,
+    "ast_hash": "27db262f2bf2a43d2a1a20cff63fed53",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/course_flat.png": {
+    "mtime": 1789331101.7041526,
+    "seen": 1789416749.1307971,
+    "ast_hash": "a7ac5426f1ff1ef086baffcb9eb811d4",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/old_logo.png": {
+    "mtime": 1789331101.7042372,
+    "seen": 1789416749.1307971,
+    "ast_hash": "ab9216cfc70dfcc11c0cc58e7bee8125",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/table_chair.jpg": {
+    "mtime": 1789331101.7043164,
+    "seen": 1789416749.130798,
+    "ast_hash": "20fcbd0beafdc2699c373014a9562e97",
+    "semantic_hash": ""
+  },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Icons/icon.svg": {
     "mtime": 1789331101.706831,
     "seen": 1789416749.130798,
@@ -660,9 +756,21 @@
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs": {
-    "mtime": 1789504817.2028246,
-    "seen": 1789505020.755677,
-    "ast_hash": "4904a34be9a7d2cebb51f9f2557fa842",
+    "mtime": 1789413180.252284,
+    "seen": 1789416749.130733,
+    "ast_hash": "57ac34c1f3c2c68b198affffdb1be3d2",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/MainViewModel.cs": {
+    "mtime": 1789413180.2525654,
+    "seen": 1789416749.130734,
+    "ast_hash": "6526d1eb4def50b595c17ac4c6be9af7",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/RegistrationViewModel.cs": {
+    "mtime": 1789331101.7046576,
+    "seen": 1789416749.130734,
+    "ast_hash": "875683df32b44478f42338b9602f4591",
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/ViewModelBase.cs": {
@@ -672,9 +780,27 @@
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs": {
-    "mtime": 1789504817.2031286,
-    "seen": 1789505020.755681,
-    "ast_hash": "59885c27a7c9d42abd64c1abeb7ab4ef",
+    "mtime": 1789413180.2531068,
+    "seen": 1789416749.130738,
+    "ast_hash": "f916face83240aa61e4c67887ad112d5",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/Lottie/caution_anim.json": {
+    "mtime": 1789378899.6547644,
+    "seen": 1789416749.1307368,
+    "ast_hash": "2133850922827f92c716b3e02cb256aa",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/Lottie/get_in_touch.json": {
+    "mtime": 1789378899.6541617,
+    "seen": 1789416749.1307368,
+    "ast_hash": "5c7d19cff9a50c993886e1476bd4351e",
+    "semantic_hash": ""
+  },
+  "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Assets/Lottie/tutorials_online.json": {
+    "mtime": 1789378899.6545234,
+    "seen": 1789416749.1307368,
+    "ast_hash": "9b40e2fa97d36871d916ecc31f02d462",
     "semantic_hash": ""
   },
   "src/AndroidJava/app/build.gradle": {
@@ -1086,21 +1212,57 @@
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs": {
-    "mtime": 1789504829.1377087,
-    "seen": 1789505020.755678,
-    "ast_hash": "3a10e0661ea23e468aa1ddfd85fc1ce2",
+    "mtime": 1789413180.2524076,
+    "seen": 1789416749.130734,
+    "ast_hash": "8178be86af93dee5096d27b23a7c313f",
     "semantic_hash": ""
   },
   "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs": {
-    "mtime": 1789504825.2083802,
-    "seen": 1789505020.755681,
-    "ast_hash": "55a9dd9a79579b870946b62931b65525",
+    "mtime": 1789416690.7709587,
+    "seen": 1789416749.130739,
+    "ast_hash": "8226f58d6e3280343febb57be2015c6f",
     "semantic_hash": ""
   },
   "docs/avalonia-crm-vision.md": {
-    "mtime": 1789505015.964714,
-    "seen": 1789505020.7557151,
-    "ast_hash": "c65043e9064d8e58170f7285d95a635f",
+    "mtime": 1789416720.8391252,
+    "seen": 1789416749.130769,
+    "ast_hash": "44ce6963361edac93895cdb381ea695d",
+    "semantic_hash": ""
+  },
+  "docs/ouroboros-guide.md": {
+    "mtime": 1789405619.5633013,
+    "seen": 1789416749.130771,
+    "ast_hash": "f630ef0f7f435030df3f7126b020b89f",
+    "semantic_hash": ""
+  },
+  "docs/crm-preview/crm-applications.png": {
+    "mtime": 1789413180.2421687,
+    "seen": 1789416749.130786,
+    "ast_hash": "ca2bd1500a0549e111b1141aba9f6f80",
+    "semantic_hash": ""
+  },
+  "docs/crm-preview/crm-dashboard.png": {
+    "mtime": 1789413180.2428284,
+    "seen": 1789416749.1307871,
+    "ast_hash": "fcc599906a362d39d677b26ca8fa18ef",
+    "semantic_hash": ""
+  },
+  "docs/crm-preview/crm-fees.png": {
+    "mtime": 1789413180.243291,
+    "seen": 1789416749.1307871,
+    "ast_hash": "01e8e34af929f677c7d3ba8a615e9bd9",
+    "semantic_hash": ""
+  },
+  "docs/crm-preview/crm-pipeline.png": {
+    "mtime": 1789413180.2439046,
+    "seen": 1789416749.1307871,
+    "ast_hash": "3b4281cdbedb817ed118b3fc4aad3017",
+    "semantic_hash": ""
+  },
+  "docs/toolchain.md": {
+    "mtime": 1789416733.4280586,
+    "seen": 1789416749.1307719,
+    "ast_hash": "0fcaa644c256f3b5292cacac505c5ac4",
     "semantic_hash": ""
   },
   "docs/ReferenceUi/LLM-Chat.txt": {

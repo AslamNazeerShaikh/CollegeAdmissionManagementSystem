@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="using:CollegeAdmission.Views"
-        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="800"
+        mc:Ignorable="d" d:DesignWidth="1440" d:DesignHeight="900"
          x:Class="CollegeAdmission.Views.MainWindow"
+         x:DataType="vm:CrmViewModel"
          Icon="/Assets/avalonia-logo.ico"
-         Title="COCSIT Admissions CRM"
+         Title="College Admissions CRM"
          Width="1440" Height="900"
          MinWidth="1024" MinHeight="640"
         WindowStartupLocation="CenterScreen">
-        <views:MainView />
+        <views:CrmShellView />
 </Window>

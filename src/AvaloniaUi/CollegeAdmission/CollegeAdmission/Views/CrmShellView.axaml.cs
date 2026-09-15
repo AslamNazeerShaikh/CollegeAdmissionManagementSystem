@@ -19,6 +19,12 @@ public partial class CrmShellView : UserControl
         NavPanel.AddHandler(Button.ClickEvent, OnNavClick);
     }
 
+    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnAttachedToVisualTree(e);
+        AppShell.ShellView = this;
+    }
+
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {
         base.OnPropertyChanged(change);
@@ -27,8 +33,6 @@ public partial class CrmShellView : UserControl
     }
 
     private CrmViewModel Vm => (CrmViewModel)DataContext!;
-
-    private static MainViewModel RootOf(Control view) => MainView.RootOf(view);
 
     private void OnNavToggle(object? sender, RoutedEventArgs e) =>
         NavSplit.IsPaneOpen = !NavSplit.IsPaneOpen;
@@ -103,7 +107,7 @@ public partial class CrmShellView : UserControl
         Vm.CollectFeeCommand.Execute(Vm.SelectedApplicant);
 
     private void OnRailRegisterClick(object? sender, RoutedEventArgs e) =>
-        RootOf(this).ShowRegistration(Vm.SelectedApplicant?.Course);
+        Vm.AddApplicationCommand.Execute(Vm.SelectedApplicant?.CourseId);
 
     private void OnSyllabusClick(object? sender, RoutedEventArgs e)
     {
@@ -113,11 +117,7 @@ public partial class CrmShellView : UserControl
 
     private void OnApplyClick(object? sender, RoutedEventArgs e)
     {
-        if (sender is Button { Tag: string course })
-            RootOf(this).ShowRegistration(course);
+        if (sender is Button { Tag: string courseId })
+            Vm.AddApplicationCommand.Execute(courseId);
     }
-
-    private void OnClassicApp(object? sender, RoutedEventArgs e) => RootOf(this).ShowMain();
-    private void OnClassicCourses(object? sender, RoutedEventArgs e) => RootOf(this).ShowCourses();
-    private void OnClassicRegister(object? sender, RoutedEventArgs e) => RootOf(this).ShowRegistration();
 }

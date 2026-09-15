@@ -77,6 +77,6 @@ Three codebases live in `src/`:
 - com.github.barteksc:android-pdf-viewer `: 3.2.0-beta.1`
 - com.squareup.okhttp3:okhttp `: 4.9.1`
 
-# Pending (see `docs/modernization-master-plan.md`)
+# Pending (see `docs/avalonia-crm-vision.md`)
 
 Unify the 21-course catalog across .NET apps, add Avalonia tests, decide the Phase 5 registration backend, restore offline/in-app PDFs, move drafts to SQLite, add iOS/Windows store heads + CI/signing.

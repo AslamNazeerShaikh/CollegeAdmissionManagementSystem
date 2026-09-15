@@ -22,18 +22,18 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = AppShell.Main
+                DataContext = AppShell.Crm
             };
         }
         else if (ApplicationLifetime is IActivityApplicationLifetime singleViewFactoryApplicationLifetime)
         {
             singleViewFactoryApplicationLifetime.MainViewFactory = () =>
-                new MainView { DataContext = AppShell.Main };
+                new CrmShellView { DataContext = AppShell.Crm };
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
             singleViewPlatform.MainView =
-                new MainView { DataContext = AppShell.Main };
+                new CrmShellView { DataContext = AppShell.Crm };
         }
 
         base.OnFrameworkInitializationCompleted();

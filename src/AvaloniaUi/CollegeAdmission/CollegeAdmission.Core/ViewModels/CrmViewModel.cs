@@ -159,6 +159,22 @@ public partial class CrmViewModel : ViewModelBase
     }
 
     [RelayCommand]
+    private void AddApplication(string? courseId)
+    {
+        var course = string.IsNullOrWhiteSpace(courseId) ? null
+            : Courses.FirstOrDefault(c => c.Id == courseId);
+        var n = enquirySeq++;
+        var item = new Applicant($"walkin-{DateTime.Now:HHmmss}-{n}", $"Walk-in Application {n}", "WA",
+            course?.CardTitle.Replace("\n", " ") ?? "General enquiry",
+            course?.Id ?? "general", "98XXXXXXXX", 0,
+            CrmStage.Enquiry, 0, 4, false, course is null ? 0 : 17900, 0, "Desk", "Walk-in");
+        Applicants.Insert(0, item);
+        SelectedApplicant = item;
+        SelectedSection = "Applications";
+        RefreshDerived();
+    }
+
+    [RelayCommand]
     private Task OpenSyllabusAsync(string? url)
     {
         if (string.IsNullOrWhiteSpace(url)) return Task.CompletedTask;
