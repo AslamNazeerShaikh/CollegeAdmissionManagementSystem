@@ -16,6 +16,8 @@ Three codebases live in `src/`:
 
 **Avalonia (`src/AvaloniaUi/CollegeAdmission/`)** — primary app:
 - Desktop: `dotnet run --project CollegeAdmission.Desktop -f net10.0`
+- One Desktop binary serves Linux/macOS/Windows — no OS-specific code, so macOS and Linux are in parity by construction (verified 2026-09-16: build 0 warnings/0 errors, stable run on Fedora/X11)
+- Linux/X11 uses forced software rendering in `CollegeAdmission.Desktop/Program.cs` (Mesa GLX segfault workaround)
 - Android: open `CollegeAdmission.slnx` in Rider/VS and deploy the `CollegeAdmission.Android` head to device
 - Needs internet for syllabus PDFs (online URLs) and no permissions otherwise
 - Sensor: disable Auto Rotation for the original portrait layout feel
