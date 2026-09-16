@@ -480,3 +480,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# graphify machine-local sidecars (interpreter path + scan root differ per
+# machine; the skill regenerates both on every run, so never commit them)
+graphify-out/.graphify_python
+graphify-out/.graphify_root
