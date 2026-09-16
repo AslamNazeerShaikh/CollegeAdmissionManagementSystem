@@ -107,6 +107,17 @@ servers:
       - "Directory.Build.props"
       - "Directory.Build.targets"
 
+  # Dart Language Server (ships with the Flutter SDK)
+  - name: dart-language-server
+    command: dart
+    args:
+      - language-server
+      - --protocol=lsp
+    filetypes:
+      - dart
+    rootPatterns:
+      - pubspec.yaml
+
 settings:
   # Kotlin specific settings
   kotlin:

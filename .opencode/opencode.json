@@ -14,12 +14,14 @@
       "college-admission-assistant",
       "test-writer",
       "documentation-writer",
-      "gradle-expert"
+      "gradle-expert",
+      "flutter-agent"
     ]
   },
   "skills": {
     "enabled": [
       "csharp-development",
+      "flutter-development",
       "gradle-build",
       "java-development",
       "kotlin-development",
@@ -37,6 +39,9 @@
       "dotnet-publish",
       "dotnet-format",
       "dotnet-lint",
+      "flutter-build",
+      "flutter-run",
+      "flutter-test",
       "build",
       "test",
       "lint",

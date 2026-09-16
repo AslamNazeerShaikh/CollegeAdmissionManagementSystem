@@ -7,6 +7,7 @@ Three codebases live in `src/`:
 | Codebase | Stack | Status | Targets today |
 |---|---|---|---|
 | `src/AvaloniaUi/` | .NET 10 + Avalonia 12 | Shipping | Android, Desktop (Linux/macOS/Windows) |
+| `src/FlutterUi/` | Flutter 3.47 + Dart 3.13 | Port (evaluation) | Linux desktop today; Android/iOS/macOS/Windows same codebase |
 | `src/PlatformUno/` | .NET 10 + Uno Platform 6 | Retained port | Android, Desktop, bare `net10.0` |
 | `src/AndroidJava/` | Java + Android SDK (archived, see `src/AndroidJava/README.md`) | Reference only | Android 4.4+ (API 19+) |
 
@@ -22,6 +23,12 @@ Three codebases live in `src/`:
 - Needs internet for syllabus PDFs (online URLs) and no permissions otherwise
 - Sensor: disable Auto Rotation for the original portrait layout feel
 
+**Flutter (`src/FlutterUi/college_admission/`)** — CRM port for look/feel/performance comparison:
+- SDK: `~/flutter_sdk/flutter` (3.47.4 stable, on PATH); system deps: `clang cmake ninja-build gtk3-devel`
+- Desktop: `flutter run -d linux` (dev) or `flutter build linux --release` → `build/linux/x64/release/bundle/`
+- Mirrors the Avalonia CRM (same seed data, `CrmColors` tokens, Inter font); pipeline is stage tabs + list, no horizontal scrolling
+- Checks: `flutter analyze && flutter test`
+
 **Uno (`src/PlatformUno/CollegeAdmission/`)** — secondary port:
 - Desktop: `dotnet run --project CollegeAdmission -f net10.0-desktop`
 - Android: deploy the `net10.0-android` target to device
@@ -36,7 +43,7 @@ Three codebases live in `src/`:
 - Samsung M51 — Android 12 (Avalonia + Uno Android heads, Java app)
 - iPhone 16 Plus — iOS 26 (no iOS head configured yet, see pending)
 - MacBook Pro M5 Pro — macOS 26 (Desktop heads)
-- Lenovo Yoga X1 Gen 2 — Fedora 44 (Desktop heads, `dotnet` 10.0.401 verified)
+- Lenovo Yoga X1 Gen 2 — Fedora 44 (Desktop heads, `dotnet` 10.0.401 verified; Flutter Linux head, Impeller, verified)
 
 ![Code Structure](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/Images%20&%20Documents/0.jpg)
 
