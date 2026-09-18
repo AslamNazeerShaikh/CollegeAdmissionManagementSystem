@@ -351,44 +351,6 @@
       "source_location": "L51"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course",
-      "label": "Course",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "course",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog",
-      "label": "CourseCatalog",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "coursecatalog",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L18"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_models_courses_collegeadmission_models_course",
       "label": "Course",
       "_callable": true,
@@ -427,6 +389,26 @@
       "source_location": "L25"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app",
+      "label": "App",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s146"
+        ]
+      },
+      "norm_label": "app",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L9"
+    },
+    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_views_crmshellview_axaml_collegeadmission_views_crmshellview",
       "label": "CrmShellView",
       "_callable": true,
@@ -445,6 +427,26 @@
       "norm_label": "crmshellview",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
       "source_location": "L9"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
+      "label": "MainWindow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "CollegeAdmission.Views",
+        "scope_chain": [
+          "s26"
+        ]
+      },
+      "norm_label": "mainwindow",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L5"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_mainmenupage_xaml_collegeadmission_mainmenupage",
@@ -487,43 +489,42 @@
       "source_location": "L3"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app",
-      "label": "App",
+      "id": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate",
+      "label": "AppDelegate",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "metadata": {
-        "is_partial": true,
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s146"
-        ]
-      },
-      "norm_label": "app",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L9"
+      "norm_label": "appdelegate",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L4"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
-      "label": "MainWindow",
+      "id": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow",
+      "label": "MainFlutterWindow",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "metadata": {
-        "is_partial": true,
-        "namespace": "CollegeAdmission.Views",
-        "scope_chain": [
-          "s26"
-        ]
-      },
-      "norm_label": "mainwindow",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "norm_label": "mainflutterwindow",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_flutterui_college_admission_macos_runnertests_runnertests_runnertests",
+      "label": "RunnerTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "runnertests",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
       "source_location": "L5"
     },
     {
@@ -686,13 +687,32 @@
       "source_location": "L6"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmseed",
+      "label": "CrmSeed",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.ViewModels",
+        "scope_chain": [
+          "s144"
+        ]
+      },
+      "norm_label": "crmseed",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
+      "source_location": "L185"
+    },
+    {
       "id": "src_platformuno_collegeadmission_collegeadmission_tests_unittest1_collegeadmission_tests_unittest1",
       "label": "UnitTest1",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 28,
-      "community_name": "CatalogTests.cs",
+      "community_name": "UnitTest1",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Tests",
@@ -711,7 +731,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Services",
@@ -730,7 +750,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
@@ -781,63 +801,6 @@
       "source_location": "L15"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_coursefill",
-      "label": "CourseFill",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "Applicant",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "coursefill",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
-      "source_location": "L50"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_crmaction",
-      "label": "CrmAction",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "Applicant",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "crmaction",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
-      "source_location": "L48"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmseed",
-      "label": "CrmSeed",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "Applicant",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.ViewModels",
-        "scope_chain": [
-          "s144"
-        ]
-      },
-      "norm_label": "crmseed",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
-      "source_location": "L185"
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_viewmodelbase_collegeadmission_viewmodels_viewmodelbase",
       "label": "ViewModelBase",
       "_callable": true,
@@ -875,6 +838,44 @@
       "norm_label": "coursesviewmodel",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs",
       "source_location": "L8"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course",
+      "label": "Course",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "course",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog",
+      "label": "CourseCatalog",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "coursecatalog",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L18"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_registrationpage_xaml_collegeadmission_registrationpage",
@@ -1057,6 +1058,44 @@
       "norm_label": "coursespage",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/CoursesPage.xaml.cs",
       "source_location": "L7"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_coursefill",
+      "label": "CourseFill",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "CrmModels.cs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "coursefill",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
+      "source_location": "L50"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_crmaction",
+      "label": "CrmAction",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "CrmModels.cs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "crmaction",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
+      "source_location": "L48"
     },
     {
       "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_courses_courses_onclick",
@@ -2045,6 +2084,50 @@
       "source_location": "L55"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_initialize",
+      "label": ".Initialize()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s146"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Load",
+            "receiver_type": "AvaloniaXamlLoader",
+            "lang": "csharp",
+            "line": "L13"
+          }
+        ]
+      },
+      "norm_label": ".initialize()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_onframeworkinitializationcompleted",
+      "label": ".OnFrameworkInitializationCompleted()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s146"
+        ]
+      },
+      "norm_label": ".onframeworkinitializationcompleted()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L19"
+    },
+    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_views_crmshellview_axaml_collegeadmission_views_crmshellview_applylayout",
       "label": ".ApplyLayout()",
       "_callable": true,
@@ -2521,24 +2604,6 @@
       "source_location": "L112"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmviewmodel_selectapplicant",
-      "label": ".SelectApplicant()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "RelayCommand",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.ViewModels",
-        "scope_chain": [
-          "s144"
-        ]
-      },
-      "norm_label": ".selectapplicant()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
-      "source_location": "L124"
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmviewmodel_selectsection",
       "label": ".SelectSection()",
       "_callable": true,
@@ -2557,48 +2622,80 @@
       "source_location": "L121"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_initialize",
-      "label": ".Initialize()",
+      "id": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant_registergeneratedplugins",
+      "label": "RegisterGeneratedPlugins()",
       "_callable": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
       "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s146"
-        ],
         "unresolved_calls": [
           {
-            "callee": "Load",
-            "receiver_type": "AvaloniaXamlLoader",
-            "lang": "csharp",
-            "line": "L13"
+            "callee": "register",
+            "receiver_type": "UrlLauncherPlugin",
+            "lang": "swift",
+            "line": "L11"
+          },
+          {
+            "callee": "registrar",
+            "receiver_type": "FlutterPluginRegistry",
+            "lang": "swift",
+            "line": "L11"
           }
         ]
       },
-      "norm_label": ".initialize()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L11"
+      "norm_label": "registergeneratedplugins()",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L10"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_onframeworkinitializationcompleted",
-      "label": ".OnFrameworkInitializationCompleted()",
+      "id": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationshouldterminateafterlastwindowclosed",
+      "label": ".applicationShouldTerminateAfterLastWindowClosed()",
       "_callable": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s146"
-        ]
-      },
-      "norm_label": ".onframeworkinitializationcompleted()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L19"
+      "norm_label": ".applicationshouldterminateafterlastwindowclosed()",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationsupportssecurerestorablestate",
+      "label": ".applicationSupportsSecureRestorableState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": ".applicationsupportssecurerestorablestate()",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "label": ".awakeFromNib()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": ".awakefromnib()",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_flutterui_college_admission_macos_runnertests_runnertests_runnertests_testexample",
+      "label": ".testExample()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": ".testexample()",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L7"
     },
     {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_android_application_collegeadmission_android_application_customizeappbuilder",
@@ -2744,7 +2841,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 28,
-      "community_name": "CatalogTests.cs",
+      "community_name": "UnitTest1",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Tests",
@@ -2762,7 +2859,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 28,
-      "community_name": "CatalogTests.cs",
+      "community_name": "UnitTest1",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Tests",
@@ -2788,7 +2885,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
@@ -2801,12 +2898,30 @@
       "source_location": "L9"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmviewmodel_selectapplicant",
+      "label": ".SelectApplicant()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Applicant",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.ViewModels",
+        "scope_chain": [
+          "s144"
+        ]
+      },
+      "norm_label": ".selectapplicant()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
+      "source_location": "L124"
+    },
+    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_ilauncherservice_openurlasync",
       "label": ".OpenUrlAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": ".OpenUrlAsync",
+      "community": 33,
+      "community_name": "CoursesViewModel",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.Services",
@@ -2823,8 +2938,8 @@
       "label": ".OpenSyllabusAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": ".OpenUrlAsync",
+      "community": 33,
+      "community_name": "CoursesViewModel",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission.ViewModels",
@@ -4579,96 +4694,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course",
-      "label": "Course.cs",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "norm_label": "course.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasfy",
-      "label": "HasFy",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "hasfy",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hassy",
-      "label": "HasSy",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "hassy",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasty",
-      "label": "HasTy",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "hasty",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog_all",
-      "label": "All",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "all",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_models_courses",
       "label": "Courses.cs",
       "_origin": "ast",
@@ -4827,6 +4852,17 @@
       "source_location": ""
     },
     {
+      "id": "application",
+      "label": "Application",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "norm_label": "application",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "avaloniapropertychangedeventargs",
       "label": "AvaloniaPropertyChangedEventArgs",
       "_origin": "ast",
@@ -4836,6 +4872,44 @@
       "norm_label": "avaloniapropertychangedeventargs",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "csharp_namespace:0424cab659d0cfe2",
+      "label": "CollegeAdmission.Views",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission.Views"
+      },
+      "norm_label": "collegeadmission.views",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
+      "source_location": "L7",
+      "type": "namespace"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml",
+      "label": "App.axaml.cs",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "norm_label": "app.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_crmshellview_axaml",
+      "label": "CrmShellView.axaml.cs",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "norm_label": "crmshellview.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_views_crmshellview_axaml_collegeadmission_views_crmshellview_vm",
@@ -4866,6 +4940,17 @@
       "source_location": ""
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml",
+      "label": "MainWindow.axaml.cs",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "norm_label": "mainwindow.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L1"
+    },
+    {
       "id": "usercontrol",
       "label": "UserControl",
       "_origin": "ast",
@@ -4886,6 +4971,28 @@
       "norm_label": "visualtreeattachmenteventargs",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "window",
+      "label": "Window",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "CrmShellView",
+      "file_type": "code",
+      "norm_label": "window",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "opencode_opencode_permission_task",
+      "label": "task",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L59"
     },
     {
       "id": "page",
@@ -5123,73 +5230,172 @@
       "source_location": "L23"
     },
     {
-      "id": "application",
-      "label": "Application",
+      "id": "bool",
+      "label": "Bool",
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "norm_label": "application",
+      "norm_label": "bool",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "csharp_namespace:0424cab659d0cfe2",
-      "label": "CollegeAdmission.Views",
+      "id": "cocoa",
+      "label": "Cocoa",
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission.Views"
-      },
-      "norm_label": "collegeadmission.views",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
-      "source_location": "L7",
-      "type": "namespace"
+      "norm_label": "cocoa",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L1",
+      "type": "module"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml",
-      "label": "App.axaml.cs",
+      "id": "flutterappdelegate",
+      "label": "FlutterAppDelegate",
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "norm_label": "app.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "norm_label": "flutterappdelegate",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "fluttermacos",
+      "label": "FlutterMacOS",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "fluttermacos",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L2",
+      "type": "module"
+    },
+    {
+      "id": "flutterpluginregistry",
+      "label": "FlutterPluginRegistry",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "flutterpluginregistry",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "foundation",
+      "label": "Foundation",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "foundation",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L6",
+      "type": "module"
+    },
+    {
+      "id": "nsapplication",
+      "label": "NSApplication",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "nsapplication",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "nswindow",
+      "label": "NSWindow",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "nswindow",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant",
+      "label": "GeneratedPluginRegistrant.swift",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "generatedpluginregistrant.swift",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
       "source_location": "L1"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_crmshellview_axaml",
-      "label": "CrmShellView.axaml.cs",
+      "id": "src_flutterui_college_admission_macos_runner_appdelegate",
+      "label": "AppDelegate.swift",
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "norm_label": "crmshellview.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
+      "norm_label": "appdelegate.swift",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
       "source_location": "L1"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml",
-      "label": "MainWindow.axaml.cs",
+      "id": "src_flutterui_college_admission_macos_runner_mainflutterwindow",
+      "label": "MainFlutterWindow.swift",
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "norm_label": "mainwindow.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "norm_label": "mainflutterwindow.swift",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
       "source_location": "L1"
     },
     {
-      "id": "window",
-      "label": "Window",
+      "id": "src_flutterui_college_admission_macos_runnertests_runnertests",
+      "label": "RunnerTests.swift",
       "_origin": "ast",
       "community": 19,
-      "community_name": "App",
+      "community_name": "FlutterMacOS",
       "file_type": "code",
-      "norm_label": "window",
+      "norm_label": "runnertests.swift",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L1"
+    },
+    {
+      "id": "url_launcher_macos",
+      "label": "url_launcher_macos",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "url_launcher_macos",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L8",
+      "type": "module"
+    },
+    {
+      "id": "xctest",
+      "label": "XCTest",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "xctest",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L3",
+      "type": "module"
+    },
+    {
+      "id": "xctestcase",
+      "label": "XCTestCase",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "FlutterMacOS",
+      "file_type": "code",
+      "norm_label": "xctestcase",
       "source_file": "",
       "source_location": ""
     },
@@ -6047,6 +6253,22 @@
       "type": "namespace"
     },
     {
+      "id": "csharp_namespace:56a0d3080b910c4a",
+      "label": "CollegeAdmission.Tests",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission.Tests"
+      },
+      "norm_label": "collegeadmission.tests",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L5",
+      "type": "namespace"
+    },
+    {
       "id": "csharp_namespace:5bed85bcf5d6061b",
       "label": "CollegeAdmission.ViewModels",
       "_origin": "ast",
@@ -6077,6 +6299,44 @@
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
       "source_location": "L7",
       "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:f9e7dd2d22cc4c26",
+      "label": "CollegeAdmission.Services",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission.Services"
+      },
+      "norm_label": "collegeadmission.services",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel",
+      "label": "CrmViewModel.cs",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "crmviewmodel.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml",
+      "label": "App.xaml.cs",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "app.xaml.cs",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel",
@@ -6134,49 +6394,33 @@
       "source_location": "L1"
     },
     {
-      "id": "csharp_namespace:56a0d3080b910c4a",
-      "label": "CollegeAdmission.Tests",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "CatalogTests.cs",
-      "file_type": "code",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission.Tests"
-      },
-      "norm_label": "collegeadmission.tests",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L5",
-      "type": "namespace"
-    },
-    {
-      "id": "setup",
-      "label": "SetUp",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "CatalogTests.cs",
-      "file_type": "code",
-      "norm_label": "setup",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests",
       "label": "CatalogTests.cs",
       "_origin": "ast",
-      "community": 28,
-      "community_name": "CatalogTests.cs",
+      "community": 27,
+      "community_name": "CollegeAdmission.ViewModels",
       "file_type": "code",
       "norm_label": "catalogtests.cs",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
       "source_location": "L1"
     },
     {
+      "id": "setup",
+      "label": "SetUp",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "UnitTest1",
+      "file_type": "code",
+      "norm_label": "setup",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_platformuno_collegeadmission_collegeadmission_tests_unittest1",
       "label": "UnitTest1.cs",
       "_origin": "ast",
       "community": 28,
-      "community_name": "CatalogTests.cs",
+      "community_name": "UnitTest1",
       "file_type": "code",
       "norm_label": "unittest1.cs",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/UnitTest1.cs",
@@ -6187,48 +6431,21 @@
       "label": "Test",
       "_origin": "ast",
       "community": 28,
-      "community_name": "CatalogTests.cs",
+      "community_name": "UnitTest1",
       "file_type": "code",
       "norm_label": "test",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "csharp_namespace:f9e7dd2d22cc4c26",
-      "label": "CollegeAdmission.Services",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "CollegeAdmission.Services",
-      "file_type": "code",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission.Services"
-      },
-      "norm_label": "collegeadmission.services",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L1",
-      "type": "namespace"
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_services_appservices",
       "label": "AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
       "_origin": "ast",
       "community": 29,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "norm_label": "avaloniaui/collegeadmission/collegeadmission.core/services/appservices.cs",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml",
-      "label": "App.xaml.cs",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "CollegeAdmission.Services",
-      "file_type": "code",
-      "norm_label": "app.xaml.cs",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
       "source_location": "L1"
     },
     {
@@ -6236,7 +6453,7 @@
       "label": "UnoServices.cs",
       "_origin": "ast",
       "community": 29,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "norm_label": "unoservices.cs",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
@@ -6247,7 +6464,7 @@
       "label": "Task",
       "_origin": "ast",
       "community": 29,
-      "community_name": "CollegeAdmission.Services",
+      "community_name": "ILauncherService",
       "file_type": "code",
       "norm_label": "task",
       "source_file": "",
@@ -6529,17 +6746,6 @@
       "source_location": "L54"
     },
     {
-      "id": "opencode_opencode_permission_task",
-      "label": "task",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "opencode.json",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L59"
-    },
-    {
       "id": "opencode_opencode_permission_write",
       "label": "write",
       "_origin": "ast",
@@ -6802,17 +7008,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels",
-      "label": "CrmModels.cs",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "Applicant",
-      "file_type": "code",
-      "norm_label": "crmmodels.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
-      "source_location": "L1"
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_applicant_docslabel",
       "label": "DocsLabel",
       "_origin": "ast",
@@ -6881,51 +7076,6 @@
       "source_location": "L34"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_coursefill_pct",
-      "label": "Pct",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "Applicant",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "pct",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
-      "source_location": "L52"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_coursefill_pctlabel",
-      "label": "PctLabel",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "Applicant",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "pctlabel",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
-      "source_location": "L53"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel",
-      "label": "CrmViewModel.cs",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "Applicant",
-      "file_type": "code",
-      "norm_label": "crmviewmodel.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs",
-      "source_location": "L1"
-    },
-    {
       "id": "observableobject",
       "label": "ObservableObject",
       "_origin": "ast",
@@ -6933,6 +7083,17 @@
       "community_name": "CoursesViewModel",
       "file_type": "code",
       "norm_label": "observableobject",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_services_appservices_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CoursesViewModel",
+      "file_type": "code",
+      "norm_label": "task",
       "source_file": "",
       "source_location": ""
     },
@@ -6976,22 +7137,11 @@
       "source_location": ""
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_services_appservices_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": ".OpenUrlAsync",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_cs_relaycommand",
       "label": "RelayCommand",
       "_origin": "ast",
-      "community": 36,
-      "community_name": ".OpenUrlAsync",
+      "community": 33,
+      "community_name": "CoursesViewModel",
       "file_type": "code",
       "norm_label": "relaycommand",
       "source_file": "",
@@ -7001,10 +7151,100 @@
       "id": "src_platformuno_collegeadmission_collegeadmission_core_viewmodels_coursesviewmodel_cs_task",
       "label": "Task",
       "_origin": "ast",
-      "community": 36,
-      "community_name": ".OpenUrlAsync",
+      "community": 33,
+      "community_name": "CoursesViewModel",
       "file_type": "code",
       "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course",
+      "label": "Course.cs",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "norm_label": "course.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasfy",
+      "label": "HasFy",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "hasfy",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hassy",
+      "label": "HasSy",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "hassy",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasty",
+      "label": "HasTy",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "hasty",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog_all",
+      "label": "All",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "all",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Course",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
       "source_file": "",
       "source_location": ""
     },
@@ -8834,17 +9074,6 @@
       "source_location": null
     },
     {
-      "id": "package_flutter_foundation_dart",
-      "label": "package:flutter/foundation.dart",
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "crm_state.dart",
-      "file_type": "code",
-      "norm_label": "package:flutter/foundation.dart",
-      "source_file": null,
-      "source_location": null
-    },
-    {
       "id": "src_flutterui_college_admission_lib_crm_state",
       "label": "crm_state.dart",
       "_origin": "ast",
@@ -10099,6 +10328,17 @@
       "source_location": null
     },
     {
+      "id": "package_flutter_foundation_dart",
+      "label": "package:flutter/foundation.dart",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "main.dart",
+      "file_type": "code",
+      "norm_label": "package:flutter/foundation.dart",
+      "source_file": null,
+      "source_location": null
+    },
+    {
       "id": "sections_applications_dart",
       "label": "sections/applications.dart",
       "_origin": "ast",
@@ -10165,6 +10405,17 @@
       "source_location": null
     },
     {
+      "id": "src_flutterui_college_admission_lib_main_body",
+      "label": "_body",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "main.dart",
+      "file_type": "code",
+      "norm_label": "_body",
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L67"
+    },
+    {
       "id": "src_flutterui_college_admission_lib_main_build",
       "label": "build",
       "_origin": "ast",
@@ -10173,7 +10424,7 @@
       "file_type": "code",
       "norm_label": "build",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L31"
+      "source_location": "L33"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_createstate",
@@ -10184,29 +10435,7 @@
       "file_type": "code",
       "norm_label": "createstate",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_flutterui_college_admission_lib_main_crmapp",
-      "label": "CrmApp",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": "main.dart",
-      "file_type": "code",
-      "norm_label": "crmapp",
-      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_flutterui_college_admission_lib_main_crmappstate",
-      "label": "_CrmAppState",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": "main.dart",
-      "file_type": "code",
-      "norm_label": "_crmappstate",
-      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L20"
+      "source_location": "L19"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_dispose",
@@ -10217,7 +10446,7 @@
       "file_type": "code",
       "norm_label": "dispose",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L25"
+      "source_location": "L27"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_main",
@@ -10228,7 +10457,7 @@
       "file_type": "code",
       "norm_label": "main",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L12"
+      "source_location": "L14"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_nav",
@@ -10239,7 +10468,18 @@
       "file_type": "code",
       "norm_label": "_nav",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L136"
+      "source_location": "L210"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_main_onselect",
+      "label": "onSelect",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "main.dart",
+      "file_type": "code",
+      "norm_label": "onselect",
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L245"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_searchctrl",
@@ -10250,7 +10490,7 @@
       "file_type": "code",
       "norm_label": "searchctrl",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L22"
+      "source_location": "L24"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_searchfield",
@@ -10261,7 +10501,7 @@
       "file_type": "code",
       "norm_label": "_searchfield",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L108"
+      "source_location": "L182"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_section",
@@ -10272,7 +10512,7 @@
       "file_type": "code",
       "norm_label": "_section",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L232"
+      "source_location": "L222"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_state",
@@ -10283,38 +10523,27 @@
       "file_type": "code",
       "norm_label": "state",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L21"
+      "source_location": "L23"
     },
     {
-      "id": "src_flutterui_college_admission_lib_main_topbar",
-      "label": "_topBar",
+      "id": "src_flutterui_college_admission_lib_main_titlebar",
+      "label": "_titleBar",
       "_origin": "ast",
       "community": 75,
       "community_name": "main.dart",
       "file_type": "code",
-      "norm_label": "_topbar",
+      "norm_label": "_titlebar",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L74"
+      "source_location": "L102"
     },
     {
-      "id": "state",
-      "label": "State",
+      "id": "valuechanged",
+      "label": "ValueChanged",
       "_origin": "ast",
       "community": 75,
       "community_name": "main.dart",
       "file_type": "code",
-      "norm_label": "state",
-      "source_file": null,
-      "source_location": null
-    },
-    {
-      "id": "statefulwidget",
-      "label": "StatefulWidget",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": "main.dart",
-      "file_type": "code",
-      "norm_label": "statefulwidget",
+      "norm_label": "valuechanged",
       "source_file": null,
       "source_location": null
     },
@@ -10323,7 +10552,7 @@
       "label": "ChangeNotifier",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "changenotifier",
       "source_file": null,
@@ -10334,7 +10563,7 @@
       "label": "../crm_button.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "../crm_button.dart",
       "source_file": null,
@@ -10345,7 +10574,7 @@
       "label": "../crm_state.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "../crm_state.dart",
       "source_file": null,
@@ -10356,7 +10585,7 @@
       "label": "../crm_theme.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "../crm_theme.dart",
       "source_file": null,
@@ -10367,7 +10596,7 @@
       "label": "package:flutter/material.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "package:flutter/material.dart",
       "source_file": null,
@@ -10378,7 +10607,7 @@
       "label": "package:url_launcher/url_launcher.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "package:url_launcher/url_launcher.dart",
       "source_file": null,
@@ -10389,7 +10618,7 @@
       "label": "CrmState",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "crmstate",
       "source_file": "src/FlutterUi/college_admission/lib/crm_state.dart",
@@ -10400,7 +10629,7 @@
       "label": "detail_rail.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "detail_rail.dart",
       "source_file": "src/FlutterUi/college_admission/lib/detail_rail.dart",
@@ -10411,18 +10640,29 @@
       "label": "build",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "build",
       "source_file": "src/FlutterUi/college_admission/lib/detail_rail.dart",
       "source_location": "L13"
     },
     {
+      "id": "src_flutterui_college_admission_lib_detail_rail_detailrail",
+      "label": "DetailRail",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "package:flutter/material.dart",
+      "file_type": "code",
+      "norm_label": "detailrail",
+      "source_file": "src/FlutterUi/college_admission/lib/detail_rail.dart",
+      "source_location": "L8"
+    },
+    {
       "id": "src_flutterui_college_admission_lib_detail_rail_state",
       "label": "state",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "state",
       "source_file": "src/FlutterUi/college_admission/lib/detail_rail.dart",
@@ -10433,7 +10673,7 @@
       "label": "courses.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "courses.dart",
       "source_file": "src/FlutterUi/college_admission/lib/sections/courses.dart",
@@ -10444,7 +10684,7 @@
       "label": "build",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "build",
       "source_file": "src/FlutterUi/college_admission/lib/sections/courses.dart",
@@ -10455,7 +10695,7 @@
       "label": "state",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "state",
       "source_file": "src/FlutterUi/college_admission/lib/sections/courses.dart",
@@ -10466,7 +10706,7 @@
       "label": "_syllabusBtn",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "_syllabusbtn",
       "source_file": "src/FlutterUi/college_admission/lib/sections/courses.dart",
@@ -10477,7 +10717,7 @@
       "label": "fees.dart",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "fees.dart",
       "source_file": "src/FlutterUi/college_admission/lib/sections/fees.dart",
@@ -10488,7 +10728,7 @@
       "label": "build",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "build",
       "source_file": "src/FlutterUi/college_admission/lib/sections/fees.dart",
@@ -10499,44 +10739,22 @@
       "label": "state",
       "_origin": "ast",
       "community": 76,
-      "community_name": "courses.dart",
+      "community_name": "package:flutter/material.dart",
       "file_type": "code",
       "norm_label": "state",
       "source_file": "src/FlutterUi/college_admission/lib/sections/fees.dart",
       "source_location": "L7"
     },
     {
-      "id": "crm_models_dart",
-      "label": "../crm_models.dart",
+      "id": "layout_breakpoints_dart",
+      "label": "../layout_breakpoints.dart",
       "_origin": "ast",
       "community": 77,
       "community_name": "applications.dart",
       "file_type": "code",
-      "norm_label": "../crm_models.dart",
+      "norm_label": "../layout_breakpoints.dart",
       "source_file": null,
       "source_location": null
-    },
-    {
-      "id": "src_flutterui_college_admission_lib_crm_button_crmbutton",
-      "label": "CrmButton",
-      "_origin": "ast",
-      "community": 77,
-      "community_name": "applications.dart",
-      "file_type": "code",
-      "norm_label": "crmbutton",
-      "source_file": "src/FlutterUi/college_admission/lib/crm_button.dart",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_flutterui_college_admission_lib_detail_rail_detailrail",
-      "label": "DetailRail",
-      "_origin": "ast",
-      "community": 77,
-      "community_name": "applications.dart",
-      "file_type": "code",
-      "norm_label": "detailrail",
-      "source_file": "src/FlutterUi/college_admission/lib/detail_rail.dart",
-      "source_location": "L8"
     },
     {
       "id": "src_flutterui_college_admission_lib_main_logo",
@@ -10547,7 +10765,18 @@
       "file_type": "code",
       "norm_label": "_logo",
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L252"
+      "source_location": "L340"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_main_navbody",
+      "label": "_NavBody",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "applications.dart",
+      "file_type": "code",
+      "norm_label": "_navbody",
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L243"
     },
     {
       "id": "src_flutterui_college_admission_lib_sections_applications",
@@ -10569,7 +10798,7 @@
       "file_type": "code",
       "norm_label": "applicationssection",
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L6"
+      "source_location": "L9"
     },
     {
       "id": "src_flutterui_college_admission_lib_sections_applications_build",
@@ -10580,7 +10809,29 @@
       "file_type": "code",
       "norm_label": "build",
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L11"
+      "source_location": "L14"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_sections_applications_cards",
+      "label": "_cards",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "applications.dart",
+      "file_type": "code",
+      "norm_label": "_cards",
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L135"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_sections_applications_chip",
+      "label": "_chip",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "applications.dart",
+      "file_type": "code",
+      "norm_label": "_chip",
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L204"
     },
     {
       "id": "src_flutterui_college_admission_lib_sections_applications_h",
@@ -10591,7 +10842,7 @@
       "file_type": "code",
       "norm_label": "_h",
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L112"
+      "source_location": "L218"
     },
     {
       "id": "src_flutterui_college_admission_lib_sections_applications_state",
@@ -10602,7 +10853,18 @@
       "file_type": "code",
       "norm_label": "state",
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L7"
+      "source_location": "L10"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_sections_applications_table",
+      "label": "_table",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "applications.dart",
+      "file_type": "code",
+      "norm_label": "_table",
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L37"
     },
     {
       "id": "src_flutterui_college_admission_lib_sections_applications_text",
@@ -10613,7 +10875,7 @@
       "file_type": "code",
       "norm_label": "text",
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L113"
+      "source_location": "L219"
     },
     {
       "id": "src_flutterui_college_admission_lib_sections_courses_coursessection",
@@ -10682,6 +10944,17 @@
       "source_location": "L21"
     },
     {
+      "id": "src_flutterui_college_admission_lib_crm_button_crmbutton",
+      "label": "CrmButton",
+      "_origin": "ast",
+      "community": 78,
+      "community_name": "crm_button.dart",
+      "file_type": "code",
+      "norm_label": "crmbutton",
+      "source_file": "src/FlutterUi/college_admission/lib/crm_button.dart",
+      "source_location": "L8"
+    },
+    {
       "id": "src_flutterui_college_admission_lib_crm_button_crmbuttonkind",
       "label": "CrmButtonKind",
       "_origin": "ast",
@@ -10746,6 +11019,28 @@
       "norm_label": "voidcallback?",
       "source_file": null,
       "source_location": null
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_main_crmapp",
+      "label": "CrmApp",
+      "_origin": "ast",
+      "community": 79,
+      "community_name": "pipeline.dart",
+      "file_type": "code",
+      "norm_label": "crmapp",
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_main_crmappstate",
+      "label": "_CrmAppState",
+      "_origin": "ast",
+      "community": 79,
+      "community_name": "pipeline.dart",
+      "file_type": "code",
+      "norm_label": "_crmappstate",
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L22"
     },
     {
       "id": "src_flutterui_college_admission_lib_sections_pipeline",
@@ -10847,6 +11142,39 @@
       "source_location": "L17"
     },
     {
+      "id": "state",
+      "label": "State",
+      "_origin": "ast",
+      "community": 79,
+      "community_name": "pipeline.dart",
+      "file_type": "code",
+      "norm_label": "state",
+      "source_file": null,
+      "source_location": null
+    },
+    {
+      "id": "statefulwidget",
+      "label": "StatefulWidget",
+      "_origin": "ast",
+      "community": 79,
+      "community_name": "pipeline.dart",
+      "file_type": "code",
+      "norm_label": "statefulwidget",
+      "source_file": null,
+      "source_location": null
+    },
+    {
+      "id": "crm_models_dart",
+      "label": "../crm_models.dart",
+      "_origin": "ast",
+      "community": 80,
+      "community_name": "dashboard.dart",
+      "file_type": "code",
+      "norm_label": "../crm_models.dart",
+      "source_file": null,
+      "source_location": null
+    },
+    {
       "id": "src_flutterui_college_admission_lib_sections_dashboard",
       "label": "dashboard.dart",
       "_origin": "ast",
@@ -10928,9 +11256,20 @@
       "label": "dart:ui",
       "_origin": "ast",
       "community": 81,
-      "community_name": "widget_test.dart",
+      "community_name": "macos_shell_test.dart",
       "file_type": "code",
       "norm_label": "dart:ui",
+      "source_file": null,
+      "source_location": null
+    },
+    {
+      "id": "package_college_admission_layout_breakpoints_dart",
+      "label": "package:college_admission/layout_breakpoints.dart",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "package:college_admission/layout_breakpoints.dart",
       "source_file": null,
       "source_location": null
     },
@@ -10939,7 +11278,7 @@
       "label": "package:college_admission/main.dart",
       "_origin": "ast",
       "community": 81,
-      "community_name": "widget_test.dart",
+      "community_name": "macos_shell_test.dart",
       "file_type": "code",
       "norm_label": "package:college_admission/main.dart",
       "source_file": null,
@@ -10950,18 +11289,106 @@
       "label": "package:flutter_test/flutter_test.dart",
       "_origin": "ast",
       "community": 81,
-      "community_name": "widget_test.dart",
+      "community_name": "macos_shell_test.dart",
       "file_type": "code",
       "norm_label": "package:flutter_test/flutter_test.dart",
       "source_file": null,
       "source_location": null
     },
     {
+      "id": "src_flutterui_college_admission_test_layout_test",
+      "label": "layout_test.dart",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "layout_test.dart",
+      "source_file": "src/FlutterUi/college_admission/test/layout_test.dart",
+      "source_location": null
+    },
+    {
+      "id": "src_flutterui_college_admission_test_layout_test_main",
+      "label": "main",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "main",
+      "source_file": "src/FlutterUi/college_admission/test/layout_test.dart",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_flutterui_college_admission_test_macos_shell_test",
+      "label": "macos_shell_test.dart",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "macos_shell_test.dart",
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": null
+    },
+    {
+      "id": "src_flutterui_college_admission_test_macos_shell_test_boot",
+      "label": "_boot",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "_boot",
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_flutterui_college_admission_test_macos_shell_test_hashorizontalours",
+      "label": "_hasHorizontalOurs",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "_hashorizontalours",
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_flutterui_college_admission_test_macos_shell_test_main",
+      "label": "main",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "main",
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_flutterui_college_admission_test_macos_shell_test_pumpandsettle",
+      "label": "pumpAndSettle",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "pumpandsettle",
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_flutterui_college_admission_test_macos_shell_test_pumpwidget",
+      "label": "pumpWidget",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "macos_shell_test.dart",
+      "file_type": "code",
+      "norm_label": "pumpwidget",
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L13"
+    },
+    {
       "id": "src_flutterui_college_admission_test_widget_test",
       "label": "widget_test.dart",
       "_origin": "ast",
       "community": 81,
-      "community_name": "widget_test.dart",
+      "community_name": "macos_shell_test.dart",
       "file_type": "code",
       "norm_label": "widget_test.dart",
       "source_file": "src/FlutterUi/college_admission/test/widget_test.dart",
@@ -10972,7 +11399,7 @@
       "label": "main",
       "_origin": "ast",
       "community": 81,
-      "community_name": "widget_test.dart",
+      "community_name": "macos_shell_test.dart",
       "file_type": "code",
       "norm_label": "main",
       "source_file": "src/FlutterUi/college_admission/test/widget_test.dart",
@@ -11321,6 +11748,95 @@
       "norm_label": "flutter-development.md",
       "source_file": ".opencode/skills/flutter-development.md",
       "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels",
+      "label": "CrmModels.cs",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "CrmModels.cs",
+      "file_type": "code",
+      "norm_label": "crmmodels.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_coursefill_pct",
+      "label": "Pct",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "CrmModels.cs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "pct",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
+      "source_location": "L52"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_coursefill_pctlabel",
+      "label": "PctLabel",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "CrmModels.cs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "pctlabel",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_layout_breakpoints",
+      "label": "layout_breakpoints.dart",
+      "_origin": "ast",
+      "community": 92,
+      "community_name": "layout_breakpoints.dart",
+      "file_type": "code",
+      "norm_label": "layout_breakpoints.dart",
+      "source_file": "src/FlutterUi/college_admission/lib/layout_breakpoints.dart",
+      "source_location": null
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_layout_breakpoints_applicationsusetable",
+      "label": "applicationsUseTable",
+      "_origin": "ast",
+      "community": 92,
+      "community_name": "layout_breakpoints.dart",
+      "file_type": "code",
+      "norm_label": "applicationsusetable",
+      "source_file": "src/FlutterUi/college_admission/lib/layout_breakpoints.dart",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_layout_breakpoints_shelllayout",
+      "label": "ShellLayout",
+      "_origin": "ast",
+      "community": 92,
+      "community_name": "layout_breakpoints.dart",
+      "file_type": "code",
+      "norm_label": "shelllayout",
+      "source_file": "src/FlutterUi/college_admission/lib/layout_breakpoints.dart",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_flutterui_college_admission_lib_layout_breakpoints_shelllayoutforwidth",
+      "label": "shellLayoutForWidth",
+      "_origin": "ast",
+      "community": 92,
+      "community_name": "layout_breakpoints.dart",
+      "file_type": "code",
+      "norm_label": "shelllayoutforwidth",
+      "source_file": "src/FlutterUi/college_admission/lib/layout_breakpoints.dart",
+      "source_location": "L17"
     },
     {
       "id": "_opencode_skills_api_design_application_controller",
@@ -14537,6 +15053,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "target": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
       "source": "src_platformuno_collegeadmission_collegeadmission_app_xaml_collegeadmission_app_onlaunched",
       "target": "src_platformuno_collegeadmission_collegeadmission_app_xaml_cs_window",
       "relation": "calls",
@@ -14630,6 +15158,54 @@
       "context": "call",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
       "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "src_platformuno_collegeadmission_collegeadmission_app_xaml_collegeadmission_app_onlaunched",
+      "target": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_platformuno_collegeadmission_collegeadmission_coursespage_xaml_collegeadmission_coursespage_oncourseclick",
+      "target": "src_platformuno_collegeadmission_collegeadmission_coursespage_cautionanim",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/CoursesPage.xaml.cs",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "src_platformuno_collegeadmission_collegeadmission_splashpage_xaml_collegeadmission_splashpage_onnavigatedto",
+      "target": "opencode_opencode_permission_task",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/SplashPage.xaml.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_openurlasync",
+      "target": "opencode_opencode_permission_task",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -17069,6 +17645,126 @@
       "weight": 1.0
     },
     {
+      "source": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant",
+      "target": "fluttermacos",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant",
+      "target": "foundation",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant",
+      "target": "url_launcher_macos",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate",
+      "target": "cocoa",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate",
+      "target": "fluttermacos",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_mainflutterwindow",
+      "target": "cocoa",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_mainflutterwindow",
+      "target": "fluttermacos",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runnertests_runnertests",
+      "target": "cocoa",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runnertests_runnertests",
+      "target": "fluttermacos",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runnertests_runnertests",
+      "target": "xctest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmviewmodel_advancestage",
       "target": "src_avaloniaui_collegeadmission_collegeadmission_core_models_crmmodels_collegeadmission_models_applicant",
       "relation": "references",
@@ -17990,6 +18686,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant_registergeneratedplugins",
+      "target": "flutterpluginregistry",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationshouldterminateafterlastwindowclosed",
+      "target": "nsapplication",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationsupportssecurerestorablestate",
+      "target": "nsapplication",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "src_avaloniaui_collegeadmission_collegeadmission_android_application_collegeadmission_android_application_customizeappbuilder",
       "target": "src_avaloniaui_collegeadmission_collegeadmission_android_application_cs_appbuilder",
       "relation": "references",
@@ -18182,6 +18914,36 @@
       },
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
       "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationshouldterminateafterlastwindowclosed",
+      "target": "bool",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "swift_plain_return": true
+      },
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationsupportssecurerestorablestate",
+      "target": "bool",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "swift_plain_return": true
+      },
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -18605,6 +19367,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "src_flutterui_college_admission_lib_crm_state_crmstate",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "variable_type",
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L244",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "valuechanged",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "variable_type",
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
       "source": "src_flutterui_college_admission_lib_sections_applications",
       "target": "src_flutterui_college_admission_lib_crm_state_crmstate",
       "relation": "references",
@@ -18613,7 +19399,7 @@
       "confidence_score": 1.0,
       "context": "variable_type",
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L7",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -20887,6 +21673,50 @@
       "weight": 1.0
     },
     {
+      "source": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant",
+      "target": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant_registergeneratedplugins",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate",
+      "target": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_mainflutterwindow",
+      "target": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runnertests_runnertests",
+      "target": "src_flutterui_college_admission_macos_runnertests_runnertests_runnertests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_flutterui_college_admission_readme",
       "target": "src_flutterui_college_admission_readme_college_admission",
       "relation": "contains",
@@ -22631,14 +23461,47 @@
       "weight": 1.0
     },
     {
+      "source": "src_flutterui_college_admission_lib_layout_breakpoints",
+      "target": "src_flutterui_college_admission_lib_layout_breakpoints_shelllayout",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/layout_breakpoints.dart",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_layout_breakpoints",
+      "target": "src_flutterui_college_admission_lib_layout_breakpoints_shelllayoutforwidth",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/layout_breakpoints.dart",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_layout_breakpoints",
+      "target": "src_flutterui_college_admission_lib_layout_breakpoints_applicationsusetable",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/layout_breakpoints.dart",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "src_flutterui_college_admission_lib_main_searchfield",
+      "target": "src_flutterui_college_admission_lib_main_titlebar",
       "relation": "defines",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L108",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -22649,18 +23512,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
-      "source": "src_flutterui_college_admission_lib_main",
-      "target": "src_flutterui_college_admission_lib_main_nav",
-      "relation": "defines",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L136",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -22671,7 +23523,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L14",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "src_flutterui_college_admission_lib_main_searchfield",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -22682,34 +23545,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L17",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "src_flutterui_college_admission_lib_main_nav",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
       "target": "src_flutterui_college_admission_lib_main_crmappstate",
-      "relation": "defines",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "src_flutterui_college_admission_lib_main",
-      "target": "src_flutterui_college_admission_lib_main_state",
-      "relation": "defines",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "src_flutterui_college_admission_lib_main",
-      "target": "src_flutterui_college_admission_lib_main_searchctrl",
       "relation": "defines",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22726,7 +23578,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L232",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "src_flutterui_college_admission_lib_main_searchctrl",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "src_flutterui_college_admission_lib_main_state",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L244",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "src_flutterui_college_admission_lib_main_onselect",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "src_flutterui_college_admission_lib_main_navbody",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -22737,7 +23633,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -22748,7 +23644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L253",
+      "source_location": "L341",
       "weight": 1.0
     },
     {
@@ -22759,62 +23655,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L255",
+      "source_location": "L343",
       "weight": 1.0
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "src_flutterui_college_admission_lib_main_topbar",
+      "target": "src_flutterui_college_admission_lib_main_body",
       "relation": "defines",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L74",
-      "weight": 1.0
-    },
-    {
-      "source": "src_flutterui_college_admission_lib_sections_applications",
-      "target": "src_flutterui_college_admission_lib_sections_applications_text",
-      "relation": "defines",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L113",
-      "weight": 1.0
-    },
-    {
-      "source": "src_flutterui_college_admission_lib_sections_applications",
-      "target": "src_flutterui_college_admission_lib_sections_applications_h",
-      "relation": "defines",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L114",
-      "weight": 1.0
-    },
-    {
-      "source": "src_flutterui_college_admission_lib_sections_applications",
-      "target": "src_flutterui_college_admission_lib_sections_applications_build",
-      "relation": "defines",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L116",
-      "weight": 1.0
-    },
-    {
-      "source": "src_flutterui_college_admission_lib_sections_applications",
-      "target": "src_flutterui_college_admission_lib_sections_applications_applicationssection",
-      "relation": "defines",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L6",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -22825,7 +23677,84 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L7",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "src_flutterui_college_admission_lib_sections_applications_cards",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "src_flutterui_college_admission_lib_sections_applications_chip",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "src_flutterui_college_admission_lib_sections_applications_text",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "src_flutterui_college_admission_lib_sections_applications_h",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "src_flutterui_college_admission_lib_sections_applications_build",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "src_flutterui_college_admission_lib_sections_applications_table",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "src_flutterui_college_admission_lib_sections_applications_applicationssection",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -23057,6 +23986,72 @@
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/sections/pipeline.dart",
       "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_layout_test",
+      "target": "src_flutterui_college_admission_test_layout_test_main",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/layout_test.dart",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "src_flutterui_college_admission_test_macos_shell_test_pumpwidget",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "src_flutterui_college_admission_test_macos_shell_test_pumpandsettle",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "src_flutterui_college_admission_test_macos_shell_test_hashorizontalours",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "src_flutterui_college_admission_test_macos_shell_test_main",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "src_flutterui_college_admission_test_macos_shell_test_boot",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -23346,7 +24341,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "package_flutter_material_dart",
+      "target": "package_flutter_foundation_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23357,7 +24352,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "detail_rail_dart",
+      "target": "sections_courses_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23368,7 +24363,29 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "crm_theme_dart",
+      "target": "sections_fees_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "detail_rail_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main",
+      "target": "package_flutter_material_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23379,7 +24396,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "crm_state_dart",
+      "target": "crm_theme_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23390,7 +24407,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "crm_button_dart",
+      "target": "crm_state_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23401,7 +24418,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "sections_dashboard_dart",
+      "target": "crm_button_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23412,7 +24429,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "sections_pipeline_dart",
+      "target": "layout_breakpoints_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23423,7 +24440,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "sections_applications_dart",
+      "target": "sections_dashboard_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23434,7 +24451,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "sections_courses_dart",
+      "target": "sections_pipeline_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23445,7 +24462,7 @@
     },
     {
       "source": "src_flutterui_college_admission_lib_main",
-      "target": "sections_fees_dart",
+      "target": "sections_applications_dart",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23496,6 +24513,17 @@
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_sections_applications",
+      "target": "layout_breakpoints_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -23683,6 +24711,61 @@
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/sections/pipeline.dart",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_layout_test",
+      "target": "package_flutter_test_flutter_test_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/layout_test.dart",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_layout_test",
+      "target": "package_college_admission_layout_breakpoints_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/layout_test.dart",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "package_flutter_material_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "package_flutter_test_flutter_test_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_test_macos_shell_test",
+      "target": "package_college_admission_main_dart",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/test/macos_shell_test.dart",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -23925,7 +25008,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -23936,7 +25019,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -23947,7 +25030,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L252",
+      "source_location": "L340",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_lib_main_navbody",
+      "target": "statelesswidget",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/lib/main.dart",
+      "source_location": "L243",
       "weight": 1.0
     },
     {
@@ -23958,7 +25052,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L6",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -23969,7 +25063,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/sections/applications.dart",
-      "source_location": "L112",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -24025,6 +25119,39 @@
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/sections/pipeline.dart",
       "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate",
+      "target": "flutterappdelegate",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow",
+      "target": "nswindow",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runnertests_runnertests_runnertests",
+      "target": "xctestcase",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -24619,6 +25746,50 @@
       "confidence_score": 1.0,
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
       "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate",
+      "target": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationsupportssecurerestorablestate",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate",
+      "target": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate_applicationshouldterminateafterlastwindowclosed",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/AppDelegate.swift",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow",
+      "target": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runnertests_runnertests_runnertests",
+      "target": "src_flutterui_college_admission_macos_runnertests_runnertests_runnertests_testexample",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/FlutterUi/college_admission/macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -25259,7 +26430,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/FlutterUi/college_admission/lib/main.dart",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -25447,6 +26618,18 @@
       "context": "call",
       "source_file": "src/FlutterUi/college_admission/linux/runner/my_application.cc",
       "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "src_flutterui_college_admission_macos_runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "target": "src_flutterui_college_admission_macos_flutter_generatedpluginregistrant_registergeneratedplugins",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/FlutterUi/college_admission/macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -27262,5 +28445,5 @@
       "source_file": ".opencode/skills/database-migration.md"
     }
   ],
-  "built_at_commit": "4812db001d6a2caead6d7b93454dc50f6597e8c1"
+  "built_at_commit": "6b0b596b69dba71cd0cce1ab6056ed6fac06a659"
 }

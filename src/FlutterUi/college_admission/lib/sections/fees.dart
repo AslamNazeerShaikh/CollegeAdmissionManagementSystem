@@ -56,6 +56,8 @@ class FeesSection extends StatelessWidget {
                                     color: CrmColors.ink)),
                             const SizedBox(height: 2),
                             Text(a.course,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
                                 style: const TextStyle(
                                     fontSize: 12, color: CrmColors.muted)),
                           ],

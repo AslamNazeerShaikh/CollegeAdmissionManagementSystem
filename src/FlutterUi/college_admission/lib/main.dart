@@ -1,7 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'crm_theme.dart';
 import 'crm_state.dart';
 import 'crm_button.dart';
+import 'layout_breakpoints.dart';
 import 'sections/dashboard.dart';
 import 'sections/pipeline.dart';
 import 'sections/applications.dart';
@@ -37,31 +39,24 @@ class _CrmAppState extends State<CrmApp> {
         listenable: state,
         builder: (context, _) => LayoutBuilder(
           builder: (context, constraints) {
-            final narrow = constraints.maxWidth < 900;
+            final layout =
+                shellLayoutForWidth(constraints.maxWidth);
             return Scaffold(
-              appBar: PreferredSize(
-                preferredSize: const Size.fromHeight(60),
-                child: _topBar(narrow),
+              // Merged macOS titlebar: the native title is hidden +
+              // transparent (see MainFlutterWindow.swift), so this bar
+              // IS the titlebar. No Scaffold.appBar anywhere — one bar
+              // total, zero horizontal scrolling inside it.
+              body: Column(
+                children: [
+                  _titleBar(layout != ShellLayout.triple),
+                  Expanded(child: _body(layout)),
+                ],
               ),
-              drawer: narrow
-                  ? Drawer(
+              drawer: layout == ShellLayout.triple
+                  ? null
+                  : Drawer(
                       child: Builder(
-                          builder: (drawerCtx) => _nav(drawerCtx)))
-                  : null,
-              body: narrow
-                  ? ListView(
-                      children: [
-                        SizedBox(height: 600, child: _section()),
-                        SizedBox(height: 560, child: DetailRail(state)),
-                      ],
-                    )
-                  : Row(
-                      children: [
-                        SizedBox(width: 300, child: _nav()),
-                        Expanded(child: _section()),
-                        SizedBox(width: 340, child: DetailRail(state)),
-                      ],
-                    ),
+                          builder: (drawerCtx) => _nav(drawerCtx))),
             );
           },
         ),
@@ -69,38 +64,117 @@ class _CrmAppState extends State<CrmApp> {
     );
   }
 
-  // Top bar carries search + creation only. Stats live on the Dashboard
-  // cards — duplicating them here forced a horizontal stats strip.
-  Widget _topBar(bool narrow) {
+  Widget _body(ShellLayout layout) {
+    return switch (layout) {
+      // Landscape default: three panes, each scrolls vertically on
+      // its own. Content flexes; side panes are fixed + narrow.
+      ShellLayout.triple => Row(
+          children: [
+            SizedBox(width: 248, child: _nav()),
+            Expanded(child: _section()),
+            SizedBox(width: 320, child: DetailRail(state)),
+          ],
+        ),
+      // Resized narrower: nav docks into the drawer, content + rail
+      // share the row. Still landscape, still no horizontal scroll.
+      ShellLayout.contentRail => Row(
+          children: [
+            Expanded(child: _section()),
+            SizedBox(width: 320, child: DetailRail(state)),
+          ],
+        ),
+      // Compact (phone/portrait): stack content over rail, both
+      // full-width, page scrolls vertically.
+      ShellLayout.single => ListView(
+          children: [
+            SizedBox(height: 600, child: _section()),
+            SizedBox(height: 560, child: DetailRail(state)),
+          ],
+        ),
+    };
+  }
+
+  // Titlebar carries traffic-light clearance on macOS, search, and
+  // creation only. Stats live on the Dashboard cards — duplicating
+  // them here forced a horizontal stats strip. Below 760dp the two
+  // creation buttons collapse into one "+" menu so the bar itself
+  // never scrolls or overflows horizontally.
+  Widget _titleBar(bool showMenu) {
+    // ponytail: no window_manager dep for drag-to-move; traffic lights
+    // + transparency come from MainFlutterWindow.swift, drag stays
+    // native-only until someone asks for it.
+    final isMac = defaultTargetPlatform == TargetPlatform.macOS;
     return Container(
+      key: const Key('crmTitlebar'),
+      height: 52,
       decoration: const BoxDecoration(
         color: CrmColors.surface,
         border: Border(bottom: BorderSide(color: CrmColors.line)),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Row(
-        children: [
-          if (narrow)
-            Builder(
-              builder: (ctx) => IconButton(
-                icon: const Text('\u2630',
-                    style: TextStyle(fontSize: 20, color: CrmColors.ink)),
-                onPressed: () => Scaffold.of(ctx).openDrawer(),
+      padding: EdgeInsets.only(
+          left: isMac ? 78 : 8, right: 12, top: 6, bottom: 6),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final roomy = constraints.maxWidth >= 760;
+          return Row(
+            children: [
+              if (showMenu)
+                Builder(
+                  builder: (ctx) => IconButton(
+                    icon: const Text('\u2630',
+                        style:
+                            TextStyle(fontSize: 20, color: CrmColors.ink)),
+                    onPressed: () => Scaffold.of(ctx).openDrawer(),
+                  ),
+                ),
+              Expanded(
+                child: Container(
+                  constraints: const BoxConstraints(maxWidth: 420),
+                  margin: const EdgeInsets.only(right: 12),
+                  child: _searchField(),
+                ),
               ),
-            ),
-          Expanded(
-            child: Container(
-              constraints: const BoxConstraints(maxWidth: 420),
-              margin: const EdgeInsets.only(right: 16),
-              child: _searchField(),
-            ),
-          ),
-          CrmButton('+ New enquiry', onPressed: state.addEnquiry),
-          const SizedBox(width: 8),
-          CrmButton('+ New application',
-              onPressed: () => state.addApplication(),
-              kind: CrmButtonKind.outline),
-        ],
+              if (roomy)
+                const Flexible(
+                  child: Text(
+                    'College Admissions \u00B7 2026\u201327',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        fontSize: 12, color: CrmColors.muted),
+                  ),
+                ),
+              if (roomy) const SizedBox(width: 12),
+              if (roomy) ...[
+                CrmButton('+ New enquiry', onPressed: state.addEnquiry),
+                const SizedBox(width: 8),
+                CrmButton('+ New application',
+                    onPressed: () => state.addApplication(),
+                    kind: CrmButtonKind.outline),
+              ] else
+                PopupMenuButton<String>(
+                  icon: const Text('+',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: CrmColors.accent)),
+                  onSelected: (v) {
+                    if (v == 'enquiry') {
+                      state.addEnquiry();
+                    } else {
+                      state.addApplication();
+                    }
+                  },
+                  itemBuilder: (_) => const [
+                    PopupMenuItem(
+                        value: 'enquiry', child: Text('New enquiry')),
+                    PopupMenuItem(
+                        value: 'application',
+                        child: Text('New application')),
+                  ],
+                ),
+            ],
+          );
+        },
       ),
     );
   }
@@ -134,6 +208,45 @@ class _CrmAppState extends State<CrmApp> {
   // closes it; the docked copy passes nothing. Never use the State's
   // own context for Navigator — it sits above MaterialApp.
   Widget _nav([BuildContext? drawerCtx]) {
+    return _NavBody(
+      state: state,
+      onSelect: (s) {
+        state.selectSection(s);
+        if (drawerCtx != null && Navigator.of(drawerCtx).canPop()) {
+          Navigator.of(drawerCtx).pop();
+        }
+      },
+    );
+  }
+
+  Widget _section() {
+    final child = switch (state.selectedSection) {
+      'Dashboard' => DashboardSection(state),
+      'Pipeline' => PipelineSection(state),
+      'Applications' => ApplicationsSection(state),
+      'Courses' => CoursesSection(state),
+      'Fees' => FeesSection(state),
+      _ => PipelineSection(state),
+    };
+    // ReferenceUi motion: 150-220ms ease-out, opacity only.
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 180),
+      switchInCurve: Curves.easeOut,
+      switchOutCurve: Curves.easeOut,
+      child: KeyedSubtree(
+          key: ValueKey(state.selectedSection), child: child),
+    );
+  }
+}
+
+// Static docked nav (triple layout) needs no context at all.
+class _NavBody extends StatelessWidget {
+  final CrmState state;
+  final ValueChanged<String> onSelect;
+  const _NavBody({required this.state, required this.onSelect});
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         color: CrmColors.surface,
@@ -176,13 +289,7 @@ class _CrmAppState extends State<CrmApp> {
                 borderRadius: BorderRadius.circular(8),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(8),
-                  onTap: () {
-                    state.selectSection(s);
-                    if (drawerCtx != null &&
-                        Navigator.of(drawerCtx).canPop()) {
-                      Navigator.of(drawerCtx).pop();
-                    }
-                  },
+                  onTap: () => onSelect(s),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 10, vertical: 10),
@@ -226,25 +333,6 @@ class _CrmAppState extends State<CrmApp> {
           ),
         ],
       ),
-    );
-  }
-
-  Widget _section() {
-    final child = switch (state.selectedSection) {
-      'Dashboard' => DashboardSection(state),
-      'Pipeline' => PipelineSection(state),
-      'Applications' => ApplicationsSection(state),
-      'Courses' => CoursesSection(state),
-      'Fees' => FeesSection(state),
-      _ => PipelineSection(state),
-    };
-    // ReferenceUi motion: 150-220ms ease-out, opacity only.
-    return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 180),
-      switchInCurve: Curves.easeOut,
-      switchOutCurve: Curves.easeOut,
-      child: KeyedSubtree(
-          key: ValueKey(state.selectedSection), child: child),
     );
   }
 }
