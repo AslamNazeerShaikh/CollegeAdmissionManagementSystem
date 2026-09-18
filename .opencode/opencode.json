@@ -67,7 +67,8 @@
   "lsp": true,
   "plugin": [
     "@dietrichgebert/ponytail",
-    ".opencode/plugins/graphify.js"
+    ".opencode/plugins/graphify.js",
+    "opencode-apify"
   ],
   "mcp": {
     "ui-skills": {
@@ -82,6 +83,15 @@
       "oauth": false,
       "headers": {
         "Authorization": "Bearer {env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "apify": {
+      "type": "remote",
+      "url": "https://mcp.apify.com",
+      "enabled": true,
+      "oauth": false,
+      "headers": {
+        "Authorization": "Bearer {env:APIFY_TOKEN}"
       }
     }
   }
