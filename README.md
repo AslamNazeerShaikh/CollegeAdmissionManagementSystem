@@ -1,5 +1,13 @@
 # College Admission Management System
 
+| Language | Used in | Platforms targeted |
+|---|---|---|
+| C# (.NET 10) | `src/AvaloniaUi/`, `src/PlatformUno/` | Android, Linux, macOS, Windows |
+| Dart | `src/FlutterUi/` | Linux today; Android, iOS, macOS, Windows from the same codebase |
+| TypeScript + React | `src/TauriUi/` frontend | Linux, macOS (desktop webview) |
+| Rust | `src/TauriUi/` backend | Linux, macOS (desktop webview) |
+| Java | `src/AndroidJava/` (archived) | Android 4.4+ (API 19+) |
+
 CollegeAdmissionManagementSystem is used by schools, colleges & institutions for admission processes and study material management. Light weight yet feature-rich, built for maximum performance and security. Flexible enough to customize on the basis of your needs so as to run a smooth and efficient system.
 
 Five codebases live in `src/`:
