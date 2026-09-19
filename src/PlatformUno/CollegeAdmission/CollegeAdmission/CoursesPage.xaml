@@ -6,51 +6,56 @@
       xmlns:lottie="using:CommunityToolkit.WinUI.Lottie"
       Background="White">
   <Grid>
-    <ScrollViewer>
-      <StackPanel Margin="10,42,10,42" Spacing="0">
-        <AnimatedVisualPlayer x:Name="HeaderAnim" AutoPlay="True"
-                              Height="240" HorizontalAlignment="Stretch" Stretch="Uniform">
-          <lottie:LottieVisualSource UriSource="ms-appx:///Assets/Lottie/tutorials_online.json" />
-        </AnimatedVisualPlayer>
-        <Border Height="1" Background="#6200EE" Margin="120,10,120,10" />
-        <TextBlock Text="Select one of the following UG or PG Course&#x0a;Scroll Down for more categories"
-                   FontSize="12" FontStyle="Italic" Foreground="Black"
-                   TextAlignment="Center" Margin="0,0,0,10" />
-        <Border Height="1" Background="#6200EE" Margin="32,0,32,10" />
-        <GridView ItemsSource="{Binding Courses}" SelectionMode="None"
-                  IsItemClickEnabled="True" ItemClick="OnCourseClick">
-          <GridView.ItemsPanel>
-            <ItemsPanelTemplate>
-              <VariableSizedWrapGrid MaximumRowsOrColumns="2" Orientation="Horizontal" />
-            </ItemsPanelTemplate>
-          </GridView.ItemsPanel>
-          <GridView.ItemTemplate>
-            <DataTemplate x:DataType="models:Course">
-              <Border Width="170" Height="190" Background="#CCFFFFFF" CornerRadius="4"
-                      BorderBrush="#E4E4E4" BorderThickness="1" Padding="5" Margin="5">
-                <StackPanel VerticalAlignment="Center" Spacing="4">
-                  <Image Source="ms-appx:///Assets/Images/certificate_flat.jpg" Width="78" Height="78"
-                         HorizontalAlignment="Center" />
-                  <TextBlock Text="{x:Bind CardTitle}" FontWeight="Bold" Foreground="Black"
-                             TextAlignment="Center" TextWrapping="Wrap" />
-                  <Border Height="1" Background="#6200EE" Margin="10,0,10,0" />
-                  <TextBlock Text="{x:Bind CardSubtitle}" Foreground="Black"
-                             TextAlignment="Center" Padding="5" />
-                </StackPanel>
-              </Border>
-            </DataTemplate>
-          </GridView.ItemTemplate>
-        </GridView>
+    <!-- GridView owns the scroll (virtualized). Nesting it in a ScrollViewer
+         materialized every card + image at once — the scroll shutter on Linux. -->
+    <GridView ItemsSource="{Binding Courses}" SelectionMode="None"
+              IsItemClickEnabled="True" ItemClick="OnCourseClick"
+              Margin="10,42,10,42">
+      <GridView.Header>
+        <StackPanel Spacing="0" Margin="0,0,0,10">
+          <AnimatedVisualPlayer x:Name="HeaderAnim" AutoPlay="True"
+                                Height="240" HorizontalAlignment="Stretch" Stretch="Uniform">
+            <lottie:LottieVisualSource UriSource="ms-appx:///Assets/Lottie/tutorials_online.json" />
+          </AnimatedVisualPlayer>
+          <Border Height="1" Background="#6200EE" Margin="120,10,120,10" />
+          <TextBlock Text="Select one of the following UG or PG Course&#x0a;Scroll Down for more categories"
+                     FontSize="12" FontStyle="Italic" Foreground="Black"
+                     TextAlignment="Center" Margin="0,0,0,10" />
+          <Border Height="1" Background="#6200EE" Margin="32,0,32,10" />
+        </StackPanel>
+      </GridView.Header>
+      <GridView.ItemsPanel>
+        <ItemsPanelTemplate>
+          <VariableSizedWrapGrid MaximumRowsOrColumns="2" Orientation="Horizontal" />
+        </ItemsPanelTemplate>
+      </GridView.ItemsPanel>
+      <GridView.ItemTemplate>
+        <DataTemplate x:DataType="models:Course">
+          <Border Width="170" Height="190" Background="White" CornerRadius="4"
+                  BorderBrush="#E4E4E4" BorderThickness="1" Padding="5" Margin="5">
+            <StackPanel VerticalAlignment="Center" Spacing="4">
+              <Image Source="ms-appx:///Assets/Images/certificate_flat.jpg" Width="78" Height="78"
+                     HorizontalAlignment="Center" />
+              <TextBlock Text="{x:Bind CardTitle}" FontWeight="Bold" Foreground="Black"
+                         TextAlignment="Center" TextWrapping="Wrap" MaxLines="2" TextTrimming="CharacterEllipsis" />
+              <Border Height="1" Background="#6200EE" Margin="10,0,10,0" />
+              <TextBlock Text="{x:Bind CardSubtitle}" Foreground="Black"
+                         TextAlignment="Center" Padding="5" MaxLines="2" TextTrimming="CharacterEllipsis" />
+            </StackPanel>
+          </Border>
+        </DataTemplate>
+      </GridView.ItemTemplate>
+      <GridView.Footer>
         <Button Click="OnBackClick" Background="Transparent" Padding="0"
                 HorizontalAlignment="Center" Margin="0,16,0,0">
           <Image Source="ms-appx:///Assets/Images/back.png" Width="32" Height="32" />
         </Button>
-      </StackPanel>
-    </ScrollViewer>
+      </GridView.Footer>
+    </GridView>
 
     <Border x:Name="PopupOverlay" Background="#80000000" Visibility="Collapsed">
-      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
-              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0" MaxWidth="480"
+              VerticalAlignment="Center" HorizontalAlignment="Center">
         <ScrollViewer MaxHeight="520">
           <StackPanel Spacing="8">
             <Image Source="ms-appx:///Assets/Images/course_flat.png"

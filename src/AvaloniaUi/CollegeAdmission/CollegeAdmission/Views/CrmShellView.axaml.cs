@@ -8,9 +8,9 @@ namespace CollegeAdmission.Views;
 
 public partial class CrmShellView : UserControl
 {
-    // Phones in portrait (19.5:9/20:9 ≈ 360-430dp wide) and landscape (~800dp)
-    // go narrow; desktop (MinWidth 1024) always stays wide.
-    private const double NarrowThreshold = 900;
+    // Matches Flutter shellLayoutForWidth: single pane below 760dp, split
+    // views above. Desktop (MinWidth 800) resizes freely through both.
+    private const double NarrowThreshold = 760;
     private bool wasNarrow;
 
     public CrmShellView()
@@ -23,6 +23,9 @@ public partial class CrmShellView : UserControl
     {
         base.OnAttachedToVisualTree(e);
         AppShell.ShellView = this;
+        // First paint used stale defaults (drawer toggle/cards invisible)
+        // until the first Bounds change fired — apply immediately instead.
+        ApplyLayout();
     }
 
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
@@ -57,18 +60,25 @@ public partial class CrmShellView : UserControl
         }
         NavToggle.IsVisible = narrow;
 
-        // Top bar: fixed two-row height on phones so the stats strip can never
-        // paint over the content (Auto can measure stale on first layout).
-        ShellGrid.RowDefinitions = new RowDefinitions(narrow ? "116,*" : "60,*");
+        // Top bar owns its height (Auto row): search + 2 CTAs only, so it
+        // can never clip or paint over the content row. Narrow stacks the
+        // buttons under the search instead of squeezing them aside.
+        ShellGrid.RowDefinitions = new RowDefinitions("Auto,*");
         TopGrid.ColumnDefinitions = new ColumnDefinitions(
-            narrow ? "Auto,*,Auto,Auto" : "*,Auto,Auto,Auto,Auto,Auto");
-        Grid.SetColumn(SearchBox, narrow ? 1 : 0);
-        Grid.SetRow(StatsScroller, narrow ? 1 : 0);
-        Grid.SetColumn(StatsScroller, narrow ? 0 : 1);
-        Grid.SetColumnSpan(StatsScroller, narrow ? 4 : 1);
+            narrow ? "Auto,*,*" : "Auto,*,Auto,Auto");
+        TopGrid.RowDefinitions = new RowDefinitions(narrow ? "Auto,Auto" : "Auto");
+        Grid.SetColumn(SearchBox, 1);
+        Grid.SetRow(SearchBox, 0);
+        Grid.SetColumnSpan(SearchBox, narrow ? 2 : 1);
+        Grid.SetRow(EnquiryButton, narrow ? 1 : 0);
+        Grid.SetColumn(EnquiryButton, narrow ? 1 : 2);
+        Grid.SetRow(ApplicationButton, narrow ? 1 : 0);
+        Grid.SetColumn(ApplicationButton, narrow ? 2 : 3);
+        EnquiryButton.Margin = narrow ? new Thickness(0, 8, 8, 0) : new Thickness(0, 0, 8, 0);
+        ApplicationButton.Margin = narrow ? new Thickness(0, 8, 0, 0) : new Thickness(0);
 
         // Rail: right column on desktop, stacked below content on phones.
-        BodyGrid.ColumnDefinitions = new ColumnDefinitions(narrow ? "*" : "*,340");
+        BodyGrid.ColumnDefinitions = new ColumnDefinitions(narrow ? "*" : "*,320");
         BodyGrid.RowDefinitions = new RowDefinitions(narrow ? "*,Auto" : "*");
         Grid.SetRow(RailBorder, narrow ? 1 : 0);
         Grid.SetColumn(RailBorder, narrow ? 0 : 1);

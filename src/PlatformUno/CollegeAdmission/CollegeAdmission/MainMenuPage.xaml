@@ -19,29 +19,29 @@
         <Grid ColumnDefinitions="*,*" Margin="0,0,0,10">
           <Button Grid.Column="0" Margin="0,0,5,0" Padding="0" Background="Transparent"
                   Click="OnRegistrationClick" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Border Height="190" Background="#CCFFFFFF" CornerRadius="4"
+            <Border MinHeight="190" Background="White" CornerRadius="4"
                     BorderBrush="#E4E4E4" BorderThickness="1" Padding="5">
               <StackPanel VerticalAlignment="Center" Spacing="4">
                 <Image Source="ms-appx:///Assets/Images/table_chair.jpg" Width="78" Height="78"
                        HorizontalAlignment="Center" />
-                <TextBlock Text="Registration" FontWeight="Bold" Foreground="Black" TextAlignment="Center" />
+                <TextBlock Text="Registration" FontWeight="Bold" Foreground="Black" TextAlignment="Center" TextWrapping="Wrap" />
                 <Border Height="1" Background="#6200EE" Margin="10,0,10,0" />
                 <TextBlock Text="Admissions , Courses&#x0a; &amp; Fees Structure" Foreground="Black"
-                           TextAlignment="Center" Padding="5" />
+                           TextAlignment="Center" Padding="5" TextWrapping="Wrap" />
               </StackPanel>
             </Border>
           </Button>
           <Button Grid.Column="1" Margin="5,0,0,0" Padding="0" Background="Transparent"
                   Click="OnWalkthroughClick" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Border Height="190" Background="#CCFFFFFF" CornerRadius="4"
+            <Border MinHeight="190" Background="White" CornerRadius="4"
                     BorderBrush="#E4E4E4" BorderThickness="1" Padding="5">
               <StackPanel VerticalAlignment="Center" Spacing="4">
                 <Image Source="ms-appx:///Assets/Images/boy_paper.jpg" Width="78" Height="78"
                        HorizontalAlignment="Center" />
-                <TextBlock Text="Walkthrough" FontWeight="Bold" Foreground="Black" TextAlignment="Center" />
+                <TextBlock Text="Walkthrough" FontWeight="Bold" Foreground="Black" TextAlignment="Center" TextWrapping="Wrap" />
                 <Border Height="1" Background="#6200EE" Margin="10,0,10,0" />
                 <TextBlock Text="About us , Academics &amp; Miscellaneous" Foreground="Black"
-                           TextAlignment="Center" Padding="5" />
+                           TextAlignment="Center" Padding="5" TextWrapping="Wrap" />
               </StackPanel>
             </Border>
           </Button>
@@ -54,8 +54,8 @@
     </ScrollViewer>
 
     <Border x:Name="ExitOverlay" Background="#80000000" Visibility="Collapsed">
-      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
-              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0" MaxWidth="480"
+              VerticalAlignment="Center" HorizontalAlignment="Center">
         <StackPanel Spacing="12">
           <Image Source="ms-appx:///Assets/Images/old_logo.png" Width="64" Height="64"
                  HorizontalAlignment="Center" />

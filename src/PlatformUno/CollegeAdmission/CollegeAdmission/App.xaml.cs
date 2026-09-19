@@ -55,6 +55,15 @@ public partial class App : Application
         }
 
         MainWindow.SetWindowIcon();
+        // Resizable desktop window (Linux X11 otherwise keeps the phone-sized
+        // first measure as a fixed hint): landscape default, free resize.
+        var appWindow = MainWindow.AppWindow;
+        appWindow?.Resize(new Windows.Graphics.SizeInt32 { Width = 1100, Height = 750 });
+        if (appWindow?.Presenter is Microsoft.UI.Windowing.OverlappedPresenter presenter)
+        {
+            presenter.IsResizable = true;
+            presenter.IsMaximizable = true;
+        }
         // Ensure the current window is active
         MainWindow.Activate();
     }

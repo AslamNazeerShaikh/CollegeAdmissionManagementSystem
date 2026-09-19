@@ -85,8 +85,8 @@
     </Grid>
 
     <Border x:Name="ConfirmOverlay" Background="#80000000" Visibility="Collapsed">
-      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
-              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0" MaxWidth="480"
+              VerticalAlignment="Center" HorizontalAlignment="Center">
         <StackPanel Spacing="12">
           <Image Source="ms-appx:///Assets/Images/old_logo.png" Width="64" Height="64"
                  HorizontalAlignment="Center" />
@@ -105,8 +105,8 @@
     </Border>
 
     <Border x:Name="CancelOverlay" Background="#80000000" Visibility="Collapsed">
-      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0"
-              VerticalAlignment="Center" HorizontalAlignment="Stretch">
+      <Border Background="White" CornerRadius="4" Padding="16" Margin="50,0,50,0" MaxWidth="480"
+              VerticalAlignment="Center" HorizontalAlignment="Center">
         <StackPanel Spacing="12">
           <Image Source="ms-appx:///Assets/Images/old_logo.png" Width="64" Height="64"
                  HorizontalAlignment="Center" />

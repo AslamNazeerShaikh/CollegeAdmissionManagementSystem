@@ -69,6 +69,38 @@ public partial class CrmViewModel : ViewModelBase
     public IEnumerable<Applicant> LaneFeePaid => Applicants.Where(a => a.Stage == CrmStage.FeePaid);
     public IEnumerable<Applicant> LaneEnrolled => Applicants.Where(a => a.Stage == CrmStage.Enrolled);
 
+    // Pipeline tabs (Flutter reference: stage tabs + vertical list, zero
+    // horizontal scroll). String param keeps XAML converter-free.
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(LaneForStage))]
+    [NotifyPropertyChangedFor(nameof(IsStageEnquiry))]
+    [NotifyPropertyChangedFor(nameof(IsStageApplied))]
+    [NotifyPropertyChangedFor(nameof(IsStageVerified))]
+    [NotifyPropertyChangedFor(nameof(IsStageMerit))]
+    [NotifyPropertyChangedFor(nameof(IsStageOffered))]
+    [NotifyPropertyChangedFor(nameof(IsStageFeePaid))]
+    [NotifyPropertyChangedFor(nameof(IsStageEnrolled))]
+    private CrmStage selectedStage = CrmStage.Enquiry;
+
+    public bool IsStageEnquiry => SelectedStage == CrmStage.Enquiry;
+    public bool IsStageApplied => SelectedStage == CrmStage.Applied;
+    public bool IsStageVerified => SelectedStage == CrmStage.Verified;
+    public bool IsStageMerit => SelectedStage == CrmStage.Merit;
+    public bool IsStageOffered => SelectedStage == CrmStage.Offered;
+    public bool IsStageFeePaid => SelectedStage == CrmStage.FeePaid;
+    public bool IsStageEnrolled => SelectedStage == CrmStage.Enrolled;
+
+    public IEnumerable<Applicant> LaneForStage => SelectedStage switch
+    {
+        CrmStage.Applied => LaneApplied,
+        CrmStage.Verified => LaneVerified,
+        CrmStage.Merit => LaneMerit,
+        CrmStage.Offered => LaneOffered,
+        CrmStage.FeePaid => LaneFeePaid,
+        CrmStage.Enrolled => LaneEnrolled,
+        _ => LaneEnquiry,
+    };
+
     // Stats
     public int TotalApplicants => Applicants.Count;
     public int EnrolledCount => Applicants.Count(a => a.Stage == CrmStage.Enrolled);
@@ -85,6 +117,7 @@ public partial class CrmViewModel : ViewModelBase
 
     private void RefreshDerived()
     {
+        OnPropertyChanged(nameof(LaneForStage));
         OnPropertyChanged(nameof(FilteredApplicants));
         OnPropertyChanged(nameof(FeeDueList));
         OnPropertyChanged(nameof(FeeDueCount));
@@ -120,6 +153,13 @@ public partial class CrmViewModel : ViewModelBase
 
     [RelayCommand]
     private void SelectSection(string section) => SelectedSection = section;
+
+    [RelayCommand]
+    private void SelectStage(string? stage)
+    {
+        if (Enum.TryParse<CrmStage>(stage, out var s))
+            SelectedStage = s;
+    }
 
     [RelayCommand]
     private void SelectApplicant(Applicant? applicant)

@@ -17,7 +17,8 @@ Three codebases live in `src/`:
 
 **Avalonia (`src/AvaloniaUi/CollegeAdmission/`)** — primary app:
 - Desktop: `dotnet run --project CollegeAdmission.Desktop -f net10.0`
-- One Desktop binary serves Linux/macOS/Windows — no OS-specific code, so macOS and Linux are in parity by construction (verified 2026-09-16: build 0 warnings/0 errors, stable run on Fedora/X11)
+- One Desktop binary serves Linux/macOS/Windows — no OS-specific code, so macOS and Linux are in parity by construction (verified 2026-09-19: build 0 warnings/0 errors, stable run on Fedora/X11, all UI visible, resizable 1100×700 default / 800×600 min)
+- Window matches the Flutter/Tauri CRM reference: titlebar carries search + 2 CTAs only (stats live on Dashboard cards), Pipeline is stage tabs + vertical list with zero horizontal scrolling, narrow breakpoint at 760dp, forced `Light` theme (system Dark made unstyled text invisible on the light CRM tokens)
 - Linux/X11 uses forced software rendering in `CollegeAdmission.Desktop/Program.cs` (Mesa GLX segfault workaround)
 - Android: open `CollegeAdmission.slnx` in Rider/VS and deploy the `CollegeAdmission.Android` head to device
 - Needs internet for syllabus PDFs (online URLs) and no permissions otherwise
@@ -31,6 +32,8 @@ Three codebases live in `src/`:
 
 **Uno (`src/PlatformUno/CollegeAdmission/`)** — secondary port:
 - Desktop: `dotnet run --project CollegeAdmission -f net10.0-desktop`
+- Resizable desktop window (1100×750 default) set in `App.xaml.cs` via `AppWindow.Resize` + `OverlappedPresenter`; Linux requires `<SkiaSharpVersion>4.152.0</SkiaSharpVersion>` in `CollegeAdmission.csproj` — without it Uno.Sdk floors the Linux `libSkiaSharp` at 3.119 (m119) while managed SkiaSharp 4.152 refuses to load it, crashing at startup (verified 2026-09-19: build 0 warnings/0 errors, stable run on Fedora/X11, tests 4/4 pass)
+- Courses `GridView` owns its scroll (header/footer instead of a wrapping `ScrollViewer`) so virtualization stays on and scrolling doesn't stutter; dialogs are `MaxWidth 480` centered cards; splash navigation is cancellation-safe
 - Android: deploy the `net10.0-android` target to device
 - Tests: `dotnet test CollegeAdmission.Tests/CollegeAdmission.Tests.csproj`
 
@@ -45,7 +48,16 @@ Three codebases live in `src/`:
 - MacBook Pro M5 Pro — macOS 26 (Desktop heads)
 - Lenovo Yoga X1 Gen 2 — Fedora 44 (Desktop heads, `dotnet` 10.0.401 verified; Flutter Linux head, Impeller, verified)
 
-![Code Structure](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/Images%20&%20Documents/0.jpg)
+ ![Code Structure](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/Images%20&%20Documents/0.jpg)
+
+# Screenshots (Linux, 2026-09-19 — all 4 apps running, verified no crashes)
+
+| App | Shot | What it proves |
+|---|---|---|
+| Avalonia | `Images & Documents/apps/avalonia/pipeline.png` | Stage tabs + vertical list, all nav/rail visible, no horizontal scroll |
+| Flutter | `Images & Documents/apps/flutter/pipeline.png` | Reference UI (unchanged): `analyze` clean, 10/10 tests pass |
+| Tauri | `Images & Documents/apps/tauri/pipeline.png` | Reference UI (unchanged): web tests 5/5, release binary runs clean |
+| Uno | `Images & Documents/apps/uno/main-menu.png`, `courses.png` | Launches past splash, cards visible, virtualized course list renders |
 
 # To develop the app
 

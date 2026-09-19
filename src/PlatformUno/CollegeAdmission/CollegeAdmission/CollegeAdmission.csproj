@@ -27,6 +27,11 @@
       SkiaRenderer;
       Lottie;
     </UnoFeatures>
+
+    <!-- Managed SkiaSharp is 4.152 (see Directory.Packages.props); Uno.Sdk
+         floors the Linux libSkiaSharp at 3.119 (m119) unless overridden, and
+         4.152 refuses to load m119 -> instant crash on Linux startup. -->
+    <SkiaSharpVersion>4.152.0</SkiaSharpVersion>
   </PropertyGroup>
 
   <ItemGroup>

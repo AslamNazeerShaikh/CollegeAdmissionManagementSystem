@@ -8,9 +8,10 @@
          x:Class="CollegeAdmission.Views.MainWindow"
          x:DataType="vm:CrmViewModel"
          Icon="/Assets/avalonia-logo.ico"
-         Title="College Admissions CRM"
-         Width="1440" Height="900"
-         MinWidth="1024" MinHeight="640"
-        WindowStartupLocation="CenterScreen">
+          Title="College Admissions CRM"
+          Width="1100" Height="700"
+          MinWidth="800" MinHeight="600"
+          CanResize="True"
+         WindowStartupLocation="CenterScreen">
         <views:CrmShellView />
 </Window>

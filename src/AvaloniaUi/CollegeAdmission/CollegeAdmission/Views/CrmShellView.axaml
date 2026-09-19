@@ -11,17 +11,23 @@
       <Setter Property="Foreground" Value="{StaticResource CrmInk}" />
       <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
+    <Style Selector="Button.stage-active">
+      <Setter Property="Background" Value="{StaticResource CrmAccentSoft}" />
+      <Setter Property="Foreground" Value="{StaticResource CrmAccent}" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
   </UserControl.Styles>
-  <!-- Dense CRM shell: nav 232 + content + rail 340 on desktop (Inline SplitView);
-       on narrow phones (<900dp: portrait 19.5:9/20:9, landscape) code-behind flips to
-       drawer nav (Overlay), stacked rail, wrapped stats/funnel, card-style apps table.
-       Desktop landscape layout is untouched. -->
-  <Grid x:Name="ShellGrid" RowDefinitions="60,*">
-    <!-- ══ Top bar ══ -->
+  <!-- Dense CRM shell: nav 248 + content + rail 320 on desktop (Inline SplitView);
+       on narrow (<760dp) code-behind flips to drawer nav (Overlay), stacked rail,
+       wrapped funnel, card-style apps table. Matches Flutter/Tauri reference:
+       titlebar carries search + 2 CTAs only (stats live on Dashboard cards),
+       pipeline is stage tabs + vertical list — zero horizontal scrolling. -->
+  <Grid x:Name="ShellGrid" RowDefinitions="Auto,*">
+    <!-- ══ Top bar (own height: Auto row, never clips content below) ══ -->
     <Border Grid.Row="0" Background="{StaticResource CrmSurface}"
-            BorderBrush="{StaticResource CrmLine}" BorderThickness="0,0,0,1" Padding="16,0">
-      <Grid x:Name="TopGrid" RowDefinitions="Auto,Auto" ColumnDefinitions="*,Auto,Auto,Auto,Auto,Auto">
-        <Button x:Name="NavToggle" Click="OnNavToggle" IsVisible="False"
+            BorderBrush="{StaticResource CrmLine}" BorderThickness="0,0,0,1" Padding="16,6">
+      <Grid x:Name="TopGrid" RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*,Auto,Auto">
+        <Button x:Name="NavToggle" Grid.Column="0" Click="OnNavToggle" IsVisible="False"
                 Background="Transparent" Padding="12,8" MinHeight="40" MinWidth="44"
                 VerticalAlignment="Center" Margin="0,0,8,0">
           <!-- Drawn bars: font glyphs like ☰ don't resolve in the bundled font on Android -->
@@ -31,30 +37,15 @@
             <Border Height="2.5" Width="20" CornerRadius="1" Background="{StaticResource CrmInk}" />
           </StackPanel>
         </Button>
-        <TextBox x:Name="SearchBox" Grid.Column="0" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+        <TextBox x:Name="SearchBox" Grid.Column="1" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                  PlaceholderText="Search name, course, phone…  ⌘K" MaxWidth="420"
                  HorizontalAlignment="Stretch" Margin="0,0,16,0"
                  VerticalAlignment="Center" FontSize="13" />
-        <ScrollViewer x:Name="StatsScroller" Grid.Column="1"
-                      HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"
-                      Margin="0,0,16,0" VerticalAlignment="Center">
-        <StackPanel Orientation="Horizontal" Spacing="16"
-                    VerticalAlignment="Center">
-          <StackPanel><TextBlock Text="TOTAL" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-            <TextBlock Text="{Binding TotalApplicants}" FontSize="16" FontWeight="Bold" Foreground="{StaticResource CrmInk}" /></StackPanel>
-          <StackPanel><TextBlock Text="ENROLLED" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-            <TextBlock Text="{Binding EnrolledCount}" FontSize="16" FontWeight="Bold" Foreground="{StaticResource CrmOk}" /></StackPanel>
-          <StackPanel><TextBlock Text="FEE DUE" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-            <TextBlock Text="{Binding FeeDueLabel}" FontSize="16" FontWeight="Bold" Foreground="{StaticResource CrmWarn}" /></StackPanel>
-          <StackPanel><TextBlock Text="DOCS PENDING" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-            <TextBlock Text="{Binding DocsPendingCount}" FontSize="16" FontWeight="Bold" Foreground="{StaticResource CrmBad}" /></StackPanel>
-        </StackPanel>
-        </ScrollViewer>
-        <Button Grid.Column="2" Content="+ New enquiry" Command="{Binding AddEnquiryCommand}"
+        <Button x:Name="EnquiryButton" Grid.Column="2" Content="+ New enquiry" Command="{Binding AddEnquiryCommand}"
                 Background="{StaticResource CrmAccent}" Foreground="{StaticResource CrmAccentInk}"
                 FontWeight="SemiBold" CornerRadius="6" Padding="14,8" Margin="0,0,8,0"
                 VerticalAlignment="Center" MinHeight="40" />
-        <Button Grid.Column="3" Content="+ New application" Command="{Binding AddApplicationCommand}"
+        <Button x:Name="ApplicationButton" Grid.Column="3" Content="+ New application" Command="{Binding AddApplicationCommand}"
                 Background="Transparent" Foreground="{StaticResource CrmInk2}"
                 BorderBrush="{StaticResource CrmLine}" BorderThickness="1"
                 CornerRadius="8" Padding="12,8" VerticalAlignment="Center" MinHeight="40" />
@@ -62,7 +53,7 @@
     </Border>
 
     <!-- ══ Body: nav lives in a SplitView (Inline pane on desktop, Overlay drawer on phones) ══ -->
-    <SplitView x:Name="NavSplit" Grid.Row="1" OpenPaneLength="300"
+    <SplitView x:Name="NavSplit" Grid.Row="1" OpenPaneLength="248"
                DisplayMode="Inline" IsPaneOpen="True">
       <SplitView.Pane>
       <!-- ── Nav ── -->
@@ -116,8 +107,9 @@
       </SplitView.Pane>
       <SplitView.Content>
       <!-- ── Content + rail (side rail on desktop, stacked below on phones) ── -->
-      <Grid x:Name="BodyGrid" ColumnDefinitions="*,340">
-      <ScrollViewer x:Name="ContentScroll" Grid.Column="0" Padding="16">
+      <Grid x:Name="BodyGrid" ColumnDefinitions="*,320">
+      <ScrollViewer x:Name="ContentScroll" Grid.Column="0" Padding="16"
+                    HorizontalScrollBarVisibility="Disabled">
         <StackPanel Spacing="16">
 
           <!-- DASHBOARD -->
@@ -194,50 +186,57 @@
             </ItemsControl>
           </StackPanel>
 
-          <!-- PIPELINE -->
+          <!-- PIPELINE: stage tabs + vertical list (Flutter/Tauri reference — no horizontal scroll) -->
           <StackPanel Spacing="12" IsVisible="{Binding ShowPipeline}">
             <Grid x:Name="PipeHeader" RowDefinitions="Auto,Auto" ColumnDefinitions="*,Auto">
-              <TextBlock x:Name="PipeTitle" Grid.Column="0" Text="Admission pipeline — merit board" FontSize="20" FontWeight="Bold" Foreground="{StaticResource CrmInk}" />
-              <TextBlock x:Name="PipeHint" Grid.Column="1" Text="click a card → detail rail · Advance moves stage" FontSize="11" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
+              <TextBlock x:Name="PipeTitle" Grid.Column="0" Text="Admission pipeline — merit board" FontSize="20" FontWeight="Bold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" />
+              <TextBlock x:Name="PipeHint" Grid.Column="1" Text="pick a stage · tap a card → detail rail" FontSize="11" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
             </Grid>
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-              <StackPanel Orientation="Horizontal" Spacing="8">
-                <Border Width="212" Background="{StaticResource CrmSurface}" CornerRadius="8" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8" VerticalAlignment="Top">
-                  <StackPanel Spacing="8"><TextBlock Text="Enquiry" FontSize="12" FontWeight="Bold" Foreground="{StaticResource CrmInk}" /><ItemsControl ItemsSource="{Binding LaneEnquiry}"><ItemsControl.ItemTemplate><DataTemplate x:DataType="models:Applicant"><Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,6"><Border Background="{StaticResource CrmPaperBg}" CornerRadius="6" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8"><StackPanel Spacing="4"><TextBlock Text="{Binding FullName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" /><TextBlock Text="{Binding Course}" FontSize="11" Foreground="{StaticResource CrmMuted}" TextWrapping="Wrap" /><TextBlock Text="{Binding DocsLabel}" FontSize="11" Foreground="{StaticResource CrmInk2}" /></StackPanel></Border></Button></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel>
-                </Border>
-                <Border Width="212" Background="{StaticResource CrmSurface}" CornerRadius="8" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8" VerticalAlignment="Top">
-                  <StackPanel Spacing="8"><TextBlock Text="Applied" FontSize="12" FontWeight="Bold" Foreground="{StaticResource CrmInk}" /><ItemsControl ItemsSource="{Binding LaneApplied}"><ItemsControl.ItemTemplate><DataTemplate x:DataType="models:Applicant"><Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,6"><Border Background="{StaticResource CrmPaperBg}" CornerRadius="6" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8"><StackPanel Spacing="4"><TextBlock Text="{Binding FullName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" /><TextBlock Text="{Binding Course}" FontSize="11" Foreground="{StaticResource CrmMuted}" TextWrapping="Wrap" /><TextBlock Text="{Binding DocsLabel}" FontSize="11" Foreground="{StaticResource CrmInk2}" /></StackPanel></Border></Button></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel>
-                </Border>
-                <Border Width="212" Background="{StaticResource CrmSurface}" CornerRadius="8" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8" VerticalAlignment="Top">
-                  <StackPanel Spacing="8"><TextBlock Text="Verified" FontSize="12" FontWeight="Bold" Foreground="{StaticResource CrmInk}" /><ItemsControl ItemsSource="{Binding LaneVerified}"><ItemsControl.ItemTemplate><DataTemplate x:DataType="models:Applicant"><Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,6"><Border Background="{StaticResource CrmPaperBg}" CornerRadius="6" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8"><StackPanel Spacing="4"><TextBlock Text="{Binding FullName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" /><TextBlock Text="{Binding Course}" FontSize="11" Foreground="{StaticResource CrmMuted}" TextWrapping="Wrap" /><TextBlock Text="{Binding DocsLabel}" FontSize="11" Foreground="{StaticResource CrmInk2}" /></StackPanel></Border></Button></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel>
-                </Border>
-                <Border Width="212" Background="{StaticResource CrmAccentSoft}" CornerRadius="8" BorderBrush="{StaticResource CrmAccent}" BorderThickness="1" Padding="8" VerticalAlignment="Top">
-                  <StackPanel Spacing="8"><TextBlock Text="★ Merit" FontSize="12" FontWeight="Bold" Foreground="{StaticResource CrmAccent}" /><ItemsControl ItemsSource="{Binding LaneMerit}"><ItemsControl.ItemTemplate><DataTemplate x:DataType="models:Applicant"><Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,6"><Border Background="{StaticResource CrmSurface}" CornerRadius="6" BorderBrush="{StaticResource CrmAccent}" BorderThickness="1" Padding="8"><StackPanel Spacing="4"><TextBlock Text="{Binding FullName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" /><TextBlock Text="{Binding Course}" FontSize="11" Foreground="{StaticResource CrmMuted}" TextWrapping="Wrap" /><StackPanel Orientation="Horizontal" Spacing="8"><TextBlock Text="{Binding MeritPct}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource CrmAccent}" /><TextBlock Text="{Binding DocsLabel}" FontSize="11" Foreground="{StaticResource CrmInk2}" VerticalAlignment="Center" /></StackPanel></StackPanel></Border></Button></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel>
-                </Border>
-                <Border Width="212" Background="{StaticResource CrmSurface}" CornerRadius="8" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8" VerticalAlignment="Top">
-                  <StackPanel Spacing="8"><TextBlock Text="Offered" FontSize="12" FontWeight="Bold" Foreground="{StaticResource CrmInk}" /><ItemsControl ItemsSource="{Binding LaneOffered}"><ItemsControl.ItemTemplate><DataTemplate x:DataType="models:Applicant"><Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,6"><Border Background="{StaticResource CrmPaperBg}" CornerRadius="6" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8"><StackPanel Spacing="4"><TextBlock Text="{Binding FullName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" /><TextBlock Text="{Binding FeeLabel}" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource CrmWarn}" /><TextBlock Text="{Binding DocsLabel}" FontSize="11" Foreground="{StaticResource CrmInk2}" /></StackPanel></Border></Button></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel>
-                </Border>
-                <Border Width="212" Background="{StaticResource CrmSurface}" CornerRadius="8" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8" VerticalAlignment="Top">
-                  <StackPanel Spacing="8"><TextBlock Text="Fee paid" FontSize="12" FontWeight="Bold" Foreground="{StaticResource CrmWarn}" /><ItemsControl ItemsSource="{Binding LaneFeePaid}"><ItemsControl.ItemTemplate><DataTemplate x:DataType="models:Applicant"><Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,6"><Border Background="{StaticResource CrmWarnBg}" CornerRadius="6" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="8"><StackPanel Spacing="4"><TextBlock Text="{Binding FullName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" /><TextBlock Text="Paid ✓" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource CrmOk}" /></StackPanel></Border></Button></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel>
-                </Border>
-                <Border Width="212" Background="{StaticResource CrmOkBg}" CornerRadius="8" BorderBrush="{StaticResource CrmOk}" BorderThickness="1" Padding="8" VerticalAlignment="Top">
-                  <StackPanel Spacing="8"><TextBlock Text="Enrolled ✓" FontSize="12" FontWeight="Bold" Foreground="{StaticResource CrmOk}" /><ItemsControl ItemsSource="{Binding LaneEnrolled}"><ItemsControl.ItemTemplate><DataTemplate x:DataType="models:Applicant"><Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,6"><Border Background="{StaticResource CrmSurface}" CornerRadius="6" BorderBrush="{StaticResource CrmOk}" BorderThickness="1" Padding="8"><StackPanel Spacing="4"><TextBlock Text="{Binding FullName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" /><TextBlock Text="{Binding Course}" FontSize="11" Foreground="{StaticResource CrmMuted}" TextWrapping="Wrap" /></StackPanel></Border></Button></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel>
-                </Border>
-              </StackPanel>
-            </ScrollViewer>
+            <WrapPanel Orientation="Horizontal">
+              <Button Command="{Binding SelectStageCommand}" CommandParameter="Enquiry" Classes.stage-active="{Binding IsStageEnquiry}" Content="{Binding CountEnquiry, StringFormat='Enquiry · {0}'}" Margin="0,0,8,8" Padding="14,8" CornerRadius="8" MinHeight="40" FontSize="13" />
+              <Button Command="{Binding SelectStageCommand}" CommandParameter="Applied" Classes.stage-active="{Binding IsStageApplied}" Content="{Binding CountApplied, StringFormat='Applied · {0}'}" Margin="0,0,8,8" Padding="14,8" CornerRadius="8" MinHeight="40" FontSize="13" />
+              <Button Command="{Binding SelectStageCommand}" CommandParameter="Verified" Classes.stage-active="{Binding IsStageVerified}" Content="{Binding CountVerified, StringFormat='Verified · {0}'}" Margin="0,0,8,8" Padding="14,8" CornerRadius="8" MinHeight="40" FontSize="13" />
+              <Button Command="{Binding SelectStageCommand}" CommandParameter="Merit" Classes.stage-active="{Binding IsStageMerit}" Content="{Binding CountMerit, StringFormat='★ Merit · {0}'}" Margin="0,0,8,8" Padding="14,8" CornerRadius="8" MinHeight="40" FontSize="13" />
+              <Button Command="{Binding SelectStageCommand}" CommandParameter="Offered" Classes.stage-active="{Binding IsStageOffered}" Content="{Binding CountOffered, StringFormat='Offered · {0}'}" Margin="0,0,8,8" Padding="14,8" CornerRadius="8" MinHeight="40" FontSize="13" />
+              <Button Command="{Binding SelectStageCommand}" CommandParameter="FeePaid" Classes.stage-active="{Binding IsStageFeePaid}" Content="{Binding CountFeePaid, StringFormat='Fee paid · {0}'}" Margin="0,0,8,8" Padding="14,8" CornerRadius="8" MinHeight="40" FontSize="13" />
+              <Button Command="{Binding SelectStageCommand}" CommandParameter="Enrolled" Classes.stage-active="{Binding IsStageEnrolled}" Content="{Binding CountEnrolled, StringFormat='Enrolled · {0}'}" Margin="0,0,8,8" Padding="14,8" CornerRadius="8" MinHeight="40" FontSize="13" />
+            </WrapPanel>
+            <ItemsControl ItemsSource="{Binding LaneForStage}">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="models:Applicant">
+                  <Button Tag="{Binding}" Click="OnApplicantClick" Background="Transparent" Padding="0" HorizontalAlignment="Stretch" Margin="0,0,0,4">
+                    <Border Background="{StaticResource CrmSurface}" CornerRadius="8" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="12">
+                      <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Border Grid.Column="0" Width="36" Height="36" CornerRadius="18" Background="{StaticResource CrmAccentSoft}" Margin="0,0,12,0" VerticalAlignment="Center">
+                          <TextBlock Text="{Binding Initials}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource CrmAccent}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                          <TextBlock Text="{Binding FullName}" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource CrmInk}" TextWrapping="Wrap" />
+                          <TextBlock Text="{Binding Course}" FontSize="12" Foreground="{StaticResource CrmMuted}" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxLines="2" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" Spacing="2" VerticalAlignment="Center" Margin="12,0,0,0">
+                          <TextBlock Text="{Binding MeritPct, StringFormat='{}{0:N1}%'}" FontSize="14" FontWeight="Bold" Foreground="{StaticResource CrmAccent}" HorizontalAlignment="Right" />
+                          <TextBlock Text="{Binding DocsLabel}" FontSize="11" Foreground="{StaticResource CrmInk2}" HorizontalAlignment="Right" />
+                        </StackPanel>
+                      </Grid>
+                    </Border>
+                  </Button>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
           </StackPanel>
 
           <!-- APPLICATIONS -->
           <StackPanel Spacing="12" IsVisible="{Binding ShowApplications}">
             <TextBlock Text="Applications — dense register" FontSize="20" FontWeight="Bold" Foreground="{StaticResource CrmInk}" />
             <Border x:Name="AppsHeader" Background="{StaticResource CrmSurface}" CornerRadius="8" BorderBrush="{StaticResource CrmLine}" BorderThickness="1" Padding="12,8">
-              <Grid ColumnDefinitions="2*,2*,*,*,*,*" Margin="0,0,0,8">
-                <TextBlock Grid.Column="0" Text="NAME" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-                <TextBlock Grid.Column="1" Text="COURSE" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-                <TextBlock Grid.Column="2" Text="STAGE" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-                <TextBlock Grid.Column="3" Text="MERIT" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-                <TextBlock Grid.Column="4" Text="DOCS" FontSize="10" Foreground="{StaticResource CrmMuted}" />
-                <TextBlock Grid.Column="5" Text="FEE" FontSize="10" Foreground="{StaticResource CrmMuted}" />
+              <Grid ColumnDefinitions="2*,2*,*,*,*,*">
+                <TextBlock Grid.Column="0" Text="NAME" FontSize="10" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="COURSE" FontSize="10" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="2" Text="STAGE" FontSize="10" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="3" Text="MERIT" FontSize="10" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="4" Text="DOCS" FontSize="10" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="5" Text="FEE" FontSize="10" Foreground="{StaticResource CrmMuted}" VerticalAlignment="Center" />
               </Grid>
             </Border>
             <ItemsControl x:Name="AppsRows" ItemsSource="{Binding FilteredApplicants}">
@@ -344,7 +343,7 @@
       <!-- ── Detail rail: right column on desktop, stacked below content on phones ── -->
       <Border x:Name="RailBorder" Grid.Column="1" Background="{StaticResource CrmSurface}"
               BorderBrush="{StaticResource CrmLine}" BorderThickness="1,0,0,0" Padding="16">
-        <ScrollViewer>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled">
           <StackPanel Spacing="10">
             <TextBlock Text="APPLICANT" FontSize="10" Foreground="{StaticResource CrmMuted}" />
             <Border Width="52" Height="52" CornerRadius="26" Background="{StaticResource CrmAccentSoft}"

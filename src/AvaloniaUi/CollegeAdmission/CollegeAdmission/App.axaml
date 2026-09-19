@@ -2,8 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:CollegeAdmission"
               x:Class="CollegeAdmission.App"
-              RequestedThemeVariant="Default">
-              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+              RequestedThemeVariant="Light">
+              <!-- CRM tokens are hardcoded light; system Dark made unstyled text white-on-light (invisible nav/tabs). -->
 
     <Application.Resources>
         <ResourceDictionary>
