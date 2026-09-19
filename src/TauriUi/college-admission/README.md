@@ -1,6 +1,41 @@
-# Tauri + React + Typescript
+# College Admissions CRM — Tauri 2 (React + Vite)
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+Vertical-first desktop UI. No horizontal scroll at any window size: content
+wraps/stacks, and below 1100px the 3-pane shell collapses to a single
+scrolling column with the detail rail stacked underneath.
+
+## Window (macOS landscape, resizable)
+
+`src-tauri/tauri.conf.json` → 1280×800 (16:10), `minWidth` 960,
+`minHeight` 600, `resizable: true`. Bundle targets include `dmg` + `app`.
+
+## Vertical layout rules
+
+- Global `overflow-x: clip` + `min-width: 0` + `overflow-wrap: anywhere`
+  (`src/index.css`) — clipping replaces scrolling everywhere.
+- Dashboard KPIs / funnel / Courses use
+  `grid-cols-[repeat(auto-fill,minmax(...))]` so cards reflow vertically.
+- Applications register is one card per applicant (header + 3-cell meta
+  grid), not a fixed 6-column row.
+- Course fill bars stack label → bar (no fixed-width side columns).
+
+## Dev / build / test
+
+```bash
+npm install --cache /tmp/npm-cache-college   # ~/.npm/_cacache perms broken on this box
+npm run dev        # Vite dev server (port 1420)
+npm run build      # tsc + vite build → dist/
+npm test           # node --test src/crm/data.test.ts (5 tests, stdlib only)
+npm run tauri dev  # needs Rust toolchain (see below)
+npm run tauri build -- --bundles dmg,app
+```
+
+## Required toolchain (macOS, NOT installed — run manually)
+
+- Rust stable ≥ 1.77 (Tauri 2.11.4): `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+  then `rustup update stable`, verify `rustc --version && cargo --version`.
+- Xcode CLT (present at `/Applications/Xcode.app`): `xcode-select --install` only if prompted.
+- Node 22+ (have 26.7.0), Tauri CLI 2.x ships via devDependencies (`@tauri-apps/cli`).
 
 ## Recommended IDE Setup
 

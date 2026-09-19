@@ -9,7 +9,7 @@ export default function Pipeline() {
   const [tab, setTab] = useState<CrmStage>(s.selected?.stage ?? "Enquiry");
   const items = s.lane(tab);
   return (
-    <div className="p-4 space-y-3">
+    <div className="p-4 space-y-3 max-w-full overflow-x-clip min-w-0">
       <div>
         <SectionTitle>Admission pipeline — merit board</SectionTitle>
         <p className="text-[11px] text-muted">pick a stage · tap a card → detail rail · Advance moves stage</p>
@@ -37,7 +37,7 @@ export default function Pipeline() {
       {items.length === 0 ? (
         <p className="text-[13px] text-muted text-center py-8">No applicants in {STAGE_LABEL[tab]}</p>
       ) : (
-        <div className="space-y-1">
+        <div className="space-y-2 min-w-0">
           {items.map((a) => (
             <Row key={a.id} a={a} />
           ))}
@@ -53,7 +53,7 @@ function Row({ a }: { a: Applicant }) {
   return (
     <button
       onClick={() => s.selectApplicant(a)}
-      className={`w-full text-left bg-surface rounded-lg border px-3 py-3 flex items-center gap-3 transition-colors duration-150 ease-out cursor-pointer ${
+      className={`w-full min-w-0 text-left bg-surface rounded-lg border px-3 py-3 flex items-center gap-3 transition-colors duration-150 ease-out cursor-pointer ${
         selected ? "border-accent border-2" : "border-line hover:border-ink2"
       }`}
     >

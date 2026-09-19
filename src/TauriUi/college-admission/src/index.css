@@ -32,6 +32,23 @@ body,
   height: 100%;
 }
 
+/* Vertical-first: never allow horizontal scroll; wrap instead. */
+html,
+body {
+  overflow-x: clip;
+  overscroll-behavior-x: none;
+}
+
+#root {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+* {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 body {
   @apply bg-paper text-ink font-sans antialiased;
   font-feature-settings: "cv11";

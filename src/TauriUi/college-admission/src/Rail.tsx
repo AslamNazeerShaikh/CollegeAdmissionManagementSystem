@@ -2,11 +2,15 @@ import { STAGE_LABEL, docsLabel, feeLabel, meritLabel } from "./crm/data";
 import { useCrm } from "./crm/store";
 import { Avatar, CrmButton } from "./crm/ui";
 
-export default function Rail() {
+export default function Rail({ stacked = false }: { stacked?: boolean }) {
   const s = useCrm();
   const a = s.selected;
   return (
-    <aside className="bg-surface border-l border-line p-4 overflow-y-auto">
+    <aside
+      className={`bg-surface p-4 overflow-y-auto overflow-x-clip min-w-0 ${
+        stacked ? "border-t border-line" : "border-l border-line"
+      }`}
+    >
       {!a ? (
         <p className="text-[13px] text-muted">Select an applicant</p>
       ) : (

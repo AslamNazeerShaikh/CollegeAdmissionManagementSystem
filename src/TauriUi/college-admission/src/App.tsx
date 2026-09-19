@@ -19,38 +19,40 @@ export default function App() {
 function Shell() {
   const s = useCrm();
   const [drawer, setDrawer] = useState(false);
-  const [narrow, setNarrow] = useState(window.innerWidth < 900);
+  // Stack vertically below 1100px so the 3-pane layout never squeezes
+  // into a horizontal scroll when the macOS window is resized smaller.
+  const [narrow, setNarrow] = useState(window.innerWidth < 1100);
 
   useEffect(() => {
-    const onResize = () => setNarrow(window.innerWidth < 900);
+    const onResize = () => setNarrow(window.innerWidth < 1100);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col min-w-0 overflow-x-clip">
       <TopBar narrow={narrow} onMenu={() => setDrawer(true)} />
 
       {narrow ? (
-        <div className="flex-1 overflow-y-auto">
-          <div key={s.section} className="fade-section">
+        <div className="flex-1 min-h-0 overflow-y-auto overflow-x-clip">
+          <div key={s.section} className="fade-section min-w-0">
             <SectionView section={s.section} />
           </div>
-          <Rail />
+          <Rail stacked />
         </div>
       ) : (
-        <div className="flex-1 flex min-h-0">
-          <nav className="w-[300px] shrink-0">
+        <div className="flex-1 flex min-h-0 min-w-0 overflow-x-clip">
+          <nav className="w-[260px] shrink-0 min-w-0">
             <Nav onNavigate={() => {}} />
           </nav>
 
-          <main className="flex-1 min-w-0 overflow-y-auto">
-            <div key={s.section} className="fade-section">
+          <main className="flex-1 min-w-0 overflow-y-auto overflow-x-clip">
+            <div key={s.section} className="fade-section min-w-0">
               <SectionView section={s.section} />
             </div>
           </main>
 
-          <div className="w-[340px] shrink-0 overflow-y-auto">
+          <div className="w-[300px] shrink-0 min-w-0 overflow-y-auto overflow-x-clip">
             <Rail />
           </div>
         </div>

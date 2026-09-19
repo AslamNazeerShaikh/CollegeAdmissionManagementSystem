@@ -51,6 +51,7 @@ export function Avatar({ initials }: { initials: string }) {
 }
 
 // KPI card: white, 1px border, radius 12, generous padding, no shadow.
+// Fluid width — parent grid decides columns so cards wrap vertically.
 export function StatCard({
   label,
   value,
@@ -63,10 +64,10 @@ export function StatCard({
   valueClass?: string;
 }) {
   return (
-    <div className="w-40 bg-surface rounded-xl border border-line px-[18px] py-4">
-      <div className="text-[13px] text-muted">{label}</div>
-      <div className={`text-[26px] leading-8 font-semibold tnum ${valueClass}`}>{value}</div>
-      <div className="text-[13px] text-muted">{sub}</div>
+    <div className="min-w-0 w-full bg-surface rounded-xl border border-line px-[18px] py-4">
+      <div className="text-[13px] text-muted truncate">{label}</div>
+      <div className={`text-[26px] leading-8 font-semibold tnum truncate ${valueClass}`}>{value}</div>
+      <div className="text-[13px] text-muted truncate">{sub}</div>
     </div>
   );
 }

@@ -6,8 +6,8 @@ export default function Fees() {
   const s = useCrm();
   const due = s.feeDueList;
   return (
-    <div className="p-4 space-y-3">
-      <div className="flex items-center">
+    <div className="p-4 space-y-3 max-w-full overflow-x-clip min-w-0">
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
         <div className="flex-1">
           <SectionTitle>Fees — collection queue</SectionTitle>
         </div>
@@ -18,9 +18,10 @@ export default function Fees() {
       {due.length === 0 ? (
         <p className="text-[13px] text-muted text-center py-8">Nothing outstanding 🎉</p>
       ) : (
-        <div className="space-y-2">
+        <div className="space-y-2 min-w-0">
           {due.map((a) => (
-            <Card key={a.id} className="p-3 flex items-center gap-3">
+            <Card key={a.id} className="p-3 min-w-0">
+              <div className="flex items-center gap-3 min-w-0">
               <div className="flex-1 min-w-0">
                 <div className="text-[13px] font-semibold text-ink truncate">{a.fullName}</div>
                 <div className="text-xs text-muted truncate">{a.course}</div>
@@ -29,6 +30,7 @@ export default function Fees() {
               <CrmButton kind="success" onClick={() => s.collectFee(a)}>
                 Collect
               </CrmButton>
+              </div>
             </Card>
           ))}
         </div>
