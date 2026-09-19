@@ -1,6 +1,6 @@
 ## response style
 
-- Answer in tabular form whenever the answer has comparable items, options, steps, or findings — tables first, prose only for what doesn't fit a table. Keep tables detailed (all relevant columns), not terse.
+- Answer in tabular form whenever the answer has comparable items, options, steps, or findings — tables first, prose only for what doesn't fit a table. Keep tables detailed (all relevant columns), not terse. Always add metrics notation to the columnn names of table if applicable.
 - Explanations the user asks for are always given in full; the "short explanation" default does not apply here.
 
 ## toolchain installs
