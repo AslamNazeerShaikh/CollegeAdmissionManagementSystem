@@ -86,10 +86,6 @@ All shots live in `images/apps/` (per-app folders).
 
 ![Android-Java legacy registration and menu](images/apps/android-java/legacy-registration-and-menu.jpg)
 
-## Android-Java — legacy project structure
-
-![Android-Java code structure](images/apps/android-java/code-structure.jpg)
-
 # To develop the app
 
 **.NET apps (Avalonia + Uno):**
