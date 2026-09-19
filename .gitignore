@@ -485,3 +485,12 @@ $RECYCLE.BIN/
 # machine; the skill regenerates both on every run, so never commit them)
 graphify-out/.graphify_python
 graphify-out/.graphify_root
+# graphify local-only outputs (per https://github.com/Graphify-Labs/graphify
+# "Team setup": graphify-out/ itself is meant to be committed, but these are
+# machine-local / regenerable and must stay out of git)
+graphify-out/cost.json
+graphify-out/cache/
+graphify-out/last_query_stamp
+# graphify curated-graph backups (auto-created dated snapshots on every
+# `graphify update`; regenerable, only bloat the repo)
+graphify-out/20*/
