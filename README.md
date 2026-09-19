@@ -2,16 +2,17 @@
 
 CollegeAdmissionManagementSystem is used by schools, colleges & institutions for admission processes and study material management. Light weight yet feature-rich, built for maximum performance and security. Flexible enough to customize on the basis of your needs so as to run a smooth and efficient system.
 
-Three codebases live in `src/`:
+Five codebases live in `src/`:
 
-| Codebase | Stack | Status | Targets today |
-|---|---|---|---|
-| `src/AvaloniaUi/` | .NET 10 + Avalonia 12 | Shipping | Android, Desktop (Linux/macOS/Windows) |
-| `src/FlutterUi/` | Flutter 3.47 + Dart 3.13 | Port (evaluation) | Linux desktop today; Android/iOS/macOS/Windows same codebase |
-| `src/PlatformUno/` | .NET 10 + Uno Platform 6 | Retained port | Android, Desktop, bare `net10.0` |
-| `src/AndroidJava/` | Java + Android SDK (archived, see `src/AndroidJava/README.md`) | Reference only | Android 4.4+ (API 19+) |
+| Codebase | Stack | Targets today |
+|---|---|---|
+| `src/AvaloniaUi/` | .NET 10 + Avalonia 12 | Android, Desktop (Linux/macOS/Windows) |
+| `src/FlutterUi/` | Flutter 3.47 + Dart 3.13 | Linux desktop today; Android/iOS/macOS/Windows same codebase |
+| `src/PlatformUno/` | .NET 10 + Uno Platform 6 | Android, Desktop, bare `net10.0` |
+| `src/TauriUi/` | Tauri 2 + React 19 + Vite | Linux/macOS Desktop (webview) |
+| `src/AndroidJava/` | Java + Android SDK (archived, see `src/AndroidJava/README.md`) | Android 4.4+ (API 19+) |
 
-![CollegeAdmissionManagementSystem CoverPage](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/images/apps/android-java/legacy-courses-and-dialogs.jpg)
+![CollegeAdmissionManagementSystem CoverPage](images/apps/android-java/legacy-courses-and-dialogs.jpg)
 
 # To run the app
 
@@ -49,9 +50,9 @@ Three codebases live in `src/`:
 - MacBook Pro M5 Pro — macOS 26 (Desktop heads)
 - Lenovo Yoga X1 Gen 2 — Fedora 44 (Desktop heads, `dotnet` 10.0.401 verified; Flutter Linux head, Impeller, verified)
 
- ![Code Structure](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/images/apps/android-java/code-structure.jpg)
+ ![Code Structure](images/apps/android-java/code-structure.jpg)
 
-# Screenshots (Linux, 2026-09-19 — all 4 apps running, verified no crashes)
+# Screenshots (Linux, 2026-09-19 — all 4 apps running)
 
 All shots live in `images/apps/` (per-app folders).
 
@@ -114,7 +115,7 @@ All shots live in `images/apps/` (per-app folders).
 - Avalonia.Labs.Lottie `: 12.0.2`
 - Xamarin.AndroidX.Core.SplashScreen `: 1.0.1.15`
 
-**Uno (`global.json` → Uno.Sdk `: 6.7.22`, features: Material, Mvvm, SkiaRenderer, Lottie):**
+**Uno (`global.json` → Uno.Sdk `: 6.7.22`, features: Material, Mvvm, SkiaRenderer):**
 - SkiaSharp.Views.Uno.WinUI / SkiaSharp.Skottie `: 4.152.0`
 - CommunityToolkit.Mvvm `: 8.4.2`
 - Tests: NUnit `: 4.1.0` + NUnit3TestAdapter + Microsoft.NET.Test.Sdk
@@ -131,7 +132,3 @@ All shots live in `images/apps/` (per-app folders).
 - com.orhanobut:dialogplus `: 1.11@aar`
 - com.github.barteksc:android-pdf-viewer `: 3.2.0-beta.1`
 - com.squareup.okhttp3:okhttp `: 4.9.1`
-
-# Pending (see `docs/avalonia-crm-vision.md`)
-
-Unify the 21-course catalog across .NET apps, add Avalonia tests, decide the Phase 5 registration backend, restore offline/in-app PDFs, move drafts to SQLite, add iOS/Windows store heads + CI/signing.
