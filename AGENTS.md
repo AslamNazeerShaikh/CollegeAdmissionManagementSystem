@@ -7,7 +7,7 @@
 
 - Never install toolchains, packages, libraries, or tools automatically (no `brew install`, `npm i -g`, `rustup`, `pip install`, SDK downloads, etc. on your own).
 - Instead, give copy-pasteable commands the user can run manually, with the exact names/versions needed.
-- Exception: the user explicitly grants permission in a prompt reply (e.g. "yes, install it") — then you may install, and report what was installed with versions.
+- Exception: the user explicitly grants permission in a prompt reply (e.g. "yes, install it" or "proceed", etc.) — then you may install, and report what was installed with versions.
 
 ## graphify
 
