@@ -312,45 +312,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests",
-      "label": "CatalogTests",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "catalogtests",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher",
-      "label": "FakeLauncher",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "is_nested_type": true,
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "fakelauncher",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L51"
-    },
-    {
       "id": "src_tauriui_college_admission_src_tauri_gen_android_app_src_main_java_in_org_cocsit_college_admission_mainactivity_mainactivity",
       "label": "MainActivity",
       "_callable": true,
@@ -362,82 +323,6 @@
       "norm_label": "mainactivity",
       "source_file": "src/TauriUi/college-admission/src-tauri/gen/android/app/src/main/java/in/org/cocsit/college_admission/MainActivity.kt",
       "source_location": "L6"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_ilauncherservice",
-      "label": "ILauncherService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "ilauncherservice",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program_collegeadmission_program",
-      "label": "Program",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 104,
-      "community_name": ".Main",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s23"
-        ]
-      },
-      "norm_label": "program",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Desktop/Program.cs",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course",
-      "label": "Course",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "course",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog",
-      "label": "CourseCatalog",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "coursecatalog",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L18"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_models_courses_collegeadmission_models_course",
@@ -536,6 +421,45 @@
       "norm_label": "splashpage",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/SplashPage.xaml.cs",
       "source_location": "L3"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests",
+      "label": "CatalogTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "catalogtests",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher",
+      "label": "FakeLauncher",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "fakelauncher",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L51"
     },
     {
       "id": "src_flutterui_college_admission_macos_runner_appdelegate_appdelegate",
@@ -808,25 +732,6 @@
       "source_location": "L185"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_appshell",
-      "label": "AppShell",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s143"
-        ]
-      },
-      "norm_label": "appshell",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
-      "source_location": "L9"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_tests_unittest1_collegeadmission_tests_unittest1",
       "label": "UnitTest1",
       "_callable": true,
@@ -863,25 +768,6 @@
       "norm_label": "ilauncherservice",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
       "source_location": "L4"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_avalonialauncherservice",
-      "label": "AvaloniaLauncherService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ILauncherService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s143"
-        ]
-      },
-      "norm_label": "avalonialauncherservice",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
-      "source_location": "L19"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_unolauncherservice",
@@ -1033,6 +919,46 @@
       "source_location": "L3"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app",
+      "label": "App",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s146"
+        ]
+      },
+      "norm_label": "app",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
+      "label": "MainWindow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "CollegeAdmission.Views",
+        "scope_chain": [
+          "s26"
+        ]
+      },
+      "norm_label": "mainwindow",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L5"
+    },
+    {
       "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml_collegeadmission_app",
       "label": "App",
       "_callable": true,
@@ -1051,6 +977,82 @@
       "norm_label": "app",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
       "source_location": "L8"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_ilauncherservice",
+      "label": "ILauncherService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "ilauncherservice",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice",
+      "label": "INavigationService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "inavigationservice",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program_collegeadmission_program",
+      "label": "Program",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s23"
+        ]
+      },
+      "norm_label": "program",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Desktop/Program.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice",
+      "label": "FrameNavigationService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "norm_label": "framenavigationservice",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
+      "source_location": "L13"
     },
     {
       "id": "src_flutterui_college_admission_linux_runner_my_application_myapplication",
@@ -1124,42 +1126,42 @@
       "source_location": "L48"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice",
-      "label": "INavigationService",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_appshell",
+      "label": "AppShell",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "inavigationservice",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice",
-      "label": "FrameNavigationService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
+      "community_name": "AvaloniaServices.cs",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
         "scope_chain": [
-          "s90"
+          "s143"
         ]
       },
-      "norm_label": "framenavigationservice",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
-      "source_location": "L13"
+      "norm_label": "appshell",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_avalonialauncherservice",
+      "label": "AvaloniaLauncherService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s143"
+        ]
+      },
+      "norm_label": "avalonialauncherservice",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
+      "source_location": "L19"
     },
     {
       "id": "src_tauriui_college_admission_src_tauri_gen_android_buildsrc_src_main_java_in_org_cocsit_college_admission_kotlin_buildtask_buildtask",
@@ -1201,44 +1203,42 @@
       "source_location": "L14"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app",
-      "label": "App",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course",
+      "label": "Course",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
       "metadata": {
-        "is_partial": true,
-        "namespace": "CollegeAdmission",
+        "namespace": "CollegeAdmission.Models",
         "scope_chain": [
-          "s146"
+          "s0"
         ]
       },
-      "norm_label": "app",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L9"
+      "norm_label": "course",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L4"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml_collegeadmission_views_mainwindow",
-      "label": "MainWindow",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog",
+      "label": "CourseCatalog",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
       "metadata": {
-        "is_partial": true,
-        "namespace": "CollegeAdmission.Views",
+        "namespace": "CollegeAdmission.Models",
         "scope_chain": [
-          "s26"
+          "s0"
         ]
       },
-      "norm_label": "mainwindow",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L5"
+      "norm_label": "coursecatalog",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L18"
     },
     {
       "id": "src_androidjava_app_src_main_java_in_org_cocsit_collegeadmissionmanagementsystem_courses_courses_onclick",
@@ -2119,114 +2119,6 @@
       "source_location": "L34"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_catalog_coversalllegacycourses",
-      "label": ".Catalog_CoversAllLegacyCourses()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L20"
-          },
-          {
-            "callee": "Contain",
-            "receiver_type": "Does",
-            "lang": "csharp",
-            "line": "L20"
-          }
-        ]
-      },
-      "norm_label": ".catalog_coversalllegacycourses()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_opensyllabus_skipsempty_opensvalid",
-      "label": ".OpenSyllabus_SkipsEmpty_OpensValid()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L45"
-          },
-          {
-            "callee": "EqualTo",
-            "receiver_type": "Is",
-            "lang": "csharp",
-            "line": "L48"
-          }
-        ]
-      },
-      "norm_label": ".opensyllabus_skipsempty_opensvalid()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L37"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_registration_requireskeyfields",
-      "label": ".Registration_RequiresKeyFields()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "That",
-            "receiver_type": "Assert",
-            "lang": "csharp",
-            "line": "L27"
-          }
-        ]
-      },
-      "norm_label": ".registration_requireskeyfields()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L23"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_openurlasync",
-      "label": ".OpenUrlAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".openurlasync()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L55"
-    },
-    {
       "id": "src_tauriui_college_admission_src_tauri_gen_android_app_src_main_java_in_org_cocsit_college_admission_mainactivity_mainactivity_oncreate",
       "label": ".onCreate()",
       "_callable": true,
@@ -2236,50 +2128,6 @@
       "file_type": "code",
       "norm_label": ".oncreate()",
       "source_file": "src/TauriUi/college-admission/src-tauri/gen/android/app/src/main/java/in/org/cocsit/college_admission/MainActivity.kt",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_ilauncherservice_openurlasync",
-      "label": ".OpenUrlAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".openurlasync()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program_collegeadmission_program_main",
-      "label": ".Main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 104,
-      "community_name": ".Main",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s23"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Create",
-            "receiver_type": "UnoPlatformHostBuilder",
-            "lang": "csharp",
-            "line": "L12"
-          }
-        ]
-      },
-      "norm_label": ".main()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Desktop/Program.cs",
       "source_location": "L7"
     },
     {
@@ -2631,6 +2479,114 @@
       "norm_label": ".onnavigatedto()",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/SplashPage.xaml.cs",
       "source_location": "L12"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_catalog_coversalllegacycourses",
+      "label": ".Catalog_CoversAllLegacyCourses()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L20"
+          },
+          {
+            "callee": "Contain",
+            "receiver_type": "Does",
+            "lang": "csharp",
+            "line": "L20"
+          }
+        ]
+      },
+      "norm_label": ".catalog_coversalllegacycourses()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_opensyllabus_skipsempty_opensvalid",
+      "label": ".OpenSyllabus_SkipsEmpty_OpensValid()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L45"
+          },
+          {
+            "callee": "EqualTo",
+            "receiver_type": "Is",
+            "lang": "csharp",
+            "line": "L48"
+          }
+        ]
+      },
+      "norm_label": ".opensyllabus_skipsempty_opensvalid()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_catalogtests_registration_requireskeyfields",
+      "label": ".Registration_RequiresKeyFields()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "That",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L27"
+          }
+        ]
+      },
+      "norm_label": ".registration_requireskeyfields()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_openurlasync",
+      "label": ".OpenUrlAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": ".openurlasync()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L55"
     },
     {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel_collegeadmission_viewmodels_crmviewmodel_addapplication",
@@ -3317,24 +3273,6 @@
       "source_location": "L10"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_avalonialauncherservice_openurlasync",
-      "label": ".OpenUrlAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ILauncherService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s143"
-        ]
-      },
-      "norm_label": ".openurlasync()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
-      "source_location": "L21"
-    },
-    {
       "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_unolauncherservice_openurlasync",
       "label": ".OpenUrlAsync()",
       "_callable": true,
@@ -3545,6 +3483,50 @@
       "source_location": "L12"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_initialize",
+      "label": ".Initialize()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s146"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Load",
+            "receiver_type": "AvaloniaXamlLoader",
+            "lang": "csharp",
+            "line": "L13"
+          }
+        ]
+      },
+      "norm_label": ".initialize()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_onframeworkinitializationcompleted",
+      "label": ".OnFrameworkInitializationCompleted()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s146"
+        ]
+      },
+      "norm_label": ".onframeworkinitializationcompleted()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L19"
+    },
+    {
       "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml_collegeadmission_app_initializelogging",
       "label": ".InitializeLogging()",
       "_callable": true,
@@ -3605,6 +3587,262 @@
       "norm_label": ".onnavigationfailed()",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs",
       "source_location": "L67"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_ilauncherservice_openurlasync",
+      "label": ".OpenUrlAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".openurlasync()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_goback",
+      "label": ".GoBack()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".goback()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetocourses",
+      "label": ".NavigateToCourses()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".navigatetocourses()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetomain",
+      "label": ".NavigateToMain()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".navigatetomain()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetoregistration",
+      "label": ".NavigateToRegistration()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".navigatetoregistration()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetosplash",
+      "label": ".NavigateToSplash()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Services",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".navigatetosplash()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program_collegeadmission_program_main",
+      "label": ".Main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s23"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Create",
+            "receiver_type": "UnoPlatformHostBuilder",
+            "lang": "csharp",
+            "line": "L12"
+          }
+        ]
+      },
+      "norm_label": ".main()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Desktop/Program.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_goback",
+      "label": ".GoBack()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "norm_label": ".goback()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetocourses",
+      "label": ".NavigateToCourses()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s90"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Navigate",
+            "receiver_type": "Frame?",
+            "lang": "csharp",
+            "line": "L21"
+          }
+        ]
+      },
+      "norm_label": ".navigatetocourses()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetomain",
+      "label": ".NavigateToMain()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s90"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Navigate",
+            "receiver_type": "Frame?",
+            "lang": "csharp",
+            "line": "L19"
+          }
+        ]
+      },
+      "norm_label": ".navigatetomain()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetoregistration",
+      "label": ".NavigateToRegistration()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s90"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Navigate",
+            "receiver_type": "Frame?",
+            "lang": "csharp",
+            "line": "L24"
+          }
+        ]
+      },
+      "norm_label": ".navigatetoregistration()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetosplash",
+      "label": ".NavigateToSplash()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s90"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Navigate",
+            "receiver_type": "Frame?",
+            "lang": "csharp",
+            "line": "L17"
+          }
+        ]
+      },
+      "norm_label": ".navigatetosplash()",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
+      "source_location": "L17"
     },
     {
       "id": "src_flutterui_college_admission_linux_flutter_generated_plugin_registrant_fl_register_plugins",
@@ -3865,216 +4103,22 @@
       "source_location": "L60"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_goback",
-      "label": ".GoBack()",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_avalonialauncherservice_openurlasync",
+      "label": ".OpenUrlAsync()",
       "_callable": true,
       "_origin": "ast",
       "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".goback()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetocourses",
-      "label": ".NavigateToCourses()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".navigatetocourses()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetomain",
-      "label": ".NavigateToMain()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".navigatetomain()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetoregistration",
-      "label": ".NavigateToRegistration()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".navigatetoregistration()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_collegeadmission_services_inavigationservice_navigatetosplash",
-      "label": ".NavigateToSplash()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Services",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".navigatetosplash()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_goback",
-      "label": ".GoBack()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
+      "community_name": "AvaloniaServices.cs",
       "file_type": "code",
       "metadata": {
         "namespace": "CollegeAdmission",
         "scope_chain": [
-          "s90"
+          "s143"
         ]
       },
-      "norm_label": ".goback()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetocourses",
-      "label": ".NavigateToCourses()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s90"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Navigate",
-            "receiver_type": "Frame?",
-            "lang": "csharp",
-            "line": "L21"
-          }
-        ]
-      },
-      "norm_label": ".navigatetocourses()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
+      "norm_label": ".openurlasync()",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
       "source_location": "L21"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetomain",
-      "label": ".NavigateToMain()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s90"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Navigate",
-            "receiver_type": "Frame?",
-            "lang": "csharp",
-            "line": "L19"
-          }
-        ]
-      },
-      "norm_label": ".navigatetomain()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetoregistration",
-      "label": ".NavigateToRegistration()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s90"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Navigate",
-            "receiver_type": "Frame?",
-            "lang": "csharp",
-            "line": "L24"
-          }
-        ]
-      },
-      "norm_label": ".navigatetoregistration()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
-      "source_location": "L23"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_navigatetosplash",
-      "label": ".NavigateToSplash()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "INavigationService",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s90"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Navigate",
-            "receiver_type": "Frame?",
-            "lang": "csharp",
-            "line": "L17"
-          }
-        ]
-      },
-      "norm_label": ".navigatetosplash()",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
-      "source_location": "L17"
     },
     {
       "id": "src_tauriui_college_admission_src_tauri_gen_android_buildsrc_src_main_java_in_org_cocsit_college_admission_kotlin_buildtask_buildtask_assemble",
@@ -4111,50 +4155,6 @@
       "norm_label": ".apply()",
       "source_file": "src/TauriUi/college-admission/src-tauri/gen/android/buildSrc/src/main/java/in/org/cocsit/college_admission/kotlin/RustPlugin.kt",
       "source_location": "L17"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_initialize",
-      "label": ".Initialize()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s146"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Load",
-            "receiver_type": "AvaloniaXamlLoader",
-            "lang": "csharp",
-            "line": "L13"
-          }
-        ]
-      },
-      "norm_label": ".initialize()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml_collegeadmission_app_onframeworkinitializationcompleted",
-      "label": ".OnFrameworkInitializationCompleted()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s146"
-        ]
-      },
-      "norm_label": ".onframeworkinitializationcompleted()",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L19"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_assets_sharedassets_shared_assets",
@@ -4788,56 +4788,6 @@
       "source_location": ""
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_opened",
-      "label": "Opened",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Tests",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "opened",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
-      "source_location": "L53"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_list",
-      "label": "List",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "norm_label": "list",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_test",
-      "label": "Test",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "RegistrationViewModel",
-      "file_type": "code",
-      "norm_label": "test",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "validationresult",
       "label": "ValidationResult",
       "_origin": "ast",
@@ -5359,50 +5309,6 @@
       "source_location": "L52"
     },
     {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices",
-      "label": "PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "file_type": "code",
-      "norm_label": "platformuno/collegeadmission/collegeadmission.core/services/appservices.cs",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program",
-      "label": "Desktop/Program.cs",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": ".Main",
-      "file_type": "code",
-      "norm_label": "desktop/program.cs",
-      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Desktop/Program.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program_cs_stathread",
-      "label": "STAThread",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": ".Main",
-      "file_type": "code",
-      "norm_label": "stathread",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_tauriui_college_admission_src_tauri_src_lib",
       "label": "lib.rs",
       "_origin": "ast",
@@ -5525,96 +5431,6 @@
       "source_location": "L1",
       "type": "package",
       "version": "0.1.0"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course",
-      "label": "Course.cs",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "norm_label": "course.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasfy",
-      "label": "HasFy",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "hasfy",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hassy",
-      "label": "HasSy",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "hassy",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasty",
-      "label": "HasTy",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "hasty",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog_all",
-      "label": "All",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission.Models",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "all",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Course",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_core_models_courses",
@@ -5891,105 +5707,6 @@
       "source_location": ""
     },
     {
-      "id": "opencode_opencode_bash_chmod_777",
-      "label": "chmod 777 *",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "chmod 777 *",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L64"
-    },
-    {
-      "id": "opencode_opencode_bash_rm_rf",
-      "label": "rm -rf *",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "rm -rf *",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L62"
-    },
-    {
-      "id": "opencode_opencode_bash_sudo",
-      "label": "sudo *",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "sudo *",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L63"
-    },
-    {
-      "id": "opencode_opencode_permission",
-      "label": "permission",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "permission",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "opencode_opencode_permission_bash",
-      "label": "bash",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "bash",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L60"
-    },
-    {
-      "id": "opencode_opencode_permission_edit",
-      "label": "edit",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "edit",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L56"
-    },
-    {
-      "id": "opencode_opencode_permission_glob",
-      "label": "glob",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "glob",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L57"
-    },
-    {
-      "id": "opencode_opencode_permission_grep",
-      "label": "grep",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "grep",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L58"
-    },
-    {
-      "id": "opencode_opencode_permission_read",
-      "label": "read",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "read",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L54"
-    },
-    {
       "id": "opencode_opencode_permission_task",
       "label": "task",
       "_origin": "ast",
@@ -5999,17 +5716,6 @@
       "norm_label": "task",
       "source_file": ".opencode/opencode.json",
       "source_location": "L59"
-    },
-    {
-      "id": "opencode_opencode_permission_write",
-      "label": "write",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "Page",
-      "file_type": "code",
-      "norm_label": "write",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L55"
     },
     {
       "id": "page",
@@ -6129,6 +5835,56 @@
       "community_name": "Page",
       "file_type": "code",
       "norm_label": "navigationeventargs",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_collegeadmission_tests_fakelauncher_opened",
+      "label": "Opened",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission.Tests",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": "opened",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_list",
+      "label": "List",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "norm_label": "list",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_tests_catalogtests_cs_test",
+      "label": "Test",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Page",
+      "file_type": "code",
+      "norm_label": "test",
       "source_file": "",
       "source_location": ""
     },
@@ -7407,15 +7163,20 @@
       "source_location": ""
     },
     {
-      "id": "control",
-      "label": "Control",
+      "id": "csharp_namespace:0424cab659d0cfe2",
+      "label": "CollegeAdmission.Views",
       "_origin": "ast",
       "community": 27,
       "community_name": "CollegeAdmission.ViewModels",
       "file_type": "code",
-      "norm_label": "control",
-      "source_file": "",
-      "source_location": ""
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "CollegeAdmission.Views"
+      },
+      "norm_label": "collegeadmission.views",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
+      "source_location": "L7",
+      "type": "namespace"
     },
     {
       "id": "csharp_namespace:0777847fcf7033c1",
@@ -7498,6 +7259,17 @@
       "type": "namespace"
     },
     {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml",
+      "label": "App.axaml.cs",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "CollegeAdmission.ViewModels",
+      "file_type": "code",
+      "norm_label": "app.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
+      "source_location": "L1"
+    },
+    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_viewmodels_crmviewmodel",
       "label": "CrmViewModel.cs",
       "_origin": "ast",
@@ -7509,49 +7281,15 @@
       "source_location": "L1"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices",
-      "label": "AvaloniaServices.cs",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_crmshellview_axaml",
+      "label": "CrmShellView.axaml.cs",
       "_origin": "ast",
       "community": 27,
       "community_name": "CollegeAdmission.ViewModels",
       "file_type": "code",
-      "norm_label": "avaloniaservices.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
+      "norm_label": "crmshellview.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
       "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_appshell_crm",
-      "label": "Crm",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s143"
-        ]
-      },
-      "norm_label": "crm",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_appshell_shellview",
-      "label": "ShellView",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "CollegeAdmission.ViewModels",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "CollegeAdmission",
-        "scope_chain": [
-          "s143"
-        ]
-      },
-      "norm_label": "shellview",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
-      "source_location": "L16"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_app_xaml",
@@ -7664,28 +7402,6 @@
       "source_location": ""
     },
     {
-      "id": "func",
-      "label": "Func",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ILauncherService",
-      "file_type": "code",
-      "norm_label": "func",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "ilauncher",
-      "label": "ILauncher",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ILauncherService",
-      "file_type": "code",
-      "norm_label": "ilauncher",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_avaloniaui_collegeadmission_collegeadmission_core_services_appservices",
       "label": "AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
       "_origin": "ast",
@@ -7695,17 +7411,6 @@
       "norm_label": "avaloniaui/collegeadmission/collegeadmission.core/services/appservices.cs",
       "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
       "source_location": "L1"
-    },
-    {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ILauncherService",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices",
@@ -7827,6 +7532,39 @@
       "norm_label": "url",
       "source_file": ".opencode/opencode.json",
       "source_location": "L90"
+    },
+    {
+      "id": "opencode_opencode_bash_chmod_777",
+      "label": "chmod 777 *",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "chmod 777 *",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L64"
+    },
+    {
+      "id": "opencode_opencode_bash_rm_rf",
+      "label": "rm -rf *",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "rm -rf *",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L62"
+    },
+    {
+      "id": "opencode_opencode_bash_sudo",
+      "label": "sudo *",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "sudo *",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L63"
     },
     {
       "id": "opencode_opencode_commands",
@@ -7970,6 +7708,83 @@
       "norm_label": "ui-skills",
       "source_file": ".opencode/opencode.json",
       "source_location": "L74"
+    },
+    {
+      "id": "opencode_opencode_permission",
+      "label": "permission",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "permission",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "opencode_opencode_permission_bash",
+      "label": "bash",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "bash",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L60"
+    },
+    {
+      "id": "opencode_opencode_permission_edit",
+      "label": "edit",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "edit",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L56"
+    },
+    {
+      "id": "opencode_opencode_permission_glob",
+      "label": "glob",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "glob",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L57"
+    },
+    {
+      "id": "opencode_opencode_permission_grep",
+      "label": "grep",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "grep",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L58"
+    },
+    {
+      "id": "opencode_opencode_permission_read",
+      "label": "read",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "read",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "opencode_opencode_permission_write",
+      "label": "write",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "write",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L55"
     },
     {
       "id": "opencode_opencode_plugin",
@@ -10366,6 +10181,17 @@
       "source_location": "L1"
     },
     {
+      "id": "application",
+      "label": "Application",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "application",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "launchactivatedeventargs",
       "label": "LaunchActivatedEventArgs",
       "_origin": "ast",
@@ -10386,6 +10212,17 @@
       "norm_label": "navigationfailedeventargs",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml",
+      "label": "MainWindow.axaml.cs",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "mainwindow.axaml.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_platformuno_collegeadmission_collegeadmission_app",
@@ -10489,6 +10326,50 @@
       "source_location": ""
     },
     {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices",
+      "label": "PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "platformuno/collegeadmission/collegeadmission.core/services/appservices.cs",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_core_services_appservices_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program",
+      "label": "Desktop/Program.cs",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "desktop/program.cs",
+      "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Desktop/Program.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_platformuno_collegeadmission_collegeadmission_platforms_desktop_program_cs_stathread",
+      "label": "STAThread",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "stathread",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_platformuno_collegeadmission_collegeadmission_services_unoservices_collegeadmission_framenavigationservice_frame",
       "label": "Frame",
       "_origin": "ast",
@@ -10504,6 +10385,17 @@
       "norm_label": "frame",
       "source_file": "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs",
       "source_location": "L15"
+    },
+    {
+      "id": "window",
+      "label": "Window",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "window",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "docs_referenceui_uiprompt",
@@ -13767,6 +13659,95 @@
       "source_location": "L25"
     },
     {
+      "id": "control",
+      "label": "Control",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "norm_label": "control",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "func",
+      "label": "Func",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "norm_label": "func",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ilauncher",
+      "label": "ILauncher",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "norm_label": "ilauncher",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices",
+      "label": "AvaloniaServices.cs",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "norm_label": "avaloniaservices.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_appshell_crm",
+      "label": "Crm",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s143"
+        ]
+      },
+      "norm_label": "crm",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_collegeadmission_appshell_shellview",
+      "label": "ShellView",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "CollegeAdmission",
+        "scope_chain": [
+          "s143"
+        ]
+      },
+      "norm_label": "shellview",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Services/AvaloniaServices.cs",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_services_avaloniaservices_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "AvaloniaServices.cs",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "defaulttask",
       "label": "DefaultTask",
       "_origin": "ast",
@@ -13822,73 +13803,92 @@
       "source_location": "L1"
     },
     {
-      "id": "application",
-      "label": "Application",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course",
+      "label": "Course.cs",
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
-      "norm_label": "application",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "course.cs",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L1"
     },
     {
-      "id": "csharp_namespace:0424cab659d0cfe2",
-      "label": "CollegeAdmission.Views",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasfy",
+      "label": "HasFy",
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
       "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "CollegeAdmission.Views"
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
       },
-      "norm_label": "collegeadmission.views",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
-      "source_location": "L7",
-      "type": "namespace"
+      "norm_label": "hasfy",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L13"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_app_axaml",
-      "label": "App.axaml.cs",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hassy",
+      "label": "HasSy",
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
-      "norm_label": "app.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/App.axaml.cs",
-      "source_location": "L1"
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "hassy",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L14"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_crmshellview_axaml",
-      "label": "CrmShellView.axaml.cs",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_course_hasty",
+      "label": "HasTy",
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
-      "norm_label": "crmshellview.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/CrmShellView.axaml.cs",
-      "source_location": "L1"
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "hasty",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L15"
     },
     {
-      "id": "src_avaloniaui_collegeadmission_collegeadmission_views_mainwindow_axaml",
-      "label": "MainWindow.axaml.cs",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_collegeadmission_models_coursecatalog_all",
+      "label": "All",
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
-      "norm_label": "mainwindow.axaml.cs",
-      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission/Views/MainWindow.axaml.cs",
-      "source_location": "L1"
+      "metadata": {
+        "namespace": "CollegeAdmission.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "all",
+      "source_file": "src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs",
+      "source_location": "L26"
     },
     {
-      "id": "window",
-      "label": "Window",
+      "id": "src_avaloniaui_collegeadmission_collegeadmission_core_models_course_cs_ireadonlylist",
+      "label": "IReadOnlyList",
       "_origin": "ast",
       "community": 97,
-      "community_name": "App",
+      "community_name": "Course",
       "file_type": "code",
-      "norm_label": "window",
+      "norm_label": "ireadonlylist",
       "source_file": "",
       "source_location": ""
     },
@@ -14026,17 +14026,29 @@
       "node_kind": "heading",
       "norm_label": "recommended ide setup",
       "source_file": "src/TauriUi/college-admission/README.md",
-      "source_location": "L40"
+      "source_location": "L48"
     },
     {
-      "id": "src_tauriui_college_admission_readme_required_toolchain_macos_not_installed_run_manually",
-      "label": "Required toolchain (macOS, NOT installed \u2014 run manually)",
+      "id": "src_tauriui_college_admission_readme_required_toolchain_macos",
+      "label": "Required toolchain (macOS)",
       "_origin": "ast",
       "community": 99,
       "community_name": "College Admissions CRM \u2014 Tauri 2 (React + Vite)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "required toolchain (macos, not installed \u2014 run manually)",
+      "norm_label": "required toolchain (macos)",
+      "source_file": "src/TauriUi/college-admission/README.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_tauriui_college_admission_readme_runtime_footprint_measured_2026_09_19_macos_release_build",
+      "label": "Runtime footprint (measured 2026-09-19, macOS release build)",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "College Admissions CRM \u2014 Tauri 2 (React + Vite)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "runtime footprint (measured 2026-09-19, macos release build)",
       "source_file": "src/TauriUi/college-admission/README.md",
       "source_location": "L33"
     },
@@ -27034,7 +27046,7 @@
     },
     {
       "source": "src_tauriui_college_admission_readme_college_admissions_crm_tauri_2_react_vite",
-      "target": "src_tauriui_college_admission_readme_required_toolchain_macos_not_installed_run_manually",
+      "target": "src_tauriui_college_admission_readme_runtime_footprint_measured_2026_09_19_macos_release_build",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27045,13 +27057,24 @@
     },
     {
       "source": "src_tauriui_college_admission_readme_college_admissions_crm_tauri_2_react_vite",
+      "target": "src_tauriui_college_admission_readme_required_toolchain_macos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/TauriUi/college-admission/README.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tauriui_college_admission_readme_college_admissions_crm_tauri_2_react_vite",
       "target": "src_tauriui_college_admission_readme_recommended_ide_setup",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/TauriUi/college-admission/README.md",
-      "source_location": "L40",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -34272,5 +34295,5 @@
       "source_file": ".opencode/skills/database-migration.md"
     }
   ],
-  "built_at_commit": "1dc964ddaac1e6280b95b9cae70e001951d0ab3b"
+  "built_at_commit": "95fc69cd9641fe1e882837bb6b54198760d9064e"
 }

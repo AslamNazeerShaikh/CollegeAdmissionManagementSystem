@@ -30,10 +30,18 @@ npm run tauri dev  # needs Rust toolchain (see below)
 npm run tauri build -- --bundles dmg,app
 ```
 
-## Required toolchain (macOS, NOT installed — run manually)
+## Runtime footprint (measured 2026-09-19, macOS release build)
 
-- Rust stable ≥ 1.77 (Tauri 2.11.4): `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-  then `rustup update stable`, verify `rustc --version && cargo --version`.
+- Main process RSS: **~115 MB**, 0% CPU idle (`ps -o rss`).
+- No separate WebKit child process attributed; WKWebView rendering lives
+  inside that footprint plus shared system WebKit services.
+- Native bundle: `src-tauri/target/release/bundle/macos/College Admissions CRM.app`
+  (built with tauri-cli 2.11.4 + rustc 1.98.1, zero build errors).
+
+## Required toolchain (macOS)
+
+- Rust stable ≥ 1.77 — installed: rustc/cargo **1.98.1** at `~/.cargo/bin/`.
+  Fresh install: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`.
 - Xcode CLT (present at `/Applications/Xcode.app`): `xcode-select --install` only if prompted.
 - Node 22+ (have 26.7.0), Tauri CLI 2.x ships via devDependencies (`@tauri-apps/cli`).
 
