@@ -1,6 +1,9 @@
 # Conventional Commits (v1.0.0) — adopted
 
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+
 Full spec: https://www.conventionalcommits.org/en/v1.0.0/#specification
+([spec source](https://github.com/conventional-commits/conventionalcommits.org))
 
 ## Format
 
