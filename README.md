@@ -11,7 +11,7 @@ Three codebases live in `src/`:
 | `src/PlatformUno/` | .NET 10 + Uno Platform 6 | Retained port | Android, Desktop, bare `net10.0` |
 | `src/AndroidJava/` | Java + Android SDK (archived, see `src/AndroidJava/README.md`) | Reference only | Android 4.4+ (API 19+) |
 
-![CollegeAdmissionManagementSystem CoverPage](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/Images%20&%20Documents/1.jpg)
+![CollegeAdmissionManagementSystem CoverPage](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/images/apps/android-java/legacy-courses-and-dialogs.jpg)
 
 # To run the app
 
@@ -49,16 +49,49 @@ Three codebases live in `src/`:
 - MacBook Pro M5 Pro — macOS 26 (Desktop heads)
 - Lenovo Yoga X1 Gen 2 — Fedora 44 (Desktop heads, `dotnet` 10.0.401 verified; Flutter Linux head, Impeller, verified)
 
- ![Code Structure](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/Images%20&%20Documents/0.jpg)
+ ![Code Structure](https://github.com/AslamNazeerShaikh/CollegeAdmissionManagementSystem/blob/development/images/apps/android-java/code-structure.jpg)
 
 # Screenshots (Linux, 2026-09-19 — all 4 apps running, verified no crashes)
 
+All shots live in `images/apps/` (per-app folders).
+
 | App | Shot | What it proves |
 |---|---|---|
-| Avalonia | `Images & Documents/apps/avalonia/pipeline.png` | Stage tabs + vertical list, all nav/rail visible, no horizontal scroll |
-| Flutter | `Images & Documents/apps/flutter/pipeline.png` | Reference UI (unchanged): `analyze` clean, 10/10 tests pass |
-| Tauri | `Images & Documents/apps/tauri/pipeline.png` | Reference UI (unchanged): web tests 5/5, release binary runs clean |
-| Uno | `Images & Documents/apps/uno/pipeline.png`, `courses.png` (+ dashboard/applications/fees verified) | Full CRM reimplementation: same shell, tabs, rail as the other three |
+| Avalonia | `apps/avalonia/pipeline.png` | Stage tabs + vertical list, all nav/rail visible, no horizontal scroll |
+| Flutter | `apps/flutter/pipeline.png` | Reference UI (unchanged): `analyze` clean, 10/10 tests pass |
+| Tauri | `apps/tauri/pipeline.png` | Reference UI (unchanged): web tests 5/5, release binary runs clean |
+| Uno | `apps/uno/pipeline.png`, `apps/uno/courses.png` (+ dashboard/applications/fees verified) | Full CRM reimplementation: same shell, tabs, rail as the other three |
+| Android-Java (legacy reference) | `apps/android-java/*.jpg` | Archived Java app UI + project structure that the CRM ports replace |
+
+## Avalonia — admission pipeline
+
+![Avalonia pipeline](images/apps/avalonia/pipeline.png)
+
+## Flutter — admission pipeline (reference)
+
+![Flutter pipeline](images/apps/flutter/pipeline.png)
+
+## Tauri — admission pipeline (reference)
+
+![Tauri pipeline](images/apps/tauri/pipeline.png)
+
+## Uno — admission pipeline
+
+![Uno pipeline](images/apps/uno/pipeline.png)
+
+## Uno — course catalog
+
+![Uno courses](images/apps/uno/courses.png)
+
+## Android-Java — legacy UI (archived reference, `src/AndroidJava/`)
+
+![Android-Java legacy courses and dialogs](images/apps/android-java/legacy-courses-and-dialogs.jpg)
+
+![Android-Java legacy registration and menu](images/apps/android-java/legacy-registration-and-menu.jpg)
+
+## Android-Java — legacy project structure
+
+![Android-Java code structure](images/apps/android-java/code-structure.jpg)
 
 # To develop the app
 
