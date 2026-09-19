@@ -1,16 +1,16 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-19)
 
 ## Corpus Check
-- 183 files · ~640,499 words
+- 184 files · ~640,695 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1156 nodes · 1456 edges · 126 communities (62 shown, 17 thin omitted)
+- 1163 nodes · 1462 edges · 123 communities (59 shown, 17 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3e689028`
+- Built from commit: `997bc137`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,36 +39,33 @@
 - tauri.conf.json
 - compilerOptions
 - CrmShellView
-- package:flutter/material.dart
+- courses.dart
 - CollegeAdmission.ViewModels
 - applications.dart
-- macos_shell_test.dart
+- package:flutter/material.dart
 - Opencode Configuration for College Admission Management System
 - pipeline.dart
 - Course
 - RustPlugin.kt
 - CoursesViewModel
-- RelayCommand
+- Applicant
 - Application
-- AvaloniaServices.cs
+- AppShell
 - crm_button.dart
-- FakeLauncher
+- Conventional Commits (v1.0.0) — adopted
 - org.junit.Test
 - MainActivity
 - graphify reference: extra exports and benchmark
 - dashboard.dart
 - .BuildAvaloniaApp
-- Course
 - CrmStage
 - College Admissions CRM — Tauri 2 (React + Vite)
 - compilerOptions
 - graphify reference: query, path, explain
 - README.md
 - UnitTest1
-- Applicant
 - ILauncherService
 - default.json
-- CrmModels.cs
 - Here is a cheat sheet
 - .onCreate
 - android/gradlew
@@ -110,19 +107,19 @@
 ## Surprising Connections (you probably didn't know these)
 - `CrmViewModel` --references--> `Course`  [EXTRACTED]
   src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs → src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs
-- `CourseCatalog` --references--> `Course`  [EXTRACTED]
-  src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Models/Courses.cs → src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs
 - `CoursesViewModel` --references--> `Course`  [EXTRACTED]
   src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs → src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs
 - `CoursesPage` --references--> `Course`  [EXTRACTED]
   src/PlatformUno/CollegeAdmission/CollegeAdmission/CoursesPage.xaml.cs → src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs
 - `CrmSeed` --references--> `Applicant`  [EXTRACTED]
   src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs → src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs
+- `CrmViewModel` --references--> `Applicant`  [EXTRACTED]
+  src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs → src/AvaloniaUi/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs
 
 ## Import Cycles
 - None detected.
 
-## Communities (126 total, 17 thin omitted)
+## Communities (123 total, 17 thin omitted)
 
 ### Community 0 - "App.tsx"
 Cohesion: 0.12
@@ -157,16 +154,16 @@ Cohesion: 0.06
 Nodes (36): IEnumerable, ObservableCollection, CrmViewModel, ActionQueue, Applicants, CountApplied, CountEnquiry, CountEnrolled (+28 more)
 
 ### Community 8 - "opencode.json"
-Cohesion: 0.06
-Nodes (33): agents, default, list, enabled, headers, oauth, type, url (+25 more)
+Cohesion: 0.05
+Nodes (43): agents, default, list, enabled, headers, oauth, type, url (+35 more)
 
 ### Community 9 - "Page"
-Cohesion: 0.08
-Nodes (24): chmod 777 *, rm -rf *, sudo *, permission, bash, edit, glob, grep (+16 more)
+Cohesion: 0.15
+Nodes (12): Page, ExitMessage, ExitOverlay, Page, WelcomeAnim, MainMenuPage, RoutedEventArgs, AnimatedVisualPlayer (+4 more)
 
 ### Community 10 - "RegistrationViewModel"
-Cohesion: 0.08
-Nodes (26): Dictionary, RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName, CurrentAddress (+18 more)
+Cohesion: 0.06
+Nodes (34): Dictionary, task, RegistrationViewModel, BirthDay, BirthMonth, BirthYear, BloodGroup, CourseName (+26 more)
 
 ### Community 11 - "crm_state.dart"
 Cohesion: 0.07
@@ -220,21 +217,21 @@ Nodes (19): compilerOptions, allowImportingTsExtensions, isolatedModules, jsx, l
 Cohesion: 0.17
 Nodes (6): AvaloniaPropertyChangedEventArgs, CrmShellView, Vm, RoutedEventArgs, UserControl, VisualTreeAttachmentEventArgs
 
-### Community 24 - "package:flutter/material.dart"
-Cohesion: 0.16
-Nodes (15): ChangeNotifier, ../crm_button.dart, ../crm_state.dart, ../crm_theme.dart, package:flutter/material.dart, package:url_launcher/url_launcher.dart, CrmState, build (+7 more)
+### Community 24 - "courses.dart"
+Cohesion: 0.15
+Nodes (15): ChangeNotifier, ../crm_button.dart, ../crm_state.dart, ../crm_theme.dart, package:url_launcher/url_launcher.dart, CrmState, build, DetailRail (+7 more)
 
 ### Community 25 - "CollegeAdmission.ViewModels"
-Cohesion: 0.18
-Nodes (7): CollegeAdmission.Views, CollegeAdmission.Models, CollegeAdmission.Tests, CollegeAdmission.ViewModels, CollegeAdmission, CollegeAdmission.Services, CrmSeed
+Cohesion: 0.22
+Nodes (5): CollegeAdmission.Views, CollegeAdmission.Models, CollegeAdmission.ViewModels, CollegeAdmission, CollegeAdmission.Services
 
 ### Community 26 - "applications.dart"
 Cohesion: 0.14
 Nodes (14): ../layout_breakpoints.dart, _Logo, _NavBody, ApplicationsSection, build, _cards, _chip, _H (+6 more)
 
-### Community 27 - "macos_shell_test.dart"
-Cohesion: 0.15
-Nodes (11): dart:ui, package:college_admission/layout_breakpoints.dart, package:college_admission/main.dart, package:flutter_test/flutter_test.dart, main, _boot, _hasHorizontalOurs, main (+3 more)
+### Community 27 - "package:flutter/material.dart"
+Cohesion: 0.14
+Nodes (12): dart:ui, package:college_admission/layout_breakpoints.dart, package:college_admission/main.dart, package:flutter/material.dart, package:flutter_test/flutter_test.dart, main, _boot, _hasHorizontalOurs (+4 more)
 
 ### Community 28 - "Opencode Configuration for College Admission Management System"
 Cohesion: 0.15
@@ -245,36 +242,36 @@ Cohesion: 0.18
 Nodes (12): CrmApp, _CrmAppState, build, createState, initState, PipelineSection, _PipelineSectionState, _row (+4 more)
 
 ### Community 30 - "Course"
-Cohesion: 0.17
-Nodes (11): Course, CardSubtitle, CardTitle, HasFy, HasSy, HasTy, PopupSubtitle, Subtitle (+3 more)
+Cohesion: 0.11
+Nodes (18): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList, Course (+10 more)
 
 ### Community 31 - "RustPlugin.kt"
 Cohesion: 0.31
 Nodes (6): DefaultTask, Plugin, Project, BuildTask, Config, RustPlugin
 
 ### Community 32 - "CoursesViewModel"
-Cohesion: 0.18
-Nodes (8): ObservableObject, Task, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList, RelayCommand, Task
+Cohesion: 0.15
+Nodes (9): ObservableObject, Task, Task, ViewModelBase, CoursesViewModel, Courses, IReadOnlyList, RelayCommand (+1 more)
 
-### Community 33 - "RelayCommand"
-Cohesion: 0.27
-Nodes (3): Applicant, RelayCommand, Task
+### Community 33 - "Applicant"
+Cohesion: 0.21
+Nodes (7): Applicant, DocsLabel, DocsPending, FeeLabel, StageName, Applicant, RelayCommand
 
 ### Community 34 - "Application"
 Cohesion: 0.20
 Nodes (7): AvaloniaAndroidApplication, AvaloniaMainActivity, CollegeAdmission.Android, Application, App, AppBuilder, MainActivity
 
-### Community 35 - "AvaloniaServices.cs"
-Cohesion: 0.20
-Nodes (8): Control, Func, ILauncher, AppShell, Crm, ShellView, AvaloniaLauncherService, Task
+### Community 35 - "AppShell"
+Cohesion: 0.50
+Nodes (4): Control, AppShell, Crm, ShellView
 
 ### Community 36 - "crm_button.dart"
 Cohesion: 0.20
 Nodes (9): EdgeInsetsGeometry, build, CrmButton, CrmButtonKind, kind, label, onPressed, padding (+1 more)
 
-### Community 37 - "FakeLauncher"
+### Community 37 - "Conventional Commits (v1.0.0) — adopted"
 Cohesion: 0.29
-Nodes (6): CatalogTests, FakeLauncher, Opened, List, Task, Test
+Nodes (6): Conventional Commits (v1.0.0) — adopted, Examples, Format, Notes, Scopes (this repo), Types we use
 
 ### Community 38 - "org.junit.Test"
 Cohesion: 0.33
@@ -289,20 +286,16 @@ Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
 ### Community 41 - "dashboard.dart"
-Cohesion: 0.25
-Nodes (7): ../crm_models.dart, _actionCard, build, DashboardSection, _funnel, _stat, state
+Cohesion: 0.29
+Nodes (6): ../crm_models.dart, _actionCard, build, _funnel, _stat, state
 
 ### Community 42 - ".BuildAvaloniaApp"
 Cohesion: 0.29
 Nodes (5): CollegeAdmission.Desktop, Program, App, AppBuilder, STAThread
 
-### Community 43 - "Course"
-Cohesion: 0.29
-Nodes (7): Course, HasFy, HasSy, HasTy, CourseCatalog, All, IReadOnlyList
-
 ### Community 44 - "CrmStage"
-Cohesion: 0.25
-Nodes (8): CrmStage, Applied, Enquiry, Enrolled, FeePaid, Merit, Offered, Verified
+Cohesion: 0.15
+Nodes (13): CourseFill, Pct, PctLabel, CrmAction, CrmStage, Applied, Enquiry, Enrolled (+5 more)
 
 ### Community 45 - "College Admissions CRM — Tauri 2 (React + Vite)"
 Cohesion: 0.25
@@ -321,24 +314,16 @@ Cohesion: 0.33
 Nodes (5): College Admission Management System, Pending (see `docs/avalonia-crm-vision.md`), Project dependencies, To develop the app, To run the app
 
 ### Community 49 - "UnitTest1"
-Cohesion: 0.33
-Nodes (3): SetUp, UnitTest1, Test
-
-### Community 50 - "Applicant"
-Cohesion: 0.33
-Nodes (5): Applicant, DocsLabel, DocsPending, FeeLabel, StageName
+Cohesion: 0.29
+Nodes (4): CollegeAdmission.Tests, SetUp, UnitTest1, Test
 
 ### Community 51 - "ILauncherService"
-Cohesion: 0.33
-Nodes (3): ILauncherService, UnoLauncherService, Task
+Cohesion: 0.18
+Nodes (7): Func, ILauncher, ILauncherService, AvaloniaLauncherService, Task, UnoLauncherService, Task
 
 ### Community 52 - "default.json"
 Cohesion: 0.33
 Nodes (5): description, identifier, permissions, $schema, windows
-
-### Community 53 - "CrmModels.cs"
-Cohesion: 0.40
-Nodes (4): CourseFill, Pct, PctLabel, CrmAction
 
 ### Community 54 - "Here is a cheat sheet"
 Cohesion: 0.40
@@ -373,21 +358,21 @@ Cohesion: 0.50
 Nodes (3): applicationsUseTable, ShellLayout, shellLayoutForWidth
 
 ## Knowledge Gaps
-- **524 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+519 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 690 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **529 isolated node(s):** `$schema`, `version`, `name`, `description`, `type` (+524 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 696 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `CrmViewModel` connect `CrmViewModel` to `CoursesViewModel`, `RelayCommand`, `AvaloniaServices.cs`, `Course`, `Applicant`, `ILauncherService`, `CrmModels.cs`, `CrmShellView`, `CollegeAdmission.ViewModels`?**
+- **Why does `CrmViewModel` connect `CrmViewModel` to `CoursesViewModel`, `Applicant`, `AppShell`, `CrmStage`, `ILauncherService`, `CrmShellView`, `CollegeAdmission.ViewModels`, `Course`?**
   _High betweenness centrality (0.050) - this node is a cross-community bridge._
-- **Why does `ILauncherService` connect `ILauncherService` to `CoursesViewModel`, `App`, `AvaloniaServices.cs`, `FakeLauncher`, `CrmViewModel`?**
+- **Why does `ILauncherService` connect `ILauncherService` to `CoursesViewModel`, `App`, `RegistrationViewModel`, `CrmViewModel`?**
   _High betweenness centrality (0.025) - this node is a cross-community bridge._
-- **Why does `CoursesPage` connect `Page` to `CoursesViewModel`, `CollegeAdmission.ViewModels`, `Course`, `Page`?**
+- **Why does `CoursesPage` connect `Page` to `CoursesViewModel`, `CollegeAdmission.ViewModels`, `Page`, `Course`?**
   _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **What connects `$schema`, `version`, `name` to the rest of the system?**
-  _524 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _529 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `App.tsx` be split into smaller, more focused modules?**
   _Cohesion score 0.11949685534591195 - nodes in this community are weakly interconnected._
 - **Should `Registration` be split into smaller, more focused modules?**
