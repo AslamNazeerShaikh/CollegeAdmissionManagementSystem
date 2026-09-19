@@ -1,3 +1,14 @@
+## response style
+
+- Answer in tabular form whenever the answer has comparable items, options, steps, or findings — tables first, prose only for what doesn't fit a table. Keep tables detailed (all relevant columns), not terse.
+- Explanations the user asks for are always given in full; the "short explanation" default does not apply here.
+
+## toolchain installs
+
+- Never install toolchains, packages, libraries, or tools automatically (no `brew install`, `npm i -g`, `rustup`, `pip install`, SDK downloads, etc. on your own).
+- Instead, give copy-pasteable commands the user can run manually, with the exact names/versions needed.
+- Exception: the user explicitly grants permission in a prompt reply (e.g. "yes, install it") — then you may install, and report what was installed with versions.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
