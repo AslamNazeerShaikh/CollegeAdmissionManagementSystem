@@ -1816,5 +1816,11 @@
     "seen": 1789823083.27498,
     "ast_hash": "d07d64dd4e09797a7d2bf1c5df878162",
     "semantic_hash": ""
+  },
+  "docs/conventional-commits.md": {
+    "mtime": 1789823565.6722202,
+    "seen": 1789823586.996578,
+    "ast_hash": "93c81180e10d9b84a198435fc7408a1e",
+    "semantic_hash": ""
   }
 }
