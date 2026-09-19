@@ -12,8 +12,6 @@ Five codebases live in `src/`:
 | `src/TauriUi/` | Tauri 2 + React 19 + Vite | Linux/macOS Desktop (webview) |
 | `src/AndroidJava/` | Java + Android SDK (archived, see `src/AndroidJava/README.md`) | Android 4.4+ (API 19+) |
 
-![CollegeAdmissionManagementSystem CoverPage](images/apps/android-java/legacy-courses-and-dialogs.jpg)
-
 # To run the app
 
 **Avalonia (`src/AvaloniaUi/CollegeAdmission/`)** — primary app:
@@ -49,8 +47,6 @@ Five codebases live in `src/`:
 - iPhone 16 Plus — iOS 26 (no iOS head configured yet, see pending)
 - MacBook Pro M5 Pro — macOS 26 (Desktop heads)
 - Lenovo Yoga X1 Gen 2 — Fedora 44 (Desktop heads, `dotnet` 10.0.401 verified; Flutter Linux head, Impeller, verified)
-
- ![Code Structure](images/apps/android-java/code-structure.jpg)
 
 # Screenshots (Linux, 2026-09-19 — all 4 apps running)
 
