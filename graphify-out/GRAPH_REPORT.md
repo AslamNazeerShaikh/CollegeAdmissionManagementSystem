@@ -1,7 +1,7 @@
 # Graph Report - CollegeAdmissionManagementSystem  (2026-09-19)
 
 ## Corpus Check
-- 184 files · ~640,695 words
+- 184 files · ~640,699 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `997bc137`
+- Built from commit: `79cd4ef0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

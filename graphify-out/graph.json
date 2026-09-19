@@ -10673,7 +10673,7 @@
       "node_kind": "heading",
       "norm_label": "examples",
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L28"
+      "source_location": "L31"
     },
     {
       "id": "docs_conventional_commits_format",
@@ -10685,7 +10685,7 @@
       "node_kind": "heading",
       "norm_label": "format",
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L5"
+      "source_location": "L8"
     },
     {
       "id": "docs_conventional_commits_notes",
@@ -10697,7 +10697,7 @@
       "node_kind": "heading",
       "norm_label": "notes",
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L40"
+      "source_location": "L43"
     },
     {
       "id": "docs_conventional_commits_scopes_this_repo",
@@ -10709,7 +10709,7 @@
       "node_kind": "heading",
       "norm_label": "scopes (this repo)",
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L24"
+      "source_location": "L27"
     },
     {
       "id": "docs_conventional_commits_types_we_use",
@@ -10721,7 +10721,7 @@
       "node_kind": "heading",
       "norm_label": "types we use",
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L19"
+      "source_location": "L22"
     },
     {
       "id": "androidx_test_ext_junit_runners_androidjunit4",
@@ -23420,7 +23420,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -23431,7 +23431,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -23442,7 +23442,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L28",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -23453,7 +23453,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L40",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -23464,7 +23464,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/conventional-commits.md",
-      "source_location": "L5",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -32404,5 +32404,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "997bc137a620a2ffaef6af69f857c15f996120e7"
+  "built_at_commit": "79cd4ef02939cd0b800b6e27744e4a0bcf4e6875"
 }
