@@ -10,6 +10,8 @@
 
 CollegeAdmissionManagementSystem is used by schools, colleges & institutions for admission processes and study material management. Light weight yet feature-rich, built for maximum performance and security. Flexible enough to customize on the basis of your needs so as to run a smooth and efficient system.
 
+Project started: **27 January 2021** (first commit `1e7c8cf`, "Initial Commit").
+
 Five codebases live in `src/`:
 
 | Codebase | Stack | Targets today |
