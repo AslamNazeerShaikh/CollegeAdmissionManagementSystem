@@ -7,11 +7,7 @@ namespace CollegeAdmission;
 
 public partial class App : Application
 {
-    public static INavigationService Navigation { get; } = new FrameNavigationService();
-
     public static ILauncherService Launcher { get; } = new UnoLauncherService();
-
-    public static Frame? RootFrame { get; private set; }
     /// <summary>
     /// Initializes the singleton application object. This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -19,6 +15,9 @@ public partial class App : Application
     public App()
     {
         this.InitializeComponent();
+        // CRM surfaces are hardcoded light; system Dark would tint default
+        // control chrome (same invisible-text bug Avalonia had).
+        this.RequestedTheme = Microsoft.UI.Xaml.ApplicationTheme.Light;
     }
 
     protected Window? MainWindow { get; private set; }
@@ -31,51 +30,26 @@ public partial class App : Application
 #endif
 
 
-        // Do not repeat app initialization when the Window already has content,
-        // just ensure that the window is active
-        if (MainWindow.Content is not Frame rootFrame)
-        {
-            // Create a Frame to act as the navigation context and navigate to the first page
-            rootFrame = new Frame();
-
-            // Place the frame in the current Window
-            MainWindow.Content = rootFrame;
-
-            rootFrame.NavigationFailed += OnNavigationFailed;
-        }
-
-        RootFrame = rootFrame;
-
-        if (rootFrame.Content == null)
-        {
-            // When the navigation stack isn't restored navigate to the first page,
-            // configuring the new page by passing required information as a navigation
-            // parameter
-            rootFrame.Navigate(typeof(SplashPage), args.Arguments);
-        }
+        // Single-page CRM shell: no Frame navigation, no splash. The shell
+        // owns section switching (same as Flutter/Tauri/Avalonia).
+        MainWindow.Content ??= new CrmShellPage();
 
         MainWindow.SetWindowIcon();
-        // Resizable desktop window (Linux X11 otherwise keeps the phone-sized
-        // first measure as a fixed hint): landscape default, free resize.
+        MainWindow.Title = "College Admissions CRM";
+        // Resizable desktop window with a landscape CRM default. Resize is
+        // requested both before and after Activate: on some X11 WMs the
+        // pre-Activate size is ignored, so re-assert it once active.
         var appWindow = MainWindow.AppWindow;
         appWindow?.Resize(new Windows.Graphics.SizeInt32 { Width = 1100, Height = 750 });
         if (appWindow?.Presenter is Microsoft.UI.Windowing.OverlappedPresenter presenter)
         {
             presenter.IsResizable = true;
             presenter.IsMaximizable = true;
+            presenter.IsMinimizable = true;
         }
         // Ensure the current window is active
         MainWindow.Activate();
-    }
-
-    /// <summary>
-    /// Invoked when Navigation to a certain page fails
-    /// </summary>
-    /// <param name="sender">The Frame which failed navigation</param>
-    /// <param name="e">Details about the navigation failure</param>
-    void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
-    {
-        throw new InvalidOperationException($"Failed to load {e.SourcePageType.FullName}: {e.Exception}");
+        appWindow?.Resize(new Windows.Graphics.SizeInt32 { Width = 1100, Height = 750 });
     }
 
     /// <summary>

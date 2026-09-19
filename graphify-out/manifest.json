@@ -389,34 +389,16 @@
     "ast_hash": "d172a2605df6bb55eb9305fb932863ab",
     "semantic_hash": ""
   },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Models/Courses.cs": {
-    "mtime": 1789382136.2492378,
-    "seen": 1789828606.270341,
-    "ast_hash": "ad8f47c5f4c66eca8184e1b58109d69b",
-    "semantic_hash": ""
-  },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Services/AppServices.cs": {
-    "mtime": 1789382136.2496932,
-    "seen": 1789828606.270344,
-    "ast_hash": "fe6556b90758cb62a1fcef4dc7666fc2",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CoursesViewModel.cs": {
-    "mtime": 1789382136.2501063,
-    "seen": 1789828606.2703464,
-    "ast_hash": "14a2889f72c583853b50df3b268df607",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/RegistrationViewModel.cs": {
-    "mtime": 1789382136.2501972,
-    "seen": 1789828606.2703495,
-    "ast_hash": "b0aa33c6fa83fa153deec55a37f16436",
+    "mtime": 1789829206.578559,
+    "seen": 1789830427.785098,
+    "ast_hash": "b745856810be9a95f8e20694a1e85b92",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CatalogTests.cs": {
-    "mtime": 1789382136.250238,
-    "seen": 1789828606.2703526,
-    "ast_hash": "dcf03d92f3fdd591682b5aa1e7df2337",
+    "mtime": 1789829786.9409983,
+    "seen": 1789830427.7851062,
+    "ast_hash": "b27f5efb93b640d58a2739860d0c56dd",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission.Tests/CollegeAdmission.Tests.csproj": {
@@ -444,69 +426,27 @@
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml": {
-    "mtime": 1789232602.8555312,
-    "seen": 1789828606.2703664,
-    "ast_hash": "b7039b3e4e42e71cfff756890bd1097a",
+    "mtime": 1789829174.187144,
+    "seen": 1789830427.7851205,
+    "ast_hash": "993b404e2e44ff9adf38f09c600d760f",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/App.xaml.cs": {
-    "mtime": 1789827810.9478981,
-    "seen": 1789828606.270369,
-    "ast_hash": "c496758642aa4c7c4db22d429fc667c7",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Lottie/caution_anim.json": {
-    "mtime": 1789382136.254238,
-    "seen": 1789828606.2703722,
-    "ast_hash": "2133850922827f92c716b3e02cb256aa",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Lottie/get_in_touch.json": {
-    "mtime": 1789382136.2552378,
-    "seen": 1789828606.2703748,
-    "ast_hash": "5c7d19cff9a50c993886e1476bd4351e",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Lottie/tutorials_online.json": {
-    "mtime": 1789382136.2552378,
-    "seen": 1789828606.2703774,
-    "ast_hash": "9b40e2fa97d36871d916ecc31f02d462",
+    "mtime": 1789829759.5678246,
+    "seen": 1789830427.7851233,
+    "ast_hash": "227858db404b43ae9f6669a3c1fd752e",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/CollegeAdmission.csproj": {
-    "mtime": 1789827384.51838,
-    "seen": 1789828606.2703805,
-    "ast_hash": "62ae88122262e418b303ef25f084a91e",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/CoursesPage.xaml": {
-    "mtime": 1789827554.119423,
-    "seen": 1789828606.2703834,
-    "ast_hash": "dee9dc0bc383998968258714f7140610",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/CoursesPage.xaml.cs": {
-    "mtime": 1789382136.256238,
-    "seen": 1789828606.2703867,
-    "ast_hash": "bcad67e48c59eb43c9f2a4b7dd1550f5",
+    "mtime": 1789829206.578559,
+    "seen": 1789830427.7851262,
+    "ast_hash": "29102ae4b2102781831eff9120d5974b",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/GlobalUsings.cs": {
     "mtime": 1789232602.8934808,
     "seen": 1789828606.2703898,
     "ast_hash": "73ccf5314683684f858d9ac7a17bcd92",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/MainMenuPage.xaml": {
-    "mtime": 1789827559.8356602,
-    "seen": 1789828606.2703927,
-    "ast_hash": "f2c65f65b7eefa37354e19b112638ed3",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/MainMenuPage.xaml.cs": {
-    "mtime": 1789382136.256238,
-    "seen": 1789828606.2703953,
-    "ast_hash": "f7963d5d13d80d0104bc45b54642bba0",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Android/Main.Android.cs": {
@@ -522,9 +462,9 @@
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/Platforms/Desktop/Program.cs": {
-    "mtime": 1789232603.0962882,
-    "seen": 1789828606.270404,
-    "ast_hash": "7d3ee9ed59197722d5af2fc7e6a88ff8",
+    "mtime": 1789829644.0291631,
+    "seen": 1789830427.7851524,
+    "ast_hash": "f8a5a2b0ce4b83626cf0ead59ca22900",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/Properties/launchSettings.json": {
@@ -533,34 +473,10 @@
     "ast_hash": "926de59dcaefdd5b36db79ca6ff86613",
     "semantic_hash": ""
   },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/RegistrationPage.xaml": {
-    "mtime": 1789827566.2037406,
-    "seen": 1789828606.2704225,
-    "ast_hash": "ff857cd6bae40b8f8c88566d557fa75a",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/RegistrationPage.xaml.cs": {
-    "mtime": 1789382136.257238,
-    "seen": 1789828606.2704253,
-    "ast_hash": "02e70f90385e6a87ff1f7591ddd2dda3",
-    "semantic_hash": ""
-  },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/Services/UnoServices.cs": {
-    "mtime": 1789382136.257238,
-    "seen": 1789828606.2704363,
-    "ast_hash": "e80a9888d33c2175b846c4740cb3a0d8",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/SplashPage.xaml": {
-    "mtime": 1789382136.257238,
-    "seen": 1789828606.2704394,
-    "ast_hash": "a9aaf733d7836213d744a169cbc3d0c9",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/SplashPage.xaml.cs": {
-    "mtime": 1789827577.7008855,
-    "seen": 1789828606.2704425,
-    "ast_hash": "1eef5c6af0a5e6b5e60df5d41ebf4a19",
+    "mtime": 1789829206.5775588,
+    "seen": 1789830427.7851584,
+    "ast_hash": "603863538f540319b8c1f3d0e24978a3",
     "semantic_hash": ""
   },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/Styles/ColorPaletteOverride.xaml": {
@@ -1038,9 +954,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1789828562.5553787,
-    "seen": 1789828606.270657,
-    "ast_hash": "914e102ed9bc8d4706784f4e55c08739",
+    "mtime": 1789830356.8061988,
+    "seen": 1789830427.7854285,
+    "ast_hash": "cb5c07ae9ceae2d7c0fff5227fe2fca9",
     "semantic_hash": ""
   },
   "docs/ReferenceUi/LLM-Chat.txt": {
@@ -1062,9 +978,9 @@
     "semantic_hash": ""
   },
   "docs/avalonia-crm-vision.md": {
-    "mtime": 1789828588.5988667,
-    "seen": 1789828606.2706683,
-    "ast_hash": "f2120b6aadadc2c795eb85bf147f8e1b",
+    "mtime": 1789830402.879457,
+    "seen": 1789830427.7854438,
+    "ast_hash": "d5b937f515e35cc3102516150f354289",
     "semantic_hash": ""
   },
   "src/AndroidJava/README.md": {
@@ -1589,42 +1505,6 @@
     "ast_hash": "9301b439c2c23268651baded8e1499d6",
     "semantic_hash": ""
   },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Images/back.png": {
-    "mtime": 1789382136.2525315,
-    "seen": 1789828606.2731977,
-    "ast_hash": "185b7f63f7a1bf113b35a322144d4c24",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Images/boy_paper.jpg": {
-    "mtime": 1789382136.253205,
-    "seen": 1789828606.273201,
-    "ast_hash": "6561143a40df448ba4bc44944bf60ec8",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Images/certificate_flat.jpg": {
-    "mtime": 1789382136.2539158,
-    "seen": 1789828606.2732038,
-    "ast_hash": "27db262f2bf2a43d2a1a20cff63fed53",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Images/course_flat.png": {
-    "mtime": 1789382136.2539158,
-    "seen": 1789828606.2732072,
-    "ast_hash": "a7ac5426f1ff1ef086baffcb9eb811d4",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Images/old_logo.png": {
-    "mtime": 1789382136.254238,
-    "seen": 1789828606.27321,
-    "ast_hash": "ab9216cfc70dfcc11c0cc58e7bee8125",
-    "semantic_hash": ""
-  },
-  "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Images/table_chair.jpg": {
-    "mtime": 1789382136.254238,
-    "seen": 1789828606.2732131,
-    "ast_hash": "20fcbd0beafdc2699c373014a9562e97",
-    "semantic_hash": ""
-  },
   "src/PlatformUno/CollegeAdmission/CollegeAdmission/Assets/Splash/splash_screen.svg": {
     "mtime": 1789232603.0640566,
     "seen": 1789828606.2732165,
@@ -1824,21 +1704,21 @@
     "semantic_hash": ""
   },
   "Images & Documents/apps/avalonia/pipeline.png": {
-    "mtime": 1789828518.4380138,
-    "seen": 1789828606.2730355,
+    "mtime": 1789830334.2439194,
+    "seen": 1789830427.7856362,
     "ast_hash": "73a3561a69c22fc48fc1f3aeb7aa9a72",
     "semantic_hash": ""
   },
   "Images & Documents/apps/flutter/pipeline.png": {
-    "mtime": 1789828516.9519947,
-    "seen": 1789828606.273039,
-    "ast_hash": "2a7fb1f2e025ba5feabfc7a0adf95e1a",
+    "mtime": 1789830334.9549284,
+    "seen": 1789830427.7856405,
+    "ast_hash": "9609a6e511130c141388a191d8196d33",
     "semantic_hash": ""
   },
   "Images & Documents/apps/tauri/pipeline.png": {
-    "mtime": 1789828517.822006,
-    "seen": 1789828606.2730422,
-    "ast_hash": "6434032a771face626ec0f3dea10b63a",
+    "mtime": 1789830335.7709384,
+    "seen": 1789830427.7856438,
+    "ast_hash": "491b48b1bf8a8407eb0dd9fcbdd7df06",
     "semantic_hash": ""
   },
   "Images & Documents/apps/uno/courses.png": {
@@ -1847,10 +1727,46 @@
     "ast_hash": "9e6881b903b13e9587edb6319df5d958",
     "semantic_hash": ""
   },
-  "Images & Documents/apps/uno/main-menu.png": {
-    "mtime": 1789828518.6260164,
-    "seen": 1789828606.2730484,
-    "ast_hash": "c77dda1b706dfecd4cd940717a9a0720",
+  "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Models/Course.cs": {
+    "mtime": 1789829029.8692892,
+    "seen": 1789830427.7850902,
+    "ast_hash": "9ef44889df9cc694b2faa37bc4b09563",
+    "semantic_hash": ""
+  },
+  "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/Models/CrmModels.cs": {
+    "mtime": 1789829786.9409983,
+    "seen": 1789830427.7850945,
+    "ast_hash": "8abf24a64c996e93521afa010e061bc9",
+    "semantic_hash": ""
+  },
+  "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/CrmViewModel.cs": {
+    "mtime": 1789830231.4696467,
+    "seen": 1789830427.785101,
+    "ast_hash": "095f9a2e4abdef1901849307dca4ea75",
+    "semantic_hash": ""
+  },
+  "src/PlatformUno/CollegeAdmission/CollegeAdmission.Core/ViewModels/ViewModelBase.cs": {
+    "mtime": 1789829029.8692892,
+    "seen": 1789830427.7851033,
+    "ast_hash": "25f0634ee24354fe7b06f152cc0e5579",
+    "semantic_hash": ""
+  },
+  "src/PlatformUno/CollegeAdmission/CollegeAdmission/CrmShellPage.xaml": {
+    "mtime": 1789830185.0270715,
+    "seen": 1789830427.7851284,
+    "ast_hash": "6e5af7ed486eb54f7d8478c344fad1f5",
+    "semantic_hash": ""
+  },
+  "src/PlatformUno/CollegeAdmission/CollegeAdmission/CrmShellPage.xaml.cs": {
+    "mtime": 1789829989.522709,
+    "seen": 1789830427.7851403,
+    "ast_hash": "4951dda05705c865412abfefa4f5bd28",
+    "semantic_hash": ""
+  },
+  "Images & Documents/apps/uno/pipeline.png": {
+    "mtime": 1789830335.929119,
+    "seen": 1789830427.7856514,
+    "ast_hash": "f863290d29a22f7983a7623d7f9a5298",
     "semantic_hash": ""
   }
 }

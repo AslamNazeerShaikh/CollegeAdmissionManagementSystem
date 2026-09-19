@@ -21,7 +21,27 @@
         </um:MaterialTheme>
       </ResourceDictionary.MergedDictionaries>
 
-      <!-- Add resources here -->
+      <!-- CRM tokens, verbatim from the Flutter/Tauri/Avalonia reference.
+           Warm neutral surfaces; color is scarce: green CTA only,
+           red/amber/blue status only. Views never hard-code hex. -->
+      <SolidColorBrush x:Key="CrmPaperBg" Color="#F7F6F3" />
+      <SolidColorBrush x:Key="CrmSurface" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="CrmInk" Color="#171717" />
+      <SolidColorBrush x:Key="CrmInk2" Color="#666666" />
+      <SolidColorBrush x:Key="CrmMuted" Color="#8A8A8A" />
+      <SolidColorBrush x:Key="CrmLine" Color="#DDDDD8" />
+      <SolidColorBrush x:Key="CrmLineSoft" Color="#E7E7E3" />
+      <SolidColorBrush x:Key="CrmAccent" Color="#147A5A" />
+      <SolidColorBrush x:Key="CrmAccentSoft" Color="#E7F5ED" />
+      <SolidColorBrush x:Key="CrmAccentInk" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="CrmOk" Color="#147A5A" />
+      <SolidColorBrush x:Key="CrmOkBg" Color="#E7F5ED" />
+      <SolidColorBrush x:Key="CrmWarn" Color="#B45309" />
+      <SolidColorBrush x:Key="CrmWarnBg" Color="#FFF3E4" />
+      <SolidColorBrush x:Key="CrmBad" Color="#A94444" />
+      <SolidColorBrush x:Key="CrmBadBg" Color="#FBECEC" />
+      <SolidColorBrush x:Key="CrmInfo" Color="#3D73D9" />
+      <SolidColorBrush x:Key="CrmInfoBg" Color="#EDF3FF" />
 
     </ResourceDictionary>
   </Application.Resources>

@@ -25,7 +25,6 @@
       Material;
       Mvvm;
       SkiaRenderer;
-      Lottie;
     </UnoFeatures>
 
     <!-- Managed SkiaSharp is 4.152 (see Directory.Packages.props); Uno.Sdk

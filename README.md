@@ -30,10 +30,11 @@ Three codebases live in `src/`:
 - Mirrors the Avalonia CRM (same seed data, `CrmColors` tokens, Inter font); pipeline is stage tabs + list, no horizontal scrolling
 - Checks: `flutter analyze && flutter test`
 
-**Uno (`src/PlatformUno/CollegeAdmission/`)** — secondary port:
-- Desktop: `dotnet run --project CollegeAdmission -f net10.0-desktop`
-- Resizable desktop window (1100×750 default) set in `App.xaml.cs` via `AppWindow.Resize` + `OverlappedPresenter`; Linux requires `<SkiaSharpVersion>4.152.0</SkiaSharpVersion>` in `CollegeAdmission.csproj` — without it Uno.Sdk floors the Linux `libSkiaSharp` at 3.119 (m119) while managed SkiaSharp 4.152 refuses to load it, crashing at startup (verified 2026-09-19: build 0 warnings/0 errors, stable run on Fedora/X11, tests 4/4 pass)
-- Courses `GridView` owns its scroll (header/footer instead of a wrapping `ScrollViewer`) so virtualization stays on and scrolling doesn't stutter; dialogs are `MaxWidth 480` centered cards; splash navigation is cancellation-safe
+**Uno (`src/PlatformUno/CollegeAdmission/`)** — CRM port (same new UI/UX as Flutter/Tauri/Avalonia; the legacy Splash/MainMenu/Courses/Registration pages, old ViewModels, images and Lottie files were deleted 2026-09-19):
+- Desktop: `dotnet run --project CollegeAdmission -f net10.0-desktop` (single-page `CrmShellPage`: titlebar search + 2 CTAs, nav 248 + content + rail 320, stage tabs + vertical pipeline, 760dp breakpoint, zero horizontal scroll)
+- Linux requires `<SkiaSharpVersion>4.152.0</SkiaSharpVersion>` in `CollegeAdmission.csproj` — without it Uno.Sdk floors the Linux `libSkiaSharp` at 3.119 (m119) while managed SkiaSharp 4.152 refuses to load it, crashing at startup
+- Window: resizable 1100×750 default via `AppWindow.Resize` (re-asserted after `Activate`, X11 WMs may drop the pre-Activate size); `UNO_DISPLAY_SCALE_OVERRIDE` defaults to `1.0` in `Platforms/Desktop/Program.cs` because XWayland reports unreliable `Xft.dpi` (192) that would double the whole UI — override with `UNO_DISPLAY_SCALE_OVERRIDE=2.0` on true-HiDPI X11
+- Verified 2026-09-19: build 0 warnings/0 errors, all 5 sections screenshotted on Fedora/X11 with no exceptions, tests 5/5 pass
 - Android: deploy the `net10.0-android` target to device
 - Tests: `dotnet test CollegeAdmission.Tests/CollegeAdmission.Tests.csproj`
 
@@ -57,7 +58,7 @@ Three codebases live in `src/`:
 | Avalonia | `Images & Documents/apps/avalonia/pipeline.png` | Stage tabs + vertical list, all nav/rail visible, no horizontal scroll |
 | Flutter | `Images & Documents/apps/flutter/pipeline.png` | Reference UI (unchanged): `analyze` clean, 10/10 tests pass |
 | Tauri | `Images & Documents/apps/tauri/pipeline.png` | Reference UI (unchanged): web tests 5/5, release binary runs clean |
-| Uno | `Images & Documents/apps/uno/main-menu.png`, `courses.png` | Launches past splash, cards visible, virtualized course list renders |
+| Uno | `Images & Documents/apps/uno/pipeline.png`, `courses.png` (+ dashboard/applications/fees verified) | Full CRM reimplementation: same shell, tabs, rail as the other three |
 
 # To develop the app
 
